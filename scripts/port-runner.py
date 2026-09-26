@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 """
-blender-rs Autonomous Zero-Token Port Runner
-============================================
+blender-rs Autonomous Zero-Token Port Runner (with Live Progress Bars)
+=====================================================================
 Orchestrates file-by-file translation from Blender C/C++ to Safe Rust:
 - Zero-token classification & routing via `zev-rs`
-- Zero-cloud-token on-device code generation via `apfel-rs` (Apple Intelligence FoundationModels)
-- Guided by `port-to-rust-playbook`, `rust-crate-decomposition`, and `rust-lifetimes-analysis`
-- Compiler error burndown via `compiler-errors-as-work-queue`
+- Zero-cloud-token on-device code generation via `apfel-rs` (Apple Intelligence)
+- Real-time animated progress bars:
+    * Overall project progress bar (X / 6,440 files)
+    * Batch subsystem progress bar (X / N in subsystem)
+    * Live per-file elapsed timer & spinner while apfel-rs generates tokens
+- Strict compiler error burndown & rollback discipline (keeps trunk 100% green)
 """
 
 import os
 import sys
 import json
+import time
+import threading
 import subprocess
 import argparse
 from pathlib import Path
@@ -29,6 +34,16 @@ PORTING_GUIDE = ROOT_DIR / "PORTING.md"
 ZEV_BIN = Path(os.environ.get("ZEV_BIN", "/Users/bhubbard/PROJECTS/zev-rs/target/release/zev"))
 APFEL_BIN = Path(os.environ.get("APFEL_BIN", "/opt/homebrew/bin/apfel"))
 
+# Terminal colors
+RESET = "\033[0m"
+BOLD = "\033[1m"
+DIM = "\033[2m"
+CYAN = "\033[36m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+RED = "\033[31m"
+BLUE = "\033[34m"
+
 ROUTES = {
     "blender-math": "Vectors, matrices, quaternions, bounding boxes, coordinate math, BLI_math",
     "blender-mem": "Chunked memory pools, allocators, BLI_mempool, MEM_guardedalloc",
@@ -37,6 +52,22 @@ ROUTES = {
     "blender-io": "File import and export, Wavefront OBJ, PLY, STL, USD",
     "skip": "CMakeLists, build scripts, tests, private platform glue, or non-portable code"
 }
+
+def render_bar(current: int, total: int, width: int = 28, fill: str = "█", empty: str = "░", color: str = CYAN) -> str:
+    if total <= 0:
+        return f"[{color}{empty * width}{RESET}]   0.0%"
+    pct = min(1.0, max(0.0, current / total))
+    filled_len = int(width * pct)
+    bar = f"{color}{fill * filled_len}{DIM}{empty * (width - filled_len)}{RESET}"
+    return f"[{bar}] {pct * 100:>5.1f}%"
+
+def count_all_upstream_files() -> int:
+    """Counts total C/C++ files across all upstream subsystems."""
+    if not UPSTREAM_DIR.exists():
+        return 6440
+    return sum(1 for _ in UPSTREAM_DIR.rglob("*.[ch]") if not _.name.startswith(".")) + \
+           sum(1 for _ in UPSTREAM_DIR.rglob("*.cc") if not _.name.startswith(".")) + \
+           sum(1 for _ in UPSTREAM_DIR.rglob("*.hh") if not _.name.startswith("."))
 
 def load_progress() -> Dict:
     if PROGRESS_FILE.exists():
@@ -72,7 +103,6 @@ def load_lifetimes() -> Dict[str, List[Dict[str, str]]]:
 def route_file_with_zev(file_path: Path) -> Tuple[str, float]:
     """Uses zev route to classify file destination in microseconds with zero tokens."""
     if not ZEV_BIN.exists():
-        # Fallback heuristic if zev binary is not compiled yet
         rel = str(file_path.relative_to(ROOT_DIR))
         if "bmesh" in rel:
             return "blender-bmesh", 1.0
@@ -84,7 +114,6 @@ def route_file_with_zev(file_path: Path) -> Tuple[str, float]:
             return "blender-math", 1.0
         return "skip", 0.0
 
-    # Read first 40 lines of file for contextual classification
     sample = []
     try:
         with open(file_path, "r", errors="ignore") as f:
@@ -109,7 +138,6 @@ def route_file_with_zev(file_path: Path) -> Tuple[str, float]:
         res = json.loads(proc.stdout)
         return res.get("destination", "skip"), res.get("probability", 0.0)
     except Exception as e:
-        print(f"  [!] Zev route error: {e}, falling back to path heuristics")
         rel = str(file_path)
         if "bmesh" in rel:
             return "blender-bmesh", 0.8
@@ -132,8 +160,55 @@ def build_system_prompt(target_crate: str, relevant_lifetimes: List[Dict]) -> st
             prompt += f"- Field `{lt['field']}`: {lt['model']} ({lt['notes']})\n"
     return prompt
 
+def run_with_live_spinner(cmd: List[str], label: str, timeout: int = 120) -> Tuple[int, str, str]:
+    """Runs a subprocess while displaying a live animated spinner & elapsed timer."""
+    spinner_frames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+    start_time = time.time()
+    done = False
+    result_holder = {}
+
+    def worker():
+        try:
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+            result_holder["rc"] = proc.returncode
+            result_holder["stdout"] = proc.stdout
+            result_holder["stderr"] = proc.stderr
+        except subprocess.TimeoutExpired:
+            result_holder["rc"] = -1
+            result_holder["stdout"] = ""
+            result_holder["stderr"] = "timed out"
+        except Exception as e:
+            result_holder["rc"] = -2
+            result_holder["stdout"] = ""
+            result_holder["stderr"] = str(e)
+        finally:
+            nonlocal done
+            done = True
+
+    t = threading.Thread(target=worker, daemon=True)
+    t.start()
+
+    i = 0
+    while not done:
+        elapsed = time.time() - start_time
+        frame = spinner_frames[i % len(spinner_frames)]
+        sys.stdout.write(f"\r  {CYAN}{frame}{RESET} {label} {DIM}({elapsed:4.1f}s){RESET} ")
+        sys.stdout.flush()
+        time.sleep(0.1)
+        i += 1
+
+    elapsed = time.time() - start_time
+    rc = result_holder.get("rc", -1)
+    if rc == 0:
+        sys.stdout.write(f"\r  {GREEN}✓{RESET} {label} {DIM}({elapsed:4.1f}s){RESET}\n")
+    else:
+        sys.stdout.write(f"\r  {RED}✗{RESET} {label} {DIM}({elapsed:4.1f}s){RESET}\n")
+    sys.stdout.flush()
+
+    return rc, result_holder.get("stdout", ""), result_holder.get("stderr", "")
+
 def translate_file_with_apfel(source_file: Path, target_crate: str, lifetimes: Dict) -> Optional[str]:
-    """Invokes on-device Apple Intelligence FoundationModels via apfel-rs."""
+    """Invokes on-device Apple Intelligence FoundationModels via apfel-rs with live progress."""
     module_name = source_file.stem
     relevant_lifetimes = []
     for struct_name, entries in lifetimes.items():
@@ -156,20 +231,10 @@ def translate_file_with_apfel(source_file: Path, target_crate: str, lifetimes: D
         user_prompt
     ]
 
-    print(f"  [→] Running on-device translation with apfel-rs for {source_file.name}...")
-    try:
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
-        if proc.returncode == 0 and proc.stdout.strip():
-            return proc.stdout.strip()
-        else:
-            print(f"  [!] apfel error (code {proc.returncode}): {proc.stderr}")
-            return None
-    except subprocess.TimeoutExpired:
-        print("  [!] apfel timed out after 120s")
-        return None
-    except Exception as e:
-        print(f"  [!] Failed to invoke apfel: {e}")
-        return None
+    rc, stdout, stderr = run_with_live_spinner(cmd, f"Translating {source_file.name} with apfel-rs...", timeout=120)
+    if rc == 0 and stdout.strip():
+        return stdout.strip()
+    return None
 
 def verify_and_fix(target_crate: str, module_path: Path, max_attempts: int = 3) -> bool:
     """Burns down compiler errors using compiler-errors-as-work-queue discipline."""
@@ -181,10 +246,9 @@ def verify_and_fix(target_crate: str, module_path: Path, max_attempts: int = 3) 
             text=True
         )
         if proc.returncode == 0:
-            print(f"  [✓] Crate '{target_crate}' compiles cleanly!")
+            print(f"  {GREEN}[✓] Crate '{target_crate}' compiles cleanly!{RESET}")
             return True
 
-        print(f"  [!] Compilation errors detected (Attempt {attempt}/{max_attempts}). Extracting diagnostics...")
         errors = []
         for line in proc.stdout.splitlines():
             try:
@@ -197,11 +261,9 @@ def verify_and_fix(target_crate: str, module_path: Path, max_attempts: int = 3) 
                 pass
 
         if not errors:
-            print("  [!] Non-JSON compiler errors occurred:")
-            print(proc.stderr[:500])
             return False
 
-        error_context = "\n".join(errors[:5])  # Cap to first 5 errors
+        error_context = "\n".join(errors[:5])
         fix_prompt = (
             f"Fix the following Rust compiler errors in this module:\n\n{error_context}\n\n"
             "Output the complete fixed Rust module only."
@@ -210,17 +272,17 @@ def verify_and_fix(target_crate: str, module_path: Path, max_attempts: int = 3) 
         fix_cmd = [
             str(APFEL_BIN),
             "--code",
+            "--temperature", "0",
+            "--max-tokens", "2048",
             "-s", "You are an expert Rust compiler debugger. Fix the compilation errors precisely.",
             "-f", str(module_path),
             fix_prompt
         ]
-        fix_proc = subprocess.run(fix_cmd, capture_output=True, text=True, timeout=90)
-        if fix_proc.returncode == 0 and fix_proc.stdout.strip():
+        rc, stdout, _ = run_with_live_spinner(fix_cmd, f"Compiler repair pass {attempt}/{max_attempts}...", timeout=90)
+        if rc == 0 and stdout.strip():
             with open(module_path, "w") as f:
-                f.write(fix_proc.stdout.strip() + "\n")
-            print("  [↺] Applied automated patch, rechecking...")
+                f.write(stdout.strip() + "\n")
         else:
-            print("  [!] Automated fix failed to generate patch.")
             break
 
     return False
@@ -235,6 +297,15 @@ def register_module_in_crate(target_crate: str, module_name: str):
             with open(lib_rs, "a") as f:
                 f.write(f"\n{mod_decl}")
 
+def unregister_module_in_crate(target_crate: str, module_name: str):
+    """Safely removes `pub mod <module_name>;` from lib.rs if module failed compilation."""
+    lib_rs = ROOT_DIR / "crates" / target_crate / "src" / "lib.rs"
+    mod_decl = f"pub mod {module_name};"
+    if lib_rs.exists():
+        lines = lib_rs.read_text().splitlines()
+        filtered = [l for l in lines if l.strip() != mod_decl]
+        lib_rs.write_text("\n".join(filtered) + "\n")
+
 def git_commit_file(target_crate: str, module_path: Path, source_rel: str):
     """Commits single ported file with strict git discipline."""
     try:
@@ -243,54 +314,71 @@ def git_commit_file(target_crate: str, module_path: Path, source_rel: str):
         subprocess.run(["git", "add", str(lib_rs)], cwd=str(ROOT_DIR), check=True)
         msg = f"port({target_crate}): mechanically port {module_path.stem} from {source_rel}"
         subprocess.run(["git", "commit", "-m", msg], cwd=str(ROOT_DIR), check=True)
-        print(f"  [✓] Committed: {msg}")
+        print(f"  {GREEN}[✓] Committed:{RESET} {msg}")
     except Exception as e:
-        print(f"  [!] Git commit error: {e}")
+        print(f"  {RED}[!] Git commit error:{RESET} {e}")
 
 def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = False):
-    """Main execution loop driven by porting-workflow-loops discipline."""
+    """Main execution loop driven by porting-workflow-loops discipline with progress bars."""
     progress = load_progress()
     lifetimes = load_lifetimes()
+    total_project_files = count_all_upstream_files()
 
     target_subsystem_dir = UPSTREAM_DIR / subsystem
     if not target_subsystem_dir.exists():
-        print(f"[!] Subsystem path {target_subsystem_dir} does not exist.")
+        print(f"{RED}[!] Subsystem path {target_subsystem_dir} does not exist.{RESET}")
         return
-
-    print(f"=== Starting Autonomous Zero-Token Port Loop for '{subsystem}' ===")
-    print(f"Upstream: {target_subsystem_dir}")
-    print(f"Zev: {ZEV_BIN}")
-    print(f"Apfel: {APFEL_BIN}\n")
 
     files_to_process = []
     for ext in ("*.cc", "*.c", "*.hh", "*.h"):
         files_to_process.extend(target_subsystem_dir.rglob(ext))
 
+    files_to_process = sorted(files_to_process)
+    total_subsystem_files = len(files_to_process)
+
+    print(f"\n{BOLD}{CYAN}======================================================================{RESET}")
+    print(f"{BOLD} 🚀 blender-rs Autonomous Port Loop: {subsystem} {RESET}")
+    print(f"{BOLD}{CYAN}======================================================================{RESET}\n")
+
     processed_count = 0
-    for file_path in sorted(files_to_process):
+    for idx, file_path in enumerate(files_to_process):
         rel_str = str(file_path.relative_to(ROOT_DIR))
         if rel_str in progress["completed"] or rel_str in progress["skipped"]:
             continue
 
-        print(f"\n[{processed_count + 1}] Evaluating: {rel_str}")
+        # Calculate progress stats
+        n_completed = len(progress.get("completed", {}))
+        n_skipped = len(progress.get("skipped", {}))
+        n_failed = len(progress.get("failed", {}))
+        n_total_done = n_completed + n_skipped + n_failed
+
+        # Display Dual Progress Bars: Project-wide + Batch Subsystem
+        proj_bar = render_bar(n_total_done, total_project_files, width=28, color=CYAN)
+        sub_bar = render_bar(idx + 1, total_subsystem_files, width=28, color=GREEN)
+
+        print(f"\n{BOLD}Overall Project:{RESET} {proj_bar} ({n_total_done:,} / {total_project_files:,} files) "
+              f"[{GREEN}Pass: {n_completed}{RESET} | {YELLOW}Skip: {n_skipped}{RESET} | {RED}Fail: {n_failed}{RESET}]")
+        print(f"{BOLD}Subsystem [{subsystem}]:{RESET} {sub_bar} ({idx + 1} / {total_subsystem_files} files)")
+        print(f"{BOLD}Active File:{RESET}     {CYAN}{rel_str}{RESET}")
+
+        # Routing with Zev
         dest_crate, prob = route_file_with_zev(file_path)
-        print(f"  [*] Zev routing → {dest_crate} (confidence: {prob:.2f})")
+        print(f"  [*] Zev routing → {BOLD}{dest_crate}{RESET} (confidence: {prob:.2f})")
 
         if dest_crate == "skip" or prob < 0.6:
-            print("  [-] Skipping non-target / build / low-confidence file.")
+            print(f"  {YELLOW}[-] Skipping non-target / build / low-confidence file.{RESET}")
             progress["skipped"][rel_str] = {"reason": "zev_route_skip", "confidence": prob}
             save_progress(progress)
             continue
 
         if dry_run:
-            print("  [DRY-RUN] Would translate and compile.")
+            print(f"  {BLUE}[DRY-RUN] Would translate and compile.{RESET}")
             continue
 
-        # Target file path
         module_name = file_path.stem.replace(".", "_")
         target_file = ROOT_DIR / "crates" / dest_crate / "src" / f"{module_name}.rs"
 
-        # Generate translation via Apfel
+        # Generate translation via Apfel (with live spinner)
         rust_code = translate_file_with_apfel(file_path, dest_crate, lifetimes)
         if not rust_code:
             progress["failed"][rel_str] = "apfel_generation_failed"
@@ -311,22 +399,26 @@ def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = Fal
                 "module": f"{module_name}.rs"
             }
         else:
+            # Revert from lib.rs so the trunk stays compiling
+            unregister_module_in_crate(dest_crate, module_name)
+            if target_file.exists():
+                target_file.unlink()
             progress["failed"][rel_str] = "compiler_burndown_exceeded"
-            print(f"  [✗] Failed to resolve compilation for {module_name}.rs")
+            print(f"  {RED}[✗] Rolled back uncompiling {module_name}.rs (keeps crate green){RESET}")
 
         save_progress(progress)
         processed_count += 1
         if processed_count >= limit:
-            print(f"\n[!] Reached batch limit of {limit} files. Pausing loop.")
+            print(f"\n{YELLOW}[!] Reached batch limit of {limit} files. Pausing loop.{RESET}")
             break
 
-    print("\n=== Port Loop Batch Finished ===")
+    print(f"\n{BOLD}{CYAN}=== Batch Finished: {subsystem} ==={RESET}")
     print(f"Completed: {len(progress['completed'])}")
     print(f"Skipped:   {len(progress['skipped'])}")
-    print(f"Failed:    {len(progress['failed'])}")
+    print(f"Failed:    {len(progress['failed'])}\n")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Blender Rust Port Runner")
+    parser = argparse.ArgumentParser(description="Blender Rust Port Runner with Progress Bars")
     parser.add_argument("--subsystem", default="bmesh", help="Subsystem inside upstream/source/blender (default: bmesh)")
     parser.add_argument("--limit", type=int, default=5, help="Number of files to process per run")
     parser.add_argument("--dry-run", action="store_true", help="Route files with Zev without modifying code")
