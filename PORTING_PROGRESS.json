@@ -1,0 +1,54 @@
+{
+  "completed": {},
+  "skipped": {
+    "upstream/source/blender/bmesh/bmesh_tools.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.5643249624550417
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_log.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.5781975968150452
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_mesh_convert.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.5686242609221168
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_uvselect.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.5289699318854054
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_walkers.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4809854579936883
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_walkers.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4393880026015234
+    },
+    "upstream/source/blender/bmesh/operators/bmo_connect_pair.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.5987479444753004
+    },
+    "upstream/source/blender/bmesh/operators/bmo_removedoubles.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.5192044256338819
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_bevel.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.5369075594288967
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_bevel.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4345804246723874
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_edgenet.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4220336683227614
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_region_match.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4947582996477041
+    }
+  },
+  "failed": {}
+}
