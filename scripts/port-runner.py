@@ -32,7 +32,7 @@ PORTING_GUIDE = ROOT_DIR / "PORTING.md"
 
 # Executable paths
 ZEV_BIN = Path(os.environ.get("ZEV_BIN", "/Users/bhubbard/PROJECTS/zev-rs/target/release/zev"))
-APFEL_BIN = Path(os.environ.get("APFEL_BIN", "/opt/homebrew/bin/apfel"))
+APFEL_BIN = Path(os.environ.get("APFEL_BIN", "/Users/bhubbard/PROJECTS/apfel-rs/target/release/apfel"))
 
 # Terminal colors
 RESET = "\033[0m"
