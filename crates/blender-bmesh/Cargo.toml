@@ -1,0 +1,17 @@
+[package]
+name = "blender-bmesh"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+blender-math = { path = "../blender-math" }
+blender-mem = { path = "../blender-mem" }
+blender-dna = { path = "../blender-dna" }
+thiserror = { workspace = true }
+hashbrown = { workspace = true }
+smallvec = { workspace = true }
+
+[dev-dependencies]
+criterion = { workspace = true }

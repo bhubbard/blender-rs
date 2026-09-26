@@ -1,0 +1,29 @@
+[workspace]
+members = [
+    "crates/blender-math",
+    "crates/blender-mem",
+    "crates/blender-dna",
+    "crates/blender-bmesh",
+    "crates/blender-io",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Brandon Hubbard <bhubbard@users.noreply.github.com>"]
+license = "GPL-2.0-or-later"
+repository = "https://github.com/blender/blender"
+
+[workspace.dependencies]
+glam = "0.29"
+bytemuck = { version = "1.18", features = ["derive"] }
+bitflags = "2.6"
+thiserror = "1.0"
+anyhow = "1.0"
+smallvec = "1.13"
+hashbrown = "0.15"
+rayon = "1.10"
+log = "0.4"
+env_logger = "0.11"
+criterion = "0.5"

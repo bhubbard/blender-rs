@@ -1,0 +1,11 @@
+[package]
+name = "blender-dna"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+blender-math = { path = "../blender-math" }
+bytemuck = { workspace = true }
+bitflags = { workspace = true }

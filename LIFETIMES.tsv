@@ -1,0 +1,24 @@
+file	struct	field	ownership_model	lifetime	notes
+source/blender/bmesh/bmesh_class.h	BMVert	e	index-handle (EdgeId)	-	Pointer to one edge in disk cycle; in Rust use EdgeId handle into BMesh edge pool
+source/blender/bmesh/bmesh_class.h	BMEdge	v1	index-handle (VertId)	-	Start vertex of edge; must outlive edge; enforced by pool generation
+source/blender/bmesh/bmesh_class.h	BMEdge	v2	index-handle (VertId)	-	End vertex of edge; must outlive edge; enforced by pool generation
+source/blender/bmesh/bmesh_class.h	BMEdge	l	index-handle (Option<LoopId>)	-	Pointer to one loop in radial cycle around edge; None for wire edge
+source/blender/bmesh/bmesh_class.h	BMDiskLink	prev	index-handle (Option<EdgeId>)	-	Previous edge in vertex disk cycle
+source/blender/bmesh/bmesh_class.h	BMDiskLink	next	index-handle (Option<EdgeId>)	-	Next edge in vertex disk cycle
+source/blender/bmesh/bmesh_class.h	BMRadial	prev	index-handle (LoopId)	-	Previous loop in edge radial cycle (around edge)
+source/blender/bmesh/bmesh_class.h	BMRadial	next	index-handle (LoopId)	-	Next loop in edge radial cycle (around edge)
+source/blender/bmesh/bmesh_class.h	BMLoop	v	index-handle (VertId)	-	Vertex associated with this corner loop
+source/blender/bmesh/bmesh_class.h	BMLoop	e	index-handle (EdgeId)	-	Edge originating from or associated with this loop
+source/blender/bmesh/bmesh_class.h	BMLoop	f	index-handle (FaceId)	-	Parent polygon face
+source/blender/bmesh/bmesh_class.h	BMLoop	prev	index-handle (LoopId)	-	Previous loop in face polygon perimeter cycle
+source/blender/bmesh/bmesh_class.h	BMLoop	next	index-handle (LoopId)	-	Next loop in face polygon perimeter cycle
+source/blender/bmesh/bmesh_class.h	BMFace	l_first	index-handle (LoopId)	-	First loop defining polygon boundary
+source/blender/bmesh/bmesh_class.h	BMesh	vpool	pool	-	Chunked memory pool owning all BMVert slots
+source/blender/bmesh/bmesh_class.h	BMesh	epool	pool	-	Chunked memory pool owning all BMEdge slots
+source/blender/bmesh/bmesh_class.h	BMesh	lpool	pool	-	Chunked memory pool owning all BMLoop slots
+source/blender/bmesh/bmesh_class.h	BMesh	fpool	pool	-	Chunked memory pool owning all BMFace slots
+source/blender/bmesh/bmesh_class.h	BMesh	vdata	customdata-pool	-	Custom vertex layers (UVs, weights, colors, bevel weights)
+source/blender/bmesh/bmesh_class.h	BMesh	edata	customdata-pool	-	Custom edge layers (crease, bweight)
+source/blender/bmesh/bmesh_class.h	BMesh	ldata	customdata-pool	-	Custom loop layers (UV coordinates, normals, vertex colors)
+source/blender/bmesh/bmesh_class.h	BMesh	pdata	customdata-pool	-	Custom face layers (material indices, face flags)
+source/blender/blenlib/BLI_mempool.h	BLI_mempool	chunks	arena	-	Linked list / vector of fixed-size memory blocks; dropped on pool free

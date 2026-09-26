@@ -1,0 +1,61 @@
+//! Blender DNA data structures mirroring `source/blender/makesdna`.
+
+use bitflags::bitflags;
+use blender_math::Vec3;
+
+bitflags! {
+    /// Element flags mirroring Blender's `BM_ELEM_*` and mesh selection flags.
+    #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+    pub struct MeshElemFlags: u8 {
+        const SELECT = 1 << 0;
+        const HIDE   = 1 << 1;
+        const SEAM   = 1 << 2;
+        const SHARP  = 1 << 3;
+        const SMOOTH = 1 << 4;
+        const TAG    = 1 << 5;
+    }
+}
+
+/// Supported CustomData layer types in Blender meshes.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+#[repr(i32)]
+pub enum CustomDataType {
+    PropFloat = 0,
+    PropInt = 1,
+    PropString = 2,
+    PropFloat2 = 3,
+    PropFloat3 = 4,
+    MDeformVert = 5,
+    MDisps = 6,
+    OrigIndex = 7,
+    MCol = 8,
+    MLoopUV = 9,
+    BWeight = 10,
+    Crease = 11,
+}
+
+/// Mesh header data mirroring DNA `Mesh`.
+#[derive(Debug, Clone)]
+pub struct DnaMesh {
+    pub name: String,
+    pub verts_num: usize,
+    pub edges_num: usize,
+    pub faces_num: usize,
+    pub corners_num: usize,
+    pub texspace_location: Vec3,
+    pub texspace_size: Vec3,
+}
+
+impl Default for DnaMesh {
+    fn default() -> Self {
+        Self {
+            name: "Mesh".into(),
+            verts_num: 0,
+            edges_num: 0,
+            faces_num: 0,
+            corners_num: 0,
+            texspace_location: Vec3::ZERO,
+            texspace_size: Vec3::ONE,
+        }
+    }
+}
