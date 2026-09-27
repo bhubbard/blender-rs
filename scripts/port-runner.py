@@ -237,11 +237,130 @@ def run_with_live_spinner(cmd: List[str], label: str, timeout: int = 120) -> Tup
         sys.stdout.write(f"\r  {RED}✗{RESET} {label} {DIM}({elapsed:4.1f}s){RESET}\n")
     sys.stdout.flush()
 
-    return rc, result_holder.get("stdout", ""), result_holder.get("stderr", "")
+def chunk_c_cpp_file(source_file: Path, max_lines: int = 160) -> Tuple[str, List[str]]:
+    """Splits a C/C++ file into function and struct bounded chunks with common preamble."""
+    lines = source_file.read_text(errors='ignore').splitlines()
+    preamble = []
+    chunks = []
+    current_chunk = []
+    depth = 0
+    namespace_depth = 0
+
+    for line in lines:
+        stripped = line.strip()
+        if 'namespace' in stripped and '{' in stripped:
+            namespace_depth += 1
+            preamble.append(line)
+            continue
+        elif not chunks and not current_chunk and (stripped.startswith('#') or stripped.startswith('//') or stripped.startswith('/*') or not stripped):
+            preamble.append(line)
+            continue
+
+        brace_open = line.count('{')
+        brace_close = line.count('}')
+        depth += brace_open - brace_close
+
+        current_chunk.append(line)
+        # Function boundary is reached when depth returns to namespace level
+        if len(current_chunk) >= max_lines and depth <= namespace_depth:
+            chunks.append('\n'.join(current_chunk))
+            current_chunk = []
+
+    if current_chunk:
+        chunks.append('\n'.join(current_chunk))
+
+    return '\n'.join(preamble), chunks
+
+def combine_rust_chunks(chunks_rust: List[str]) -> str:
+    """Combines translated Rust chunks, deduplicating imports."""
+    uses = set()
+    bodies = []
+
+    for chunk in chunks_rust:
+        for line in chunk.splitlines():
+            s = line.strip()
+            if s.startswith("use ") and s.endswith(";"):
+                uses.add(s)
+            else:
+                bodies.append(line)
+
+    sorted_uses = sorted(list(uses))
+    assembled = "\n".join(sorted_uses) + "\n\n" + "\n".join(bodies)
+    return assembled.strip()
+
+def translate_large_file_chunked(source_file: Path, target_crate: str, lifetimes: Dict) -> Optional[str]:
+    """Automated struct/function chunker for large files exceeding FoundationModels 4K context."""
+    module_name = source_file.stem
+    preamble, chunks = chunk_c_cpp_file(source_file, max_lines=160)
+    total_chunks = len(chunks)
+
+    if total_chunks <= 1:
+        # Fall back to single-shot if not divisible
+        return None
+
+    print(f"  {CYAN}[⚡ Chunker]{RESET} File has {sum(len(c.splitlines()) for c in chunks)} lines → Split into {total_chunks} function/struct chunks")
+    translated_chunks = []
+
+    relevant_lifetimes = []
+    for struct_name, entries in lifetimes.items():
+        if struct_name.lower() in source_file.name.lower():
+            relevant_lifetimes.extend(entries)
+
+    system_prompt = build_system_prompt(target_crate, relevant_lifetimes)
+
+    tmp_dir = ROOT_DIR / "target" / "chunks"
+    tmp_dir.mkdir(parents=True, exist_ok=True)
+
+    for i, chunk in enumerate(chunks, start=1):
+        chunk_file = tmp_dir / f"{module_name}_part_{i}.cpp"
+        # Prepend preamble for type context
+        chunk_file.write_text(f"// File Preamble Context\n{preamble}\n\n// Target Chunk {i}/{total_chunks}\n{chunk}\n")
+
+        user_prompt = (
+            f"Mechanically convert Part {i}/{total_chunks} of {source_file.name} into safe Rust for crate '{target_crate}'. "
+            f"Only translate the functions and structs in this chunk. Output only pure Rust code without commentary."
+        )
+
+        cmd = [
+            str(APFEL_BIN),
+            "--code",
+            "--temperature", "0",
+            "--max-tokens", "2048",
+            "-s", system_prompt,
+            "-f", str(chunk_file),
+            user_prompt
+        ]
+
+        rc, stdout, stderr = run_with_live_spinner(cmd, f"Chunk {i}/{total_chunks} ({len(chunk.splitlines())} lines)...", timeout=90)
+        if chunk_file.exists():
+            chunk_file.unlink()
+
+        if rc == 0 and stdout.strip():
+            translated_chunks.append(stdout.strip())
+        else:
+            print(f"  {RED}[!] Chunk {i}/{total_chunks} failed translation.{RESET}")
+            return None
+
+    assembled_rust = combine_rust_chunks(translated_chunks)
+    print(f"  {GREEN}[✓ Chunker]{RESET} Successfully assembled {total_chunks} chunks into {module_name}.rs")
+    return assembled_rust
 
 def translate_file_with_apfel(source_file: Path, target_crate: str, lifetimes: Dict) -> Optional[str]:
     """Invokes on-device Apple Intelligence FoundationModels via apfel-rs with live progress."""
     module_name = source_file.stem
+    try:
+        file_bytes = source_file.stat().st_size
+        file_lines = sum(1 for _ in open(source_file, "r", errors="ignore"))
+    except Exception:
+        file_bytes, file_lines = 0, 0
+
+    # Automated Chunker: files > 250 lines get split by function/struct to avoid 4K context limits
+    if file_lines > 250:
+        chunked_result = translate_large_file_chunked(source_file, target_crate, lifetimes)
+        if chunked_result:
+            return chunked_result
+        print(f"  {YELLOW}[!] Chunker fallback: attempting single-shot...{RESET}")
+
     relevant_lifetimes = []
     for struct_name, entries in lifetimes.items():
         if struct_name.lower() in source_file.name.lower():
@@ -266,11 +385,6 @@ def translate_file_with_apfel(source_file: Path, target_crate: str, lifetimes: D
     t0 = time.time()
     rc, stdout, stderr = run_with_live_spinner(cmd, f"Translating {source_file.name} with apfel-rs...", timeout=120)
     dur = round(time.time() - t0, 2)
-    try:
-        file_bytes = source_file.stat().st_size
-        file_lines = sum(1 for _ in open(source_file, "r", errors="ignore"))
-    except Exception:
-        file_bytes, file_lines = 0, 0
 
     log_apfel_telemetry({
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
