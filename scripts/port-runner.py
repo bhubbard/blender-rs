@@ -29,6 +29,26 @@ UPSTREAM_DIR = ROOT_DIR / "upstream" / "source" / "blender"
 PROGRESS_FILE = ROOT_DIR / "PORTING_PROGRESS.json"
 LIFETIMES_FILE = ROOT_DIR / "LIFETIMES.tsv"
 PORTING_GUIDE = ROOT_DIR / "PORTING.md"
+TELEMETRY_DIR = ROOT_DIR / "telemetry"
+TELEMETRY_DIR.mkdir(parents=True, exist_ok=True)
+APFEL_TELEMETRY_FILE = TELEMETRY_DIR / "apfel_telemetry.jsonl"
+ZEV_TELEMETRY_FILE = TELEMETRY_DIR / "zev_routing_telemetry.jsonl"
+
+def log_apfel_telemetry(record: dict):
+    """Appends structured interaction telemetry for improving apfel-rs."""
+    try:
+        with open(APFEL_TELEMETRY_FILE, "a") as f:
+            f.write(json.dumps(record) + "\n")
+    except Exception:
+        pass
+
+def log_zev_telemetry(record: dict):
+    """Appends structured classification record compatible with zev_benchmarks dataset."""
+    try:
+        with open(ZEV_TELEMETRY_FILE, "a") as f:
+            f.write(json.dumps(record) + "\n")
+    except Exception:
+        pass
 
 # Executable paths
 ZEV_BIN = Path(os.environ.get("ZEV_BIN", "/Users/bhubbard/PROJECTS/zev-rs/target/release/zev"))
@@ -128,6 +148,7 @@ def route_file_with_zev(file_path: Path) -> Tuple[str, float]:
     state_text = f"Path: {file_path.name}\nContext: {''.join(sample)[:500]}"
     routes_json = json.dumps(ROUTES)
 
+    t0 = time.time()
     cmd = [
         str(ZEV_BIN), "route",
         "--state", state_text,
@@ -136,7 +157,18 @@ def route_file_with_zev(file_path: Path) -> Tuple[str, float]:
     try:
         proc = subprocess.run(cmd, capture_output=True, text=True, check=True)
         res = json.loads(proc.stdout)
-        return res.get("destination", "skip"), res.get("probability", 0.0)
+        dest = res.get("destination", "skip")
+        prob = res.get("probability", 0.0)
+        latency_us = int((time.time() - t0) * 1_000_000)
+        log_zev_telemetry({
+            "task": "codebase_module_routing",
+            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "source_file": str(file_path.relative_to(ROOT_DIR)),
+            "predicted_destination": dest,
+            "confidence": prob,
+            "latency_us": latency_us,
+        })
+        return dest, prob
     except Exception as e:
         rel = str(file_path)
         if "bmesh" in rel:
@@ -231,7 +263,27 @@ def translate_file_with_apfel(source_file: Path, target_crate: str, lifetimes: D
         user_prompt
     ]
 
+    t0 = time.time()
     rc, stdout, stderr = run_with_live_spinner(cmd, f"Translating {source_file.name} with apfel-rs...", timeout=120)
+    dur = round(time.time() - t0, 2)
+    try:
+        file_bytes = source_file.stat().st_size
+        file_lines = sum(1 for _ in open(source_file, "r", errors="ignore"))
+    except Exception:
+        file_bytes, file_lines = 0, 0
+
+    log_apfel_telemetry({
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "source_file": str(source_file.relative_to(ROOT_DIR)),
+        "file_lines": file_lines,
+        "file_bytes": file_bytes,
+        "target_crate": target_crate,
+        "exit_code": rc,
+        "duration_s": dur,
+        "stdout_len": len(stdout) if stdout else 0,
+        "stderr": stderr[:300] if stderr else "",
+        "success": (rc == 0 and bool(stdout.strip()))
+    })
     if rc == 0 and stdout.strip():
         return stdout.strip()
     return None
