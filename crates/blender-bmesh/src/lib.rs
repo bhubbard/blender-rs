@@ -511,3 +511,30 @@ pub mod bmesh_marking;
 
 
 pub mod BLI_expr_pylike_eval;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod bmesh_mesh_normals;
