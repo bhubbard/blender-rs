@@ -405,3 +405,5 @@ pub mod NOD_partial_eval;
 
 
 pub mod NOD_socket_items;
+
+pub mod NOD_string_pattern;
