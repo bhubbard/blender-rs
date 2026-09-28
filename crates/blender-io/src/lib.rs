@@ -399,3 +399,6 @@ pub mod BKE_callbacks;
 
 
 pub mod NOD_nested_node_id;
+
+
+pub mod NOD_partial_eval;
