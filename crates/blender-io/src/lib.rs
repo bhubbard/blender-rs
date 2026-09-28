@@ -407,3 +407,16 @@ pub mod NOD_partial_eval;
 pub mod NOD_socket_items;
 
 pub mod NOD_string_pattern;
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod eevee_depth_of_field;
