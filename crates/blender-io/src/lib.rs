@@ -370,3 +370,7 @@ pub mod GEO_uv_parametrizer;
 
 
 pub mod BKE_autoexec;
+
+
+
+pub mod BKE_callbacks;
