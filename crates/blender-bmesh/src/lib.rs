@@ -496,3 +496,6 @@ pub mod bmesh_core;
 
 
 pub mod bmesh_edgeloop;
+
+
+pub mod bmesh_interp;
