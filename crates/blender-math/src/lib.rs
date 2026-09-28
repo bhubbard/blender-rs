@@ -1,5 +1,8 @@
 //! Fast vector, matrix, quaternion, and geometric routines mirroring Blender's `BLI_math_*`.
 
+pub type float2 = glam::Vec2;
+pub type float3 = glam::Vec3;
+pub type float4 = glam::Vec4;
 pub use glam::{vec2, vec3, vec4, Mat3, Mat4, Quat, Vec2, Vec3, Vec4};
 
 /// Tolerance used across Blender's geometric operations.
@@ -185,3 +188,75 @@ mod tests {
         assert_eq!(b.center(), Vec2::new(2.0, 3.0));
     }
 }
+
+
+
+
+
+pub mod BLI_generic_vector_array;
+
+
+
+
+
+
+
+
+
+pub mod eevee_material_shared;
+
+
+
+
+
+pub mod VecMat;
+
+pub mod BPy_FrsMaterial;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod GPU_matrix;
+
+
+
+pub mod gpu_shader_math_angle_bsl;
+
+pub mod gpu_shader_math_axis_angle_bsl;
+
+pub mod gpu_shader_math_euler_bsl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

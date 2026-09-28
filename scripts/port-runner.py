@@ -50,9 +50,12 @@ def log_zev_telemetry(record: dict):
     except Exception:
         pass
 
+import shutil
+
 # Executable paths
-ZEV_BIN = Path(os.environ.get("ZEV_BIN", "/Users/bhubbard/PROJECTS/zev-rs/target/release/zev"))
-APFEL_BIN = Path(os.environ.get("APFEL_BIN", "/Users/bhubbard/PROJECTS/apfel-rs/target/release/apfel"))
+ZEV_BIN = Path(os.environ.get("ZEV_BIN", shutil.which("zev") or "/Users/bhubbard/.cargo/bin/zev"))
+APFEL_BIN = Path(os.environ.get("APFEL_BIN", shutil.which("apfel") or "/Users/bhubbard/.cargo/bin/apfel"))
+APFEL_TRANSPILE_BIN = Path(os.environ.get("APFEL_TRANSPILE_BIN", shutil.which("apfel-transpile") or "/Users/bhubbard/.cargo/bin/apfel-transpile"))
 
 # Terminal colors
 RESET = "\033[0m"
@@ -236,8 +239,9 @@ def run_with_live_spinner(cmd: List[str], label: str, timeout: int = 120) -> Tup
     else:
         sys.stdout.write(f"\r  {RED}✗{RESET} {label} {DIM}({elapsed:4.1f}s){RESET}\n")
     sys.stdout.flush()
+    return rc, result_holder.get("stdout", ""), result_holder.get("stderr", "")
 
-def chunk_c_cpp_file(source_file: Path, max_lines: int = 160) -> Tuple[str, List[str]]:
+def chunk_c_cpp_file(source_file: Path, max_lines: int = 75) -> Tuple[str, List[str]]:
     """Splits a C/C++ file into function and struct bounded chunks with common preamble."""
     lines = source_file.read_text(errors='ignore').splitlines()
     preamble = []
@@ -291,14 +295,14 @@ def combine_rust_chunks(chunks_rust: List[str]) -> str:
 def translate_large_file_chunked(source_file: Path, target_crate: str, lifetimes: Dict) -> Optional[str]:
     """Automated struct/function chunker for large files exceeding FoundationModels 4K context."""
     module_name = source_file.stem
-    preamble, chunks = chunk_c_cpp_file(source_file, max_lines=160)
+    preamble, chunks = chunk_c_cpp_file(source_file, max_lines=75)
     total_chunks = len(chunks)
 
     if total_chunks <= 1:
         # Fall back to single-shot if not divisible
         return None
 
-    print(f"  {CYAN}[⚡ Chunker]{RESET} File has {sum(len(c.splitlines()) for c in chunks)} lines → Split into {total_chunks} function/struct chunks")
+    print(f"  {CYAN}[⚡ Chunker]{RESET} File has {sum(len(c.splitlines()) for c in chunks)} lines → Split into {total_chunks} function/struct chunks (≤75 lines/ea)")
     translated_chunks = []
 
     relevant_lifetimes = []
@@ -324,6 +328,9 @@ def translate_large_file_chunked(source_file: Path, target_crate: str, lifetimes
         cmd = [
             str(APFEL_BIN),
             "--code",
+            "--auto-continue",
+            "--permissive",
+            "--telemetry", str(TELEMETRY_DIR / "apfel_engine_telemetry.jsonl"),
             "--temperature", "0",
             "--max-tokens", "2048",
             "-s", system_prompt,
@@ -345,21 +352,26 @@ def translate_large_file_chunked(source_file: Path, target_crate: str, lifetimes
     print(f"  {GREEN}[✓ Chunker]{RESET} Successfully assembled {total_chunks} chunks into {module_name}.rs")
     return assembled_rust
 
+def extract_code_fence(text: str) -> str:
+    """Extracts code block from markdown fences if present."""
+    if "```" in text:
+        parts = text.split("```")
+        if len(parts) >= 3:
+            block = parts[1]
+            lines = block.splitlines()
+            if lines and lines[0].strip().lower() in ("rust", "rs", "c", "cpp"):
+                return "\n".join(lines[1:]).strip()
+            return block.strip()
+    return text.strip()
+
 def translate_file_with_apfel(source_file: Path, target_crate: str, lifetimes: Dict) -> Optional[str]:
-    """Invokes on-device Apple Intelligence FoundationModels via apfel-rs with live progress."""
-    module_name = source_file.stem
+    """Invokes on-device Apple Intelligence FoundationModels via apfel-transpile with live progress."""
+    module_name = source_file.stem.replace(".", "_")
     try:
         file_bytes = source_file.stat().st_size
         file_lines = sum(1 for _ in open(source_file, "r", errors="ignore"))
     except Exception:
         file_bytes, file_lines = 0, 0
-
-    # Automated Chunker: files > 250 lines get split by function/struct to avoid 4K context limits
-    if file_lines > 250:
-        chunked_result = translate_large_file_chunked(source_file, target_crate, lifetimes)
-        if chunked_result:
-            return chunked_result
-        print(f"  {YELLOW}[!] Chunker fallback: attempting single-shot...{RESET}")
 
     relevant_lifetimes = []
     for struct_name, entries in lifetimes.items():
@@ -367,23 +379,22 @@ def translate_file_with_apfel(source_file: Path, target_crate: str, lifetimes: D
             relevant_lifetimes.extend(entries)
 
     system_prompt = build_system_prompt(target_crate, relevant_lifetimes)
-    user_prompt = (
-        f"Mechanically convert this C/C++ file into safe Rust for crate '{target_crate}'. "
-        f"Target module name: {module_name}.rs"
-    )
 
     cmd = [
-        str(APFEL_BIN),
-        "--code",
+        str(APFEL_TRANSPILE_BIN),
+        "-f", str(source_file),
+        "-t", target_crate,
+        "-m", module_name,
+        "--chunk-lines", "75",
+        "--auto-continue",
+        "-s", system_prompt,
+        "--telemetry", str(TELEMETRY_DIR / "apfel_engine_telemetry.jsonl"),
         "--temperature", "0",
         "--max-tokens", "2048",
-        "-s", system_prompt,
-        "-f", str(source_file),
-        user_prompt
     ]
 
     t0 = time.time()
-    rc, stdout, stderr = run_with_live_spinner(cmd, f"Translating {source_file.name} with apfel-rs...", timeout=120)
+    rc, stdout, stderr = run_with_live_spinner(cmd, f"Transpiling {source_file.name} with apfel-transpile...", timeout=180)
     dur = round(time.time() - t0, 2)
 
     log_apfel_telemetry({
@@ -432,22 +443,24 @@ def verify_and_fix(target_crate: str, module_path: Path, max_attempts: int = 3) 
         error_context = "\n".join(errors[:5])
         fix_prompt = (
             f"Fix the following Rust compiler errors in this module:\n\n{error_context}\n\n"
-            "Output the complete fixed Rust module only."
+            "Output the complete fixed Rust module only inside markdown fences."
         )
 
         fix_cmd = [
             str(APFEL_BIN),
-            "--code",
+            "--permissive",
+            "--telemetry", str(TELEMETRY_DIR / "apfel_engine_telemetry.jsonl"),
             "--temperature", "0",
             "--max-tokens", "2048",
-            "-s", "You are an expert Rust compiler debugger. Fix the compilation errors precisely.",
+            "-s", "You are an expert Rust compiler debugger. Fix the compilation errors precisely. Output ONLY the fixed Rust module inside markdown fences.",
             "-f", str(module_path),
             fix_prompt
         ]
         rc, stdout, _ = run_with_live_spinner(fix_cmd, f"Compiler repair pass {attempt}/{max_attempts}...", timeout=90)
         if rc == 0 and stdout.strip():
+            fixed_code = extract_code_fence(stdout.strip())
             with open(module_path, "w") as f:
-                f.write(stdout.strip() + "\n")
+                f.write(fixed_code + "\n")
         else:
             break
 
@@ -564,12 +577,15 @@ def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = Fal
                 "crate": dest_crate,
                 "module": f"{module_name}.rs"
             }
+            progress.get("failed", {}).pop(rel_str, None)
+            save_progress(progress)
         else:
             # Revert from lib.rs so the trunk stays compiling
             unregister_module_in_crate(dest_crate, module_name)
             if target_file.exists():
                 target_file.unlink()
             progress["failed"][rel_str] = "compiler_burndown_exceeded"
+            save_progress(progress)
             print(f"  {RED}[✗] Rolled back uncompiling {module_name}.rs (keeps crate green){RESET}")
 
         save_progress(progress)
