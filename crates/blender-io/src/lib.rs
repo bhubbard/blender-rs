@@ -364,3 +364,9 @@ pub mod GEO_set_curve_type;
 
 
 pub mod GEO_uv_parametrizer;
+
+
+
+
+
+pub mod BKE_autoexec;
