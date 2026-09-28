@@ -480,3 +480,11 @@ pub mod wm_gesture;
 
 
 pub mod BLI_delaunay_2d;
+
+
+
+
+
+
+
+pub mod obj_export_file_writer;
