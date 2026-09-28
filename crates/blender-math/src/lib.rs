@@ -269,3 +269,6 @@ pub mod GEO_transform;
 
 
 pub mod GEO_xpbd_constraint_align_rotations;
+
+
+pub mod GEO_xpbd_constraint_rod_stretch_shear;
