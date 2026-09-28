@@ -481,3 +481,14 @@ mod tests {
 
 
 pub mod BKE_editmesh;
+
+
+
+
+
+
+
+
+
+
+pub mod bmesh_core;
