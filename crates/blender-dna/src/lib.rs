@@ -886,3 +886,5 @@ pub mod NOD_geo_index_switch;
 pub mod NOD_geo_menu_switch;
 
 pub mod NOD_geo_rasterize_points;
+
+pub mod NOD_geo_repeat;
