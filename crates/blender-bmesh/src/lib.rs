@@ -538,3 +538,6 @@ pub mod BLI_expr_pylike_eval;
 
 
 pub mod bmesh_mesh_normals;
+
+
+pub mod bmesh_mesh_partial_update;
