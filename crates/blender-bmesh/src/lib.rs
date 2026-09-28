@@ -509,3 +509,5 @@ pub mod bmesh_marking;
 
 
 
+
+pub mod BLI_expr_pylike_eval;
