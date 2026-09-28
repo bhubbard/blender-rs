@@ -1,5 +1,7 @@
 //! Auto-transpiled C/C++ header module: DNA_gpencil_legacy_types
 
+use crate::DNA_brush_types::ID;
+
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
 pub struct bGPDspoint {
@@ -16,9 +18,15 @@ pub struct bGPDtriangle {
 }
 
 #[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct bGPDpalettecolor {
     pub info: [i8; 64],
+}
+
+impl Default for bGPDpalettecolor {
+    fn default() -> Self {
+        Self { info: [0; 64] }
+    }
 }
 
 #[repr(C)]
@@ -40,7 +48,7 @@ pub struct bGPDcurve {
 }
 
 #[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct bGPDstroke_Runtime {
     pub tmp_layerinfo: [i8; 128],
     pub multi_frame_falloff: f32,
@@ -48,6 +56,19 @@ pub struct bGPDstroke_Runtime {
     pub fill_start: i32,
     pub vertex_start: i32,
     pub curve_start: i32,
+}
+
+impl Default for bGPDstroke_Runtime {
+    fn default() -> Self {
+        Self {
+            tmp_layerinfo: [0; 128],
+            multi_frame_falloff: 0.0,
+            stroke_start: 0,
+            fill_start: 0,
+            vertex_start: 0,
+            curve_start: 0,
+        }
+    }
 }
 
 #[repr(C)]
@@ -72,9 +93,17 @@ pub struct bGPDframe {
 }
 
 #[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct bGPDlayer_Mask {
     pub name: [i8; 128],
+}
+
+impl Default for bGPDlayer_Mask {
+    fn default() -> Self {
+        Self {
+            name: [0; 128],
+        }
+    }
 }
 
 #[repr(C)]
@@ -158,7 +187,7 @@ pub enum eGPDstroke_Flag {
     GP_STROKE_USE_ARROW_START = (1 << 12),
     GP_STROKE_USE_ARROW_END = (1 << 13),
     GP_STROKE_TAG = (1 << 14),
-    GP_STROKE_ERASER = static_cast<short>(1 << 15),
+    GP_STROKE_ERASER = (1 << 15),
 }
 
 #[repr(C)]
@@ -208,9 +237,9 @@ pub enum eGPDlayer_Flag {
     GP_LAYER_VOLUMETRIC = (1 << 10),
     GP_LAYER_USE_LIGHTS = (1 << 11),
     GP_LAYER_UNLOCK_COLOR = (1 << 12),
-    GP_LAYER_USE_MASK = (1 << 13), /* TODO: DEPRECATED */,
+    GP_LAYER_USE_MASK = (1 << 13), /* TODO: DEPRECATED */
     GP_LAYER_IS_RULER = (1 << 14),
-    GP_LAYER_DISABLE_MASKS_IN_VIEWLAYER = static_cast<short>(1 << 15),
+    GP_LAYER_DISABLE_MASKS_IN_VIEWLAYER = (1 << 15),
 }
 
 #[repr(C)]
