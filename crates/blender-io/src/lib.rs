@@ -402,3 +402,6 @@ pub mod NOD_nested_node_id;
 
 
 pub mod NOD_partial_eval;
+
+
+pub mod NOD_socket_items;
