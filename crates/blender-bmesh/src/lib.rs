@@ -492,3 +492,7 @@ pub mod BKE_editmesh;
 
 
 pub mod bmesh_core;
+
+
+
+pub mod bmesh_edgeloop;
