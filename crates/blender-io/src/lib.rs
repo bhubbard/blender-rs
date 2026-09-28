@@ -488,3 +488,8 @@ pub mod BLI_delaunay_2d;
 
 
 pub mod obj_export_file_writer;
+
+
+
+
+pub mod obj_export_mtl;
