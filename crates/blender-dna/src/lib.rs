@@ -969,3 +969,15 @@ pub mod DNA_gpencil_legacy_types;
 
 
 pub mod DNA_gpu_types;
+
+
+
+
+
+
+
+
+
+
+
+pub mod DNA_nla_types;
