@@ -444,3 +444,11 @@ pub mod eevee_motion_blur_shared;
 
 
 pub mod wm_gizmo_group;
+
+
+
+
+
+
+
+pub mod wm_gesture;
