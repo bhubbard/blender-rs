@@ -809,3 +809,5 @@ pub mod DNA_attribute_types;
 
 
 pub mod BKE_bvh;
+
+pub mod BKE_bvhutils;
