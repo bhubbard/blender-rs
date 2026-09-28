@@ -592,3 +592,10 @@ pub mod obj_export_mtl;
 
 
 pub mod eevee_lightprobe_shared;
+
+
+
+
+
+
+pub mod eevee_raytrace;
