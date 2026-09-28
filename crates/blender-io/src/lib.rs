@@ -485,12 +485,10 @@ pub mod BLI_delaunay_2d;
 
 
 
-pub mod obj_export_file_writer;
 
 
 
 
-pub mod obj_export_mtl;
 
 
 
@@ -641,3 +639,80 @@ pub mod BLI_color_types;
 
 
 pub mod BLI_csv_parse;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod BKE_id_hash;
