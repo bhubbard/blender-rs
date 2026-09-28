@@ -541,3 +541,5 @@ pub mod bmesh_mesh_normals;
 
 
 pub mod bmesh_mesh_partial_update;
+
+pub mod bmesh_mesh_tessellate;
