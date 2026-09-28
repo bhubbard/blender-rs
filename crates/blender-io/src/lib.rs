@@ -420,3 +420,7 @@ pub mod NOD_string_pattern;
 
 
 pub mod eevee_depth_of_field;
+
+
+
+pub mod eevee_gbuffer;
