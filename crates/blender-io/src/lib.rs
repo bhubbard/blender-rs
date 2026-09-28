@@ -941,3 +941,10 @@ pub mod bake;
 
 
 pub mod DNA_lineart_types;
+
+
+
+
+
+
+pub mod BLI_atomic_disjoint_set;
