@@ -599,3 +599,38 @@ pub mod eevee_lightprobe_shared;
 
 
 pub mod eevee_raytrace;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod BLI_color_types;
