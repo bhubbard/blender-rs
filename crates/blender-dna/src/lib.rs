@@ -912,3 +912,5 @@ pub mod DNA_defs;
 pub mod DNA_documentation;
 
 pub mod DNA_freestyle_types;
+
+pub mod DNA_genfile;
