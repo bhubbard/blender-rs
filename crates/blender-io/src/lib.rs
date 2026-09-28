@@ -718,3 +718,26 @@ pub mod BLI_csv_parse;
 pub mod BKE_id_hash;
 
 pub mod BKE_image_save;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod bake;
