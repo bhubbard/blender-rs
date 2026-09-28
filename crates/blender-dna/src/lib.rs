@@ -910,3 +910,5 @@ pub mod NOD_geo_viewer;
 pub mod DNA_defs;
 
 pub mod DNA_documentation;
+
+pub mod DNA_freestyle_types;
