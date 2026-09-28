@@ -1,4 +1,18 @@
-//! Auto-transpiled C/C++ header module: DNA_brush_types
+pub type eGP_FillLayerModes = i32;
+pub type eBrushFlags = i32;
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct ID {
+    pub name: [u8; 32],
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct MTex {
+    pub texco: i16,
+    pub mapto: i16,
+}
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
