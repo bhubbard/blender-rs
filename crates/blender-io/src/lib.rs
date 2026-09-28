@@ -419,7 +419,6 @@ pub mod NOD_string_pattern;
 
 
 
-pub mod eevee_depth_of_field;
 
 
 
@@ -430,7 +429,6 @@ pub mod eevee_gbuffer;
 
 
 
-pub mod eevee_lightprobe;
 
 
 
@@ -493,3 +491,104 @@ pub mod obj_export_file_writer;
 
 
 pub mod obj_export_mtl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod eevee_lightprobe_shared;
