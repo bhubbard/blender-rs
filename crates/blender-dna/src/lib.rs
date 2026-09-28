@@ -890,3 +890,5 @@ pub mod NOD_geo_rasterize_points;
 pub mod NOD_geo_repeat;
 
 pub mod NOD_geo_simulation;
+
+pub mod NOD_geo_viewer;
