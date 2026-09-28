@@ -2,18 +2,6 @@
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
-pub struct TessellationUserTLS {
-
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct PartialTessellationUserData {
-
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct PartialTessellationUserTLS {
-
+pub struct BMeshCalcTessellation_Params {
+    pub face_normals: bool,
 }
