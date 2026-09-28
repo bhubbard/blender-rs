@@ -2,13 +2,6 @@
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
-pub struct BMEdgeLoopStore {
-    pub flag: i32,
-    pub len: i32,
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct VertStep {
-
+pub struct BMEdgeLoopFind_Params {
+    pub use_vert_junction: bool,
 }
