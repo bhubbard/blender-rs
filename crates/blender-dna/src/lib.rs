@@ -914,3 +914,5 @@ pub mod DNA_documentation;
 pub mod DNA_freestyle_types;
 
 pub mod DNA_genfile;
+
+pub mod DNA_gpencil_legacy_types;
