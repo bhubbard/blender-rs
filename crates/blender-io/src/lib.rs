@@ -431,3 +431,8 @@ pub mod eevee_gbuffer;
 
 
 pub mod eevee_lightprobe;
+
+
+
+
+pub mod eevee_material_shared;
