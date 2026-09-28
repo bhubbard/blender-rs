@@ -981,3 +981,6 @@ pub mod DNA_gpu_types;
 
 
 pub mod DNA_nla_types;
+
+
+pub mod DNA_object_enums;
