@@ -436,3 +436,6 @@ pub mod eevee_lightprobe;
 
 
 pub mod eevee_material_shared;
+
+
+pub mod eevee_motion_blur_shared;
