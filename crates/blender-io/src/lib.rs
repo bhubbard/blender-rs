@@ -1286,3 +1286,6 @@ pub mod BLI_gsqueue;
 
 
 pub mod obj_export_nurbs;
+
+
+pub mod obj_exporter;
