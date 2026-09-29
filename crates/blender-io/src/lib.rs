@@ -1509,3 +1509,5 @@ pub mod node_composite_util;
 
 
 pub mod BLI_heap_simple;
+
+pub mod BLI_index_range;
