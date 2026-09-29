@@ -1475,3 +1475,6 @@ pub mod BKE_node_legacy_types;
 
 
 pub mod BKE_object_deform;
+
+
+pub mod ANIM_driver;
