@@ -407,3 +407,15 @@ pub mod node_geo_input_mesh_edge_vertices;
 pub mod bmesh;
 pub mod ANIM_bone_collections;
 pub mod bmesh_class;
+pub use bmesh_class::{
+    BMElem, BMElemF, BMFlagLayer, BMDiskLink, BMVert_OFlag, BMEdge_OFlag, BMFace_OFlag,
+    BMLoopList, BMLoopNorEditData, BMLoopNorEditDataArray,
+    BM_VERT, BM_EDGE, BM_LOOP, BM_FACE,
+    BM_ELEM_SELECT, BM_ELEM_HIDDEN, BM_ELEM_SEAM, BM_ELEM_SMOOTH,
+    BM_ELEM_TAG, BM_ELEM_SELECT_UV, BM_ELEM_TAG_ALT, BM_ELEM_INTERNAL_TAG,
+};
+
+
+
+
+pub mod bmesh_delete;

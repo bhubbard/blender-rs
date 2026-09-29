@@ -183,12 +183,14 @@ def route_file_with_zev(file_path: Path) -> Tuple[str, float]:
 
 def build_system_prompt(target_crate: str, relevant_lifetimes: List[Dict]) -> str:
     prompt = (
-        "You are an expert systems engineer porting Blender C/C++ to Safe Rust.\n"
+        f"You are an expert systems engineer porting Blender C/C++ to Safe Rust for crate '{target_crate}'.\n"
         "Guidelines:\n"
         "1. Produce 100% safe, compiling Rust code. Do not use raw pointers unless strictly necessary.\n"
-        "2. Replace C self-referential pointer webs with generational handles (Handle<T>) or slot indices.\n"
-        "3. Map errors to `Result<T, BMeshError>` or `Option<T>`.\n"
-        "4. Output ONLY the pure Rust code module. Do not include markdown preamble or conversational text.\n"
+        f"2. IMPORTANT: This module resides INSIDE crate '{target_crate}'. Do NOT write `use {target_crate}::...` or `use bmesh::...`. All local types (BMVert, BMEdge, BMFace, BMesh, etc.) are available via `use crate::*;`.\n"
+        "3. Replace C self-referential pointer webs with generational handles (Handle<T>) or slot indices.\n"
+        "4. For null pointers use `core::ptr::null()` / `core::ptr::null_mut()`, or prefer `Option<T>` / `None`.\n"
+        "5. Map errors to `Result<T, BMeshError>` or `Option<T>`.\n"
+        "6. Output ONLY the pure Rust code module. Do not include markdown preamble or conversational text.\n"
     )
     if relevant_lifetimes:
         prompt += "\nEnforced Ownership Mappings (from LIFETIMES.tsv):\n"
@@ -285,7 +287,16 @@ def combine_rust_chunks(chunks_rust: List[str]) -> str:
         for line in chunk.splitlines():
             s = line.strip()
             if s.startswith("use ") and s.endswith(";"):
+                if s.startswith("use bmesh::core::"):
+                    s = "use crate::" + s[len("use bmesh::core::"):]
+                elif s.startswith("use bmesh::"):
+                    s = "use crate::" + s[len("use bmesh::"):]
+                elif s.startswith("use blender_bmesh::"):
+                    s = "use crate::" + s[len("use blender_bmesh::"):]
                 uses.add(s)
+            elif s == "use" or (s.startswith("use ") and not s.endswith(";")):
+                # Drop truncated or incomplete use statement fragments
+                continue
             else:
                 bodies.append(line)
 
@@ -393,7 +404,8 @@ def translate_file_with_apfel(source_file: Path, target_crate: str, lifetimes: D
     ]
 
     t0 = time.time()
-    rc, stdout, stderr = run_with_live_spinner(cmd, f"Transpiling {source_file.name} with apfel-transpile...", timeout=180)
+    dur_timeout = max(180, int(file_lines * 0.4) + 60)
+    rc, stdout, stderr = run_with_live_spinner(cmd, f"Transpiling {source_file.name} with apfel-transpile...", timeout=dur_timeout)
     dur = round(time.time() - t0, 2)
 
     log_apfel_telemetry({

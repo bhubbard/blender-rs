@@ -1,7 +1,7 @@
 //! Auto-transpiled C/C++ header module: bmesh_class
 
-use crate::*;
 use core::ffi::c_void;
+use crate::*;
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
@@ -159,3 +159,21 @@ pub struct BMLoopNorEditDataArray {
     pub cd_custom_normal_offset: i32,
     pub totloop: i32,
 }
+
+pub const BM_VERT: i32 = 1;
+pub const BM_EDGE: i32 = 2;
+pub const BM_LOOP: i32 = 4;
+pub const BM_FACE: i32 = 8;
+
+pub const BM_SPACEARR_DIRTY: i32 = 1 << 0;
+pub const BM_SPACEARR_DIRTY_ALL: i32 = 1 << 1;
+pub const BM_SPACEARR_BMO_SET: i32 = 1 << 2;
+
+pub const BM_ELEM_SELECT: i32 = (1 << 0);
+pub const BM_ELEM_HIDDEN: i32 = (1 << 1);
+pub const BM_ELEM_SEAM: i32 = (1 << 2);
+pub const BM_ELEM_SMOOTH: i32 = (1 << 3);
+pub const BM_ELEM_TAG: i32 = (1 << 4);
+pub const BM_ELEM_SELECT_UV: i32 = (1 << 5);
+pub const BM_ELEM_TAG_ALT: i32 = (1 << 6);
+pub const BM_ELEM_INTERNAL_TAG: i32 = (1 << 7);
