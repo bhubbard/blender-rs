@@ -114,11 +114,10 @@ _marker: core::marker::PhantomData,
 }
 }
 }
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct BLI_mempool {
-pub _opaque: [u8; 0],
-}
+pub use blender_mem::BLI_mempool::BLI_mempool;
+pub use blender_mem::BLI_mempool::BLI_mempool_chunk;
+pub use blender_mem::BLI_mempool::BLI_mempool_iter;
+pub use blender_mem::{GHash, GHashIterator, GHashIterState, GSet, Entry, GHashPair};
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
 pub struct MLoopNorSpaceArray {
@@ -418,4 +417,20 @@ pub use bmesh_class::{
 
 
 
-pub mod bmesh_delete;
+
+
+pub mod bmesh_iterators;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
