@@ -653,11 +653,9 @@ def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = Fal
             save_progress(progress)
         else:
             # Revert from lib.rs and restore or delete file so trunk stays green
-            if existing_content is not None:
+            if existing_content is not None and already_registered:
                 with open(target_file, "w") as f:
                     f.write(existing_content)
-                if not already_registered:
-                    unregister_module_in_crate(dest_crate, module_name)
             else:
                 unregister_module_in_crate(dest_crate, module_name)
                 if target_file.exists():

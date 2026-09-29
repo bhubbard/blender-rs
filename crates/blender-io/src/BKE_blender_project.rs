@@ -11,9 +11,9 @@ pub struct Main {
 #[repr(i32)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum ProjectVariableType {
-    STRING = eIDPropertyType::IDP_STRING,
-    INT = eIDPropertyType::IDP_INT,
-    FLOAT = eIDPropertyType::IDP_FLOAT,
+    STRING = 0,
+    INT = 1,
+    FLOAT = 2,
 }
 
 impl Default for ProjectVariableType {

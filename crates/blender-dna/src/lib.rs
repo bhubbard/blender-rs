@@ -208,3 +208,4 @@ pub mod BKE_mesh_runtime;
 pub mod BKE_mesh_tangent;
 
 pub mod BKE_movieclip;
+
