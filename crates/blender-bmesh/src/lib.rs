@@ -482,3 +482,6 @@ pub mod eevee_shadow_shared;
 
 
 pub mod bmesh_callback_generic;
+
+
+pub mod bmesh_construct;
