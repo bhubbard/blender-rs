@@ -204,3 +204,5 @@ pub mod BKE_mesh_remap;
 pub mod BKE_mesh_remesh_voxel;
 
 pub mod BKE_mesh_runtime;
+
+pub mod BKE_mesh_tangent;
