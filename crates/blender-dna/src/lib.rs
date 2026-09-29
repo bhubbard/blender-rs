@@ -136,3 +136,6 @@ pub mod GEO_mesh_split_edges;
 pub mod GEO_randomize;
 
 pub mod mesh_boolean_intern;
+
+
+pub mod BKE_curve_to_mesh;
