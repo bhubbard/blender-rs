@@ -268,6 +268,10 @@ pub mod gpu_shader_sequencer_scope_bsl;
 pub mod vk_device;
 
 pub mod vk_memory;
+pub mod BLI_mempool;
+pub use BLI_mempool::*;
+pub mod BLI_ghash;
+pub use BLI_ghash::*;
 
 
 
