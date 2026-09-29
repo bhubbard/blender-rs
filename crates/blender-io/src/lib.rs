@@ -1516,3 +1516,39 @@ pub mod BLI_index_range;
 
 
 pub mod BLI_map_slots;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod BKE_compute_contexts;
