@@ -1555,3 +1555,7 @@ pub mod BKE_compute_contexts;
 
 
 pub mod BKE_curveprofile;
+
+
+
+pub mod BKE_pose_backup;
