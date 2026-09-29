@@ -555,6 +555,26 @@
     "upstream/source/blender/bmesh/bmesh_class.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh_class.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_iterators.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_iterators.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_log.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_log.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_mesh.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_mesh.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_mesh_convert.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_mesh_convert.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_operator_api.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_operator_api.rs"
     }
   },
   "skipped": {
@@ -9005,13 +9025,9 @@
     "upstream/source/blender/bmesh/intern/bmesh_inline.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_interp.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_iterators.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_iterators.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_iterators_inline.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_iterators_parallel.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/bmesh/intern/bmesh_log.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_mesh.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_mesh.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/bmesh/intern/bmesh_mesh_convert.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_mesh_debug.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_mesh_debug.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_mesh_duplicate.cc": "compiler_burndown_exceeded",
@@ -9023,7 +9039,6 @@
     "upstream/source/blender/bmesh/intern/bmesh_mods.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/intern/bmesh_mods.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_opdefines.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_operator_api.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_operator_api_inline.hh": "apfel_generation_failed",
     "upstream/source/blender/bmesh/intern/bmesh_operators.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/intern/bmesh_operators.hh": "apfel_generation_failed",

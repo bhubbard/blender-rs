@@ -442,3 +442,6 @@ pub mod bmesh_log;
 pub mod bmesh_mesh;
 
 pub mod bmesh_mesh_convert;
+
+pub mod bmesh_operator_api;
+

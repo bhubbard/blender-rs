@@ -620,6 +620,15 @@ def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = Fal
         module_name = file_path.stem.replace(".", "_")
         target_file = ROOT_DIR / "crates" / dest_crate / "src" / f"{module_name}.rs"
 
+        # Check if the target module already exists and was registered
+        existing_content = None
+        already_registered = False
+        if target_file.exists():
+            existing_content = target_file.read_text()
+            lib_rs = ROOT_DIR / "crates" / dest_crate / "src" / "lib.rs"
+            if lib_rs.exists() and f"pub mod {module_name};" in lib_rs.read_text():
+                already_registered = True
+
         # Generate translation via Apfel (with live spinner)
         rust_code = translate_file_with_apfel(file_path, dest_crate, lifetimes)
         if not rust_code:
@@ -643,10 +652,16 @@ def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = Fal
             progress.get("failed", {}).pop(rel_str, None)
             save_progress(progress)
         else:
-            # Revert from lib.rs so the trunk stays compiling
-            unregister_module_in_crate(dest_crate, module_name)
-            if target_file.exists():
-                target_file.unlink()
+            # Revert from lib.rs and restore or delete file so trunk stays green
+            if existing_content is not None:
+                with open(target_file, "w") as f:
+                    f.write(existing_content)
+                if not already_registered:
+                    unregister_module_in_crate(dest_crate, module_name)
+            else:
+                unregister_module_in_crate(dest_crate, module_name)
+                if target_file.exists():
+                    target_file.unlink()
             progress["failed"][rel_str] = "compiler_burndown_exceeded"
             save_progress(progress)
             print(f"  {RED}[✗] Rolled back uncompiling {module_name}.rs (keeps crate green){RESET}")
