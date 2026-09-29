@@ -1486,3 +1486,5 @@ pub mod ANIM_visualkey;
 
 
 pub mod action_runtime;
+
+pub mod bone_collections_internal;
