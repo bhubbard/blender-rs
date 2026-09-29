@@ -375,3 +375,11 @@ pub mod gpu_shader_math_quaternion_bsl;
 pub mod gpu_shader_cxx_builtin;
 
 pub mod gpu_shader_index_gen_bsl;
+
+
+
+
+
+
+
+pub mod node_item;

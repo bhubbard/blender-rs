@@ -262,3 +262,12 @@ pub mod gpu_query;
 pub mod mtl_texture;
 
 pub mod gpu_shader_sequencer_scope_bsl;
+
+
+
+pub mod vk_device;
+
+pub mod vk_memory;
+
+
+

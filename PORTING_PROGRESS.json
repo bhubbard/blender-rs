@@ -555,6 +555,18 @@
     "upstream/source/blender/gpu/shaders/gpu_shader_sequencer_scope.bsl.hh": {
       "crate": "blender-mem",
       "module": "gpu_shader_sequencer_scope_bsl.rs"
+    },
+    "upstream/source/blender/gpu/vulkan/vk_device.hh": {
+      "crate": "blender-mem",
+      "module": "vk_device.rs"
+    },
+    "upstream/source/blender/gpu/vulkan/vk_memory.hh": {
+      "crate": "blender-mem",
+      "module": "vk_memory.rs"
+    },
+    "upstream/source/blender/nodes/shader/materialx/node_item.h": {
+      "crate": "blender-math",
+      "module": "node_item.rs"
     }
   },
   "skipped": {
@@ -6629,10 +6641,6 @@
     "upstream/source/blender/nodes/shader/materialx/node_item.cc": {
       "reason": "zev_route_skip",
       "confidence": 0.19224952133605627
-    },
-    "upstream/source/blender/nodes/shader/materialx/node_item.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.19168423525186348
     },
     "upstream/source/blender/nodes/shader/materialx/node_parser.cc": {
       "reason": "zev_route_skip",
