@@ -456,3 +456,10 @@ pub mod bmesh_mesh_validate;
 pub mod bmesh_mods;
 
 pub mod bmesh_operator_api_inline;
+
+
+
+
+
+
+pub mod BLI_generic_vector_array;
