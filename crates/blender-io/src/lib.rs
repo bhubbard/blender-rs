@@ -1492,3 +1492,20 @@ pub mod bone_collections_internal;
 
 
 pub mod node_composite_util;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod BLI_heap_simple;
