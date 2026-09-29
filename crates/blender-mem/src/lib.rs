@@ -243,3 +243,12 @@ pub mod grease_pencil_intern;
 
 
 
+
+
+pub mod BKE_preview_image;
+
+
+
+
+
+pub mod eevee_deferred_thickness_amend_bsl;

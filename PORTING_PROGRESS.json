@@ -395,6 +395,86 @@
     "upstream/source/blender/blenkernel/BKE_annotations.h": {
       "crate": "blender-dna",
       "module": "BKE_annotations.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_attribute.h": {
+      "crate": "blender-dna",
+      "module": "BKE_attribute.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_attribute_filter.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_attribute_filter.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_attribute_math.hh": {
+      "crate": "blender-math",
+      "module": "BKE_attribute_math.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_bake_data_block_map.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_bake_data_block_map.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_bake_geometry_nodes_modifier.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier_pack.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_bake_geometry_nodes_modifier_pack.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_bake_items_serialize.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_bake_values.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_bake_values.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_blender_project.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_blender_project.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_preview_image.hh": {
+      "crate": "blender-mem",
+      "module": "BKE_preview_image.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_volume_grid_type_traits.hh": {
+      "crate": "blender-math",
+      "module": "BKE_volume_grid_type_traits.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/pbvh_pixels_rasterize.hh": {
+      "crate": "blender-math",
+      "module": "pbvh_pixels_rasterize.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_length_parameterize.hh": {
+      "crate": "blender-math",
+      "module": "BLI_length_parameterize.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_axis_angle_types.hh": {
+      "crate": "blender-math",
+      "module": "BLI_math_axis_angle_types.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_interp.hh": {
+      "crate": "blender-math",
+      "module": "BLI_math_interp.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_vector.hh": {
+      "crate": "blender-math",
+      "module": "BLI_math_vector.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_quadric.hh": {
+      "crate": "blender-math",
+      "module": "BLI_quadric.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_morphological_blur.hh": {
+      "crate": "blender-math",
+      "module": "COM_algorithm_morphological_blur.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_summed_area_table.hh": {
+      "crate": "blender-math",
+      "module": "COM_algorithm_summed_area_table.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_deferred_thickness_amend.bsl.hh": {
+      "crate": "blender-mem",
+      "module": "eevee_deferred_thickness_amend_bsl.rs"
     }
   },
   "skipped": {
@@ -946,10 +1026,6 @@
       "reason": "zev_route_skip",
       "confidence": 0.49349519223954513
     },
-    "upstream/source/blender/blenkernel/BKE_attribute.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5375548243993455
-    },
     "upstream/source/blender/blenkernel/BKE_attribute.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.53299944896558
@@ -958,17 +1034,9 @@
       "reason": "zev_route_skip",
       "confidence": 0.5371080081226308
     },
-    "upstream/source/blender/blenkernel/BKE_attribute_filter.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.4991483483630006
-    },
     "upstream/source/blender/blenkernel/BKE_attribute_filters.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.43196745649157126
-    },
-    "upstream/source/blender/blenkernel/BKE_attribute_math.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5344765157919033
     },
     "upstream/source/blender/blenkernel/BKE_attribute_storage.hh": {
       "reason": "zev_route_skip",
@@ -982,29 +1050,9 @@
       "reason": "zev_route_skip",
       "confidence": 0.3692332631229658
     },
-    "upstream/source/blender/blenkernel/BKE_bake_data_block_map.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5026248600638595
-    },
-    "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5050692867975652
-    },
-    "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier_pack.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.43248708833430977
-    },
     "upstream/source/blender/blenkernel/BKE_bake_items_paths.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.33210920783009845
-    },
-    "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3401453552426879
-    },
-    "upstream/source/blender/blenkernel/BKE_bake_values.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.538145320465646
     },
     "upstream/source/blender/blenkernel/BKE_blender.hh": {
       "reason": "zev_route_skip",
@@ -1013,10 +1061,6 @@
     "upstream/source/blender/blenkernel/BKE_blender_cli_command.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.47108068188730773
-    },
-    "upstream/source/blender/blenkernel/BKE_blender_project.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.2762810904273484
     },
     "upstream/source/blender/blenkernel/BKE_blender_undo.hh": {
       "reason": "zev_route_skip",
@@ -1405,10 +1449,6 @@
     "upstream/source/blender/blenkernel/BKE_preferences.h": {
       "reason": "zev_route_skip",
       "confidence": 0.4903620788278753
-    },
-    "upstream/source/blender/blenkernel/BKE_preview_image.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.40741429382917427
     },
     "upstream/source/blender/blenkernel/BKE_rigidbody.h": {
       "reason": "zev_route_skip",
@@ -2490,10 +2530,6 @@
       "reason": "zev_route_skip",
       "confidence": 0.5448877486321541
     },
-    "upstream/source/blender/blenkernel/intern/pbvh_pixels_rasterize.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3090022649919071
-    },
     "upstream/source/blender/blenkernel/intern/pbvh_uv_islands.cc": {
       "reason": "zev_route_skip",
       "confidence": 0.5335937428627593
@@ -3174,10 +3210,6 @@
       "reason": "zev_route_skip",
       "confidence": 0.35950779722348536
     },
-    "upstream/source/blender/blenlib/BLI_length_parameterize.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5440725996057166
-    },
     "upstream/source/blender/blenlib/BLI_linear_allocator.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.4718872125815442
@@ -3225,10 +3257,6 @@
     "upstream/source/blender/blenlib/BLI_math_inline.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.32711678484899703
-    },
-    "upstream/source/blender/blenlib/BLI_math_interp.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.36523377722969247
     },
     "upstream/source/blender/blenlib/BLI_math_matrix_c.hh": {
       "reason": "zev_route_skip",
@@ -7434,10 +7462,6 @@
       "reason": "zev_route_skip",
       "confidence": 0.5614797820099048
     },
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_deferred_thickness_amend.bsl.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.19001211444994848
-    },
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_accumulator.bsl.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.3608896286932167
@@ -9198,7 +9222,6 @@
     "upstream/source/blender/blenkernel/BKE_vfontdata.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_volume_grid_fields.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_volume_grid_file_cache.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_volume_grid_type_traits.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_volume_openvdb.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_volume_render.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_volume_to_mesh.hh": "apfel_generation_failed",
@@ -9321,7 +9344,6 @@
     "upstream/source/blender/blenlib/BLI_listbase_wrapper.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_map_slots.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_axis_angle.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_axis_angle_types.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_base.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_base_c.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_base_safe.hh": "apfel_generation_failed",
@@ -9338,7 +9360,6 @@
     "upstream/source/blender/blenlib/BLI_math_rotation_legacy.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_rotation_types.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_solvers.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_vector.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_vector_mpq_types.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_vector_unroll.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_memory_cache_file_load.hh": "apfel_generation_failed",
@@ -9346,7 +9367,6 @@
     "upstream/source/blender/blenlib/BLI_mutex.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_ordered_edge.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_probing_strategies.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_quadric.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_rand_c.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_serialize.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_session_uid.hh": "apfel_generation_failed",

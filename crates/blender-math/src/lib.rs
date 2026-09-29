@@ -306,3 +306,26 @@ pub mod BLI_math_quaternion_types;
 
 
 
+
+pub mod BKE_attribute_math;
+
+pub mod BKE_volume_grid_type_traits;
+
+pub mod pbvh_pixels_rasterize;
+
+pub mod BLI_length_parameterize;
+
+pub mod BLI_math_axis_angle_types;
+
+pub mod BLI_math_interp;
+
+
+pub mod BLI_math_vector;
+
+pub mod BLI_quadric;
+
+
+
+pub mod COM_algorithm_morphological_blur;
+
+pub mod COM_algorithm_summed_area_table;
