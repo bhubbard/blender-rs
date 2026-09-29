@@ -468,3 +468,5 @@ pub mod BLI_generic_vector_array;
 pub mod BKE_attribute_legacy_convert;
 
 pub mod BKE_editmesh_bvh;
+
+pub mod BKE_editmesh_tangent;
