@@ -151,3 +151,6 @@ pub mod BKE_mesh_iterators;
 pub mod ANIM_bonecolor;
 
 pub mod NOD_defaults;
+
+
+pub mod NOD_geo_bake;
