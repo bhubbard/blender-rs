@@ -114,3 +114,6 @@ pub mod BKE_bake_geometry_nodes_modifier_pack;
 
 
 pub mod DNA_print;
+
+
+pub mod stl_import_binary_reader;
