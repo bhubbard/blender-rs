@@ -1346,3 +1346,5 @@ pub mod stl_import;
 
 
 pub mod BKE_asset_edit;
+
+pub mod BKE_blender_copybuffer;
