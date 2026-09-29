@@ -1273,3 +1273,7 @@ pub mod BLI_enum_flags;
 
 
 pub mod BLI_fixed_string;
+
+
+
+pub mod BLI_gsqueue;
