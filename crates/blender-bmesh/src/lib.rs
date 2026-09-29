@@ -440,3 +440,5 @@ pub mod bmesh_iterators;
 pub mod bmesh_log;
 
 pub mod bmesh_mesh;
+
+pub mod bmesh_mesh_convert;
