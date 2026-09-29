@@ -490,3 +490,15 @@ pub mod bmesh_construct;
 
 
 pub mod bmesh_interp;
+
+
+
+
+
+
+
+
+
+
+
+pub mod bmesh_operators;
