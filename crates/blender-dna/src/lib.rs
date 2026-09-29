@@ -126,3 +126,5 @@ pub mod GEO_mesh_copy_selection;
 pub mod GEO_mesh_primitive_cuboid;
 
 pub mod GEO_mesh_primitive_grid;
+
+pub mod GEO_mesh_primitive_line;
