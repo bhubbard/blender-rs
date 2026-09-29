@@ -145,3 +145,5 @@ pub mod BKE_grease_pencil_modifiers;
 pub mod BKE_mball_tessellate;
 
 pub mod BKE_mesh_fair;
+
+pub mod BKE_mesh_iterators;
