@@ -551,6 +551,10 @@
     "upstream/source/blender/nodes/shader/materialx/node_item.h": {
       "crate": "blender-math",
       "module": "node_item.rs"
+    },
+    "upstream/source/blender/bmesh/bmesh_class.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_class.rs"
     }
   },
   "skipped": {
@@ -8992,7 +8996,6 @@
     }
   },
   "failed": {
-    "upstream/source/blender/bmesh/bmesh_class.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_callback_generic.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_callback_generic.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_construct.cc": "compiler_burndown_exceeded",

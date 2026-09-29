@@ -110,9 +110,34 @@ pub struct BMFace {
 }
 
 /// Custom data storage for vertices, edges, loops, and faces.
-#[derive(Default, Debug, Clone)]
+#[derive(Default, Debug, Clone, PartialEq)]
 pub struct CustomData {
     pub float_layers: HashMap<(u32, CustomDataType), f32>,
+}
+
+#[derive(Debug, Clone, PartialEq)]
+pub struct ListBaseT<T> {
+    pub _marker: core::marker::PhantomData<T>,
+}
+
+impl<T> Default for ListBaseT<T> {
+    fn default() -> Self {
+        Self {
+            _marker: core::marker::PhantomData,
+        }
+    }
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct BLI_mempool {
+    pub _opaque: [u8; 0],
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct MLoopNorSpaceArray {
+    pub _opaque: [u8; 0],
 }
 
 /// The BMesh instance owning memory pools and mesh elements.
@@ -747,3 +772,4 @@ pub mod ANIM_bone_collections;
 
 
 
+pub mod bmesh_class;
