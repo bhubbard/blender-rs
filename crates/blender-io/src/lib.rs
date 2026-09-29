@@ -1268,3 +1268,5 @@ pub mod BLI_dial_2d;
 pub mod BLI_dynstr;
 
 pub mod BLI_endian_defines;
+
+pub mod BLI_enum_flags;
