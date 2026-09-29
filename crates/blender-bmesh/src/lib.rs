@@ -485,3 +485,8 @@ pub mod bmesh_callback_generic;
 
 
 pub mod bmesh_construct;
+
+
+
+
+pub mod bmesh_interp;
