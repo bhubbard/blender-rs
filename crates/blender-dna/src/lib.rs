@@ -141,3 +141,5 @@ pub mod mesh_boolean_intern;
 pub mod BKE_curve_to_mesh;
 
 pub mod BKE_grease_pencil_modifiers;
+
+pub mod BKE_mball_tessellate;
