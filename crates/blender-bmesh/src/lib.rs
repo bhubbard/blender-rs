@@ -452,3 +452,5 @@ pub mod bmesh_operator_api;
 
 
 pub mod bmesh_mesh_validate;
+
+pub mod bmesh_mods;
