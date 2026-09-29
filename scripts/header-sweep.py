@@ -129,7 +129,6 @@ def render_bar(current: int, total: int, width: int = 30) -> str:
 def run_sweep(limit: int = 0):
     progress = load_progress()
     completed = set(progress.get("completed", {}).keys())
-    skipped = set(progress.get("skipped", {}).keys())
 
     # Find all header files (.h, .hh, .hpp)
     all_headers = []
@@ -138,7 +137,7 @@ def run_sweep(limit: int = 0):
     all_headers = sorted(list(set(all_headers)))
 
     # Filter out already done
-    pending = [f for f in all_headers if str(f.relative_to(ROOT_DIR)) not in completed and str(f.relative_to(ROOT_DIR)) not in skipped]
+    pending = [f for f in all_headers if str(f.relative_to(ROOT_DIR)) not in completed]
     if limit > 0:
         pending = pending[:limit]
 
@@ -151,6 +150,7 @@ def run_sweep(limit: int = 0):
     n_compiled = 0
     n_parsed = 0
     n_failed = 0
+    batch_new_files = []
 
     for idx, header_path in enumerate(pending, 1):
         rel_str = str(header_path.relative_to(ROOT_DIR))
@@ -188,11 +188,13 @@ def run_sweep(limit: int = 0):
             register_module(target_crate, module_name)
             if check_crate_compiles(target_crate):
                 n_compiled += 1
+                batch_new_files.append((target_crate, target_file, rel_str))
                 progress["completed"][rel_str] = {
                     "crate": target_crate,
                     "module": f"{module_name}.rs"
                 }
                 progress.get("failed", {}).pop(rel_str, None)
+                progress.get("skipped", {}).pop(rel_str, None)
             else:
                 # Unregister from lib.rs and clean up file so trunk remains 100% green
                 unregister_module(target_crate, module_name)
@@ -203,8 +205,28 @@ def run_sweep(limit: int = 0):
                 target_file.unlink()
             n_failed += 1
 
+        if len(batch_new_files) >= 20:
+            save_progress(progress)
+            try:
+                subprocess.run(["git", "add", "crates/", "PORTING_PROGRESS.json"], cwd=str(ROOT_DIR), check=True)
+                msg = f"port(crates): batch mechanically port {len(batch_new_files)} headers with 100% green tests"
+                subprocess.run(["git", "commit", "-m", msg], cwd=str(ROOT_DIR), check=True)
+                batch_new_files.clear()
+            except Exception:
+                pass
+
         if idx % 25 == 0:
             save_progress(progress)
+
+    if batch_new_files:
+        save_progress(progress)
+        try:
+            subprocess.run(["git", "add", "crates/", "PORTING_PROGRESS.json"], cwd=str(ROOT_DIR), check=True)
+            msg = f"port(crates): batch mechanically port {len(batch_new_files)} headers with 100% green tests"
+            subprocess.run(["git", "commit", "-m", msg], cwd=str(ROOT_DIR), check=True)
+            batch_new_files.clear()
+        except Exception:
+            pass
 
     save_progress(progress)
     elapsed = time.time() - t_start

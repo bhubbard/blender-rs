@@ -412,25 +412,9 @@
       "crate": "blender-dna",
       "module": "BKE_bake_data_block_map.rs"
     },
-    "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": {
-      "crate": "blender-dna",
-      "module": "BKE_bake_geometry_nodes_modifier.rs"
-    },
     "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier_pack.hh": {
       "crate": "blender-dna",
       "module": "BKE_bake_geometry_nodes_modifier_pack.rs"
-    },
-    "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": {
-      "crate": "blender-dna",
-      "module": "BKE_bake_items_serialize.rs"
-    },
-    "upstream/source/blender/blenkernel/BKE_bake_values.hh": {
-      "crate": "blender-dna",
-      "module": "BKE_bake_values.rs"
-    },
-    "upstream/source/blender/blenkernel/BKE_blender_project.hh": {
-      "crate": "blender-dna",
-      "module": "BKE_blender_project.rs"
     },
     "upstream/source/blender/blenkernel/BKE_preview_image.hh": {
       "crate": "blender-mem",
@@ -9704,6 +9688,10 @@
     "upstream/source/blender/windowmanager/intern/wm_subwindow.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_toolsystem.cc": "apfel_generation_failed",
     "upstream/source/blender/windowmanager/wm_event_types.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/xr/intern/wm_xr_location_scouting.cc": "compiler_burndown_exceeded"
+    "upstream/source/blender/windowmanager/xr/intern/wm_xr_location_scouting.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/BKE_bake_values.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/BKE_blender_project.hh": "compiler_burndown_exceeded"
   }
 }

@@ -1,5 +1,7 @@
 //! Auto-transpiled C/C++ header module: vk_memory
 
+pub type VkDeviceSize = u64;
+
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
 pub struct VKMemoryExport {

@@ -448,17 +448,22 @@ def verify_and_fix(target_crate: str, module_path: Path, max_attempts: int = 3) 
             "Output the complete fixed Rust module only inside markdown fences."
         )
 
+        file_len = module_path.stat().st_size if module_path.exists() else 0
+        prompt_len = len(fix_prompt) + 200
+        est_input_tokens = (file_len + prompt_len) // 4
+        avail_tokens = max(256, min(2048, 3800 - est_input_tokens))
+
         fix_cmd = [
             str(APFEL_BIN),
             "--permissive",
             "--telemetry", str(TELEMETRY_DIR / "apfel_engine_telemetry.jsonl"),
             "--temperature", "0",
-            "--max-tokens", "2048",
+            "--max-tokens", str(avail_tokens),
             "-s", "You are an expert Rust compiler debugger. Fix the compilation errors precisely. Output ONLY the fixed Rust module inside markdown fences.",
             "-f", str(module_path),
             fix_prompt
         ]
-        rc, stdout, _ = run_with_live_spinner(fix_cmd, f"Compiler repair pass {attempt}/{max_attempts}...", timeout=90)
+        rc, stdout, _ = run_with_live_spinner(fix_cmd, f"Compiler repair pass {attempt}/{max_attempts} (budget: {avail_tokens} tokens)...", timeout=90)
         if rc == 0 and stdout.strip():
             fixed_code = extract_code_fence(stdout.strip())
             with open(module_path, "w") as f:
