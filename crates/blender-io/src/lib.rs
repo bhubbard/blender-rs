@@ -1298,3 +1298,6 @@ pub mod obj_import_file_reader;
 
 
 pub mod obj_import_mtl;
+
+
+pub mod obj_import_nurbs;
