@@ -1565,3 +1565,5 @@ pub mod BKE_recents;
 pub mod BKE_volume_grid_file_cache;
 
 pub mod BKE_volume_openvdb;
+
+pub mod BKE_volume_render;
