@@ -329,9 +329,7 @@ def translate_large_file_chunked(source_file: Path, target_crate: str, lifetimes
         cmd = [
             str(APFEL_BIN),
             "--code",
-            "--auto-continue",
             "--permissive",
-            "--telemetry", str(TELEMETRY_DIR / "apfel_engine_telemetry.jsonl"),
             "--temperature", "0",
             "--max-tokens", "2048",
             "-s", system_prompt,
@@ -441,29 +439,64 @@ def verify_and_fix(target_crate: str, module_path: Path, max_attempts: int = 3) 
         if not errors:
             return False
 
-        error_context = "\n".join(errors[:8])
+        concise_errors = []
+        for err in errors[:3]:
+            lines = [l for l in err.strip().splitlines()[:5] if l.strip()]
+            concise_errors.append("\n".join(lines))
+        error_context = "\n---\n".join(concise_errors)
+
         fix_prompt = (
             f"Fix the following Rust compiler errors in this module:\n\n{error_context}\n\n"
             "If any types, structs, or functions are missing, add placeholder definitions, structs, enums, or type aliases so that this module compiles cleanly.\n"
             "Output the complete fixed Rust module only inside markdown fences."
         )
 
-        file_len = module_path.stat().st_size if module_path.exists() else 0
-        prompt_len = len(fix_prompt) + 200
-        est_input_tokens = (file_len + prompt_len) // 4
-        avail_tokens = max(256, min(2048, 3800 - est_input_tokens))
+        sys_prompt = "You are an expert Rust compiler debugger. Fix the compilation errors precisely. Output ONLY the fixed Rust module inside markdown fences."
+
+        # Prepare compact file to conserve token context (input + output must be <= 3800 tokens)
+        content = module_path.read_text() if module_path.exists() else ""
+        compact_lines = [l for l in content.splitlines() if l.strip() and not l.strip().startswith("//") and not l.strip().startswith("/*")]
+        compact_code = "\n".join(compact_lines)
+
+        tmp_repair_file = module_path.with_suffix(".repair.tmp")
+        tmp_repair_file.write_text(compact_code)
+
+        def get_exact_tokens(f_path: Path, prompt_str: str) -> int:
+            cmd = [str(APFEL_BIN), "--count-tokens", "-s", sys_prompt, "-f", str(f_path), prompt_str]
+            try:
+                proc = subprocess.run(cmd, capture_output=True, text=True, timeout=5)
+                if proc.returncode == 0 and "/" in proc.stdout:
+                    return int(proc.stdout.split("/")[0].strip())
+            except Exception:
+                pass
+            return len(f_path.read_text()) // 2 + len(prompt_str) // 2 + 100
+
+        input_tokens = get_exact_tokens(tmp_repair_file, fix_prompt)
+        # Ensure input tokens <= 2400 by trimming file if needed
+        while input_tokens > 2400 and len(compact_code) > 500:
+            compact_code = compact_code[:int(len(compact_code) * 0.75)]
+            tmp_repair_file.write_text(compact_code)
+            input_tokens = get_exact_tokens(tmp_repair_file, fix_prompt)
+
+        avail_tokens = min(1024, max(256, 3800 - input_tokens))
 
         fix_cmd = [
             str(APFEL_BIN),
             "--permissive",
-            "--telemetry", str(TELEMETRY_DIR / "apfel_engine_telemetry.jsonl"),
             "--temperature", "0",
             "--max-tokens", str(avail_tokens),
-            "-s", "You are an expert Rust compiler debugger. Fix the compilation errors precisely. Output ONLY the fixed Rust module inside markdown fences.",
-            "-f", str(module_path),
+            "-s", sys_prompt,
+            "-f", str(tmp_repair_file),
             fix_prompt
         ]
-        rc, stdout, _ = run_with_live_spinner(fix_cmd, f"Compiler repair pass {attempt}/{max_attempts} (budget: {avail_tokens} tokens)...", timeout=90)
+        rc, stdout, stderr = run_with_live_spinner(fix_cmd, f"Compiler repair pass {attempt}/{max_attempts} (input: {input_tokens}, budget: {avail_tokens})...", timeout=90)
+        if tmp_repair_file.exists():
+            tmp_repair_file.unlink()
+
+        if rc != 0 or not stdout.strip():
+            print(f"  {YELLOW}[DEBUG] Compiler repair pass failed: rc={rc}, stderr={stderr.strip()[:160]}{RESET}")
+            if stdout.strip():
+                print(f"  {DIM}[DEBUG] stdout: {stdout[:160]}...{RESET}")
         if rc == 0 and stdout.strip():
             fixed_code = extract_code_fence(stdout.strip())
             with open(module_path, "w") as f:
