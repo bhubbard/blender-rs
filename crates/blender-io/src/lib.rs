@@ -1480,3 +1480,5 @@ pub mod BKE_object_deform;
 pub mod ANIM_driver;
 
 pub mod ANIM_versioning;
+
+pub mod ANIM_visualkey;
