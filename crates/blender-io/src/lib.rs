@@ -1264,3 +1264,5 @@ pub mod BLI_concurrent_set;
 pub mod BLI_console;
 
 pub mod BLI_dial_2d;
+
+pub mod BLI_dynstr;
