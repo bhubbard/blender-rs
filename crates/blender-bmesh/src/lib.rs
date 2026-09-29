@@ -454,3 +454,5 @@ pub mod bmesh_operator_api;
 pub mod bmesh_mesh_validate;
 
 pub mod bmesh_mods;
+
+pub mod bmesh_operator_api_inline;
