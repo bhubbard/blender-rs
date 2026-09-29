@@ -1468,3 +1468,5 @@ pub mod BKE_main_idmap;
 pub mod BKE_main_namemap;
 
 pub mod BKE_multires;
+
+pub mod BKE_node_enum;
