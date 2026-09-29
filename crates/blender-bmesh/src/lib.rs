@@ -478,3 +478,7 @@ pub mod BKE_editmesh_tangent;
 
 
 pub mod eevee_shadow_shared;
+
+
+
+pub mod bmesh_callback_generic;
