@@ -470,3 +470,11 @@ pub mod BKE_attribute_legacy_convert;
 pub mod BKE_editmesh_bvh;
 
 pub mod BKE_editmesh_tangent;
+
+
+
+
+
+
+
+pub mod eevee_shadow_shared;
