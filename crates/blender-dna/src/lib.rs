@@ -200,3 +200,5 @@ pub mod RE_texture_margin;
 pub mod BKE_mesh_mirror;
 
 pub mod BKE_mesh_remap;
+
+pub mod BKE_mesh_remesh_voxel;
