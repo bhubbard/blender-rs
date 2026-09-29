@@ -156,3 +156,5 @@ pub mod NOD_defaults;
 pub mod NOD_geo_bake;
 
 pub mod NOD_geo_bundle;
+
+pub mod NOD_geo_closure;
