@@ -502,3 +502,5 @@ pub mod bmesh_interp;
 
 
 pub mod bmesh_operators;
+
+pub mod bmesh_operators_private;
