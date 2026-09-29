@@ -1332,3 +1332,6 @@ pub mod ply_export_load_plydata;
 
 
 pub mod stl_export;
+
+
+pub mod stl_export_writer;
