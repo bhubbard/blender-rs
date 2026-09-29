@@ -25,8 +25,9 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 UPSTREAM_DIR = ROOT_DIR / "upstream" / "source" / "blender"
 PROGRESS_FILE = ROOT_DIR / "PORTING_PROGRESS.json"
 
-ZEV_BIN = Path(os.environ.get("ZEV_BIN", shutil.which("zev") or "/Users/bhubbard/.cargo/bin/zev"))
-APFEL_TRANSPILE_BIN = Path(os.environ.get("APFEL_TRANSPILE_BIN", shutil.which("apfel-transpile") or "/Users/bhubbard/.cargo/bin/apfel-transpile"))
+CARGO_BIN = Path("/Users/bhubbard/.cargo/bin")
+ZEV_BIN = Path(os.environ.get("ZEV_BIN", str(CARGO_BIN / "zev") if (CARGO_BIN / "zev").exists() else (shutil.which("zev") or "/Users/bhubbard/.cargo/bin/zev")))
+APFEL_TRANSPILE_BIN = Path(os.environ.get("APFEL_TRANSPILE_BIN", str(CARGO_BIN / "apfel-transpile") if (CARGO_BIN / "apfel-transpile").exists() else (shutil.which("apfel-transpile") or "/Users/bhubbard/.cargo/bin/apfel-transpile")))
 
 # Terminal formatting
 CYAN = "\033[96m"
@@ -67,7 +68,6 @@ def route_file_with_zev(source_file: Path) -> Tuple[str, float]:
         "route",
         "--file", str(source_file),
         "--routes", json.dumps(target_crates),
-        "--json"
     ]
     try:
         proc = subprocess.run(cmd, capture_output=True, text=True, timeout=5)

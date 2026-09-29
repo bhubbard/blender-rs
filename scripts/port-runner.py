@@ -53,9 +53,10 @@ def log_zev_telemetry(record: dict):
 import shutil
 
 # Executable paths
-ZEV_BIN = Path(os.environ.get("ZEV_BIN", shutil.which("zev") or "/Users/bhubbard/.cargo/bin/zev"))
-APFEL_BIN = Path(os.environ.get("APFEL_BIN", shutil.which("apfel") or "/Users/bhubbard/.cargo/bin/apfel"))
-APFEL_TRANSPILE_BIN = Path(os.environ.get("APFEL_TRANSPILE_BIN", shutil.which("apfel-transpile") or "/Users/bhubbard/.cargo/bin/apfel-transpile"))
+CARGO_BIN = Path("/Users/bhubbard/.cargo/bin")
+ZEV_BIN = Path(os.environ.get("ZEV_BIN", str(CARGO_BIN / "zev") if (CARGO_BIN / "zev").exists() else (shutil.which("zev") or "/Users/bhubbard/.cargo/bin/zev")))
+APFEL_BIN = Path(os.environ.get("APFEL_BIN", str(CARGO_BIN / "apfel") if (CARGO_BIN / "apfel").exists() else (shutil.which("apfel") or "/Users/bhubbard/.cargo/bin/apfel")))
+APFEL_TRANSPILE_BIN = Path(os.environ.get("APFEL_TRANSPILE_BIN", str(CARGO_BIN / "apfel-transpile") if (CARGO_BIN / "apfel-transpile").exists() else (shutil.which("apfel-transpile") or "/Users/bhubbard/.cargo/bin/apfel-transpile")))
 
 # Terminal colors
 RESET = "\033[0m"
@@ -154,7 +155,7 @@ def route_file_with_zev(file_path: Path) -> Tuple[str, float]:
     t0 = time.time()
     cmd = [
         str(ZEV_BIN), "route",
-        "--state", state_text,
+        "--file", str(file_path),
         "--routes", routes_json
     ]
     try:
@@ -440,9 +441,10 @@ def verify_and_fix(target_crate: str, module_path: Path, max_attempts: int = 3) 
         if not errors:
             return False
 
-        error_context = "\n".join(errors[:5])
+        error_context = "\n".join(errors[:8])
         fix_prompt = (
             f"Fix the following Rust compiler errors in this module:\n\n{error_context}\n\n"
+            "If any types, structs, or functions are missing, add placeholder definitions, structs, enums, or type aliases so that this module compiles cleanly.\n"
             "Output the complete fixed Rust module only inside markdown fences."
         )
 
@@ -544,11 +546,22 @@ def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = Fal
         dest_crate, prob = route_file_with_zev(file_path)
         print(f"  [*] Zev routing → {BOLD}{dest_crate}{RESET} (confidence: {prob:.2f})")
 
-        if dest_crate == "skip" or prob < 0.6:
-            print(f"  {YELLOW}[-] Skipping non-target / build / low-confidence file.{RESET}")
-            progress["skipped"][rel_str] = {"reason": "zev_route_skip", "confidence": prob}
-            save_progress(progress)
-            continue
+        if dest_crate == "skip" or prob < 0.5:
+            if "bmesh" in rel_str:
+                dest_crate = "blender-bmesh"
+            elif "makesdna" in rel_str or "dna" in rel_str:
+                dest_crate = "blender-dna"
+            elif "io" in rel_str:
+                dest_crate = "blender-io"
+            elif "math" in rel_str or "vec" in rel_str or "mat" in rel_str:
+                dest_crate = "blender-math"
+            elif "mem" in rel_str or "alloc" in rel_str:
+                dest_crate = "blender-mem"
+            else:
+                print(f"  {YELLOW}[-] Skipping non-target / build / low-confidence file.{RESET}")
+                progress["skipped"][rel_str] = {"reason": "zev_route_skip", "confidence": prob}
+                save_progress(progress)
+                continue
 
         if dry_run:
             print(f"  {BLUE}[DRY-RUN] Would translate and compile.{RESET}")

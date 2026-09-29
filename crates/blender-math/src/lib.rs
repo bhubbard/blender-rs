@@ -209,7 +209,6 @@ pub mod eevee_material_shared;
 
 
 
-pub mod VecMat;
 
 pub mod BPy_FrsMaterial;
 
@@ -233,7 +232,6 @@ pub mod BPy_FrsMaterial;
 
 
 
-pub mod GPU_matrix;
 
 
 
@@ -272,3 +270,39 @@ pub mod GEO_xpbd_constraint_align_rotations;
 
 
 pub mod GEO_xpbd_constraint_rod_stretch_shear;
+
+
+
+pub mod BLI_math_basis_types;
+
+pub mod BLI_math_constants;
+
+pub mod BLI_math_euler_types;
+
+pub mod BLI_math_filter;
+
+pub mod BLI_math_quaternion_types;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

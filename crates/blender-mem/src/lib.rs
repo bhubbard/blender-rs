@@ -213,3 +213,32 @@ pub mod vk_memory_layout;
 pub mod vk_memory_pool;
 
 
+
+
+
+pub mod BLI_map;
+
+pub mod BLI_resource_scope;
+
+pub mod eevee_shadow_page_defrag_bsl;
+
+pub mod eevee_shadow_page_ops_bsl;
+
+pub mod eevee_shadow_tilemap_amend_bsl;
+
+pub mod workbench_shadow_raytrace_bsl;
+
+pub mod sculpt_intern;
+
+pub mod grease_pencil_intern;
+
+
+
+
+
+
+
+
+
+
+
