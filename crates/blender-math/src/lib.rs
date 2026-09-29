@@ -329,3 +329,49 @@ pub mod BLI_quadric;
 pub mod COM_algorithm_morphological_blur;
 
 pub mod COM_algorithm_summed_area_table;
+
+pub mod eevee_ray_trace_bsl;
+
+pub mod eevee_ray_trace_screen_lib_bsl;
+
+pub mod eevee_shadow_tag_update_bsl;
+
+
+
+
+
+
+
+
+pub mod workbench_shadow_bsl;
+
+pub mod attribute_convert;
+
+
+
+
+
+pub mod FRS_precomp;
+
+pub mod GeomUtils;
+
+pub mod VecMat;
+
+pub mod LineRep;
+
+pub mod ViewMapBuilder;
+
+
+
+pub mod GEO_xpbd_constraint_distance;
+
+pub mod GEO_xpbd_constraint_math;
+
+pub mod GPU_matrix;
+
+
+pub mod gpu_shader_math_quaternion_bsl;
+
+pub mod gpu_shader_cxx_builtin;
+
+pub mod gpu_shader_index_gen_bsl;

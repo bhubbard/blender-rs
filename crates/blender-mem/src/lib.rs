@@ -252,3 +252,13 @@ pub mod BKE_preview_image;
 
 
 pub mod eevee_deferred_thickness_amend_bsl;
+
+pub mod eevee_depth_of_field_gather_bsl;
+
+
+
+pub mod gpu_query;
+
+pub mod mtl_texture;
+
+pub mod gpu_shader_sequencer_scope_bsl;

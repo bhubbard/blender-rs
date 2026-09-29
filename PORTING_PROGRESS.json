@@ -475,6 +475,86 @@
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_deferred_thickness_amend.bsl.hh": {
       "crate": "blender-mem",
       "module": "eevee_deferred_thickness_amend_bsl.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_gather.bsl.hh": {
+      "crate": "blender-mem",
+      "module": "eevee_depth_of_field_gather_bsl.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_trace.bsl.hh": {
+      "crate": "blender-math",
+      "module": "eevee_ray_trace_bsl.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_trace_screen_lib.bsl.hh": {
+      "crate": "blender-math",
+      "module": "eevee_ray_trace_screen_lib_bsl.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_tag_update.bsl.hh": {
+      "crate": "blender-math",
+      "module": "eevee_shadow_tag_update_bsl.rs"
+    },
+    "upstream/source/blender/draw/engines/workbench/shaders/workbench_shadow.bsl.hh": {
+      "crate": "blender-math",
+      "module": "workbench_shadow_bsl.rs"
+    },
+    "upstream/source/blender/draw/intern/attribute_convert.hh": {
+      "crate": "blender-math",
+      "module": "attribute_convert.rs"
+    },
+    "upstream/source/blender/freestyle/FRS_precomp.h": {
+      "crate": "blender-math",
+      "module": "FRS_precomp.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/GeomUtils.h": {
+      "crate": "blender-math",
+      "module": "GeomUtils.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/VecMat.h": {
+      "crate": "blender-math",
+      "module": "VecMat.rs"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/LineRep.h": {
+      "crate": "blender-math",
+      "module": "LineRep.rs"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewMapBuilder.h": {
+      "crate": "blender-math",
+      "module": "ViewMapBuilder.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_distance.hh": {
+      "crate": "blender-math",
+      "module": "GEO_xpbd_constraint_distance.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_math.hh": {
+      "crate": "blender-math",
+      "module": "GEO_xpbd_constraint_math.rs"
+    },
+    "upstream/source/blender/gpu/GPU_matrix.hh": {
+      "crate": "blender-math",
+      "module": "GPU_matrix.rs"
+    },
+    "upstream/source/blender/gpu/intern/gpu_query.hh": {
+      "crate": "blender-mem",
+      "module": "gpu_query.rs"
+    },
+    "upstream/source/blender/gpu/metal/mtl_texture.hh": {
+      "crate": "blender-mem",
+      "module": "mtl_texture.rs"
+    },
+    "upstream/source/blender/gpu/shaders/common/gpu_shader_math_quaternion.bsl.hh": {
+      "crate": "blender-math",
+      "module": "gpu_shader_math_quaternion_bsl.rs"
+    },
+    "upstream/source/blender/gpu/shaders/compat/gpu_shader_cxx_builtin.hh": {
+      "crate": "blender-math",
+      "module": "gpu_shader_cxx_builtin.rs"
+    },
+    "upstream/source/blender/gpu/shaders/gpu_shader_index_gen.bsl.hh": {
+      "crate": "blender-math",
+      "module": "gpu_shader_index_gen_bsl.rs"
+    },
+    "upstream/source/blender/gpu/shaders/gpu_shader_sequencer_scope.bsl.hh": {
+      "crate": "blender-mem",
+      "module": "gpu_shader_sequencer_scope_bsl.rs"
     }
   },
   "skipped": {
@@ -966,10 +1046,6 @@
       "reason": "zev_route_skip",
       "confidence": 0.1704037012677408
     },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_distance.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5912070774734893
-    },
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_friction_edge.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.17068594032560183
@@ -977,10 +1053,6 @@
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_friction_face.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.17045244455758504
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_math.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.46635178729399895
     },
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_pin_position.hh": {
       "reason": "zev_route_skip",
@@ -7466,10 +7538,6 @@
       "reason": "zev_route_skip",
       "confidence": 0.3608896286932167
     },
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_gather.bsl.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.585328574619859
-    },
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_lib.bsl.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.18994910800746428
@@ -7637,14 +7705,6 @@
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_generate.bsl.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.1898805434019699
-    },
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_trace.bsl.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.18984646946094877
-    },
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_trace_screen_lib.bsl.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.18997095914007017
     },
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_types_lib.bsl.hh": {
       "reason": "zev_route_skip",
@@ -8202,10 +8262,6 @@
       "reason": "zev_route_skip",
       "confidence": 0.5581339692784222
     },
-    "upstream/source/blender/draw/engines/workbench/shaders/workbench_shadow.bsl.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3475085798179875
-    },
     "upstream/source/blender/draw/engines/workbench/shaders/workbench_volume.bsl.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.18992324227366356
@@ -8285,10 +8341,6 @@
     "upstream/source/blender/draw/intern/attribute_convert.cc": {
       "reason": "zev_route_skip",
       "confidence": 0.5378244860550186
-    },
-    "upstream/source/blender/draw/intern/attribute_convert.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5392782424892616
     },
     "upstream/source/blender/draw/intern/draw_attribute_shader_shared.hh": {
       "reason": "zev_route_skip",
@@ -9569,7 +9621,6 @@
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_octahedron_lib.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_tile.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_tag_update.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_tag_usage_transparent.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_tilemap_init.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_visibility.bsl.hh": "apfel_generation_failed",
