@@ -463,3 +463,6 @@ pub mod bmesh_operator_api_inline;
 
 
 pub mod BLI_generic_vector_array;
+
+
+pub mod BKE_attribute_legacy_convert;
