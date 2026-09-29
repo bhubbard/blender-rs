@@ -1462,3 +1462,5 @@ pub mod BKE_blender_version;
 pub mod BKE_grease_pencil;
 
 pub mod BKE_grease_pencil_legacy_convert;
+
+pub mod BKE_main_idmap;
