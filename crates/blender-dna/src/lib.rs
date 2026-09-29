@@ -134,3 +134,5 @@ pub mod GEO_mesh_primitive_uv_sphere;
 pub mod GEO_mesh_split_edges;
 
 pub mod GEO_randomize;
+
+pub mod mesh_boolean_intern;
