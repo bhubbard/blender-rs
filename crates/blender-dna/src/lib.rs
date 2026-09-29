@@ -235,3 +235,5 @@ pub mod BKE_movieclip;
 pub mod BKE_shader_fx;
 
 pub mod BKE_subdiv_deform;
+
+pub mod BKE_subdiv_mesh;
