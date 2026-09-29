@@ -147,3 +147,5 @@ pub mod BKE_mball_tessellate;
 pub mod BKE_mesh_fair;
 
 pub mod BKE_mesh_iterators;
+
+pub mod ANIM_bonecolor;
