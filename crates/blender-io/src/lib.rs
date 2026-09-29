@@ -1295,3 +1295,6 @@ pub mod importer_mesh_utils;
 
 
 pub mod obj_import_file_reader;
+
+
+pub mod obj_import_mtl;
