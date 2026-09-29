@@ -1270,3 +1270,6 @@ pub mod BLI_dynstr;
 pub mod BLI_endian_defines;
 
 pub mod BLI_enum_flags;
+
+
+pub mod BLI_fixed_string;
