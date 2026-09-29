@@ -1277,3 +1277,12 @@ pub mod BLI_fixed_string;
 
 
 pub mod BLI_gsqueue;
+
+
+
+
+
+
+
+
+pub mod obj_export_nurbs;
