@@ -1488,3 +1488,7 @@ pub mod ANIM_visualkey;
 pub mod action_runtime;
 
 pub mod bone_collections_internal;
+
+
+
+pub mod node_composite_util;
