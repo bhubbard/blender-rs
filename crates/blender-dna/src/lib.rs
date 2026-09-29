@@ -130,3 +130,5 @@ pub mod GEO_mesh_primitive_grid;
 pub mod GEO_mesh_primitive_line;
 
 pub mod GEO_mesh_primitive_uv_sphere;
+
+pub mod GEO_mesh_split_edges;
