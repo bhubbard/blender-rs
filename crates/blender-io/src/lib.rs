@@ -1472,3 +1472,6 @@ pub mod BKE_multires;
 pub mod BKE_node_enum;
 
 pub mod BKE_node_legacy_types;
+
+
+pub mod BKE_object_deform;
