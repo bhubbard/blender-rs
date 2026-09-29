@@ -1292,3 +1292,6 @@ pub mod obj_exporter;
 
 
 pub mod importer_mesh_utils;
+
+
+pub mod obj_import_file_reader;
