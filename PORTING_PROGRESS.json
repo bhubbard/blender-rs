@@ -379,6 +379,22 @@
     "upstream/source/blender/bmesh/bmesh.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_bone_collections.hh": {
+      "crate": "blender-bmesh",
+      "module": "ANIM_bone_collections.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_keyframing.hh": {
+      "crate": "blender-dna",
+      "module": "ANIM_keyframing.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_anim_data.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_anim_data.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_annotations.h": {
+      "crate": "blender-dna",
+      "module": "BKE_annotations.rs"
     }
   },
   "skipped": {
@@ -486,10 +502,6 @@
       "reason": "zev_route_skip",
       "confidence": 0.4747169019875499
     },
-    "upstream/source/blender/blenkernel/BKE_anim_data.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.4933248961925451
-    },
     "upstream/source/blender/blenkernel/BKE_anim_path.h": {
       "reason": "zev_route_skip",
       "confidence": 0.48206132278486924
@@ -501,10 +513,6 @@
     "upstream/source/blender/blenkernel/BKE_animsys.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.5065296115987952
-    },
-    "upstream/source/blender/blenkernel/BKE_annotations.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5139548662409844
     },
     "upstream/source/blender/blenkernel/BKE_annotations_geom.h": {
       "reason": "zev_route_skip",
@@ -4302,10 +4310,6 @@
       "reason": "zev_route_skip",
       "confidence": 0.5380331979198268
     },
-    "upstream/source/blender/animrig/ANIM_bone_collections.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5079249546008812
-    },
     "upstream/source/blender/animrig/ANIM_evaluation.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.5387692813326794
@@ -4313,10 +4317,6 @@
     "upstream/source/blender/animrig/ANIM_fcurve.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.4696972437750677
-    },
-    "upstream/source/blender/animrig/ANIM_keyframing.hh": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5183963654013148
     },
     "upstream/source/blender/animrig/ANIM_keyingsets.hh": {
       "reason": "zev_route_skip",

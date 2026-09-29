@@ -1559,3 +1559,23 @@ pub mod BKE_main;
 
 
 
+
+
+
+
+
+
+
+
+
+pub mod ANIM_keyframing;
+
+
+
+
+
+
+pub mod BKE_anim_data;
+
+
+pub mod BKE_annotations;
