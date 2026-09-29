@@ -122,3 +122,5 @@ pub mod stl_import_binary_reader;
 pub mod GEO_extract_elements;
 
 pub mod GEO_mesh_copy_selection;
+
+pub mod GEO_mesh_primitive_cuboid;
