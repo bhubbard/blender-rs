@@ -963,6 +963,10 @@
     "upstream/source/blender/draw/engines/eevee/eevee_cryptomatte.hh": {
       "crate": "blender-io",
       "module": "eevee_cryptomatte.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_ID_enums.h": {
+      "crate": "blender-dna",
+      "module": "DNA_ID_enums.rs"
     }
   },
   "skipped": {

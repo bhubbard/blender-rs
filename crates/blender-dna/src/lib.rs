@@ -237,3 +237,4 @@ pub mod BKE_shader_fx;
 pub mod BKE_subdiv_deform;
 
 pub mod BKE_subdiv_mesh;
+pub mod DNA_ID_enums;
