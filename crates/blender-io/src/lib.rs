@@ -1641,3 +1641,25 @@ pub mod DNA_curve_enums;
 
 
 pub mod icons;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod eevee_shader;
