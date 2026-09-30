@@ -1666,3 +1666,5 @@ pub mod eevee_shader;
 
 
 pub mod WM_message;
+
+pub mod wm_gizmo_wmapi;
