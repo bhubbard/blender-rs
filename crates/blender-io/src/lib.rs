@@ -1579,3 +1579,6 @@ pub mod BKE_volume_render;
 
 
 pub mod eevee_cryptomatte;
+
+
+pub mod DNA_curve_enums;
