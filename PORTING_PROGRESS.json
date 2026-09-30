@@ -907,6 +907,62 @@
     "upstream/source/blender/nodes/composite/node_composite_util.hh": {
       "crate": "blender-io",
       "module": "node_composite_util.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_heap_simple.hh": {
+      "crate": "blender-io",
+      "module": "BLI_heap_simple.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_index_range.hh": {
+      "crate": "blender-io",
+      "module": "BLI_index_range.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_map_slots.hh": {
+      "crate": "blender-io",
+      "module": "BLI_map_slots.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_compute_contexts.hh": {
+      "crate": "blender-io",
+      "module": "BKE_compute_contexts.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_curveprofile.h": {
+      "crate": "blender-io",
+      "module": "BKE_curveprofile.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_pose_backup.h": {
+      "crate": "blender-io",
+      "module": "BKE_pose_backup.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_recents.hh": {
+      "crate": "blender-io",
+      "module": "BKE_recents.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_shader_fx.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_shader_fx.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv_deform.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_subdiv_deform.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv_mesh.hh": {
+      "crate": "blender-dna",
+      "module": "BKE_subdiv_mesh.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_volume_grid_file_cache.hh": {
+      "crate": "blender-io",
+      "module": "BKE_volume_grid_file_cache.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_volume_openvdb.hh": {
+      "crate": "blender-io",
+      "module": "BKE_volume_openvdb.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_volume_render.hh": {
+      "crate": "blender-io",
+      "module": "BKE_volume_render.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_cryptomatte.hh": {
+      "crate": "blender-io",
+      "module": "eevee_cryptomatte.rs"
     }
   },
   "skipped": {
@@ -9521,6 +9577,62 @@
     "upstream/source/blender/blenkernel/BKE_node_socket_value.hh": {
       "reason": "zev_route_skip",
       "confidence": 0.4885334633858423
+    },
+    "upstream/source/blender/blenkernel/BKE_object_types.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.32686359200125253
+    },
+    "upstream/source/blender/blenkernel/BKE_outliner_treehash.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.468463298186037
+    },
+    "upstream/source/blender/blenkernel/BKE_path_templates.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.8907083386157206
+    },
+    "upstream/source/blender/blenkernel/BKE_pointcache.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4538126009490532
+    },
+    "upstream/source/blender/blenkernel/BKE_report.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.49402952364779973
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4056048030954428
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv_eval.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.38841147559906747
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv_foreach.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3694256838422496
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv_modifier.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.45997552183331103
+    },
+    "upstream/source/blender/blenkernel/BKE_vfontdata.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.42510545055242077
+    },
+    "upstream/source/blender/blenkernel/BKE_volume_to_mesh.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.39061176375163403
+    },
+    "upstream/source/blender/blenkernel/intern/asset_weak_reference.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.45025259968306763
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_vertex_of_corner.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.45040212219705134
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_separate_components.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.41048719813019713
     }
   },
   "failed": {
@@ -9703,9 +9815,7 @@
     "upstream/source/blender/blenkernel/BKE_camera.h": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_compute_context_cache.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_compute_context_cache_fwd.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/BKE_compute_contexts.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_cpp_types.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/BKE_curveprofile.h": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_deform.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_geometry_nodes_reference_set.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_key.hh": "compiler_burndown_exceeded",
@@ -9719,29 +9829,21 @@
     "upstream/source/blender/blenkernel/BKE_outliner_treehash.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_path_templates.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_pointcache.h": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_pose_backup.h": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_recents.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_report.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_shader_fx.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_shrinkwrap.hh": "apfel_generation_failed",
+    "upstream/source/blender/blenkernel/BKE_shrinkwrap.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_subdiv.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_subdiv_deform.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_subdiv_eval.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_subdiv_foreach.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_subdiv_mesh.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_subdiv_modifier.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_undo_system.hh": "apfel_generation_failed",
+    "upstream/source/blender/blenkernel/BKE_undo_system.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_vfontdata.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_volume_grid_fields.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_volume_grid_file_cache.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_volume_openvdb.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_volume_render.hh": "apfel_generation_failed",
+    "upstream/source/blender/blenkernel/BKE_volume_grid_fields.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_volume_to_mesh.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/anonymous_attribute_id.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/armature_test.cc": "apfel_generation_failed",
+    "upstream/source/blender/blenkernel/intern/anonymous_attribute_id.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/armature_test.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/intern/asset_weak_reference.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/attribute_math.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/blender_cli_command.cc": "apfel_generation_failed",
+    "upstream/source/blender/blenkernel/intern/attribute_math.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/blender_cli_command.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/intern/blendfile.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/bpath.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/curve_poly.cc": "apfel_generation_failed",
@@ -9836,15 +9938,12 @@
     "upstream/source/blender/blenlib/BLI_generic_array.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_generic_key.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_generic_virtual_array.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_heap_simple.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_implicit_sharing.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_index_range.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_index_ranges_builder.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_lazy_threading.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_link_utils.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_linklist_stack.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_listbase_wrapper.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_map_slots.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_math_axis_angle.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_math_base.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_base_c.hh": "apfel_generation_failed",
@@ -9977,13 +10076,13 @@
     "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_to_sdf_grid.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_corners_of_edge.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_corners_of_face.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_corners_of_vertex.cc": "apfel_generation_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_edges_of_corner.cc": "apfel_generation_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_offset_corner_in_face.cc": "apfel_generation_failed",
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_corners_of_vertex.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_edges_of_corner.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_offset_corner_in_face.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_vertex_of_corner.cc": "apfel_generation_failed",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_separate_components.cc": "apfel_generation_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_string_to_curves.cc": "apfel_generation_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_tool_set_face_set.cc": "apfel_generation_failed",
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_string_to_curves.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_tool_set_face_set.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_transform_geometry.cc": "apfel_generation_failed",
     "upstream/source/blender/nodes/shader/materialx/material.h": "apfel_generation_failed",
     "upstream/source/blender/nodes/shader/materialx/node_graph.cc": "apfel_generation_failed",
@@ -10001,7 +10100,6 @@
     "upstream/source/blender/draw/DRW_select_buffer.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/compositor/compositor_engine.h": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_camera_shared.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_cryptomatte.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_debug_shared.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_depth_of_field.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_depth_of_field_shared.hh": "compiler_burndown_exceeded",
