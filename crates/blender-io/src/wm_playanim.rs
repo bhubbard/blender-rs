@@ -5,6 +5,66 @@ use crate::*;
 pub const PLAY_FRAME_CACHE_MAX: i32 = 30;
 
 #[repr(C)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct GHOST_ISystem {
+    pub _marker: core::marker::PhantomData<u8>,
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct GHOST_IWindow {
+    pub _marker: core::marker::PhantomData<u8>,
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct GPUContext {
+    pub _marker: core::marker::PhantomData<u8>,
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct ColorManagedViewSettings {
+    pub _marker: core::marker::PhantomData<u8>,
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct ColorManagedDisplaySettings {
+    pub _marker: core::marker::PhantomData<u8>,
+}
+
+#[derive(Debug, Clone, PartialEq)]
+pub struct ListBaseT<T> {
+    pub _marker: core::marker::PhantomData<T>,
+}
+impl<T> Default for ListBaseT<T> {
+    fn default() -> Self {
+        Self {
+            _marker: core::marker::PhantomData,
+        }
+    }
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct ImBuf {
+    pub _marker: core::marker::PhantomData<u8>,
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct MovieReader {
+    pub _marker: core::marker::PhantomData<u8>,
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub struct LinkData {
+    pub _marker: core::marker::PhantomData<u8>,
+}
+
+#[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
 pub struct GhostData {
     pub system: *mut GHOST_ISystem,
