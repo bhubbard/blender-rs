@@ -560,12 +560,31 @@ def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = Fal
         print(f"{RED}[!] Subsystem path {target_subsystem_dir} does not exist.{RESET}")
         return
 
-    files_to_process = []
+    raw_files = []
     for ext in ("*.cc", "*.c", "*.hh", "*.h"):
-        files_to_process.extend(target_subsystem_dir.rglob(ext))
+        raw_files.extend(target_subsystem_dir.rglob(ext))
 
-    files_to_process = sorted(files_to_process)
-    total_subsystem_files = len(files_to_process)
+    # Priority partitioning:
+    # 1. Fresh headers (.h, .hh) that establish types/structs/enums
+    # 2. Fresh implementation files (.c, .cc)
+    # 3. Deferred retries for previously failed files
+    fresh_headers = []
+    fresh_sources = []
+    failed_files = []
+
+    for file_path in sorted(raw_files):
+        rel_str = str(file_path.relative_to(ROOT_DIR))
+        if rel_str in progress.get("completed", {}) or rel_str in progress.get("skipped", {}):
+            continue
+        if rel_str in progress.get("failed", {}):
+            failed_files.append(file_path)
+        elif file_path.suffix in (".h", ".hh"):
+            fresh_headers.append(file_path)
+        else:
+            fresh_sources.append(file_path)
+
+    files_to_process = fresh_headers + fresh_sources + failed_files
+    total_subsystem_files = len(raw_files)
 
     print(f"\n{BOLD}{CYAN}======================================================================{RESET}")
     print(f"{BOLD} 🚀 blender-rs Autonomous Port Loop: {subsystem} {RESET}")
