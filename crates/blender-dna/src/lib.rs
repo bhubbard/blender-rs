@@ -484,3 +484,6 @@ pub mod DNA_object_fluidsim_types;
 
 
 pub mod DNA_pointcloud_types;
+
+
+pub mod DNA_rigidbody_types;
