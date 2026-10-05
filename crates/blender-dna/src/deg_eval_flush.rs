@@ -7,3 +7,4 @@ use crate::*;
 pub struct Depsgraph {
     pub _opaque: [u8; 0],
 }
+
