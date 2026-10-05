@@ -673,3 +673,5 @@ pub mod bmesh_opdefines;
 pub mod bmesh_polygon;
 
 pub mod bmesh_polygon_edgenet;
+
+pub mod bmesh_private;
