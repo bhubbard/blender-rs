@@ -1889,3 +1889,6 @@ pub mod IMB_thumbs;
 
 
 pub mod BLI_array_state;
+
+
+pub mod BLI_assert;
