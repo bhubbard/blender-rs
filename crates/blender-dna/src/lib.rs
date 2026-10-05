@@ -30,6 +30,21 @@ MLoopUV = 9,
 BWeight = 10,
 Crease = 11,
 }
+
+#[derive(Debug, Clone, PartialEq)]
+pub struct ListBaseT<T> {
+    pub _marker: core::marker::PhantomData<T>,
+}
+impl<T> Default for ListBaseT<T> {
+    fn default() -> Self {
+        Self {
+            _marker: core::marker::PhantomData,
+        }
+    }
+}
+
+pub use DNA_ID_enums::*;
+
 /// Mesh header data mirroring DNA `Mesh`.
 #[derive(Debug, Clone)]
 pub struct DnaMesh {
@@ -323,3 +338,6 @@ pub mod DNA_uuid_types;
 pub mod DNA_theme_types;
 
 pub mod dna_utils;
+
+
+pub mod DNA_ID;
