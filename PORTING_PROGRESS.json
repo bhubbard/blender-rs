@@ -9637,6 +9637,3410 @@
     "upstream/source/blender/nodes/geometry/nodes/node_geo_separate_components.cc": {
       "reason": "zev_route_skip",
       "confidence": 0.41048719813019713
+    },
+    "upstream/source/blender/freestyle/FRS_freestyle.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/python/BPY_extern.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/BPY_extern_clog.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/BPY_extern_python.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/BPY_extern_run.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_api.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_api.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_geometry.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_geometry.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_ops.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_ops.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_ops_call.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_ops_call.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_types.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_types.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_types_customdata.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_types_customdata.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_types_meshdata.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_types_meshdata.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_types_select.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_types_select.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_utils.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/bmesh/bmesh_py_utils.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/bl_math_py_api.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/bl_math_py_api.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/blf_py_api.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/blf_py_api.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/bpy_threads.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/idprop_py_api.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/idprop_py_api.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/idprop_py_ui_api.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/idprop_py_ui_api.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/imbuf_py_api.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/imbuf_py_api.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/py_capi_rna.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/py_capi_rna.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/py_capi_utils.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/py_capi_utils.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/python_compat.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/python_compat.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/generic/python_utildefines.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_api.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_api.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_batch.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_batch.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_buffer.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_buffer.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_capabilities.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_capabilities.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_compute.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_compute.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_element.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_element.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_framebuffer.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_framebuffer.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_matrix.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_matrix.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_offscreen.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_offscreen.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_platform.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_platform.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_select.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_select.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_shader.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_shader.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_shader_create_info.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_state.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_state.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_storagebuffer.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_storagebuffer.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_texture.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_texture.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_types.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_types.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_uniformbuffer.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_uniformbuffer.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_vertex_buffer.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_vertex_buffer.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_vertex_format.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/gpu/gpu_py_vertex_format.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_alembic.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_alembic.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_build_options.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_build_options.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_ffmpeg.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_ffmpeg.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_handlers.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_handlers.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_icons.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_icons.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_ocio.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_ocio.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_oiio.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_oiio.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_opensubdiv.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_opensubdiv.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_openvdb.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_openvdb.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_sdl.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_sdl.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_timers.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_timers.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_translations.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_translations.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_usd.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_app_usd.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_audaspace.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_audaspace.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_capi_utils.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_capi_utils.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_cli_command.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_cli_command.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_driver.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_driver.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_driver_bytecode.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_driver_bytecode.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_geometry_set.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_geometry_set.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_gizmo_wrap.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_gizmo_wrap.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_inline_shader_nodes.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_inline_shader_nodes.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_interface.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_interface_atexit.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_interface_run.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_intern_string.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_intern_string.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_library.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_library_load.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_library_write.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_msgbus.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_msgbus.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_operator.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_operator.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_operator_function.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_operator_function.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_operator_wrap.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_operator_wrap.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_path.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_path.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_props.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_props.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_anim.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_anim.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_array.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_callback.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_callback.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_context.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_context.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_data.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_data.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_driver.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_driver.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_gizmo.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_gizmo.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_id_collection.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_id_collection.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_operator.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_operator.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_text.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_text.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_types_capi.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_types_capi.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_ui.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_ui.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_wm.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_rna_wm.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_traceback.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_traceback.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_utils_previews.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_utils_previews.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_utils_units.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/intern/bpy_utils_units.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_bvhtree.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_bvhtree.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Color.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Color.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Euler.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Euler.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_geometry.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_geometry.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_interpolate.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_interpolate.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_kdtree.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_kdtree.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Matrix.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Matrix.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_noise.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_noise.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Quaternion.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Quaternion.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Vector.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/python/mathutils/mathutils_Vector.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "python"
+    },
+    "upstream/source/blender/makesrna/intern/makesrna_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "makesrna"
+    },
+    "upstream/source/blender/makesrna/intern/rna_path_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "makesrna"
+    },
+    "upstream/source/blender/makesrna/intern/rna_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "makesrna"
+    },
+    "upstream/source/blender/makesdna/tests/dna/dna_test.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "makesdna"
+    },
+    "upstream/source/blender/io/wavefront_obj/tests/obj_mtl_parser_tests.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/wavefront_obj/tests/obj_nurbs_io_tests.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/usd/tests/usd_export_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/usd/tests/usd_stage_creation_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/stl/tests/stl_exporter_tests.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/spz/tests/spz_header_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/ply/tests/io_ply_importer_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/common/intern/abstract_hierarchy_iterator_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/common/intern/object_identifier_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/common/intern/string_utils_tests.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/alembic/tests/abc_export_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/io/alembic/tests/abc_matrix_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "io"
+    },
+    "upstream/source/blender/imbuf/tests/IMB_colormanagement_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/imbuf/tests/IMB_partial_update_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/imbuf/tests/IMB_scaling_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/imbuf/tests/IMB_transform_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/description_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/source_processor_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/view_specific_look_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_fallback_config_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/imbuf/movie/tests/ffmpeg_codecs.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/imbuf/movie/tests/ffmpeg_cpu_flags.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "imbuf"
+    },
+    "upstream/source/blender/gpu/tests/buffer_texture_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/compute_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/framebuffer_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/gpu_testing.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/gpu_testing.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/immediate_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/index_buffer_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/mipmap_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/push_constants_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/ray_tracing_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/shader_create_info_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/shader_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/specialization_constants_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/state_blend_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/storage_buffer_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/texture_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/texture_view_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/vertex_buffer_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/vulkan/tests/vk_data_conversion_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/vulkan/tests/vk_memory_layout_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/vulkan/render_graph/tests/vk_render_graph_test_compute.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/vulkan/render_graph/tests/vk_render_graph_test_present.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/vulkan/render_graph/tests/vk_render_graph_test_render.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/vulkan/render_graph/tests/vk_render_graph_test_scheduler.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/vulkan/render_graph/tests/vk_render_graph_test_transfer.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/vulkan/render_graph/tests/vk_render_graph_test_types.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/shaders/bsl_shader_linting.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/tests/shaders/gpu_math_test.bsl.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shaders/common/gpu_shader_test_lib.bsl.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shaders/infos/gpu_shader_test_infos.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/expression_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/flow_control_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/function_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/grammar_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/metadata_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/namespace_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/parser_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/resource_table_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/shader_preprocess_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/shader_tool_testing.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/struct_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/syntax_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/gpu/shader_tool/tests/templates_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "gpu"
+    },
+    "upstream/source/blender/functions/tests/FN_field_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "functions"
+    },
+    "upstream/source/blender/functions/tests/FN_lazy_function_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "functions"
+    },
+    "upstream/source/blender/functions/tests/FN_multi_function_procedure_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "functions"
+    },
+    "upstream/source/blender/functions/tests/FN_multi_function_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "functions"
+    },
+    "upstream/source/blender/functions/tests/FN_multi_function_test_common.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "functions"
+    },
+    "upstream/source/blender/freestyle/intern/application/AppCanvas.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/application/AppCanvas.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/application/AppConfig.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/application/AppConfig.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/application/AppView.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/application/AppView.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/application/Controller.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/application/Controller.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/blender_interface/BlenderFileLoader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/blender_interface/BlenderFileLoader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/blender_interface/BlenderStrokeRenderer.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/blender_interface/BlenderStrokeRenderer.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/blender_interface/BlenderStyleModule.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/blender_interface/FRS_freestyle.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/BBox.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Bezier.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Bezier.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/FastGrid.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/FastGrid.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/FitCurve.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/FitCurve.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Geom.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/GeomCleaner.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/GeomCleaner.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/GeomUtils.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Grid.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Grid.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/GridHelpers.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/GridHelpers.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/HashGrid.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/HashGrid.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/matrix_util.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/matrix_util.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Noise.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Noise.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/normal_cycle.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/normal_cycle.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Polygon.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/SweepLine.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/image/GaussianFilter.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/image/GaussianFilter.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/image/Image.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/image/ImagePyramid.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/image/ImagePyramid.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_BBox.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_BBox.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_BinaryPredicate0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_BinaryPredicate0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_BinaryPredicate1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_BinaryPredicate1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_ContextFunctions.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_ContextFunctions.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Convert.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Convert.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Freestyle.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Freestyle.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_FrsMaterial.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_FrsMaterial.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_FrsNoise.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_FrsNoise.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Id.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Id.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_IntegrationType.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_IntegrationType.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Interface0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Interface0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Interface1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Interface1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Iterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Iterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_MediumType.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_MediumType.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Nature.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Nature.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Operators.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_Operators.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_SShape.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_SShape.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_StrokeAttribute.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_StrokeAttribute.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_StrokeShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_StrokeShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_UnaryFunction0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_UnaryFunction0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_UnaryFunction1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_UnaryFunction1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_UnaryPredicate0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_UnaryPredicate0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_UnaryPredicate1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_UnaryPredicate1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_ViewMap.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_ViewMap.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_ViewShape.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BPy_ViewShape.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Director.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Director.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/DrawingStyle.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/FrsMaterial.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/IndexedFaceSet.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/IndexedFaceSet.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/LineRep.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/Node.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeCamera.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeCamera.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeDrawingStyle.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeDrawingStyle.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeGroup.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeGroup.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeLight.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeLight.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeShape.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeShape.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeTransform.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeTransform.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeViewLayer.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/NodeViewLayer.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/OrientedLineRep.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/OrientedLineRep.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/Rep.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/Rep.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/SceneHash.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/SceneHash.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/ScenePrettyPrinter.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/ScenePrettyPrinter.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/SceneVisitor.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/SceneVisitor.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/TriangleRep.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/TriangleRep.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/VertexRep.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/scene_graph/VertexRep.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/AdvancedFunctions0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/AdvancedFunctions0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/AdvancedFunctions1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/AdvancedFunctions1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/AdvancedPredicates1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/AdvancedStrokeShaders.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/AdvancedStrokeShaders.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/BasicStrokeShaders.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/BasicStrokeShaders.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Canvas.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Canvas.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Chain.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Chain.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/ChainingIterators.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/ChainingIterators.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/ContextFunctions.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/ContextFunctions.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Curve.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Curve.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/CurveAdvancedIterators.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/CurveIterators.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Modifiers.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Module.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Operators.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Operators.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Predicates0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Predicates0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Predicates1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Predicates1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/PSStrokeRenderer.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/PSStrokeRenderer.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/QInformationMap.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Stroke.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Stroke.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeAdvancedIterators.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeIO.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeIO.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeIterators.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeLayer.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeLayer.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeRenderer.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeRenderer.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeRep.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeRep.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeTesselator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeTesselator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StyleModule.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/TextStrokeRenderer.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/TextStrokeRenderer.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/BaseIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/BaseObject.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/BaseObject.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/Cast.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/Exception.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/Exception.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/FreestyleConfig.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/Id.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/Interpreter.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/Iterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/Iterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/PointerSequence.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/Precision.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/ProgressBar.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/PseudoNoise.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/PseudoNoise.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/PythonInterpreter.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/PythonInterpreter.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/RandGen.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/RandGen.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/RenderMonitor.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/StringUtils.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/StringUtils.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/TimeStamp.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/TimeStamp.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/system/TimeUtils.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ArbitraryGridDensityProvider.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ArbitraryGridDensityProvider.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/AutoPtrHelper.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/AverageAreaGridDensityProvider.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/AverageAreaGridDensityProvider.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/BoxGrid.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/BoxGrid.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/CulledOccluderSource.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/CulledOccluderSource.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/FEdgeXDetector.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/FEdgeXDetector.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Functions0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Functions0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Functions1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Functions1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/GridDensityProvider.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/HeuristicGridDensityProviderFactory.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/HeuristicGridDensityProviderFactory.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Interface0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Interface0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Interface1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Interface1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/OccluderSource.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/OccluderSource.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Pow23GridDensityProvider.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Pow23GridDensityProvider.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Silhouette.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Silhouette.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/SilhouetteGeomEngine.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/SilhouetteGeomEngine.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/SphericalGrid.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/SphericalGrid.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/SteerableViewMap.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/SteerableViewMap.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewEdgeXBuilder.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewEdgeXBuilder.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewMap.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewMap.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewMapAdvancedIterators.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewMapBuilder.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewMapIterators.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewMapTesselator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewMapTesselator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/Curvature.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/Curvature.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/Nature.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WEdge.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WEdge.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WFillGrid.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WFillGrid.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WingedEdgeBuilder.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WingedEdgeBuilder.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WSFillGrid.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WSFillGrid.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WXEdge.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WXEdge.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WXEdgeBuilder.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WXEdgeBuilder.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_FalseBP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_FalseBP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_Length2DBP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_Length2DBP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_SameShapeIdBP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_SameShapeIdBP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_TrueBP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_TrueBP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_ViewMapGradientNormBP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/BinaryPredicate1D/BPy_ViewMapGradientNormBP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/BPy_CurvePoint.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/BPy_CurvePoint.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/BPy_SVertex.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/BPy_SVertex.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/BPy_ViewVertex.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/BPy_ViewVertex.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/BPy_FEdge.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/BPy_FEdge.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/BPy_FrsCurve.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/BPy_FrsCurve.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/BPy_Stroke.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/BPy_Stroke.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/BPy_ViewEdge.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/BPy_ViewEdge.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_AdjacencyIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_AdjacencyIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_ChainingIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_ChainingIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_ChainPredicateIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_ChainPredicateIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_ChainSilhouetteIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_ChainSilhouetteIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_CurvePointIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_CurvePointIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_Interface0DIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_Interface0DIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_orientedViewEdgeIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_orientedViewEdgeIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_StrokeVertexIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_StrokeVertexIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_SVertexIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_SVertexIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_ViewEdgeIterator.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Iterator/BPy_ViewEdgeIterator.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_BackboneStretcherShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_BackboneStretcherShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_BezierCurveShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_BezierCurveShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_BlenderTextureShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_BlenderTextureShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_CalligraphicShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_CalligraphicShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ColorNoiseShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ColorNoiseShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ConstantColorShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ConstantColorShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ConstantThicknessShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ConstantThicknessShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ConstrainedIncreasingThicknessShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ConstrainedIncreasingThicknessShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_GuidingLinesShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_GuidingLinesShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_IncreasingColorShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_IncreasingColorShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_IncreasingThicknessShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_IncreasingThicknessShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_PolygonalizationShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_PolygonalizationShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_SamplingShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_SamplingShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_SmoothingShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_SmoothingShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_SpatialNoiseShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_SpatialNoiseShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_StrokeTextureStepShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_StrokeTextureStepShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ThicknessNoiseShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_ThicknessNoiseShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_TipRemoverShader.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/StrokeShader/BPy_TipRemoverShader.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DDouble.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DDouble.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DEdgeNature.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DEdgeNature.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DFloat.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DFloat.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DId.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DId.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DMaterial.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DMaterial.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DUnsigned.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DUnsigned.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DVec2f.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DVec2f.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DVec3f.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DVec3f.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DVectorViewShape.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DVectorViewShape.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DViewShape.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/BPy_UnaryFunction0DViewShape.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DDouble.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DDouble.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DEdgeNature.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DEdgeNature.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DFloat.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DFloat.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DUnsigned.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DUnsigned.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DVec2f.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DVec2f.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DVec3f.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DVec3f.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DVectorViewShape.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DVectorViewShape.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DVoid.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/BPy_UnaryFunction1DVoid.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate0D/BPy_FalseUP0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate0D/BPy_FalseUP0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate0D/BPy_TrueUP0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate0D/BPy_TrueUP0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_ContourUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_ContourUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_DensityLowerThanUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_DensityLowerThanUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_EqualToChainingTimeStampUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_EqualToChainingTimeStampUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_EqualToTimeStampUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_EqualToTimeStampUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_ExternalContourUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_ExternalContourUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_FalseUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_FalseUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_QuantitativeInvisibilityUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_QuantitativeInvisibilityUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_ShapeUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_ShapeUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_TrueUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_TrueUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_WithinImageBoundaryUP1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryPredicate1D/BPy_WithinImageBoundaryUP1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_Curvature2DAngleF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_Curvature2DAngleF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_DensityF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_DensityF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetCompleteViewMapDensityF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetCompleteViewMapDensityF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetDirectionalViewMapDensityF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetDirectionalViewMapDensityF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetProjectedXF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetProjectedXF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetProjectedYF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetProjectedYF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetProjectedZF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetProjectedZF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetSteerableViewMapDensityF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetSteerableViewMapDensityF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetViewMapGradientNormF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetViewMapGradientNormF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetXF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetXF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetYF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetYF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetZF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_GetZF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_LocalAverageDepthF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_LocalAverageDepthF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_ZDiscontinuityF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_double/BPy_ZDiscontinuityF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_Nature_EdgeNature/BPy_CurveNatureF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_Nature_EdgeNature/BPy_CurveNatureF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_unsigned_int/BPy_QuantitativeInvisibilityF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_unsigned_int/BPy_QuantitativeInvisibilityF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_Vec2f/BPy_Normal2DF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_Vec2f/BPy_Normal2DF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_Vec2f/BPy_Orientation2DF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_Vec2f/BPy_Orientation2DF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_Vec3f/BPy_Orientation3DF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_Vec3f/BPy_Orientation3DF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_vector_ViewShape/BPy_GetOccludeeF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_vector_ViewShape/BPy_GetOccludeeF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_vector_ViewShape/BPy_GetOccludersF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_vector_ViewShape/BPy_GetOccludersF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_vector_ViewShape/BPy_GetShapeF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_vector_ViewShape/BPy_GetShapeF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_void/BPy_ChainingTimeStampF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_void/BPy_ChainingTimeStampF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_void/BPy_IncrementChainingTimeStampF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_void/BPy_IncrementChainingTimeStampF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_void/BPy_TimeStampF1D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction1D/UnaryFunction1D_void/BPy_TimeStampF1D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_Curvature2DAngleF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_Curvature2DAngleF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_DensityF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_DensityF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetProjectedXF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetProjectedXF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetProjectedYF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetProjectedYF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetProjectedZF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetProjectedZF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetXF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetXF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetYF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetYF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetZF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_GetZF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_LocalAverageDepthF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_LocalAverageDepthF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_ZDiscontinuityF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_double/BPy_ZDiscontinuityF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_GetCurvilinearAbscissaF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_GetCurvilinearAbscissaF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_GetParameterF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_GetParameterF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_GetViewMapGradientNormF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_GetViewMapGradientNormF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_ReadCompleteViewMapPixelF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_ReadCompleteViewMapPixelF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_ReadMapPixelF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_ReadMapPixelF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_ReadSteerableViewMapPixelF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_float/BPy_ReadSteerableViewMapPixelF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Id/BPy_ShapeIdF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Id/BPy_ShapeIdF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Material/BPy_MaterialF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Material/BPy_MaterialF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Nature_EdgeNature/BPy_CurveNatureF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Nature_EdgeNature/BPy_CurveNatureF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_unsigned_int/BPy_QuantitativeInvisibilityF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_unsigned_int/BPy_QuantitativeInvisibilityF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Vec2f/BPy_Normal2DF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Vec2f/BPy_Normal2DF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Vec2f/BPy_VertexOrientation2DF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Vec2f/BPy_VertexOrientation2DF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Vec3f/BPy_VertexOrientation3DF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_Vec3f/BPy_VertexOrientation3DF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_vector_ViewShape/BPy_GetOccludersF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_vector_ViewShape/BPy_GetOccludersF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_ViewShape/BPy_GetOccludeeF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_ViewShape/BPy_GetOccludeeF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_ViewShape/BPy_GetShapeF0D.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/UnaryFunction0D/UnaryFunction0D_ViewShape/BPy_GetShapeF0D.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/Curve/BPy_Chain.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/Curve/BPy_Chain.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/FEdge/BPy_FEdgeSharp.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/FEdge/BPy_FEdgeSharp.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/FEdge/BPy_FEdgeSmooth.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface1D/FEdge/BPy_FEdgeSmooth.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/CurvePoint/BPy_StrokeVertex.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/CurvePoint/BPy_StrokeVertex.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/ViewVertex/BPy_NonTVertex.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/ViewVertex/BPy_NonTVertex.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/ViewVertex/BPy_TVertex.cpp": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/freestyle/intern/python/Interface0D/ViewVertex/BPy_TVertex.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "freestyle"
+    },
+    "upstream/source/blender/editors/animation/anim_draw_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/animation/anim_filter_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/animation/keyframes_general_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/animation/keyframes_keylist_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/animation/transformable_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/interface/interface_ops_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/sculpt_paint/mesh/mesh_brush_common_tests.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/sculpt_paint/mesh/paint_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/sculpt_paint/mesh/sculpt_boundary_tests.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/sculpt_paint/mesh/sculpt_detail_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/sculpt_paint/mesh/sculpt_undo_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/grease_pencil/tests/grease_pencil_boolean_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/grease_pencil/tests/grease_pencil_merge_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/grease_pencil/tests/grease_pencil_trim_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/editors/curves/tests/curves_edit_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "editors"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_test_gbuffer_closure.bsl.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "draw"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_test_gbuffer_normal.bsl.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "draw"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_test_shadow.bsl.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "draw"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_query_iter_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "depsgraph"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_rna_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "depsgraph"
+    },
+    "upstream/source/blender/bmesh/tests/bmesh_core_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "bmesh"
+    },
+    "upstream/source/blender/blenloader/tests/blendfile_load_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenloader"
+    },
+    "upstream/source/blender/blenloader/tests/blendfile_loading_base_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenloader"
+    },
+    "upstream/source/blender/blenloader/tests/blendfile_loading_base_test.h": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenloader"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_array_store_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_array_utils_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_convexhull_2d_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_exception_safety_test_utils.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_index_mask_expression_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_math_geom_hh_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_math_half_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_math_interp_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_math_matrix_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_math_matrix_types_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_math_rotation_types_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_math_vector_types_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_memory_counter_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_polyfill_2d_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_random_access_iterator_mixin_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_string_utf8_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenlib/tests/BLI_task_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenlib"
+    },
+    "upstream/source/blender/blenkernel/intern/armature_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenkernel"
+    },
+    "upstream/source/blender/blenkernel/intern/image_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenkernel"
+    },
+    "upstream/source/blender/blenkernel/intern/lib_id_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenkernel"
+    },
+    "upstream/source/blender/blenfont/tests/BLF_tests.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "blenfont"
+    },
+    "upstream/source/blender/asset_system/tests/asset_catalog_path_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "asset_system"
+    },
+    "upstream/source/blender/asset_system/tests/asset_catalog_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "asset_system"
+    },
+    "upstream/source/blender/asset_system/tests/asset_catalog_tree_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "asset_system"
+    },
+    "upstream/source/blender/asset_system/tests/asset_library_service_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "asset_system"
+    },
+    "upstream/source/blender/asset_system/tests/asset_library_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "asset_system"
+    },
+    "upstream/source/blender/asset_system/tests/asset_library_test_common.hh": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "asset_system"
+    },
+    "upstream/source/blender/asset_system/tests/asset_representation_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "asset_system"
+    },
+    "upstream/source/blender/asset_system/tests/essentials_library_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "asset_system"
+    },
+    "upstream/source/blender/asset_system/tests/remote_library_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "asset_system"
+    },
+    "upstream/source/blender/animrig/intern/bone_collections_test.cc": {
+      "reason": "pruned_legacy_or_test",
+      "subsystem": "animrig"
     }
   },
   "failed": {
@@ -9715,7 +13119,6 @@
     "upstream/source/blender/bmesh/operators/bmo_unsubdivide.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/operators/bmo_utils.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/operators/bmo_wireframe.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tests/bmesh_core_test.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_beautify.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_beautify.hh": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_bisect_plane.cc": "apfel_generation_failed",
@@ -9774,8 +13177,6 @@
     "upstream/source/blender/io/wavefront_obj/importer/obj_import_objects.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.cc": "apfel_generation_failed",
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/tests/obj_mtl_parser_tests.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/tests/obj_nurbs_io_tests.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/IO_ply.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/IO_ply.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/exporter/ply_export.cc": "compiler_burndown_exceeded",
@@ -9793,7 +13194,6 @@
     "upstream/source/blender/io/ply/importer/ply_import_gsplat.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/importer/ply_import_mesh.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/intern/ply_data.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/tests/io_ply_importer_test.cc": "apfel_generation_failed",
     "upstream/source/blender/io/stl/IO_stl.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/stl/IO_stl.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/io/stl/exporter/stl_export.cc": "compiler_burndown_exceeded",
@@ -9802,7 +13202,6 @@
     "upstream/source/blender/io/stl/importer/stl_import_ascii_reader.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/stl/importer/stl_import_binary_reader.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/stl/importer/stl_import_mesh.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/stl/tests/stl_exporter_tests.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/geometry/GEO_add_curves_on_mesh.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/geometry/GEO_curves_remove_and_split.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/geometry/GEO_interpolate_curves.hh": "compiler_burndown_exceeded",
@@ -9844,7 +13243,6 @@
     "upstream/source/blender/blenkernel/BKE_volume_grid_fields.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_volume_to_mesh.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/anonymous_attribute_id.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/intern/armature_test.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/intern/asset_weak_reference.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/attribute_math.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/intern/blender_cli_command.cc": "compiler_burndown_exceeded",
@@ -9855,11 +13253,9 @@
     "upstream/source/blender/blenkernel/intern/editmesh_bvh.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/icons.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/idprop_serialize.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/image_test.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/lib_id.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/lib_id_delete.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/lib_id_eval.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/lib_id_test.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/main.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/main_idmap.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/mask_evaluate.cc": "apfel_generation_failed",
@@ -9918,7 +13314,6 @@
     "upstream/source/blender/makesdna/intern/dna_utils.cc": "apfel_generation_failed",
     "upstream/source/blender/makesdna/intern/dna_utils.h": "apfel_generation_failed",
     "upstream/source/blender/makesdna/intern/makesdna.cc": "apfel_generation_failed",
-    "upstream/source/blender/makesdna/tests/dna/dna_test.h": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_alloca.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_any.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_array_state.hh": "compiler_burndown_exceeded",
@@ -10028,28 +13423,10 @@
     "upstream/source/blender/blenlib/intern/task_graph.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/task_iterator.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/task_pool.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_array_store_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_array_utils_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_convexhull_2d_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_exception_safety_test_utils.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_index_mask_expression_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_math_geom_hh_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_math_half_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_math_interp_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_math_matrix_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_math_matrix_types_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_math_rotation_types_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_math_vector_types_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_memory_counter_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_polyfill_2d_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_random_access_iterator_mixin_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_string_utf8_test.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/tests/BLI_task_test.cc": "apfel_generation_failed",
     "upstream/source/blender/animrig/ANIM_action_legacy.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/animrig/ANIM_pose.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/animrig/intern/action_legacy.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/animrig/intern/action_runtime.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/animrig/intern/bone_collections_test.cc": "apfel_generation_failed",
     "upstream/source/blender/nodes/NOD_eval_log.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/NOD_geometry_nodes_closure.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/NOD_geometry_nodes_closure_signature.hh": "compiler_burndown_exceeded",
@@ -10169,9 +13546,6 @@
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_surfel_light.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_surfel_list.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_surfel_ray.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_test_gbuffer_closure.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_test_gbuffer_normal.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_test_shadow.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_velocity.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_volume.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/external/external_engine.cc": "apfel_generation_failed",
@@ -10222,7 +13596,6 @@
     "upstream/source/blender/windowmanager/intern/wm.cc": "apfel_generation_failed",
     "upstream/source/blender/windowmanager/intern/wm_cursors.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_dragdrop.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/intern/wm_dragdrop_test.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_event_system.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_files.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_files_link.cc": "compiler_burndown_exceeded",
