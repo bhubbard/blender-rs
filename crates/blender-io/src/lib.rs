@@ -1897,3 +1897,5 @@ pub mod BLI_assert;
 pub mod BLI_bit_group_vector;
 
 pub mod BLI_bit_ref;
+
+pub mod BLI_bit_span;
