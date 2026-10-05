@@ -400,3 +400,9 @@ pub mod DNA_meta_types;
 
 
 pub mod DNA_outliner_types;
+
+
+
+
+
+pub mod DNA_sound_types;
