@@ -438,3 +438,6 @@ pub mod DNA_brush_enums;
 pub mod DNA_camera_types;
 
 pub mod DNA_colorband_types;
+
+
+pub mod DNA_cloth_types;
