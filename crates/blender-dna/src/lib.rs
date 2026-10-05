@@ -453,3 +453,6 @@ pub mod DNA_fileglobal_types;
 pub mod DNA_effect_types;
 
 pub mod DNA_fluid_types;
+
+
+pub mod DNA_image_enums;
