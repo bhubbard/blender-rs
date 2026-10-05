@@ -408,3 +408,7 @@ pub mod DNA_outliner_types;
 pub mod DNA_sound_types;
 
 pub mod DNA_shader_fx_types;
+
+
+
+pub mod DNA_speaker_types;
