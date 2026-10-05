@@ -412,3 +412,5 @@ pub mod DNA_shader_fx_types;
 
 
 pub mod DNA_speaker_types;
+
+pub mod DNA_text_types;
