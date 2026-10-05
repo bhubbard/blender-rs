@@ -675,3 +675,8 @@ pub mod bmesh_polygon;
 pub mod bmesh_polygon_edgenet;
 
 pub mod bmesh_private;
+
+
+
+
+pub mod COM_meta_data;
