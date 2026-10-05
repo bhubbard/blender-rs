@@ -499,3 +499,11 @@ pub mod DNA_sdna_type_ids;
 
 
 pub mod DNA_texture_types;
+
+
+
+
+
+
+
+pub mod DNA_view3d_enums;
