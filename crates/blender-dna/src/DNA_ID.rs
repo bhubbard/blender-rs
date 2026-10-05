@@ -177,6 +177,12 @@ pub struct ID {
     pub library_weak_reference: *mut LibraryWeakReference,
 }
 
+impl Default for ID {
+    fn default() -> Self {
+        unsafe { core::mem::zeroed() }
+    }
+}
+
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq)]
 pub struct Library {

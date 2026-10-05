@@ -2,6 +2,11 @@
 
 use crate::*;
 
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct BitVector {
+    pub _marker: core::marker::PhantomData<u8>,
+}
+
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
 pub struct Changes {
@@ -10,7 +15,7 @@ pub struct Changes {
     pub buffer_height: i32,
     pub chunk_x_len: i32,
     pub chunk_y_len: i32,
-    pub modified_chunks: BitVector<>,
+    pub modified_chunks: BitVector,
 }
 
 #[repr(C)]

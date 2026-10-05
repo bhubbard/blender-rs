@@ -991,6 +991,142 @@
     "upstream/source/blender/makesdna/DNA_ID.h": {
       "crate": "blender-dna",
       "module": "DNA_ID.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_constraint_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_constraint_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_viewer_path_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_viewer_path_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_collection_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_collection_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_lattice_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_lattice_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_light_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_light_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_meta_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_meta_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_outliner_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_outliner_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_sound_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_sound_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_shader_fx_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_shader_fx_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_speaker_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_speaker_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_text_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_text_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_linestyle_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_linestyle_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_vfont_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_vfont_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_volume_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_volume_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_brush_enums.h": {
+      "crate": "blender-dna",
+      "module": "DNA_brush_enums.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_camera_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_camera_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_colorband_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_colorband_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_cloth_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_cloth_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_dynamicpaint_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_dynamicpaint_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_fileglobal_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_fileglobal_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_effect_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_effect_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_fluid_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_fluid_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_image_enums.h": {
+      "crate": "blender-dna",
+      "module": "DNA_image_enums.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_key_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_key_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_lightprobe_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_lightprobe_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_modifier_enums.h": {
+      "crate": "blender-dna",
+      "module": "DNA_modifier_enums.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_meshdata_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_meshdata_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_object_fluidsim_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_object_fluidsim_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_pointcloud_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_pointcloud_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_rigidbody_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_rigidbody_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_sdna_type_ids.hh": {
+      "crate": "blender-dna",
+      "module": "DNA_sdna_type_ids.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_texture_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_texture_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_view3d_enums.h": {
+      "crate": "blender-dna",
+      "module": "DNA_view3d_enums.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_windowmanager_enums.h": {
+      "crate": "blender-dna",
+      "module": "DNA_windowmanager_enums.rs"
     }
   },
   "skipped": {
@@ -1041,54 +1177,6 @@
     "upstream/source/blender/bmesh/tools/bmesh_region_match.cc": {
       "reason": "zev_route_skip",
       "confidence": 0.4947582996477041
-    },
-    "upstream/source/blender/makesdna/DNA_ID_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.33967409713202074
-    },
-    "upstream/source/blender/makesdna/DNA_action_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5969476235495652
-    },
-    "upstream/source/blender/makesdna/DNA_anim_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.34440236851870515
-    },
-    "upstream/source/blender/makesdna/DNA_asset_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.32836613433463835
-    },
-    "upstream/source/blender/makesdna/DNA_boid_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3426061971758035
-    },
-    "upstream/source/blender/makesdna/DNA_brush_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3395417043825216
-    },
-    "upstream/source/blender/makesdna/DNA_cachefile_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.34030887779872826
-    },
-    "upstream/source/blender/makesdna/DNA_cloth_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3429664997365606
-    },
-    "upstream/source/blender/makesdna/DNA_color_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3400382050175109
-    },
-    "upstream/source/blender/makesdna/DNA_colorband_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3433589548339767
-    },
-    "upstream/source/blender/makesdna/DNA_curveprofile_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3404148727199356
-    },
-    "upstream/source/blender/makesdna/DNA_customdata_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.43521084678035726
     },
     "upstream/source/blender/blenkernel/BKE_action.hh": {
       "reason": "zev_route_skip",
@@ -3317,134 +3405,6 @@
     "upstream/source/blender/blenkernel/particle_private.h": {
       "reason": "zev_route_skip",
       "confidence": 0.38838836162788304
-    },
-    "upstream/source/blender/makesdna/DNA_dynamicpaint_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.34040517325344766
-    },
-    "upstream/source/blender/makesdna/DNA_effect_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.4483571111136768
-    },
-    "upstream/source/blender/makesdna/DNA_fileglobal_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5604385756832218
-    },
-    "upstream/source/blender/makesdna/DNA_fluid_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.34297566877765007
-    },
-    "upstream/source/blender/makesdna/DNA_grease_pencil_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.33852068642652394
-    },
-    "upstream/source/blender/makesdna/DNA_image_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.36081384206680206
-    },
-    "upstream/source/blender/makesdna/DNA_key_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.35687777721365155
-    },
-    "upstream/source/blender/makesdna/DNA_lightprobe_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.4458426469971216
-    },
-    "upstream/source/blender/makesdna/DNA_listBase.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5162669935828184
-    },
-    "upstream/source/blender/makesdna/DNA_mask_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5234889534977244
-    },
-    "upstream/source/blender/makesdna/DNA_mesh_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.34524048690432757
-    },
-    "upstream/source/blender/makesdna/DNA_meshdata_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.34361722235220027
-    },
-    "upstream/source/blender/makesdna/DNA_modifier_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.4410481642676841
-    },
-    "upstream/source/blender/makesdna/DNA_node_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.33770525350166786
-    },
-    "upstream/source/blender/makesdna/DNA_object_fluidsim_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3413329212538061
-    },
-    "upstream/source/blender/makesdna/DNA_object_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.31785476745605995
-    },
-    "upstream/source/blender/makesdna/DNA_packedFile_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5447381945171567
-    },
-    "upstream/source/blender/makesdna/DNA_pointcache_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3292343840021036
-    },
-    "upstream/source/blender/makesdna/DNA_pointcloud_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.33825236112674817
-    },
-    "upstream/source/blender/makesdna/DNA_rigidbody_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5613067125497431
-    },
-    "upstream/source/blender/makesdna/DNA_scene_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3431162638753946
-    },
-    "upstream/source/blender/makesdna/DNA_scene_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.31783137125587707
-    },
-    "upstream/source/blender/makesdna/DNA_space_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3433250316171061
-    },
-    "upstream/source/blender/makesdna/DNA_space_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.31763946718278063
-    },
-    "upstream/source/blender/makesdna/DNA_tracking_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5464567077682335
-    },
-    "upstream/source/blender/makesdna/DNA_userdef_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3698953434271408
-    },
-    "upstream/source/blender/makesdna/DNA_userdef_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3179339842321138
-    },
-    "upstream/source/blender/makesdna/DNA_view2d_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.5293941889336891
-    },
-    "upstream/source/blender/makesdna/DNA_view3d_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3396280187167839
-    },
-    "upstream/source/blender/makesdna/DNA_view3d_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.3455805402250144
-    },
-    "upstream/source/blender/makesdna/DNA_windowmanager_enums.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.2888693949337508
-    },
-    "upstream/source/blender/makesdna/DNA_xr_types.h": {
-      "reason": "zev_route_skip",
-      "confidence": 0.33959506057337724
     },
     "upstream/source/blender/makesdna/tests/makesdna_test.cc": {
       "reason": "zev_route_skip",
@@ -13178,9 +13138,6 @@
     "upstream/source/blender/makesdna/DNA_anim_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_armature_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_array_utils.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/makesdna/DNA_camera_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_collection_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_constraint_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_curve_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_curves_types.h": "fast_path_type_resolution",
     "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.cc": "compiler_burndown_exceeded",
@@ -13296,34 +13253,20 @@
     "upstream/source/blender/blenkernel/intern/volume_grid_fields.cc": "apfel_generation_failed",
     "upstream/source/blender/makesdna/DNA_grease_pencil_modifier_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_image_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_lattice_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_layer_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_light_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_linestyle_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_material_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_meta_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_modifier_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_movieclip_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_node_tree_interface_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_object_force_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_outliner_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_particle_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_screen_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_sdna_pointers.hh": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_sdna_type_ids.hh": "apfel_generation_failed",
     "upstream/source/blender/makesdna/DNA_sdna_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_sequence_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_session_uid_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_shader_fx_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_sound_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_speaker_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_text_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_texture_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_vec_defaults.h": "apfel_generation_failed",
     "upstream/source/blender/makesdna/DNA_vec_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_vfont_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_viewer_path_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_volume_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_windowmanager_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_workspace_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_world_types.h": "fast_path_type_resolution",
@@ -13629,6 +13572,31 @@
     "upstream/source/blender/windowmanager/xr/intern/wm_xr_location_scouting.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/BKE_bake_values.hh": "compiler_burndown_exceeded"
+    "upstream/source/blender/blenkernel/BKE_bake_values.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_action_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_asset_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_boid_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_cachefile_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_color_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_curveprofile_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_customdata_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_grease_pencil_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_listBase.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_mask_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_mesh_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_packedFile_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_node_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_object_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_pointcache_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_scene_enums.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_scene_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_space_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_space_enums.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_tracking_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_userdef_enums.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_view2d_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_userdef_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_view3d_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_xr_types.h": "fast_path_type_resolution"
   }
 }

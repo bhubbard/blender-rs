@@ -125,17 +125,18 @@ def load_lifetimes() -> Dict[str, List[Dict[str, str]]]:
     return lifetimes
 
 def route_file_with_zev(file_path: Path) -> Tuple[str, float]:
-    """Uses zev route to classify file destination in microseconds with zero tokens."""
+    """Uses deterministic subsystem rules and zev route to classify file destination."""
+    rel = str(file_path.relative_to(ROOT_DIR))
+    if "makesdna" in rel:
+        return "blender-dna", 1.0
+    elif "bmesh" in rel:
+        return "blender-bmesh", 1.0
+    elif "blenlib" in rel or "blenkernel" in rel or "imbuf" in rel or "nodes" in rel or "/io/" in rel:
+        return "blender-io", 1.0
+    elif "math" in rel:
+        return "blender-math", 1.0
+
     if not ZEV_BIN.exists():
-        rel = str(file_path.relative_to(ROOT_DIR))
-        if "bmesh" in rel:
-            return "blender-bmesh", 1.0
-        elif "makesdna" in rel:
-            return "blender-dna", 1.0
-        elif "io" in rel:
-            return "blender-io", 1.0
-        elif "math" in rel:
-            return "blender-math", 1.0
         return "skip", 0.0
 
     sample = []
@@ -387,6 +388,35 @@ def translate_file_with_apfel(source_file: Path, target_crate: str, lifetimes: D
     for struct_name, entries in lifetimes.items():
         if struct_name.lower() in source_file.name.lower():
             relevant_lifetimes.extend(entries)
+
+    # 1. Deterministic Fast-Path AST Pass for Headers (0 tokens, <10ms)
+    if source_file.suffix.lower() in (".h", ".hh"):
+        fast_cmd = [
+            str(APFEL_TRANSPILE_BIN),
+            "-f", str(source_file),
+            "-t", target_crate,
+            "-m", module_name,
+            "--fast-only"
+        ]
+        t_fast0 = time.time()
+        fast_res = subprocess.run(fast_cmd, capture_output=True, text=True)
+        if fast_res.returncode == 0 and len(fast_res.stdout.strip()) > 50:
+            dur_fast = round(time.time() - t_fast0, 3)
+            print(f"  {GREEN}[⚡ Fast-Path AST]{RESET} Transpiled {source_file.name} in {dur_fast * 1000:.1f}ms")
+            log_apfel_telemetry({
+                "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "source_file": str(source_file.relative_to(ROOT_DIR)),
+                "file_lines": file_lines,
+                "file_bytes": file_bytes,
+                "target_crate": target_crate,
+                "exit_code": 0,
+                "duration_s": dur_fast,
+                "stdout_len": len(fast_res.stdout),
+                "stderr": "fast_path_ast",
+                "output_lines": len(fast_res.stdout.splitlines()),
+                "mode": "fast_only_ast"
+            })
+            return fast_res.stdout
 
     system_prompt = build_system_prompt(target_crate, relevant_lifetimes)
 
