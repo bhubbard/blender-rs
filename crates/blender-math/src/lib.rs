@@ -418,3 +418,5 @@ pub mod GEO_xpbd_constraint_collision_face;
 pub mod GEO_xpbd_constraint_pin_rotation;
 
 pub mod GEO_xpbd_updater_gauss_seidel;
+
+pub mod COM_pixel_operation;
