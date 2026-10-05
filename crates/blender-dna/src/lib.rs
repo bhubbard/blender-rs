@@ -286,3 +286,35 @@ pub mod DNA_anim_enums;
 
 
 pub mod DNA_curve_enums;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod DNA_uuid_types;
