@@ -432,3 +432,5 @@ pub mod COM_pixel_operation;
 
 
 pub mod COM_fog_glow_kernel;
+
+pub mod COM_symmetric_blur_weights;
