@@ -1892,3 +1892,6 @@ pub mod BLI_array_state;
 
 
 pub mod BLI_assert;
+
+
+pub mod BLI_bit_group_vector;
