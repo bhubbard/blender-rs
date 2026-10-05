@@ -1878,3 +1878,7 @@ pub mod wm_playanim;
 
 
 pub mod IMB_cache;
+
+
+
+pub mod IMB_openexr;
