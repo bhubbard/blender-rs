@@ -680,3 +680,9 @@ pub mod bmesh_private;
 
 
 pub mod COM_meta_data;
+
+
+
+
+
+pub mod rna_animation;
