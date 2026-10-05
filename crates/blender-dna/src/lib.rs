@@ -441,3 +441,8 @@ pub mod DNA_colorband_types;
 
 
 pub mod DNA_cloth_types;
+
+
+
+
+pub mod DNA_dynamicpaint_types;
