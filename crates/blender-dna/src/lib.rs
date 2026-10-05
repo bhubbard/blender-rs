@@ -378,3 +378,8 @@ pub mod DNA_constraint_types;
 
 
 pub mod DNA_viewer_path_types;
+
+
+
+
+pub mod DNA_collection_types;
