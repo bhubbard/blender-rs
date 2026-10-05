@@ -1882,3 +1882,5 @@ pub mod IMB_cache;
 
 
 pub mod IMB_openexr;
+
+pub mod IMB_partial_update;
