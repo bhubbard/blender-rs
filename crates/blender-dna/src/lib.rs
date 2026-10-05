@@ -551,3 +551,5 @@ pub mod RNA_path_fwd;
 
 
 pub mod compositor_engine;
+
+pub mod eevee_engine;
