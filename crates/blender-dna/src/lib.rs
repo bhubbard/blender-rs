@@ -279,3 +279,10 @@ pub mod deg_eval_flush;
 pub mod deg_eval_runtime_backup;
 
 pub mod DNA_anim_enums;
+
+
+
+
+
+
+pub mod DNA_curve_enums;
