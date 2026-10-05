@@ -1886,3 +1886,6 @@ pub mod IMB_openexr;
 pub mod IMB_partial_update;
 
 pub mod IMB_thumbs;
+
+
+pub mod BLI_array_state;
