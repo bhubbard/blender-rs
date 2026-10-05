@@ -967,6 +967,10 @@
     "upstream/source/blender/makesdna/DNA_ID_enums.h": {
       "crate": "blender-dna",
       "module": "DNA_ID_enums.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_anim_enums.h": {
+      "crate": "blender-dna",
+      "module": "DNA_anim_enums.rs"
     }
   },
   "skipped": {
