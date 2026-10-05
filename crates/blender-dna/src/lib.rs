@@ -44,6 +44,7 @@ impl<T> Default for ListBaseT<T> {
 }
 
 pub use DNA_ID_enums::*;
+pub use DNA_ID::*;
 
 /// Mesh header data mirroring DNA `Mesh`.
 #[derive(Debug, Clone)]
