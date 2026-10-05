@@ -352,3 +352,28 @@ pub mod DNA_ID;
 
 
 pub mod DNA_constraint_types;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod DNA_viewer_path_types;
