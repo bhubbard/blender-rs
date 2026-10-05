@@ -460,3 +460,7 @@ pub mod DNA_image_enums;
 
 
 pub mod DNA_key_types;
+
+
+
+pub mod DNA_lightprobe_types;
