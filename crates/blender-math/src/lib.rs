@@ -412,3 +412,5 @@ pub mod ply_export_load_plydata;
 
 
 pub mod GEO_xpbd_constraint_collision_edge;
+
+pub mod GEO_xpbd_constraint_collision_face;
