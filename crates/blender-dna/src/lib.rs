@@ -489,3 +489,13 @@ pub mod DNA_pointcloud_types;
 pub mod DNA_rigidbody_types;
 
 pub mod DNA_sdna_type_ids;
+
+
+
+
+
+
+
+
+
+pub mod DNA_texture_types;
