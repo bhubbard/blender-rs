@@ -432,3 +432,7 @@ pub mod DNA_volume_types;
 
 
 pub mod DNA_brush_enums;
+
+
+
+pub mod DNA_camera_types;
