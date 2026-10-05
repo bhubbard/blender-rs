@@ -468,3 +468,5 @@ pub mod DNA_lightprobe_types;
 
 
 pub mod DNA_modifier_enums;
+
+pub mod DNA_meshdata_types;
