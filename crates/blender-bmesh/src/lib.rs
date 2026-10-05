@@ -668,3 +668,6 @@ pub mod COM_domain;
 
 
 pub mod bmesh_opdefines;
+
+
+pub mod bmesh_polygon;
