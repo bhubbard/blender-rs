@@ -2132,3 +2132,6 @@ pub mod eevee_motion_blur;
 
 
 pub mod eevee_renderbuffers;
+
+
+pub mod eevee_sampling;
