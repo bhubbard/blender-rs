@@ -1946,3 +1946,5 @@ pub mod BLI_math_mpq;
 
 
 pub mod BKE_anonymous_attribute_id;
+
+pub mod BKE_attribute_storage_blend_write;
