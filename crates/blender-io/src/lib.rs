@@ -1922,3 +1922,17 @@ pub mod BLI_concurrent_map;
 
 
 pub mod BLI_generic_key;
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod BLI_math_matrix_types;
