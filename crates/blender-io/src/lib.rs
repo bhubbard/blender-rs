@@ -1912,3 +1912,9 @@ pub mod BLI_listbase_wrapper;
 pub mod BLI_lazy_threading;
 
 pub mod BLI_index_ranges_builder;
+
+
+
+
+
+pub mod BLI_concurrent_map;
