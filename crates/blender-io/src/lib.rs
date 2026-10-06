@@ -2117,3 +2117,11 @@ pub mod ply_import_buffer;
 
 
 pub mod stl_import_ascii_reader;
+
+
+
+
+
+
+
+pub mod eevee_hizbuffer_shared;
