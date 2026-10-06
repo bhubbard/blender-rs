@@ -2102,3 +2102,6 @@ pub mod obj_import_objects;
 
 
 pub mod ply_file_buffer_ascii;
+
+
+pub mod ply_file_buffer_binary;
