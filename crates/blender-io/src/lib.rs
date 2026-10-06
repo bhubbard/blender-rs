@@ -1936,3 +1936,5 @@ pub mod BLI_generic_key;
 
 
 pub mod BLI_math_matrix_types;
+
+pub mod BLI_math_mpq;
