@@ -2,6 +2,18 @@
 
 use crate::*;
 
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct ShaderModule {
+    pub _opaque: [u8; 0],
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct SpecializationsKey {
+    pub _opaque: [u8; 0],
+}
+
 #[repr(i32)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum eShaderType {
@@ -313,3 +325,4 @@ pub const DEFAULT_MATERIALS: i32 = ShaderGroups::DEFAULT_MATERIALS as i32;
 pub const WORLD_SHADERS: i32 = ShaderGroups::WORLD_SHADERS as i32;
 pub const MATERIAL_SHADERS: i32 = ShaderGroups::MATERIAL_SHADERS as i32;
 pub const VOLUME_PROBE_SHADERS: i32 = ShaderGroups::VOLUME_PROBE_SHADERS as i32;
+
