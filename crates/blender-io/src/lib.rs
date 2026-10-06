@@ -1918,3 +1918,7 @@ pub mod BLI_index_ranges_builder;
 
 
 pub mod BLI_concurrent_map;
+
+
+
+pub mod BLI_generic_key;
