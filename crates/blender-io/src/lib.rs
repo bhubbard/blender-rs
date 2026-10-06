@@ -1938,3 +1938,11 @@ pub mod BLI_generic_key;
 pub mod BLI_math_matrix_types;
 
 pub mod BLI_math_mpq;
+
+
+
+
+
+
+
+pub mod BKE_anonymous_attribute_id;
