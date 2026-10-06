@@ -55,3 +55,4 @@ pub struct wmKeyConfig {
 pub struct wmOperatorType {
     pub _opaque: [u8; 0],
 }
+
