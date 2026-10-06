@@ -1910,3 +1910,5 @@ pub mod BLI_function_ref;
 pub mod BLI_listbase_wrapper;
 
 pub mod BLI_lazy_threading;
+
+pub mod BLI_index_ranges_builder;
