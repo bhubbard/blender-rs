@@ -1901,3 +1901,6 @@ pub mod BLI_bit_ref;
 pub mod BLI_bit_span;
 
 pub mod BLI_cache_mutex;
+
+
+pub mod BLI_dynamic_stack_buffer;
