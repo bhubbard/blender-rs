@@ -2009,3 +2009,5 @@ pub mod node_geo_material_selection;
 pub mod node_geo_mesh_topology_corners_of_edge;
 
 pub mod node_geo_mesh_topology_corners_of_face;
+
+pub mod node_geo_mesh_topology_corners_of_vertex;
