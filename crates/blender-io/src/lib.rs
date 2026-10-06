@@ -1906,3 +1906,5 @@ pub mod BLI_cache_mutex;
 pub mod BLI_dynamic_stack_buffer;
 
 pub mod BLI_function_ref;
+
+pub mod BLI_listbase_wrapper;
