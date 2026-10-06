@@ -1953,3 +1953,6 @@ pub mod BKE_attribute_storage_blend_write;
 pub mod BKE_compute_context_cache;
 
 pub mod BKE_compute_context_cache_fwd;
+
+
+pub mod BKE_geometry_nodes_reference_set;
