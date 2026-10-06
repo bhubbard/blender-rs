@@ -1994,3 +1994,5 @@ pub mod node_composite_file_output;
 
 
 pub mod node_geo_curve_topology_curve_of_point;
+
+pub mod node_geo_input_mesh_face_area;
