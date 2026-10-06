@@ -5,7 +5,7 @@ use crate::*;
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
 pub struct IndexRangesBuilderBuffer {
-    pub this->data: return,
+    pub _opaque: [u8; 0],
 }
 
 #[repr(C)]
