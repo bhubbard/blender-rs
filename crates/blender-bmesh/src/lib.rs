@@ -714,3 +714,5 @@ pub mod bmesh_beautify;
 
 
 pub mod bmesh_intersect;
+
+pub mod bmesh_path;
