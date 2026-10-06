@@ -2013,3 +2013,5 @@ pub mod node_geo_mesh_topology_corners_of_face;
 pub mod node_geo_mesh_topology_corners_of_vertex;
 
 pub mod node_geo_mesh_topology_edges_of_corner;
+
+pub mod node_geo_mesh_topology_offset_corner_in_face;
