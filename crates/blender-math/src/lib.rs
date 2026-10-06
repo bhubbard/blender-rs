@@ -436,3 +436,6 @@ pub mod COM_fog_glow_kernel;
 pub mod COM_symmetric_blur_weights;
 
 pub mod COM_symmetric_separable_blur_weights;
+
+
+pub mod deriche_gaussian_blur;
