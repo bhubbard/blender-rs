@@ -1127,6 +1127,138 @@
     "upstream/source/blender/makesdna/DNA_windowmanager_enums.h": {
       "crate": "blender-dna",
       "module": "DNA_windowmanager_enums.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_listBase.h": {
+      "crate": "blender-dna",
+      "module": "DNA_listBase.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_array_state.hh": {
+      "crate": "blender-io",
+      "module": "BLI_array_state.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_assert.hh": {
+      "crate": "blender-io",
+      "module": "BLI_assert.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_bit_group_vector.hh": {
+      "crate": "blender-io",
+      "module": "BLI_bit_group_vector.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_bit_ref.hh": {
+      "crate": "blender-io",
+      "module": "BLI_bit_ref.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_bit_span.hh": {
+      "crate": "blender-io",
+      "module": "BLI_bit_span.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_cache_mutex.hh": {
+      "crate": "blender-io",
+      "module": "BLI_cache_mutex.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_mesh_validate.cc": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_mesh_validate.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_opdefines.cc": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_opdefines.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_polygon.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_polygon.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_polygon_edgenet.cc": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_polygon_edgenet.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_polygon_edgenet.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_polygon_edgenet.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_private.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_private.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_collision_edge.hh": {
+      "crate": "blender-math",
+      "module": "GEO_xpbd_constraint_collision_edge.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_collision_face.hh": {
+      "crate": "blender-math",
+      "module": "GEO_xpbd_constraint_collision_face.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_pin_rotation.hh": {
+      "crate": "blender-math",
+      "module": "GEO_xpbd_constraint_pin_rotation.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_updater_gauss_seidel.hh": {
+      "crate": "blender-math",
+      "module": "GEO_xpbd_updater_gauss_seidel.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_flush.h": {
+      "crate": "blender-dna",
+      "module": "deg_eval_flush.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup.h": {
+      "crate": "blender-dna",
+      "module": "deg_eval_runtime_backup.rs"
+    },
+    "upstream/source/blender/compositor/COM_meta_data.hh": {
+      "crate": "blender-bmesh",
+      "module": "COM_meta_data.rs"
+    },
+    "upstream/source/blender/compositor/COM_node_tree_input_node_operation.hh": {
+      "crate": "blender-dna",
+      "module": "COM_node_tree_input_node_operation.rs"
+    },
+    "upstream/source/blender/compositor/COM_pixel_operation.hh": {
+      "crate": "blender-math",
+      "module": "COM_pixel_operation.rs"
+    },
+    "upstream/source/blender/makesrna/RNA_path_fwd.hh": {
+      "crate": "blender-dna",
+      "module": "RNA_path_fwd.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_animation.cc": {
+      "crate": "blender-bmesh",
+      "module": "rna_animation.rs"
+    },
+    "upstream/source/blender/draw/engines/compositor/compositor_engine.h": {
+      "crate": "blender-dna",
+      "module": "compositor_engine.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_engine.h": {
+      "crate": "blender-dna",
+      "module": "eevee_engine.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_shader.cc": {
+      "crate": "blender-dna",
+      "module": "eevee_shader.rs"
+    },
+    "upstream/source/blender/windowmanager/intern/wm_init_exit.cc": {
+      "crate": "blender-bmesh",
+      "module": "wm_init_exit.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_cached_image.hh": {
+      "crate": "blender-bmesh",
+      "module": "COM_cached_image.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_fog_glow_kernel.hh": {
+      "crate": "blender-math",
+      "module": "COM_fog_glow_kernel.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_morphological_distance_feather_weights.hh": {
+      "crate": "blender-bmesh",
+      "module": "COM_morphological_distance_feather_weights.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_symmetric_blur_weights.hh": {
+      "crate": "blender-math",
+      "module": "COM_symmetric_blur_weights.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_symmetric_separable_blur_weights.hh": {
+      "crate": "blender-math",
+      "module": "COM_symmetric_separable_blur_weights.rs"
     }
   },
   "skipped": {
@@ -13025,6 +13157,450 @@
     "upstream/source/blender/animrig/intern/bone_collections_test.cc": {
       "reason": "pruned_legacy_or_test",
       "subsystem": "animrig"
+    },
+    "upstream/source/blender/depsgraph/DEG_depsgraph_light_linking.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3229061937889519
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.34702462496112385
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cache.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4811546007823757
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_key.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.41310351885596647
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_pchanmap.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3746928731991457
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_remove_noop.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.39522596593348697
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_rna.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4190549395660103
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_transitive.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.39368083397257647
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.34422021268265396
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_compositor.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3579098157277614
+    },
+    "upstream/source/blender/depsgraph/intern/debug/deg_debug.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.49944795082197796
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_light_linking.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4673068162392385
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_physics.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3954531590937763
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_registry.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.41418397830046133
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_tag.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3588773053973526
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_update.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3940114096839622
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3983417536911781
+    },
+    "upstream/source/blender/compositor/COM_context.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3933060101369811
+    },
+    "upstream/source/blender/compositor/COM_derived_resources.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.44749397841032484
+    },
+    "upstream/source/blender/compositor/COM_node_tree_evaluator.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.34658660689700377
+    },
+    "upstream/source/blender/compositor/COM_scheduler.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.45021087475680405
+    },
+    "upstream/source/blender/makesrna/RNA_enum_items.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4888406886605747
+    },
+    "upstream/source/blender/makesrna/RNA_enum_types.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.30464368916868473
+    },
+    "upstream/source/blender/makesrna/intern/makesrna_utils.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3381587725682255
+    },
+    "upstream/source/blender/makesrna/intern/rna_access_internal.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.44422257764437306
+    },
+    "upstream/source/blender/makesrna/intern/rna_curves_utils.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.34582856766614384
+    },
+    "upstream/source/blender/makesrna/intern/rna_screen_utils.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.36545586231124755
+    },
+    "upstream/source/blender/makesrna/intern/makesrna_utils.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3310849106464096
+    },
+    "upstream/source/blender/makesrna/intern/rna_ID.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4525599663227171
+    },
+    "upstream/source/blender/makesrna/intern/rna_access.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.97085761637571
+    },
+    "upstream/source/blender/makesrna/intern/rna_access_compare_override.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3536961087247348
+    },
+    "upstream/source/blender/makesrna/intern/rna_animviz.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3358223153556973
+    },
+    "upstream/source/blender/makesrna/intern/rna_brush.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.48666395593413136
+    },
+    "upstream/source/blender/makesrna/intern/rna_cachefile.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.30135472888761344
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_modifier.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.39898480999753844
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_movieclip.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.390778149324363
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_object.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.37554328971548173
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_scene.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.30333433526676157
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sequence.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3788764049576104
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sequencer.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.30969797235469965
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sound.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.254336232847658
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_volume.h": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3061325018736714
+    },
+    "upstream/source/blender/depsgraph/intern/node/deg_node.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.33216355909326434
+    },
+    "upstream/source/blender/depsgraph/intern/node/deg_node_component.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3381872863328139
+    },
+    "upstream/source/blender/depsgraph/intern/node/deg_node_factory.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.44563151944669444
+    },
+    "upstream/source/blender/depsgraph/intern/node/deg_node_factory_impl.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3478203306709551
+    },
+    "upstream/source/blender/depsgraph/intern/node/deg_node_id.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3408740229451972
+    },
+    "upstream/source/blender/depsgraph/intern/node/deg_node_time.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.40162858337310964
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_key.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.47472327661636216
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_pchanmap.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4031794030302719
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_remove_noop.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3297967610192578
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_stack.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.49552824406735035
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_compositor.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.498863897460226
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_ids.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.49424281521026187
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_render.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.49991262914654966
+    },
+    "upstream/source/blender/depsgraph/intern/debug/deg_debug.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4990852558890403
+    },
+    "upstream/source/blender/depsgraph/intern/debug/deg_debug_stats_gnuplot.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3080839302816871
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3600996831476519
+    },
+    "upstream/source/blender/compositor/COM_utilities.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3287922865305425
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_deriche_gaussian_blur.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4621784171869036
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_morphological_distance_feather.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.46944156855886765
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_pad.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.40238325955521176
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_recursive_gaussian_blur.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4295542728864454
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_sample_pixel.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.19438142460320632
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_van_vliet_gaussian_blur.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.43986187453859266
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_bokeh_kernel.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.438495923639681
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_cached_mask.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.43517800970523784
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_cached_shader.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4376622929989056
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_deriche_gaussian_coefficients.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.3924117873281905
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_image_coordinates.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.43733274538188116
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_keying_screen.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.38090679123979915
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_smaa_precomputed_textures.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4026713947810977
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_string_image.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.425100943046415
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_van_vliet_gaussian_coefficients.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4021850810948565
+    },
+    "upstream/source/blender/compositor/derived_resources/COM_denoised_auxiliary_pass.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4190796164546794
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_alpha_crop_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1893407593016637
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_bilateral_blur_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18930944397582194
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_bokeh_blur_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18931990236277563
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_bokeh_blur_variable_size_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1892746444217702
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_bokeh_image_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1892873309348927
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_box_mask_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18903241968624265
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_compute_preview_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18939222241708464
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_defocus_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18906443239141382
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_deriche_gaussian_blur_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18909626865636886
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_despeckle_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1893065476992364
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_displace_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18909377459342258
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_double_edge_mask_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18910087409602258
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_edge_filter_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18933908410124442
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_ellipse_mask_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1890288292963098
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_filter_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18934758565570878
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_flip_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1893600374701065
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_gamma_correct_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1891598589032385
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_glare_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1889203116481883
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_id_mask_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18938201780838876
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_image_coordinates_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18910412244607644
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_image_crop_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1891809045306295
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_inpaint_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18906469266556933
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_jump_flooding_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18937317870395634
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_keying_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18898629846089524
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_keying_screen_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18928602519271104
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_kuwahara_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1889654985399754
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_map_uv_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.1890991931417139
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_mask_to_sdf_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.18918125900955163
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_morphological_distance_feather_infos.hh": {
+      "reason": "zev_route_skip",
+      "confidence": 0.43961687177376924
+    },
+    "upstream/source/blender/makesrna/intern/rna_cloth.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.473771973249589
+    },
+    "upstream/source/blender/makesrna/intern/rna_constraint.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.16666666666666666
+    },
+    "upstream/source/blender/makesrna/intern/rna_curve_api.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.49200465266641397
+    },
+    "upstream/source/blender/makesrna/intern/rna_curves_api.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.4311687548720573
+    },
+    "upstream/source/blender/makesrna/intern/rna_define.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.389048623370696
+    },
+    "upstream/source/blender/makesrna/intern/rna_fcurve.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.16666666666666666
+    },
+    "upstream/source/blender/makesrna/intern/rna_fcurve_api.cc": {
+      "reason": "zev_route_skip",
+      "confidence": 0.49043441965710083
     }
   },
   "failed": {
@@ -13043,16 +13619,10 @@
     "upstream/source/blender/bmesh/intern/bmesh_mesh_duplicate.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_mesh_normals.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_mesh_partial_update.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/bmesh/intern/bmesh_mesh_validate.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_mods.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/bmesh/intern/bmesh_opdefines.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_operators.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/bmesh/intern/bmesh_polygon.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_polygon.hh": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_polygon_edgenet.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_polygon_edgenet.hh": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_private.hh": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_query.cc": "apfel_generation_failed",
+    "upstream/source/blender/bmesh/intern/bmesh_polygon.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/bmesh/intern/bmesh_query.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/bmesh/intern/bmesh_query.hh": "apfel_generation_failed",
     "upstream/source/blender/bmesh/intern/bmesh_query_inline.hh": "apfel_generation_failed",
     "upstream/source/blender/bmesh/intern/bmesh_query_uv.cc": "apfel_generation_failed",
@@ -13135,11 +13705,11 @@
     "upstream/source/blender/bmesh/tools/bmesh_triangulate.hh": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_wireframe.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_wireframe.hh": "apfel_generation_failed",
-    "upstream/source/blender/makesdna/DNA_anim_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_armature_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_anim_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_armature_types.h": "compiler_burndown_exceeded",
     "upstream/source/blender/makesdna/DNA_array_utils.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/makesdna/DNA_curve_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_curves_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_curve_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_curves_types.h": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/exporter/obj_export_file_writer.cc": "compiler_burndown_exceeded",
@@ -13186,12 +13756,8 @@
     "upstream/source/blender/geometry/GEO_interpolate_curves.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/geometry/GEO_mesh_merge_verts.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/geometry/GEO_trim_curves.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_collision_edge.hh": "apfel_generation_failed",
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_collision_face.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_coloring_utils.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_pin_rotation.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_updater_gauss_seidel.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_anonymous_attribute_id.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_attribute_storage_blend_write.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_camera.h": "compiler_burndown_exceeded",
@@ -13225,17 +13791,17 @@
     "upstream/source/blender/blenkernel/intern/asset_weak_reference.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/attribute_math.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/intern/blender_cli_command.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/intern/blendfile.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/bpath.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/curve_poly.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/data_transfer_intern.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/editmesh_bvh.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/icons.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/idprop_serialize.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/lib_id.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/lib_id_delete.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/lib_id_eval.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/main.cc": "apfel_generation_failed",
+    "upstream/source/blender/blenkernel/intern/blendfile.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/bpath.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/curve_poly.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/data_transfer_intern.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/editmesh_bvh.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/icons.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/idprop_serialize.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/lib_id.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/lib_id_delete.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/lib_id_eval.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenkernel/intern/main.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/intern/main_idmap.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/mask_evaluate.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/mask_rasterize.cc": "apfel_generation_failed",
@@ -13251,14 +13817,14 @@
     "upstream/source/blender/blenkernel/intern/subdiv_converter.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/tracking.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/volume_grid_fields.cc": "apfel_generation_failed",
-    "upstream/source/blender/makesdna/DNA_grease_pencil_modifier_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_image_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_layer_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_material_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_modifier_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_movieclip_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_node_tree_interface_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_object_force_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_grease_pencil_modifier_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_image_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_layer_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_material_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_modifier_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_movieclip_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_node_tree_interface_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_object_force_types.h": "compiler_burndown_exceeded",
     "upstream/source/blender/makesdna/DNA_particle_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_screen_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_sdna_pointers.hh": "fast_path_type_resolution",
@@ -13278,16 +13844,10 @@
     "upstream/source/blender/makesdna/intern/makesdna.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_alloca.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_any.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_array_state.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_asan.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_assert.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_bit_bool_conversion.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_bit_group_vector.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_bit_ref.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_bit_span.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_bit_span_ops.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_build_config.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_cache_mutex.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_colorspace.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_compiler_typecheck.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_concurrent_map.hh": "compiler_burndown_exceeded",
@@ -13306,15 +13866,15 @@
     "upstream/source/blender/blenlib/BLI_linklist_stack.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_listbase_wrapper.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_math_axis_angle.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_math_base.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_base_c.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_base_safe.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_boolean.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_color.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_euler.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_geom.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_half.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_math_matrix.hh": "apfel_generation_failed",
+    "upstream/source/blender/blenlib/BLI_math_base.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenlib/BLI_math_base_c.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenlib/BLI_math_base_safe.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenlib/BLI_math_boolean.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenlib/BLI_math_color.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenlib/BLI_math_euler.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenlib/BLI_math_geom.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenlib/BLI_math_half.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/blenlib/BLI_math_matrix.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenlib/BLI_math_matrix_types.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_mpq.hh": "apfel_generation_failed",
     "upstream/source/blender/blenlib/BLI_math_quaternion.hh": "apfel_generation_failed",
@@ -13441,12 +14001,10 @@
     "upstream/source/blender/render/hydra/engine.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/render/hydra/light_tasks_delegate.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/DRW_select_buffer.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/compositor/compositor_engine.h": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_camera_shared.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_debug_shared.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_depth_of_field.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_depth_of_field_shared.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_engine.h": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_film_shared.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_hizbuffer_shared.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_light.cc": "compiler_burndown_exceeded",
@@ -13465,10 +14023,9 @@
     "upstream/source/blender/draw/engines/eevee/eevee_renderbuffers_shared.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_sampling.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_sampling.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_sampling_shared.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/eevee_shader.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/draw/engines/eevee/eevee_sampling_shared.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_shader.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_subsurface_shared.hh": "apfel_generation_failed",
+    "upstream/source/blender/draw/engines/eevee/eevee_subsurface_shared.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_sync.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/eevee_uniform_shared.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/eevee/eevee_velocity_shared.hh": "apfel_generation_failed",
@@ -13561,7 +14118,6 @@
     "upstream/source/blender/windowmanager/intern/wm_event_system.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_files.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_files_link.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/intern/wm_init_exit.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_operator_props.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_operators.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_panel_type.cc": "compiler_burndown_exceeded",
@@ -13573,20 +14129,19 @@
     "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_bake_values.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/makesdna/DNA_action_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_asset_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_boid_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_cachefile_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_color_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_curveprofile_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_customdata_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_grease_pencil_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_listBase.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_mask_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_mesh_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_action_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_asset_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_boid_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_cachefile_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_color_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_curveprofile_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_customdata_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_grease_pencil_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_mask_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_mesh_types.h": "compiler_burndown_exceeded",
     "upstream/source/blender/makesdna/DNA_packedFile_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_node_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_object_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/makesdna/DNA_node_types.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesdna/DNA_object_types.h": "compiler_burndown_exceeded",
     "upstream/source/blender/makesdna/DNA_pointcache_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_scene_enums.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_scene_types.h": "fast_path_type_resolution",
@@ -13597,6 +14152,180 @@
     "upstream/source/blender/makesdna/DNA_view2d_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_userdef_types.h": "fast_path_type_resolution",
     "upstream/source/blender/makesdna/DNA_view3d_types.h": "fast_path_type_resolution",
-    "upstream/source/blender/makesdna/DNA_xr_types.h": "fast_path_type_resolution"
+    "upstream/source/blender/makesdna/DNA_xr_types.h": "fast_path_type_resolution",
+    "upstream/source/blender/imbuf/IMB_cache.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/IMB_colormanagement.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/IMB_imbuf.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/IMB_imbuf_enums.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/IMB_imbuf_types.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/IMB_interp.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/IMB_metadata.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/IMB_openexr.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/IMB_partial_update.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/IMB_thumbs.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/IMB_colormanagement_intern.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/IMB_filetype.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/IMB_filter.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/cineon/cineonlib.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/cineon/logImageCore.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/cineon/logmemfile.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/colormanagement_inline.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/imbuf.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/oiio/openimageio_api.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/oiio/openimageio_support.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/intern/openexr/openexr_api.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/MOV_enums.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/MOV_read.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/MOV_util.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/MOV_write.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/DEG_depsgraph.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/DEG_depsgraph_build.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/DEG_depsgraph_debug.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/DEG_depsgraph_physics.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/DEG_depsgraph_query.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/DEG_depsgraph_writeback_sync.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_drivers.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_impl.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_stack.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_all_objects.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_collection.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_ids.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_render.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_view_layer.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/depsgraph.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/depsgraph_relation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/depsgraph_type.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_copy_on_write.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_animation.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_bundle_item.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_conversion_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_domain.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_group_node_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_implicit_input_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_input_descriptor.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_multi_function_procedure_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_node_group_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_node_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_node_tree_output_node_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_realize_on_domain_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_render_context.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_repeat_zone_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_result.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_scene_compositor_effects_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_shader_node.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_shader_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_simple_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_single_value_node_input_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_static_cache_manager.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_undefined_node_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/RNA_access.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/RNA_define.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/RNA_documentation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/RNA_path.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/RNA_types.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_action_tools.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_defaults.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_internal.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_internal_types.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/makesrna.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_action.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_action_api.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_animation_api.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_annotations.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_armature.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_armature_api.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_asset.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_attribute.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_blender_project.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_blendfile_import.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_boid.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_camera.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_camera_api.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/intern/ffmpeg_compat.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/intern/ffmpeg_swscale.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/intern/movie_proxy_indexer.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/intern/movie_read.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/intern/movie_util.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/movie/intern/movie_write.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_api.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_colorspace.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_config.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_cpu_processor.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_display.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_gpu_shader_binder.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_look.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_matrix.hh": "apfel_generation_failed",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_packed_image.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_role_names.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_scope.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_version.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/OCIO_view.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/intern/cpu_processor_cache.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/intern/description.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/intern/gpu_shader_binder_internal.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/error_handling.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_colorspace.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_config.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_cpu_processor.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_pose.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_stats.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_visibility.h": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/node/deg_node_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cache.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes.cc": "apfel_generation_failed",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_rig.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_scene.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_view_layer.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_drivers.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_rig.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_scene.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_view_layer.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_rna.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_transitive.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/pipeline.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_all_objects.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_collection.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_view_layer.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/debug/deg_debug_relations_graphviz.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/depsgraph_build.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/depsgraph/intern/depsgraph_debug.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_zone_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/COM_zone_tree_operation.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_compute_preview.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_convolve.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_extract_alpha.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_jump_flooding.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_morphological_distance.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_parallel_reduction.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_smaa.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_symmetric_separable_blur.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_symmetric_separable_blur_variable_size.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/cached_resources/COM_cached_resource.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/cached_resources/COM_distortion_grid.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/cached_resources/COM_ocio_color_space_conversion_shader.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/shaders/infos/compositor_convert_infos.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/shaders/infos/compositor_cryptomatte_infos.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/shaders/infos/compositor_directional_blur_infos.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/shaders/infos/compositor_lens_distortion_infos.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/shaders/infos/compositor_morphological_blur_infos.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/compositor/shaders/infos/compositor_morphological_distance_infos.hh": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_collection.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_color.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_context.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_curve.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_curveprofile.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_curves.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_depsgraph.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_dynamicpaint.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/makesrna/intern/rna_fluid.cc": "apfel_generation_failed"
   }
 }
