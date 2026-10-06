@@ -1956,3 +1956,5 @@ pub mod BKE_compute_context_cache_fwd;
 
 
 pub mod BKE_geometry_nodes_reference_set;
+
+pub mod BKE_node_socket_value_fwd;
