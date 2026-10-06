@@ -1970,3 +1970,5 @@ pub mod BKE_volume_grid_fields;
 
 
 
+
+pub mod idprop_serialize;
