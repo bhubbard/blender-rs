@@ -26,3 +26,28 @@ pub struct Material {
 pub struct MaterialPass {
     pub _opaque: [u8; 0],
 }
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct Instance {
+    pub _opaque: [u8; 0],
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct ObjectHandle {
+    pub _opaque: [u8; 0],
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct WorldHandle {
+    pub _opaque: [u8; 0],
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct SyncModule {
+    pub _opaque: [u8; 0],
+}
+
