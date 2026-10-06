@@ -709,3 +709,5 @@ pub mod wm_init_exit;
 pub mod COM_cached_image;
 
 pub mod COM_morphological_distance_feather_weights;
+
+pub mod bmesh_beautify;
