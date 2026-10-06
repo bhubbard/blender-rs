@@ -439,3 +439,14 @@ pub mod COM_symmetric_separable_blur_weights;
 
 
 pub mod deriche_gaussian_blur;
+
+
+
+
+
+
+
+
+
+
+pub mod van_vliet_gaussian_blur;
