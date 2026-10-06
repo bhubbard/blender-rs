@@ -2091,3 +2091,7 @@ pub mod rna_main_api;
 
 
 pub mod obj_export_mesh;
+
+
+
+pub mod obj_import_objects;
