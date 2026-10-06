@@ -1988,3 +1988,5 @@ pub mod NOD_inverse_eval_params;
 pub mod NOD_value_elem;
 
 pub mod node_composite_corner_pin;
+
+pub mod node_composite_file_output;
