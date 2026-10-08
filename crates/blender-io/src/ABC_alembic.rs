@@ -2,6 +2,10 @@
 
 use crate::*;
 
+pub type eEvaluationMode = i32;
+pub const MAX_ID_NAME: usize = 66;
+
+
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq)]
 pub struct AlembicExportParams {
