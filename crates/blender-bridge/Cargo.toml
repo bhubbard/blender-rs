@@ -1,0 +1,12 @@
+[package]
+name = "blender-bridge"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Adapters between standalone formats (OBJ) and the BMesh kernel"
+
+[dependencies]
+blender-bmesh = { path = "../blender-bmesh" }
+blender-math = { path = "../blender-math" }
+blender-obj = { path = "../blender-obj" }
