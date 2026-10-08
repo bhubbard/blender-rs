@@ -2181,3 +2181,5 @@ pub mod BLI_rand_c;
 pub use BLI_rand_c::*;
 pub mod BLI_serialize;
 pub use BLI_serialize::*;
+pub mod BLI_set;
+pub use BLI_set::*;
