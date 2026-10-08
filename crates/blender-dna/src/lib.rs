@@ -755,3 +755,5 @@ pub mod DNA_tracking_types;
 pub use DNA_tracking_types::*;
 pub mod DNA_view2d_types;
 pub use DNA_view2d_types::*;
+pub mod DNA_xr_types;
+pub use DNA_xr_types::*;
