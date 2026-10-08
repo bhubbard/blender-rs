@@ -2191,3 +2191,5 @@ pub mod BLI_span;
 pub use BLI_span::*;
 pub mod subdiv_converter;
 pub use subdiv_converter::*;
+pub mod mask_evaluate;
+pub use mask_evaluate::*;
