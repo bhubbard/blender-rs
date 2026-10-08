@@ -614,23 +614,43 @@ pub mod deg_eval_copy_on_write;
 
 
 pub mod DNA_packedFile_types;
+pub use DNA_packedFile_types::*;
 pub mod DNA_curveprofile_types;
+pub use DNA_curveprofile_types::*;
 pub mod DNA_vec_types;
+pub use DNA_vec_types::*;
 pub mod DNA_world_types;
+pub use DNA_world_types::*;
 
 pub mod DNA_boid_types;
+pub use DNA_boid_types::*;
 pub mod DNA_cachefile_types;
+pub use DNA_cachefile_types::*;
 pub mod DNA_color_types;
+pub use DNA_color_types::*;
 pub mod DNA_image_types;
+pub use DNA_image_types::*;
 pub mod DNA_customdata_types;
+pub use DNA_customdata_types::*;
 pub mod DNA_grease_pencil_modifier_types;
+pub use DNA_grease_pencil_modifier_types::*;
 pub mod DNA_layer_types;
+pub use DNA_layer_types::*;
 pub mod DNA_material_types;
+pub use DNA_material_types::*;
 pub mod DNA_node_tree_interface_types;
+pub use DNA_node_tree_interface_types::*;
 pub mod DNA_object_types;
+pub use DNA_object_types::*;
 pub mod DNA_pointcache_types;
+pub use DNA_pointcache_types::*;
 pub mod DNA_scene_enums;
+pub use DNA_scene_enums::*;
 pub mod DNA_space_enums;
+pub use DNA_space_enums::*;
 pub mod DNA_userdef_enums;
+pub use DNA_userdef_enums::*;
 pub mod DNA_workspace_types;
-
+pub use DNA_workspace_types::*;
+pub mod DNA_armature_types;
+pub use DNA_armature_types::*;
