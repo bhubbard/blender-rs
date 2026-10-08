@@ -24,8 +24,20 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 TELEMETRY_FILE = ROOT_DIR / "telemetry" / "zima_telemetry.jsonl"
 TELEMETRY_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-ZIMA_HOST = os.environ.get("ZIMA_HOST", "http://192.168.0.206:11434")
+DEFAULT_CLUSTER = [
+    "http://192.168.0.206:11434",
+    "http://192.168.0.224:11434",
+]
+
+if "ZIMA_HOST" in os.environ:
+    ZIMA_CLUSTER = [os.environ["ZIMA_HOST"]]
+elif "ZIMA_CLUSTER" in os.environ:
+    ZIMA_CLUSTER = [h.strip() for h in os.environ["ZIMA_CLUSTER"].split(",") if h.strip()]
+else:
+    ZIMA_CLUSTER = DEFAULT_CLUSTER
+
 DEFAULT_MODEL = os.environ.get("ZIMA_MODEL", "qwen2.5-coder:0.5b")
+_cluster_index = 0
 
 def log_telemetry(record: dict):
     try:
@@ -34,44 +46,60 @@ def log_telemetry(record: dict):
     except Exception:
         pass
 
-def query_zima(prompt: str, model: str = DEFAULT_MODEL, max_tokens: int = 256) -> str:
-    url = f"{ZIMA_HOST}/api/generate"
-    payload = {
-        "model": model,
-        "prompt": prompt,
-        "stream": False,
-        "options": {
-            "num_predict": max_tokens,
-            "temperature": 0.2
+def query_zima(prompt: str, model: str = DEFAULT_MODEL, max_tokens: int = 256, target_node: Optional[str] = None) -> str:
+    global _cluster_index
+    nodes_to_try = [target_node] if target_node else list(ZIMA_CLUSTER)
+    if not target_node and len(nodes_to_try) > 1:
+        # Rotate start index for round-robin
+        idx = _cluster_index % len(nodes_to_try)
+        nodes_to_try = nodes_to_try[idx:] + nodes_to_try[:idx]
+        _cluster_index += 1
+
+    last_error = None
+    for host in nodes_to_try:
+        url = f"{host}/api/generate"
+        payload = {
+            "model": model,
+            "prompt": prompt,
+            "stream": False,
+            "options": {
+                "num_predict": max_tokens,
+                "temperature": 0.2
+            }
         }
-    }
-    data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
-    start_time = time.time()
-    try:
-        with urllib.request.urlopen(req, timeout=600) as resp:
-            res = json.loads(resp.read().decode("utf-8"))
-            elapsed = time.time() - start_time
-            response_text = res.get("response", "")
-            eval_count = res.get("eval_count", 0)
-            tok_s = round(eval_count / max(0.001, elapsed), 2)
+        data = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
+        start_time = time.time()
+        try:
+            with urllib.request.urlopen(req, timeout=600) as resp:
+                res = json.loads(resp.read().decode("utf-8"))
+                elapsed = time.time() - start_time
+                response_text = res.get("response", "")
+                eval_count = res.get("eval_count", 0)
+                tok_s = round(eval_count / max(0.001, elapsed), 2)
+                log_telemetry({
+                    "timestamp": time.time(),
+                    "host": host,
+                    "model": model,
+                    "eval_count": eval_count,
+                    "elapsed": elapsed,
+                    "tokens_per_sec": tok_s,
+                    "status": "success"
+                })
+                return response_text
+        except Exception as e:
+            last_error = e
             log_telemetry({
                 "timestamp": time.time(),
+                "host": host,
                 "model": model,
-                "eval_count": eval_count,
-                "elapsed": elapsed,
-                "tokens_per_sec": tok_s,
-                "status": "success"
+                "error": str(e),
+                "status": "failed"
             })
-            return response_text
-    except Exception as e:
-        log_telemetry({
-            "timestamp": time.time(),
-            "model": model,
-            "error": str(e),
-            "status": "failed"
-        })
-        raise RuntimeError(f"ZimaBoard query failed: {e}")
+            print(f"  [!] Node {host} failed: {e}. Trying next node...")
+            continue
+
+    raise RuntimeError(f"All ZimaBoard nodes failed. Last error: {last_error}")
 
 def extract_rust_code(response: str) -> str:
     if "```rust" in response:
@@ -130,17 +158,17 @@ def main():
     elif args.source:
         transpile_file(args.source, args.target, model=args.model)
     else:
-        # Default health check
-        print(f"[*] Checking ZimaBoard status at {ZIMA_HOST}...")
-        try:
-            req = urllib.request.Request(f"{ZIMA_HOST}/api/tags")
-            with urllib.request.urlopen(req, timeout=3) as resp:
-                data = json.loads(resp.read().decode())
-                models = [m.get("name") for m in data.get("models", [])]
-                print(f"[✓] ZimaBoard online! Available models: {', '.join(models)}")
-        except Exception as e:
-            print(f"[!] Could not connect to ZimaBoard: {e}")
-            sys.exit(1)
+        # Default health check across cluster
+        print(f"[*] Checking ZimaBoard cluster ({len(ZIMA_CLUSTER)} nodes configured)...")
+        for i, host in enumerate(ZIMA_CLUSTER, start=1):
+            try:
+                req = urllib.request.Request(f"{host}/api/tags")
+                with urllib.request.urlopen(req, timeout=3) as resp:
+                    data = json.loads(resp.read().decode())
+                    models = [m.get("name") for m in data.get("models", [])]
+                    print(f"  [✓] Node {i} ({host}): Online! Models: {', '.join(models)}")
+            except Exception as e:
+                print(f"  [✗] Node {i} ({host}): Offline / Error ({e})")
 
 if __name__ == "__main__":
     main()
