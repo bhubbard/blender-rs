@@ -743,3 +743,5 @@ pub mod DNA_sequence_types;
 pub use DNA_sequence_types::*;
 pub mod DNA_action_types;
 pub use DNA_action_types::*;
+pub mod DNA_node_types;
+pub use DNA_node_types::*;
