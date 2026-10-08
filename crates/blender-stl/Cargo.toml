@@ -1,0 +1,10 @@
+[package]
+name = "blender-stl"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "STL (binary and ASCII) reader/writer, after Blender's io/stl"
+
+[dependencies]
+glam = { workspace = true }

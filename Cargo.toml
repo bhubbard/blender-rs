@@ -7,6 +7,7 @@ members = [
     "crates/blender-io",
     "crates/blender-geom",
     "crates/blender-obj",
+    "crates/blender-stl",
     "crates/blender-bridge",
 ]
 resolver = "2"
