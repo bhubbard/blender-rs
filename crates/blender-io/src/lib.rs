@@ -2140,3 +2140,26 @@ pub mod eevee_sampling;
 
 
 pub mod eevee_volume;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pub mod BLI_math_rotation_types;
