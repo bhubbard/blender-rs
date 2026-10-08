@@ -45,6 +45,8 @@ impl<T> Default for ListBaseT<T> {
 
 pub use DNA_ID_enums::*;
 pub use DNA_ID::*;
+pub use DNA_listBase::*;
+pub use DNA_uuid_types::*;
 
 /// Mesh header data mirroring DNA `Mesh`.
 #[derive(Debug, Clone)]
@@ -656,3 +658,5 @@ pub mod DNA_armature_types;
 pub use DNA_armature_types::*;
 pub mod DNA_asset_types;
 pub use DNA_asset_types::*;
+pub mod DNA_modifier_types;
+pub use DNA_modifier_types::*;
