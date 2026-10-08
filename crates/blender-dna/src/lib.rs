@@ -625,3 +625,4 @@ pub mod DNA_image_types;
 pub mod DNA_customdata_types;
 pub mod DNA_grease_pencil_modifier_types;
 pub mod DNA_layer_types;
+pub mod DNA_material_types;
