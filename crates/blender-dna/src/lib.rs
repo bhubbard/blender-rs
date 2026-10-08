@@ -50,6 +50,63 @@ pub use DNA_uuid_types::*;
 pub use DNA_attribute_types::*;
 pub use DNA_curve_enums::*;
 pub use DNA_anim_enums::*;
+pub use DNA_image_enums::ImColorMode;
+pub use DNA_texture_types::{TexMapping, ColorMapping};
+
+#[derive(Debug, Clone, PartialEq, Default)]
+#[repr(C)]
+pub struct rcti {
+    pub xmin: i32,
+    pub xmax: i32,
+    pub ymin: i32,
+    pub ymax: i32,
+}
+
+#[derive(Debug, Clone, PartialEq, Default)]
+#[repr(C)]
+pub struct ARegion {
+    pub next: *mut ARegion,
+    pub prev: *mut ARegion,
+    pub winrct: rcti,
+}
+
+#[derive(Debug, Clone, PartialEq, Default)]
+#[repr(C)]
+pub struct View2D {
+    pub tot: rctf,
+    pub cur: rctf,
+    pub mask: rcti,
+}
+
+#[derive(Debug, Clone, PartialEq, Default)]
+#[repr(C)]
+pub struct ImageFormatData {
+    pub imtype: i8,
+    pub depth: i8,
+    pub quality: i8,
+    pub compress: i8,
+}
+
+#[derive(Debug, Clone, PartialEq, Default)]
+#[repr(C)]
+pub struct TextboxState {
+    pub _pad: [i8; 16],
+}
+
+#[derive(Debug, Clone, PartialEq)]
+#[repr(C)]
+pub struct FFMpegCodecData {
+    pub _pad: [i8; 64],
+}
+
+impl Default for FFMpegCodecData {
+    fn default() -> Self {
+        unsafe { core::mem::zeroed() }
+    }
+}
+
+pub type uiListFreeRuntimeDataFunc = Option<unsafe extern "C" fn()>;
+pub type Vector<T> = Vec<T>;
 
 
 /// Mesh header data mirroring DNA `Mesh`.
@@ -359,6 +416,7 @@ pub mod DNA_ID;
 
 
 pub mod DNA_constraint_types;
+pub use DNA_constraint_types::{bConstraint, bConstraintTarget};
 
 
 
@@ -683,3 +741,5 @@ pub mod DNA_particle_types;
 pub use DNA_particle_types::*;
 pub mod DNA_sequence_types;
 pub use DNA_sequence_types::*;
+pub mod DNA_action_types;
+pub use DNA_action_types::*;
