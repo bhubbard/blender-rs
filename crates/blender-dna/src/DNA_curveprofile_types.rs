@@ -5,37 +5,40 @@
 #[allow(unused_imports)]
 use crate::*;
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eCurveProfilePoint_Flag {
-    #[default]
-    PROF_SELECT = (1 << 0),
-    PROF_H1_SELECT = (1 << 1),
-    PROF_H2_SELECT = (1 << 2),
-    PROF_ACTIVE = (1 << 3),
-    PROF_H1_ACTIVE = (1 << 4),
-    PROF_H2_ACTIVE = (1 << 5),
+pub struct eCurveProfilePoint_Flag(pub i16);
+
+impl eCurveProfilePoint_Flag {
+    pub const PROF_SELECT: Self = Self(((1 << 0)) as i16);
+    pub const PROF_H1_SELECT: Self = Self(((1 << 1)) as i16);
+    pub const PROF_H2_SELECT: Self = Self(((1 << 2)) as i16);
+    pub const PROF_ACTIVE: Self = Self(((1 << 3)) as i16);
+    pub const PROF_H1_ACTIVE: Self = Self(((1 << 4)) as i16);
+    pub const PROF_H2_ACTIVE: Self = Self(((1 << 5)) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eCurveProfile_Flag {
-    #[default]
-    PROF_USE_CLIP = (1 << 0),
-    PROF_SAMPLE_STRAIGHT_EDGES = (1 << 2),
-    PROF_SAMPLE_EVEN_LENGTHS = (1 << 3),
-    PROF_DIRTY_PRESET = (1 << 4),
+pub struct eCurveProfile_Flag(pub i32);
+
+impl eCurveProfile_Flag {
+    pub const PROF_USE_CLIP: Self = Self(((1 << 0)) as i32);
+    pub const PROF_SAMPLE_STRAIGHT_EDGES: Self = Self(((1 << 2)) as i32);
+    pub const PROF_SAMPLE_EVEN_LENGTHS: Self = Self(((1 << 3)) as i32);
+    pub const PROF_DIRTY_PRESET: Self = Self(((1 << 4)) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eCurveProfilePresets {
-    #[default]
-    PROF_PRESET_LINE = 0,
-    PROF_PRESET_SUPPORTS = 1,
-    PROF_PRESET_CORNICE = 2,
-    PROF_PRESET_CROWN = 3,
-    PROF_PRESET_STEPS = 4,
+pub struct eCurveProfilePresets(pub i32);
+
+impl eCurveProfilePresets {
+    pub const PROF_PRESET_LINE: Self = Self((0) as i32);
+    pub const PROF_PRESET_SUPPORTS: Self = Self((1) as i32);
+    pub const PROF_PRESET_CORNICE: Self = Self((2) as i32);
+    pub const PROF_PRESET_CROWN: Self = Self((3) as i32);
+    pub const PROF_PRESET_STEPS: Self = Self((4) as i32);
 }
 
 #[derive(Debug, Clone, PartialEq)]
