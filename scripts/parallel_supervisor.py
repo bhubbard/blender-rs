@@ -165,7 +165,9 @@ def verify_and_commit(target_crate: str, module_name: str, dest_file: Path, sour
             unregister_module(target_crate, module_name)
             if dest_file.exists():
                 try:
-                    dest_file.unlink()
+                    actual_name = dest_file.resolve().name
+                    if actual_name == f"{module_name}.rs":
+                        dest_file.unlink()
                 except Exception:
                     pass
             return False
@@ -255,6 +257,8 @@ def run_subsystem_parallel(subsystem: str, cycle: int, batch_limit: int = 30):
     target_files = []
     for root, _, files in os.walk(subsys_dir):
         for f in files:
+            if subsystem == "makesdna" and not f.endswith((".h", ".hh")):
+                continue
             if f.endswith((".h", ".hh", ".c", ".cc")) and not f.startswith("."):
                 full_path = Path(root) / f
                 rel_str = str(full_path.relative_to(ROOT_DIR))
