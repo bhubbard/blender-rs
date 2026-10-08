@@ -2177,3 +2177,5 @@ pub mod BLI_ordered_edge;
 pub use BLI_ordered_edge::*;
 pub mod BLI_probing_strategies;
 pub use BLI_probing_strategies::*;
+pub mod BLI_rand_c;
+pub use BLI_rand_c::*;
