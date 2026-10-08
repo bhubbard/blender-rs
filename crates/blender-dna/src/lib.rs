@@ -681,3 +681,5 @@ pub mod DNA_session_uid_types;
 pub use DNA_session_uid_types::*;
 pub mod DNA_particle_types;
 pub use DNA_particle_types::*;
+pub mod DNA_sequence_types;
+pub use DNA_sequence_types::*;
