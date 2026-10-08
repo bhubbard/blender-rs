@@ -763,14 +763,5 @@ pub mod cached_image;
 
 
 pub mod pbvh_bmesh;
-
-
-
-
-
-
-
-
-
-
-
+pub mod bmesh_delete_impl;
+pub use bmesh_delete_impl::*;
