@@ -2179,3 +2179,5 @@ pub mod BLI_probing_strategies;
 pub use BLI_probing_strategies::*;
 pub mod BLI_rand_c;
 pub use BLI_rand_c::*;
+pub mod BLI_serialize;
+pub use BLI_serialize::*;
