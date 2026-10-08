@@ -170,6 +170,11 @@ def main():
             test_proc = subprocess.run(["cargo", "test", "--workspace"], cwd=str(ROOT_DIR), capture_output=True, text=True, timeout=300)
             if test_proc.returncode == 0:
                 print("[✓] All workspace tests 100% green.")
+                try:
+                    subprocess.run(["git", "push", "origin", "main"], cwd=str(ROOT_DIR), check=False)
+                    print("[✓] Pushed latest commits to origin main.")
+                except Exception as e:
+                    print(f"[!] Git push warning: {e}")
             else:
                 print(f"[!] Workspace test notice: {test_proc.stderr[:200]}")
         except Exception as e:
