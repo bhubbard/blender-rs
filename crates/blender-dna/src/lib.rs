@@ -753,3 +753,5 @@ pub mod DNA_sdna_pointers;
 pub use DNA_sdna_pointers::*;
 pub mod DNA_tracking_types;
 pub use DNA_tracking_types::*;
+pub mod DNA_view2d_types;
+pub use DNA_view2d_types::*;
