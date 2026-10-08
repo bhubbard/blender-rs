@@ -1,6 +1,24 @@
-//! Auto-transpiled C/C++ header module: wm_dragdrop
-
 use crate::*;
+
+pub const KMAP_MAX_NAME: usize = 64;
+
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct ListBaseT<T> {
+    pub _marker: core::marker::PhantomData<T>,
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct wmDropBox {
+    pub _opaque: [u8; 0],
+}
+
+#[repr(i32)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum eWM_DragDataType {
+    #[default]
+    None = 0,
+}
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq)]
