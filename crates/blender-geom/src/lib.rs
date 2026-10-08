@@ -10,6 +10,7 @@ pub mod kdtree;
 pub mod line;
 pub mod plane;
 pub mod poly;
+pub mod rotation;
 pub mod tri;
 
 pub use glam::{Vec2, Vec3, Vec4};
