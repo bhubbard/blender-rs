@@ -617,3 +617,4 @@ pub mod DNA_packedFile_types;
 pub mod DNA_curveprofile_types;
 pub mod DNA_vec_types;
 pub mod DNA_world_types;
+pub mod DNA_grease_pencil_types;
