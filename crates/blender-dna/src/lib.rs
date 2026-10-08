@@ -669,3 +669,5 @@ pub mod DNA_curve_types;
 pub use DNA_curve_types::*;
 pub mod DNA_curves_types;
 pub use DNA_curves_types::*;
+pub mod DNA_grease_pencil_types;
+pub use DNA_grease_pencil_types::*;
