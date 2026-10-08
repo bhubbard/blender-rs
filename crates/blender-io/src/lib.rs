@@ -2183,3 +2183,5 @@ pub mod BLI_serialize;
 pub use BLI_serialize::*;
 pub mod BLI_set;
 pub use BLI_set::*;
+pub mod BLI_set_slots;
+pub use BLI_set_slots::*;
