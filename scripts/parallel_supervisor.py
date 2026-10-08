@@ -127,6 +127,13 @@ def update_status_file(cycle: int, active_subsys: str, status_msg: str):
     except Exception:
         pass
 
+def is_file_tracked(file_path: Path) -> bool:
+    try:
+        res = subprocess.run(["git", "ls-files", "--error-unmatch", str(file_path)], cwd=str(ROOT_DIR), capture_output=True)
+        return res.returncode == 0
+    except Exception:
+        return False
+
 def register_module(target_crate: str, module_name: str) -> None:
     lib_rs = ROOT_DIR / "crates" / target_crate / "src" / "lib.rs"
     if not lib_rs.exists():
@@ -151,25 +158,37 @@ def unregister_module(target_crate: str, module_name: str) -> None:
 def verify_and_commit(target_crate: str, module_name: str, dest_file: Path, source_rel: str) -> bool:
     """Acquires lock, checks crate compilation, commits on success or rolls back."""
     with CARGO_LOCK:
+        lib_rs = ROOT_DIR / "crates" / target_crate / "src" / "lib.rs"
+        is_dest_tracked = is_file_tracked(dest_file)
+        was_registered = False
+        if lib_rs.exists():
+            was_registered = f"pub mod {module_name};" in lib_rs.read_text()
+
         register_module(target_crate, module_name)
         res = subprocess.run(["cargo", "check", "-p", target_crate], cwd=str(ROOT_DIR), capture_output=True, text=True)
         if res.returncode == 0:
             # Commit to git
-            lib_rs = ROOT_DIR / "crates" / target_crate / "src" / "lib.rs"
             subprocess.run(["git", "add", str(dest_file), str(lib_rs)], cwd=str(ROOT_DIR), capture_output=True)
             msg = f"port({target_crate}): port {module_name} via 4-worker supervisor ({source_rel})"
             subprocess.run(["git", "commit", "-m", msg], cwd=str(ROOT_DIR), capture_output=True)
             return True
         else:
             # Rollback
-            unregister_module(target_crate, module_name)
-            if dest_file.exists():
-                try:
-                    actual_name = dest_file.resolve().name
-                    if actual_name == f"{module_name}.rs":
-                        dest_file.unlink()
-                except Exception:
-                    pass
+            if is_dest_tracked:
+                subprocess.run(["git", "checkout", "--", str(dest_file)], cwd=str(ROOT_DIR), capture_output=True)
+            else:
+                if dest_file.exists():
+                    try:
+                        actual_name = dest_file.resolve().name
+                        if actual_name == f"{module_name}.rs":
+                            dest_file.unlink()
+                    except Exception:
+                        pass
+
+            if was_registered:
+                subprocess.run(["git", "checkout", "--", str(lib_rs)], cwd=str(ROOT_DIR), capture_output=True)
+            else:
+                unregister_module(target_crate, module_name)
             return False
 
 def process_file_worker(worker_id: int, file_path: Path, cycle: int) -> bool:
@@ -178,10 +197,15 @@ def process_file_worker(worker_id: int, file_path: Path, cycle: int) -> bool:
     dest_crate = route_file(rel_str)
     dest_file = ROOT_DIR / "crates" / dest_crate / "src" / f"{stem}.rs"
 
+    is_header = file_path.suffix in [".h", ".hh"]
+    # If this is an implementation file and the header module is already tracked, isolate it
+    if not is_header and is_file_tracked(dest_file):
+        stem = f"{stem}_impl"
+        dest_file = ROOT_DIR / "crates" / dest_crate / "src" / f"{stem}.rs"
+
     ACTIVE_WORKERS[worker_id] = f"Transpiling {file_path.name} → {dest_crate}"
     t0 = time.time()
 
-    is_header = file_path.suffix in [".h", ".hh"]
     cmd = [
         "apfel-transpile",
         "-f", str(file_path),
@@ -234,7 +258,9 @@ def process_file_worker(worker_id: int, file_path: Path, cycle: int) -> bool:
             prog = read_progress()
             prog["failed"][rel_str] = "timeout"
             write_progress(prog)
-        if dest_file.exists():
+        if is_file_tracked(dest_file):
+            subprocess.run(["git", "checkout", "--", str(dest_file)], cwd=str(ROOT_DIR), capture_output=True)
+        elif dest_file.exists():
             try:
                 dest_file.unlink()
             except Exception:
