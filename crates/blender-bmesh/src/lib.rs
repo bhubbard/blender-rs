@@ -394,6 +394,7 @@ assert_eq!(bm.totface(), 1);
 }
 }
 pub mod BKE_editmesh;
+pub mod bmesh_geomq;
 pub mod bmesh_separate;
 pub mod bmesh_cycles;
 pub mod bmesh_kill;
