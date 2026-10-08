@@ -2167,3 +2167,5 @@ pub mod abc_custom_props;
 pub use abc_custom_props::*;
 pub mod abc_archive;
 pub use abc_archive::*;
+pub mod abc_hierarchy_iterator;
+pub use abc_hierarchy_iterator::*;
