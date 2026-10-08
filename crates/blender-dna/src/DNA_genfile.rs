@@ -1,8 +1,11 @@
-//! Auto-transpiled C/C++ header module: DNA_genfile
+//! Blender DNA structure definition types mirroring `DNA_genfile.h`.
 
-#[repr(C)]
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#![allow(non_snake_case, non_camel_case_types, dead_code)]
+
+#[repr(i32)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
 pub enum eSDNA_Type {
+    #[default]
     SDNA_TYPE_CHAR = 0,
     SDNA_TYPE_UCHAR = 1,
     SDNA_TYPE_SHORT = 2,
@@ -18,10 +21,11 @@ pub enum eSDNA_Type {
 }
 
 #[repr(C)]
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum eSDNA_StructCompare {
-    SDNA_CMP_REMOVED = 0,
-    SDNA_CMP_EQUAL = 1,
-    SDNA_CMP_NOT_EQUAL = 2,
-    SDNA_CMP_UNKNOWN = 3,
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct SDNA {
+    pub data: *mut core::ffi::c_void,
+    pub datalen: i32,
+    pub nr_names: i32,
+    pub nr_types: i32,
+    pub nr_structs: i32,
 }

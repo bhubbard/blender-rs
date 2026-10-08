@@ -2,6 +2,21 @@
 
 #![allow(non_snake_case, non_camel_case_types, non_upper_case_globals, dead_code)]
 
+#[allow(unused_imports)]
+use crate::*;
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq)]
+pub struct CurvesGeometry {
+    pub _data: [u8; 64],
+}
+
+impl Default for CurvesGeometry {
+    fn default() -> Self {
+        unsafe { core::mem::zeroed() }
+    }
+}
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
 #[repr(i8)]
 pub enum GreasePencilStrokeCapType {
@@ -151,7 +166,6 @@ pub struct GreasePencilDrawing {
     pub base: GreasePencilDrawingBase,
     pub geometry: CurvesGeometry,
     pub runtime: *mut core::ffi::c_void,
-    pub r#const: bke::greasepencil::Drawing &wrap(),
 }
 
 #[derive(Debug, Clone, PartialEq, Default)]
@@ -159,7 +173,6 @@ pub struct GreasePencilDrawing {
 pub struct GreasePencilDrawingReference {
     pub base: GreasePencilDrawingBase,
     pub id_reference: *mut core::ffi::c_void,
-    pub r#const: bke::greasepencil::DrawingReference &wrap(),
 }
 
 #[derive(Debug, Clone, PartialEq, Default)]
