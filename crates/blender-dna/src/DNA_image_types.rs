@@ -5,87 +5,94 @@
 #[allow(unused_imports)]
 use crate::*;
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eImageUser_Flag {
-    #[default]
-    IMA_ANIM_ALWAYS = 1 << 0,
-    IMA_SHOW_SEQUENCER_SCENE = 1 << 1,
-    IMA_NEED_FRAME_RECALC = 1 << 3,
-    IMA_SHOW_STEREO = 1 << 4,
-    IMA_USER_FRAME_IN_RANGE = (1 << 10),
+pub struct eImageUser_Flag(pub i16);
+
+impl eImageUser_Flag {
+    pub const IMA_ANIM_ALWAYS: Self = Self((1 << 0) as i16);
+    pub const IMA_SHOW_SEQUENCER_SCENE: Self = Self((1 << 1) as i16);
+    pub const IMA_NEED_FRAME_RECALC: Self = Self((1 << 3) as i16);
+    pub const IMA_SHOW_STEREO: Self = Self((1 << 4) as i16);
+    pub const IMA_USER_FRAME_IN_RANGE: Self = Self(((1 << 10)) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eImage_Flag {
-    #[default]
-    IMA_HIGH_BITDEPTH = (1 << 0),
-    IMA_FLAG_UNUSED_1 = (1 << 1),
-    IMA_DO_PREMUL = (1 << 2),
-    IMA_FLAG_UNUSED_4 = (1 << 4),
-    IMA_NOCOLLECT = (1 << 5),
-    IMA_FLAG_UNUSED_6 = (1 << 6),
-    IMA_OLD_PREMUL = (1 << 7),
-    IMA_FLAG_UNUSED_8 = (1 << 8),
-    IMA_USED_FOR_RENDER = (1 << 9),
-    IMA_VIEW_AS_RENDER = (1 << 11),
-    IMA_FLAG_UNUSED_12 = (1 << 12),
-    IMA_DEINTERLACE = (1 << 13),
-    IMA_USE_VIEWS = (1 << 14),
-    IMA_FLAG_UNUSED_15 = (1 << 15),
-    IMA_FLAG_UNUSED_16 = (1 << 16),
-    IMA_AUTOSAVE_TEMPPACK = (1 << 17),
+pub struct eImage_Flag(pub i32);
+
+impl eImage_Flag {
+    pub const IMA_HIGH_BITDEPTH: Self = Self(((1 << 0)) as i32);
+    pub const IMA_FLAG_UNUSED_1: Self = Self(((1 << 1)) as i32);
+    pub const IMA_DO_PREMUL: Self = Self(((1 << 2)) as i32);
+    pub const IMA_FLAG_UNUSED_4: Self = Self(((1 << 4)) as i32);
+    pub const IMA_NOCOLLECT: Self = Self(((1 << 5)) as i32);
+    pub const IMA_FLAG_UNUSED_6: Self = Self(((1 << 6)) as i32);
+    pub const IMA_OLD_PREMUL: Self = Self(((1 << 7)) as i32);
+    pub const IMA_FLAG_UNUSED_8: Self = Self(((1 << 8)) as i32);
+    pub const IMA_USED_FOR_RENDER: Self = Self(((1 << 9)) as i32);
+    pub const IMA_VIEW_AS_RENDER: Self = Self(((1 << 11)) as i32);
+    pub const IMA_FLAG_UNUSED_12: Self = Self(((1 << 12)) as i32);
+    pub const IMA_DEINTERLACE: Self = Self(((1 << 13)) as i32);
+    pub const IMA_USE_VIEWS: Self = Self(((1 << 14)) as i32);
+    pub const IMA_FLAG_UNUSED_15: Self = Self(((1 << 15)) as i32);
+    pub const IMA_FLAG_UNUSED_16: Self = Self(((1 << 16)) as i32);
+    pub const IMA_AUTOSAVE_TEMPPACK: Self = Self(((1 << 17)) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eImageSource {
-    #[default]
-    IMA_SRC_FILE = 1,
-    IMA_SRC_SEQUENCE = 2,
-    IMA_SRC_MOVIE = 3,
-    IMA_SRC_GENERATED = 4,
-    IMA_SRC_VIEWER = 5,
-    IMA_SRC_TILED = 6,
+pub struct eImageSource(pub i16);
+
+impl eImageSource {
+    pub const IMA_SRC_FILE: Self = Self((1) as i16);
+    pub const IMA_SRC_SEQUENCE: Self = Self((2) as i16);
+    pub const IMA_SRC_MOVIE: Self = Self((3) as i16);
+    pub const IMA_SRC_GENERATED: Self = Self((4) as i16);
+    pub const IMA_SRC_VIEWER: Self = Self((5) as i16);
+    pub const IMA_SRC_TILED: Self = Self((6) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eImageType {
-    #[default]
-    IMA_TYPE_IMAGE = 0,
-    IMA_TYPE_MULTILAYER = 1,
-    IMA_TYPE_UV_TEST = 2,
-    IMA_TYPE_R_RESULT = 4,
-    IMA_TYPE_COMPOSITE = 5,
+pub struct eImageType(pub i16);
+
+impl eImageType {
+    pub const IMA_TYPE_IMAGE: Self = Self((0) as i16);
+    pub const IMA_TYPE_MULTILAYER: Self = Self((1) as i16);
+    pub const IMA_TYPE_UV_TEST: Self = Self((2) as i16);
+    pub const IMA_TYPE_R_RESULT: Self = Self((4) as i16);
+    pub const IMA_TYPE_COMPOSITE: Self = Self((5) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i8)]
-pub enum eImageGenType {
-    #[default]
-    IMA_GENTYPE_BLANK = 0,
-    IMA_GENTYPE_GRID = 1,
-    IMA_GENTYPE_GRID_COLOR = 2,
+pub struct eImageGenType(pub i8);
+
+impl eImageGenType {
+    pub const IMA_GENTYPE_BLANK: Self = Self((0) as i8);
+    pub const IMA_GENTYPE_GRID: Self = Self((1) as i8);
+    pub const IMA_GENTYPE_GRID_COLOR: Self = Self((2) as i8);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i8)]
-pub enum eImage_GenFlag {
-    #[default]
-    IMA_GEN_FLOAT = (1 << 0),
-    IMA_GEN_TILE = (1 << 1),
+pub struct eImage_GenFlag(pub i8);
+
+impl eImage_GenFlag {
+    pub const IMA_GEN_FLOAT: Self = Self(((1 << 0)) as i8);
+    pub const IMA_GEN_TILE: Self = Self(((1 << 1)) as i8);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i8)]
-pub enum eImageAlphaMode {
-    #[default]
-    IMA_ALPHA_STRAIGHT = 0,
-    IMA_ALPHA_PREMUL = 1,
-    IMA_ALPHA_CHANNEL_PACKED = 2,
-    IMA_ALPHA_IGNORE = 3,
+pub struct eImageAlphaMode(pub i8);
+
+impl eImageAlphaMode {
+    pub const IMA_ALPHA_STRAIGHT: Self = Self((0) as i8);
+    pub const IMA_ALPHA_PREMUL: Self = Self((1) as i8);
+    pub const IMA_ALPHA_CHANNEL_PACKED: Self = Self((2) as i8);
+    pub const IMA_ALPHA_IGNORE: Self = Self((3) as i8);
 }
 
 #[derive(Debug, Clone, PartialEq)]
