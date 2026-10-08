@@ -2187,3 +2187,5 @@ pub mod BLI_set_slots;
 pub use BLI_set_slots::*;
 pub mod BLI_smaa_textures;
 pub use BLI_smaa_textures::*;
+pub mod BLI_span;
+pub use BLI_span::*;
