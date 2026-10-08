@@ -2165,3 +2165,5 @@ pub mod eevee_volume;
 pub mod BLI_math_rotation_types;
 pub mod abc_custom_props;
 pub use abc_custom_props::*;
+pub mod abc_archive;
+pub use abc_archive::*;
