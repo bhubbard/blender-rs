@@ -620,3 +620,4 @@ pub mod DNA_world_types;
 pub mod DNA_grease_pencil_types;
 pub mod DNA_boid_types;
 pub mod DNA_cachefile_types;
+pub mod DNA_color_types;
