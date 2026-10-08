@@ -5,6 +5,7 @@ members = [
     "crates/blender-dna",
     "crates/blender-bmesh",
     "crates/blender-io",
+    "crates/blender-geom",
 ]
 resolver = "2"
 

@@ -1,0 +1,10 @@
+[package]
+name = "blender-geom"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Hand-ported geometry routines from Blender's BLI_math_geom / BLI_bounds"
+
+[dependencies]
+glam = { workspace = true }
