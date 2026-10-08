@@ -667,3 +667,5 @@ pub mod DNA_anim_types;
 pub use DNA_anim_types::*;
 pub mod DNA_curve_types;
 pub use DNA_curve_types::*;
+pub mod DNA_curves_types;
+pub use DNA_curves_types::*;
