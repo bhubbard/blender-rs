@@ -5,43 +5,48 @@
 #[allow(unused_imports)]
 use crate::*;
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i8)]
-pub enum eCacheFileType {
-    #[default]
-    CACHEFILE_TYPE_ALEMBIC = 1,
-    CACHEFILE_TYPE_USD = 2,
-    CACHE_FILE_TYPE_INVALID = 0,
+pub struct eCacheFileType(pub i8);
+
+impl eCacheFileType {
+    pub const CACHEFILE_TYPE_ALEMBIC: Self = Self((1) as i8);
+    pub const CACHEFILE_TYPE_USD: Self = Self((2) as i8);
+    pub const CACHE_FILE_TYPE_INVALID: Self = Self((0) as i8);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eCacheFile_Flag {
-    #[default]
-    CACHEFILE_DS_EXPAND = (1 << 0),
-    CACHEFILE_UNUSED_0 = (1 << 1),
+pub struct eCacheFile_Flag(pub i16);
+
+impl eCacheFile_Flag {
+    pub const CACHEFILE_DS_EXPAND: Self = Self(((1 << 0)) as i16);
+    pub const CACHEFILE_UNUSED_0: Self = Self(((1 << 1)) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eCacheFile_DrawFlag {
-    #[default]
-    CACHEFILE_KEYFRAME_DRAWN = (1 << 0),
+pub struct eCacheFile_DrawFlag(pub i16);
+
+impl eCacheFile_DrawFlag {
+    pub const CACHEFILE_KEYFRAME_DRAWN: Self = Self(((1 << 0)) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eCacheFileLayer_Flag {
-    #[default]
-    CACHEFILE_LAYER_HIDDEN = (1 << 0),
+pub struct eCacheFileLayer_Flag(pub i32);
+
+impl eCacheFileLayer_Flag {
+    pub const CACHEFILE_LAYER_HIDDEN: Self = Self(((1 << 0)) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i8)]
-pub enum eCacheFile_VelocityUnit {
-    #[default]
-    CACHEFILE_VELOCITY_UNIT_FRAME = 0,
-    CACHEFILE_VELOCITY_UNIT_SECOND = 1,
+pub struct eCacheFile_VelocityUnit(pub i8);
+
+impl eCacheFile_VelocityUnit {
+    pub const CACHEFILE_VELOCITY_UNIT_FRAME: Self = Self((0) as i8);
+    pub const CACHEFILE_VELOCITY_UNIT_SECOND: Self = Self((1) as i8);
 }
 
 #[derive(Debug, Clone, PartialEq)]
