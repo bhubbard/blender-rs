@@ -2171,3 +2171,5 @@ pub mod abc_hierarchy_iterator;
 pub use abc_hierarchy_iterator::*;
 pub mod ABC_alembic;
 pub use ABC_alembic::*;
+pub mod BLI_mmap;
+pub use BLI_mmap::*;
