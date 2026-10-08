@@ -675,3 +675,5 @@ pub mod DNA_mesh_types;
 pub use DNA_mesh_types::*;
 pub mod DNA_object_force_types;
 pub use DNA_object_force_types::*;
+pub mod DNA_movieclip_types;
+pub use DNA_movieclip_types::*;
