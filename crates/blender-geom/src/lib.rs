@@ -4,6 +4,8 @@
 //! developed and tested while the port-runner is rewriting them.
 
 pub mod bounds;
+pub mod isect;
+pub mod kdtree;
 pub mod line;
 pub mod plane;
 pub mod poly;
