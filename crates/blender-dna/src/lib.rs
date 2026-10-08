@@ -338,7 +338,7 @@ pub mod DNA_uuid_types;
 
 pub mod DNA_theme_types;
 
-pub mod dna_utils;
+
 
 
 pub mod DNA_ID;
@@ -633,3 +633,4 @@ pub mod DNA_scene_enums;
 pub mod DNA_space_enums;
 pub mod DNA_userdef_enums;
 pub mod DNA_workspace_types;
+

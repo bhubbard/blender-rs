@@ -5,74 +5,81 @@
 #[allow(unused_imports)]
 use crate::*;
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eBoidRuleType {
-    #[default]
-    eBoidRuleType_None = 0,
-    eBoidRuleType_Goal = 1,
-    eBoidRuleType_Avoid = 2,
-    eBoidRuleType_AvoidCollision = 3,
-    eBoidRuleType_Separate = 4,
-    eBoidRuleType_Flock = 5,
-    eBoidRuleType_FollowLeader = 6,
-    eBoidRuleType_AverageSpeed = 7,
-    eBoidRuleType_Fight = 8,
+pub struct eBoidRuleType(pub i32);
+
+impl eBoidRuleType {
+    pub const eBoidRuleType_None: Self = Self((0) as i32);
+    pub const eBoidRuleType_Goal: Self = Self((1) as i32);
+    pub const eBoidRuleType_Avoid: Self = Self((2) as i32);
+    pub const eBoidRuleType_AvoidCollision: Self = Self((3) as i32);
+    pub const eBoidRuleType_Separate: Self = Self((4) as i32);
+    pub const eBoidRuleType_Flock: Self = Self((5) as i32);
+    pub const eBoidRuleType_FollowLeader: Self = Self((6) as i32);
+    pub const eBoidRuleType_AverageSpeed: Self = Self((7) as i32);
+    pub const eBoidRuleType_Fight: Self = Self((8) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eBoidRule_Flag {
-    #[default]
-    BOIDRULE_CURRENT = 1 << 0,
-    BOIDRULE_IN_AIR = 1 << 2,
-    BOIDRULE_ON_LAND = 1 << 3,
+pub struct eBoidRule_Flag(pub i32);
+
+impl eBoidRule_Flag {
+    pub const BOIDRULE_CURRENT: Self = Self((1 << 0) as i32);
+    pub const BOIDRULE_IN_AIR: Self = Self((1 << 2) as i32);
+    pub const BOIDRULE_ON_LAND: Self = Self((1 << 3) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eBoidRuleGoalAvoid_Option {
-    #[default]
-    BRULE_GOAL_AVOID_PREDICT = 1 << 0,
-    BRULE_GOAL_AVOID_ARRIVE = 1 << 1,
-    BRULE_GOAL_AVOID_SIGNAL = 1 << 2,
+pub struct eBoidRuleGoalAvoid_Option(pub i32);
+
+impl eBoidRuleGoalAvoid_Option {
+    pub const BRULE_GOAL_AVOID_PREDICT: Self = Self((1 << 0) as i32);
+    pub const BRULE_GOAL_AVOID_ARRIVE: Self = Self((1 << 1) as i32);
+    pub const BRULE_GOAL_AVOID_SIGNAL: Self = Self((1 << 2) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eBoidRuleAvoidCollision_Option {
-    #[default]
-    BRULE_ACOLL_WITH_BOIDS = 1 << 0,
-    BRULE_ACOLL_WITH_DEFLECTORS = 1 << 1,
+pub struct eBoidRuleAvoidCollision_Option(pub i32);
+
+impl eBoidRuleAvoidCollision_Option {
+    pub const BRULE_ACOLL_WITH_BOIDS: Self = Self((1 << 0) as i32);
+    pub const BRULE_ACOLL_WITH_DEFLECTORS: Self = Self((1 << 1) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eBoidMode {
-    #[default]
-    eBoidMode_InAir = 0,
-    eBoidMode_OnLand = 1,
-    eBoidMode_Climbing = 2,
-    eBoidMode_Falling = 3,
-    eBoidMode_Liftoff = 4,
+pub struct eBoidMode(pub i16);
+
+impl eBoidMode {
+    pub const eBoidMode_InAir: Self = Self((0) as i16);
+    pub const eBoidMode_OnLand: Self = Self((1) as i16);
+    pub const eBoidMode_Climbing: Self = Self((2) as i16);
+    pub const eBoidMode_Falling: Self = Self((3) as i16);
+    pub const eBoidMode_Liftoff: Self = Self((4) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eBoidRulesetType {
-    #[default]
-    eBoidRulesetType_Fuzzy = 0,
-    eBoidRulesetType_Random = 1,
-    eBoidRulesetType_Average = 2,
+pub struct eBoidRulesetType(pub i32);
+
+impl eBoidRulesetType {
+    pub const eBoidRulesetType_Fuzzy: Self = Self((0) as i32);
+    pub const eBoidRulesetType_Random: Self = Self((1) as i32);
+    pub const eBoidRulesetType_Average: Self = Self((2) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eBoid_Option {
-    #[default]
-    BOID_ALLOW_FLIGHT = 1 << 0,
-    BOID_ALLOW_LAND = 1 << 1,
-    BOID_ALLOW_CLIMB = 1 << 2,
+pub struct eBoid_Option(pub i32);
+
+impl eBoid_Option {
+    pub const BOID_ALLOW_FLIGHT: Self = Self((1 << 0) as i32);
+    pub const BOID_ALLOW_LAND: Self = Self((1 << 1) as i32);
+    pub const BOID_ALLOW_CLIMB: Self = Self((1 << 2) as i32);
 }
 
 #[derive(Debug, Clone, PartialEq)]
