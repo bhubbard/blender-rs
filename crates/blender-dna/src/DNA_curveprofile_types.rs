@@ -1,6 +1,9 @@
 //! Mechanically generated via blender-cluster AST zero-token fast-path
 
-#![allow(non_snake_case, non_camel_case_types, non_upper_case_globals, dead_code)]
+#![allow(non_snake_case, non_camel_case_types, non_upper_case_globals, dead_code, unused_imports)]
+
+#[allow(unused_imports)]
+use crate::*;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
 #[repr(i16)]
@@ -35,7 +38,7 @@ pub enum eCurveProfilePresets {
     PROF_PRESET_STEPS = 4,
 }
 
-#[derive(Debug, Clone, PartialEq, Default)]
+#[derive(Debug, Clone, PartialEq)]
 #[repr(C)]
 pub struct CurveProfilePoint {
     pub x: f32,
@@ -43,7 +46,13 @@ pub struct CurveProfilePoint {
     pub flag: eCurveProfilePoint_Flag,
 }
 
-#[derive(Debug, Clone, PartialEq, Default)]
+impl Default for CurveProfilePoint {
+    fn default() -> Self {
+        unsafe { core::mem::zeroed() }
+    }
+}
+
+#[derive(Debug, Clone, PartialEq)]
 #[repr(C)]
 pub struct CurveProfile {
     pub path_len: i16,
@@ -53,5 +62,11 @@ pub struct CurveProfile {
     pub table: *mut core::ffi::c_void,
     pub segments: *mut core::ffi::c_void,
     pub flag: eCurveProfile_Flag,
+}
+
+impl Default for CurveProfile {
+    fn default() -> Self {
+        unsafe { core::mem::zeroed() }
+    }
 }
 
