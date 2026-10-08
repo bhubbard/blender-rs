@@ -6,6 +6,7 @@ members = [
     "crates/blender-bmesh",
     "crates/blender-io",
     "crates/blender-geom",
+    "crates/blender-obj",
 ]
 resolver = "2"
 
