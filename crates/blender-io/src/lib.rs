@@ -2189,3 +2189,5 @@ pub mod BLI_smaa_textures;
 pub use BLI_smaa_textures::*;
 pub mod BLI_span;
 pub use BLI_span::*;
+pub mod subdiv_converter;
+pub use subdiv_converter::*;
