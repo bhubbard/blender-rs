@@ -5,109 +5,119 @@
 #[allow(unused_imports)]
 use crate::*;
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eCurveMapPoint_Flag {
-    #[default]
-    CUMA_SELECT = (1 << 0),
-    CUMA_HANDLE_VECTOR = (1 << 1),
-    CUMA_HANDLE_AUTO_ANIM = (1 << 2),
-    CUMA_REMOVE = (1 << 3),
-    CUMA_ACTIVE = (1 << 4),
+pub struct eCurveMapPoint_Flag(pub i16);
+
+impl eCurveMapPoint_Flag {
+    pub const CUMA_SELECT: Self = Self(((1 << 0)) as i16);
+    pub const CUMA_HANDLE_VECTOR: Self = Self(((1 << 1)) as i16);
+    pub const CUMA_HANDLE_AUTO_ANIM: Self = Self(((1 << 2)) as i16);
+    pub const CUMA_REMOVE: Self = Self(((1 << 3)) as i16);
+    pub const CUMA_ACTIVE: Self = Self(((1 << 4)) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eCurveMappingFlags {
-    #[default]
-    CUMA_DO_CLIP = (1 << 0),
-    CUMA_PREMULLED = (1 << 1),
-    CUMA_DRAW_CFRA = (1 << 2),
-    CUMA_DRAW_SAMPLE = (1 << 3),
-    CUMA_EXTEND_EXTRAPOLATE = (1 << 4),
-    CUMA_USE_WRAPPING = (1 << 5),
+pub struct eCurveMappingFlags(pub i32);
+
+impl eCurveMappingFlags {
+    pub const CUMA_DO_CLIP: Self = Self(((1 << 0)) as i32);
+    pub const CUMA_PREMULLED: Self = Self(((1 << 1)) as i32);
+    pub const CUMA_DRAW_CFRA: Self = Self(((1 << 2)) as i32);
+    pub const CUMA_DRAW_SAMPLE: Self = Self(((1 << 3)) as i32);
+    pub const CUMA_EXTEND_EXTRAPOLATE: Self = Self(((1 << 4)) as i32);
+    pub const CUMA_USE_WRAPPING: Self = Self(((1 << 5)) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eCurveMappingPreset {
-    #[default]
-    CURVE_PRESET_LINE = 0,
-    CURVE_PRESET_SHARP = 1,
-    CURVE_PRESET_SMOOTH = 2,
-    CURVE_PRESET_MAX = 3,
-    CURVE_PRESET_MID8 = 4,
-    CURVE_PRESET_ROUND = 5,
-    CURVE_PRESET_ROOT = 6,
-    CURVE_PRESET_GAUSS = 7,
-    CURVE_PRESET_BELL = 8,
-    CURVE_PRESET_CONSTANT_MEDIAN = 9,
+pub struct eCurveMappingPreset(pub i32);
+
+impl eCurveMappingPreset {
+    pub const CURVE_PRESET_LINE: Self = Self((0) as i32);
+    pub const CURVE_PRESET_SHARP: Self = Self((1) as i32);
+    pub const CURVE_PRESET_SMOOTH: Self = Self((2) as i32);
+    pub const CURVE_PRESET_MAX: Self = Self((3) as i32);
+    pub const CURVE_PRESET_MID8: Self = Self((4) as i32);
+    pub const CURVE_PRESET_ROUND: Self = Self((5) as i32);
+    pub const CURVE_PRESET_ROOT: Self = Self((6) as i32);
+    pub const CURVE_PRESET_GAUSS: Self = Self((7) as i32);
+    pub const CURVE_PRESET_BELL: Self = Self((8) as i32);
+    pub const CURVE_PRESET_CONSTANT_MEDIAN: Self = Self((9) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eCurveMappingTone {
-    #[default]
-    CURVE_TONE_STANDARD = 0,
-    CURVE_TONE_FILMLIKE = 2,
+pub struct eCurveMappingTone(pub i16);
+
+impl eCurveMappingTone {
+    pub const CURVE_TONE_STANDARD: Self = Self((0) as i16);
+    pub const CURVE_TONE_FILMLIKE: Self = Self((2) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eHistogram_Mode {
-    #[default]
-    HISTO_MODE_LUMA = 0,
-    HISTO_MODE_RGB = 1,
-    HISTO_MODE_R = 2,
-    HISTO_MODE_G = 3,
-    HISTO_MODE_B = 4,
-    HISTO_MODE_ALPHA = 5,
+pub struct eHistogram_Mode(pub i16);
+
+impl eHistogram_Mode {
+    pub const HISTO_MODE_LUMA: Self = Self((0) as i16);
+    pub const HISTO_MODE_RGB: Self = Self((1) as i16);
+    pub const HISTO_MODE_R: Self = Self((2) as i16);
+    pub const HISTO_MODE_G: Self = Self((3) as i16);
+    pub const HISTO_MODE_B: Self = Self((4) as i16);
+    pub const HISTO_MODE_ALPHA: Self = Self((5) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i16)]
-pub enum eHistogram_Flag {
-    #[default]
-    HISTO_FLAG_LINE = (1 << 0),
-    HISTO_FLAG_SAMPLELINE = (1 << 1),
+pub struct eHistogram_Flag(pub i16);
+
+impl eHistogram_Flag {
+    pub const HISTO_FLAG_LINE: Self = Self(((1 << 0)) as i16);
+    pub const HISTO_FLAG_SAMPLELINE: Self = Self(((1 << 1)) as i16);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eScopes_WaveformMode {
-    #[default]
-    SCOPES_WAVEFRM_LUMA = 0,
-    SCOPES_WAVEFRM_RGB_PARADE = 1,
-    SCOPES_WAVEFRM_YCC_601 = 2,
-    SCOPES_WAVEFRM_YCC_709 = 3,
-    SCOPES_WAVEFRM_YCC_JPEG = 4,
-    SCOPES_WAVEFRM_RGB = 5,
+pub struct eScopes_WaveformMode(pub i32);
+
+impl eScopes_WaveformMode {
+    pub const SCOPES_WAVEFRM_LUMA: Self = Self((0) as i32);
+    pub const SCOPES_WAVEFRM_RGB_PARADE: Self = Self((1) as i32);
+    pub const SCOPES_WAVEFRM_YCC_601: Self = Self((2) as i32);
+    pub const SCOPES_WAVEFRM_YCC_709: Self = Self((3) as i32);
+    pub const SCOPES_WAVEFRM_YCC_JPEG: Self = Self((4) as i32);
+    pub const SCOPES_WAVEFRM_RGB: Self = Self((5) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eScopes_VecscopeMode {
-    #[default]
-    SCOPES_VECSCOPE_RGB = 0,
-    SCOPES_VECSCOPE_LUMA = 1,
+pub struct eScopes_VecscopeMode(pub i32);
+
+impl eScopes_VecscopeMode {
+    pub const SCOPES_VECSCOPE_RGB: Self = Self((0) as i32);
+    pub const SCOPES_VECSCOPE_LUMA: Self = Self((1) as i32);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i8)]
-pub enum eColorManageDisplay_Emulation {
-    #[default]
-    COLORMANAGE_DISPLAY_EMULATION_AUTO = 0,
-    COLORMANAGE_DISPLAY_EMULATION_OFF = 1,
+pub struct eColorManageDisplay_Emulation(pub i8);
+
+impl eColorManageDisplay_Emulation {
+    pub const COLORMANAGE_DISPLAY_EMULATION_AUTO: Self = Self((0) as i8);
+    pub const COLORMANAGE_DISPLAY_EMULATION_OFF: Self = Self((1) as i8);
 }
 
+#[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
-#[repr(i32)]
-pub enum eColorManageView_Flag {
-    #[default]
-    COLORMANAGE_VIEW_USE_CURVES = (1 << 0),
-    COLORMANAGE_VIEW_USE_DEPRECATED = (1 << 1),
-    COLORMANAGE_VIEW_USE_WHITE_BALANCE = (1 << 2),
-    COLORMANAGE_VIEW_ONLY_VIEW_LOOK = (1 << 3),
+pub struct eColorManageView_Flag(pub i32);
+
+impl eColorManageView_Flag {
+    pub const COLORMANAGE_VIEW_USE_CURVES: Self = Self(((1 << 0)) as i32);
+    pub const COLORMANAGE_VIEW_USE_DEPRECATED: Self = Self(((1 << 1)) as i32);
+    pub const COLORMANAGE_VIEW_USE_WHITE_BALANCE: Self = Self(((1 << 2)) as i32);
+    pub const COLORMANAGE_VIEW_ONLY_VIEW_LOOK: Self = Self(((1 << 3)) as i32);
 }
 
 #[derive(Debug, Clone, PartialEq)]
