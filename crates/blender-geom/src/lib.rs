@@ -10,6 +10,7 @@ pub mod kdtree;
 pub mod line;
 pub mod plane;
 pub mod poly;
+pub mod polyfill;
 pub mod rotation;
 pub mod tri;
 
