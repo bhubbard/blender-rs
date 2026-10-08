@@ -2175,3 +2175,5 @@ pub mod BLI_mmap;
 pub use BLI_mmap::*;
 pub mod BLI_ordered_edge;
 pub use BLI_ordered_edge::*;
+pub mod BLI_probing_strategies;
+pub use BLI_probing_strategies::*;
