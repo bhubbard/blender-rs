@@ -234,6 +234,14 @@ impl BMesh {
                 if !self.edge_loops(lp.e).contains(&l) {
                     return Err(format!("loop {l:?} missing from radial cycle"));
                 }
+                let next_v = self.lpool.get(lp.next).map(|n| n.v);
+                let joins = self.epool.get(lp.e).is_some_and(|e| {
+                    (e.v1 == lp.v && Some(e.v2) == next_v)
+                        || (e.v2 == lp.v && Some(e.v1) == next_v)
+                });
+                if !joins {
+                    return Err(format!("loop {l:?}: edge does not join v to next.v"));
+                }
             }
         }
         for (eh, e) in self.epool.iter() {

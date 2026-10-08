@@ -21,6 +21,8 @@ DegenerateEdge,
 DuplicateEdge(VertHandle, VertHandle),
 #[error("Invalid split: vertices must be distinct, in the face, and non-adjacent")]
 InvalidSplit,
+#[error("Invalid join: edge must be shared by exactly two distinct faces")]
+InvalidJoin,
 #[error("Face must have at least 3 vertices")]
 DegenerateFace,
 }
@@ -393,6 +395,8 @@ pub mod BKE_editmesh;
 pub mod bmesh_cycles;
 pub mod bmesh_kill;
 pub mod bmesh_split;
+pub mod bmesh_query;
+pub mod bmesh_join;
 pub mod bmesh_core;
 pub mod bmesh_edgeloop;
 pub mod bmesh_marking;
