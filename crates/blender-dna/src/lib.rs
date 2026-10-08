@@ -654,3 +654,5 @@ pub mod DNA_workspace_types;
 pub use DNA_workspace_types::*;
 pub mod DNA_armature_types;
 pub use DNA_armature_types::*;
+pub mod DNA_asset_types;
+pub use DNA_asset_types::*;
