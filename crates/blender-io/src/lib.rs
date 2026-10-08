@@ -2193,3 +2193,5 @@ pub mod subdiv_converter;
 pub use subdiv_converter::*;
 pub mod mask_evaluate;
 pub use mask_evaluate::*;
+pub mod material;
+pub use material::*;
