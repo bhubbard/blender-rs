@@ -757,3 +757,5 @@ pub mod DNA_view2d_types;
 pub use DNA_view2d_types::*;
 pub mod DNA_xr_types;
 pub use DNA_xr_types::*;
+pub mod dna_parse;
+pub use dna_parse::*;
