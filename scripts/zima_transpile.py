@@ -18,6 +18,7 @@ import urllib.request
 import argparse
 import subprocess
 from pathlib import Path
+from typing import Optional
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 TELEMETRY_FILE = ROOT_DIR / "telemetry" / "zima_telemetry.jsonl"
@@ -83,9 +84,13 @@ def extract_rust_code(response: str) -> str:
         return code.strip()
     return response.strip()
 
-def transpile_file(source_file: Path, target_crate: str, model: str = DEFAULT_MODEL) -> bool:
+def transpile_file(source_file: Path, target_crate: str, model: str = DEFAULT_MODEL) -> Optional[str]:
     print(f"[*] Reading source: {source_file}")
-    source_code = source_file.read_text(errors="ignore")
+    try:
+        source_code = source_file.read_text(errors="ignore")
+    except Exception as e:
+        print(f"[!] Error reading file: {e}")
+        return None
     lines = source_code.splitlines()
 
     # If file is too large for single chunk on 0.5B / 2B model, truncate or handle first struct/fn
@@ -99,15 +104,16 @@ def transpile_file(source_file: Path, target_crate: str, model: str = DEFAULT_MO
 
     print(f"[*] Sending prompt to ZimaBoard ({model})...")
     start = time.time()
-    raw = query_zima(system_prompt, model=model)
+    try:
+        raw = query_zima(system_prompt, model=model)
+    except Exception as e:
+        print(f"[!] Remote query failed: {e}")
+        return None
     elapsed = time.time() - start
     rust_code = extract_rust_code(raw)
 
     print(f"[✓] Received {len(rust_code.splitlines())} lines of Rust in {elapsed:.1f}s")
-    print("--------------------------------------------------")
-    print(rust_code[:500] + ("..." if len(rust_code) > 500 else ""))
-    print("--------------------------------------------------")
-    return True
+    return rust_code
 
 def main():
     parser = argparse.ArgumentParser(description="ZimaBoard Remote Transpile Helper")

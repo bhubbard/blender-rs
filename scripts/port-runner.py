@@ -24,6 +24,8 @@ from typing import Optional, Dict, List, Tuple
 
 # Base paths
 SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.append(str(SCRIPT_DIR))
 ROOT_DIR = SCRIPT_DIR.parent
 UPSTREAM_DIR = ROOT_DIR / "upstream" / "source" / "blender"
 PROGRESS_FILE = ROOT_DIR / "PORTING_PROGRESS.json"
@@ -579,7 +581,7 @@ def git_commit_file(target_crate: str, module_path: Path, source_rel: str):
     except Exception as e:
         print(f"  {RED}[!] Git commit error:{RESET} {e}")
 
-def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = False):
+def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = False, use_zima: bool = False):
     """Main execution loop driven by porting-workflow-loops discipline with progress bars."""
     progress = load_progress()
     lifetimes = load_lifetimes()
@@ -680,6 +682,14 @@ def run_port_loop(subsystem: str = "bmesh", limit: int = 10, dry_run: bool = Fal
 
         # Generate translation via Apfel (with live spinner)
         rust_code = translate_file_with_apfel(file_path, dest_crate, lifetimes)
+        if not rust_code and use_zima:
+            print(f"  {YELLOW}[⚡ ZimaBoard]{RESET} Attempting remote neural fallback for {file_path.name}...")
+            try:
+                import zima_transpile
+                rust_code = zima_transpile.transpile_file(file_path, dest_crate)
+            except Exception as e:
+                print(f"  {RED}[!] ZimaBoard fallback error:{RESET} {e}")
+
         if not rust_code:
             progress["failed"][rel_str] = "apfel_generation_failed"
             save_progress(progress)
@@ -729,6 +739,7 @@ if __name__ == "__main__":
     parser.add_argument("--subsystem", default="bmesh", help="Subsystem inside upstream/source/blender (default: bmesh)")
     parser.add_argument("--limit", type=int, default=5, help="Number of files to process per run")
     parser.add_argument("--dry-run", action="store_true", help="Route files with Zev without modifying code")
+    parser.add_argument("--use-zima", action="store_true", default=(os.environ.get("ZIMA_ENABLED", "0") in ("1", "true", "True")), help="Use remote ZimaBoard node as neural transpile fallback")
     args = parser.parse_args()
 
-    run_port_loop(subsystem=args.subsystem, limit=args.limit, dry_run=args.dry_run)
+    run_port_loop(subsystem=args.subsystem, limit=args.limit, dry_run=args.dry_run, use_zima=args.use_zima)

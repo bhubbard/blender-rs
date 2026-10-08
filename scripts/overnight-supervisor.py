@@ -117,7 +117,8 @@ def run_subsystem_batch(subsystem: str, limit: int = 25) -> bool:
         sys.executable,
         str(PORT_RUNNER),
         "--subsystem", subsystem,
-        "--limit", str(limit)
+        "--limit", str(limit),
+        "--use-zima",
     ]
     try:
         proc = subprocess.run(cmd, cwd=str(ROOT_DIR), timeout=3600)
