@@ -622,3 +622,4 @@ pub mod DNA_boid_types;
 pub mod DNA_cachefile_types;
 pub mod DNA_color_types;
 pub mod DNA_image_types;
+pub mod DNA_customdata_types;
