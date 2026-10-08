@@ -19,6 +19,8 @@ InvalidFace(FaceHandle),
 DegenerateEdge,
 #[error("Duplicate edge between vertex {0:?} and {1:?}")]
 DuplicateEdge(VertHandle, VertHandle),
+#[error("Invalid split: vertices must be distinct, in the face, and non-adjacent")]
+InvalidSplit,
 #[error("Face must have at least 3 vertices")]
 DegenerateFace,
 }
@@ -242,17 +244,9 @@ v2_disk_prev: None,
 v2_disk_next: None,
 };
 let e_handle = self.epool.alloc(edge);
-// Update vertex edge disk pointer
-if let Some(vert1) = self.vpool.get_mut(v1) {
-if vert1.edge.is_none() {
-vert1.edge = Some(e_handle);
-}
-}
-if let Some(vert2) = self.vpool.get_mut(v2) {
-if vert2.edge.is_none() {
-vert2.edge = Some(e_handle);
-}
-}
+// Link into the disk cycle of both endpoints.
+self.disk_edge_append(v1, e_handle);
+self.disk_edge_append(v2, e_handle);
 Ok(e_handle)
 }
 /// Creates an edge between two vertices or returns existing one if already present.
@@ -261,10 +255,8 @@ pub fn edge_find_or_create(
 v1: VertHandle,
 v2: VertHandle,
 ) -> Result<EdgeHandle, BMeshError> {
-for (h, edge) in self.epool.iter() {
-if (edge.v1 == v1 && edge.v2 == v2) || (edge.v1 == v2 && edge.v2 == v1) {
-return Ok(h);
-}
+if let Some(e) = self.edge_exists(v1, v2) {
+return Ok(e);
 }
 self.edge_create(v1, v2, None)
 }
@@ -300,6 +292,7 @@ prev: LoopHandle::invalid(),
 radial_next: LoopHandle::invalid(),
 radial_prev: LoopHandle::invalid(),
 });
+self.radial_loop_append(edge, loop_h);
 loop_handles.push(loop_h);
 }
 // Link loop cycle
@@ -397,6 +390,9 @@ assert_eq!(bm.totface(), 1);
 }
 }
 pub mod BKE_editmesh;
+pub mod bmesh_cycles;
+pub mod bmesh_kill;
+pub mod bmesh_split;
 pub mod bmesh_core;
 pub mod bmesh_edgeloop;
 pub mod bmesh_marking;
@@ -756,3 +752,8 @@ pub mod cached_image;
 
 
 pub mod pbvh_bmesh;
+
+
+
+
+
