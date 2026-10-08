@@ -1,0 +1,22 @@
+[package]
+name = "blender-cluster"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance distributed Rust transpiler coordinator for ZimaBoard clusters"
+license = "GPL-2.0-or-later"
+
+[[bin]]
+name = "blender-cluster"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+clap = { version = "4", features = ["derive"] }
+colored = "2"
+anyhow = "1.0"
+futures = "0.3"
+regex = "1.10"
+walkdir = "2.5"

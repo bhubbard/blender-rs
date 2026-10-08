@@ -21,11 +21,14 @@ impl CrateVerifier {
             return Ok(());
         }
         let content = std::fs::read_to_string(&lib_rs)?;
-        let stmt = format!("pub mod {};", module_name);
-        if !content.contains(&stmt) {
+        let mod_stmt = format!("pub mod {};", module_name);
+        let use_stmt = format!("pub use {}::*;", module_name);
+        if !content.contains(&mod_stmt) {
             let mut updated = content.trim_end().to_string();
             updated.push('\n');
-            updated.push_str(&stmt);
+            updated.push_str(&mod_stmt);
+            updated.push('\n');
+            updated.push_str(&use_stmt);
             updated.push('\n');
             std::fs::write(&lib_rs, updated)?;
         }
@@ -38,11 +41,10 @@ impl CrateVerifier {
             return Ok(());
         }
         let content = std::fs::read_to_string(&lib_rs)?;
-        let stmt = format!("pub mod {};", module_name);
-        if content.contains(&stmt) {
-            let updated = content.replace(&stmt, "");
-            std::fs::write(&lib_rs, updated)?;
-        }
+        let mod_stmt = format!("pub mod {};", module_name);
+        let use_stmt = format!("pub use {}::*;", module_name);
+        let updated = content.replace(&mod_stmt, "").replace(&use_stmt, "");
+        std::fs::write(&lib_rs, updated)?;
         Ok(())
     }
 

@@ -6,8 +6,22 @@ const RUST_KEYWORDS: &[&str] = &[
     "as", "break", "const", "continue", "crate", "else", "enum", "extern", "false", "fn",
     "for", "if", "impl", "in", "let", "loop", "match", "mod", "move", "mut", "pub", "ref",
     "return", "self", "Self", "static", "struct", "super", "trait", "true", "type", "unsafe",
-    "use", "where", "while", "async", "await", "dyn", "box",
+    "use", "where", "while", "async", "await", "dyn", "box", "macro", "try", "yield",
+    "abstract", "become", "final", "override", "priv", "typeof", "unsized", "virtual",
 ];
+
+pub fn is_valid_ident(ident: &str) -> bool {
+    let clean = ident.trim().trim_start_matches("r#");
+    if clean.is_empty() {
+        return false;
+    }
+    let mut chars = clean.chars();
+    match chars.next() {
+        Some(c) if c.is_ascii_alphabetic() || c == '_' => {}
+        _ => return false,
+    }
+    chars.all(|c| c.is_ascii_alphanumeric() || c == '_')
+}
 
 pub fn sanitize_ident(ident: &str) -> String {
     let clean = ident.trim().trim_start_matches('*').trim();
@@ -44,7 +58,8 @@ pub fn clean_c_literal(lit: &str) -> String {
 
 /// Maps standard C/C++ scalar and pointer types to idiomatic Rust types.
 pub fn map_c_type(c_type: &str, in_array: bool) -> String {
-    let mut t = c_type.trim();
+    let cleaned_c_type = c_type.replace("<struct ", "<").replace("<class ", "<");
+    let mut t = cleaned_c_type.as_str().trim();
 
     // Strip const, volatile, struct, class keywords
     while t.starts_with("const ") || t.starts_with("struct ") || t.starts_with("class ") || t.starts_with("volatile ") {
@@ -60,26 +75,28 @@ pub fn map_c_type(c_type: &str, in_array: bool) -> String {
     }
 
     match t {
-        "int" | "signed int" | "bContextDataResult" => "i32".to_string(),
-        "unsigned int" | "uint" | "uint32_t" => "u32".to_string(),
-        "short" | "signed short" | "short int" | "int16_t" => "i16".to_string(),
-        "unsigned short" | "ushort" | "uint16_t" => "u16".to_string(),
-        "char" | "int8_t" | "schar" => {
+        "int" | "signed int" | "bContextDataResult" | "int32_t" | "int32" => "i32".to_string(),
+        "unsigned int" | "uint" | "uint32_t" | "uint32" => "u32".to_string(),
+        "short" | "signed short" | "short int" | "int16_t" | "int16" => "i16".to_string(),
+        "unsigned short" | "ushort" | "uint16_t" | "uint16" => "u16".to_string(),
+        "char" | "int8_t" | "schar" | "int8" => {
             if in_array {
                 "u8".to_string()
             } else {
                 "i8".to_string()
             }
         }
-        "unsigned char" | "uchar" | "uint8_t" | "byte" => "u8".to_string(),
+        "unsigned char" | "uchar" | "uint8_t" | "byte" | "uint8" => "u8".to_string(),
         "long" | "long int" | "int64_t" | "int64" => "i64".to_string(),
-        "unsigned long" | "uint64_t" | "uint64" | "size_t" | "uintptr_t" => "usize".to_string(),
+        "unsigned long" | "uint64_t" | "uint64" | "size_t" | "uintptr_t" | "ulong" => "usize".to_string(),
         "float" => "f32".to_string(),
         "double" => "f64".to_string(),
         "bool" => "bool".to_string(),
         "void" => "()".to_string(),
         "void*" | "void *" => "*mut core::ffi::c_void".to_string(),
         "char*" | "char *" | "const char*" | "const char *" => "*mut i8".to_string(),
+        "std::string" | "string" => "String".to_string(),
+        "StringRef" | "StringRefNull" => "String".to_string(),
         other => {
             if other.ends_with('*') {
                 "*mut core::ffi::c_void".to_string()
@@ -90,10 +107,12 @@ pub fn map_c_type(c_type: &str, in_array: bool) -> String {
     }
 }
 
-/// Strips C and C++ comments from source code while preserving clean syntax.
+/// Strips C and C++ comments and disabled blocks from source code while preserving clean syntax.
 pub fn strip_comments(source: &str) -> String {
+    let if0_re = Regex::new(r"(?s)#if\s+0\b.*?#endif").unwrap();
+    let cleaned_if0 = if0_re.replace_all(source, " ");
     let block_re = Regex::new(r"(?s)/\*.*?\*/").unwrap();
-    let cleaned = block_re.replace_all(source, " ");
+    let cleaned = block_re.replace_all(&cleaned_if0, " ");
     let line_re = Regex::new(r"//.*").unwrap();
     line_re.replace_all(&cleaned, "").to_string()
 }
@@ -139,12 +158,14 @@ pub fn parse_c_enums(content: &str) -> Vec<String> {
         let mut constants = Vec::new();
         let mut cur_val = 0i64;
 
-        for line in body.lines() {
-            let line = line.trim();
-            if line.is_empty() || line.starts_with('#') {
-                continue;
-            }
-            let item = line.trim_end_matches(',').trim();
+        // Strip preprocessor lines in body
+        let clean_body: String = body.lines()
+            .filter(|l| !l.trim().starts_with('#'))
+            .collect::<Vec<&str>>()
+            .join(" ");
+
+        for item in clean_body.split(',') {
+            let item = item.trim();
             if item.is_empty() {
                 continue;
             }
@@ -153,8 +174,7 @@ pub fn parse_c_enums(content: &str) -> Vec<String> {
                 let vname = sanitize_ident(name.trim());
                 let clean_val = clean_c_literal(val.trim());
 
-                if !vname.is_empty() {
-                    // If clean_val is a simple number or expression, use it; else fallback to cur_val
+                if !vname.is_empty() && is_valid_ident(&vname) {
                     let is_safe_expr = clean_val.chars().all(|c| c.is_ascii_digit() || c == '-' || c == 'x' || c == 'X' || c == '<' || c == '>' || c == '|' || c == '&' || c == '^' || c == ' ' || c == '(' || c == ')');
                     if is_safe_expr && !clean_val.is_empty() {
                         constants.push(format!("    pub const {}: Self = Self(({}) as {});", vname, clean_val, rust_repr));
@@ -165,7 +185,7 @@ pub fn parse_c_enums(content: &str) -> Vec<String> {
                 }
             } else {
                 let vname = sanitize_ident(item);
-                if !vname.is_empty() {
+                if !vname.is_empty() && is_valid_ident(&vname) {
                     constants.push(format!("    pub const {}: Self = Self({} as {});", vname, cur_val, rust_repr));
                     cur_val += 1;
                 }
@@ -344,6 +364,19 @@ pub fn try_ast_fast_path(header_content: &str) -> Option<String> {
     let mut out = String::from("//! Mechanically generated via blender-cluster AST zero-token fast-path\n\n");
     out.push_str("#![allow(non_snake_case, non_camel_case_types, non_upper_case_globals, dead_code, unused_imports)]\n\n");
     out.push_str("#[allow(unused_imports)]\nuse crate::*;\n\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype int32_t = i32;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype uint32_t = u32;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype int16_t = i16;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype uint16_t = u16;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype int64_t = i64;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype uint64_t = u64;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype int8_t = i8;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype uint8_t = u8;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype uchar = u8;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype ushort = u16;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype uint = u32;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype ulong = u64;\n\n");
+
 
     for e in enums {
         out.push_str(&e);

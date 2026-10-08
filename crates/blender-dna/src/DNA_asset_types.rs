@@ -6,29 +6,29 @@
 use crate::*;
 
 #[allow(non_camel_case_types)]
-pub type int32_t = i32;
+type int32_t = i32;
 #[allow(non_camel_case_types)]
-pub type uint32_t = u32;
+type uint32_t = u32;
 #[allow(non_camel_case_types)]
-pub type int16_t = i16;
+type int16_t = i16;
 #[allow(non_camel_case_types)]
-pub type uint16_t = u16;
+type uint16_t = u16;
 #[allow(non_camel_case_types)]
-pub type int64_t = i64;
+type int64_t = i64;
 #[allow(non_camel_case_types)]
-pub type uint64_t = u64;
+type uint64_t = u64;
 #[allow(non_camel_case_types)]
-pub type int8_t = i8;
+type int8_t = i8;
 #[allow(non_camel_case_types)]
-pub type uint8_t = u8;
+type uint8_t = u8;
 #[allow(non_camel_case_types)]
-pub type uchar = u8;
+type uchar = u8;
 #[allow(non_camel_case_types)]
-pub type ushort = u16;
+type ushort = u16;
 #[allow(non_camel_case_types)]
-pub type uint = u32;
+type uint = u32;
 #[allow(non_camel_case_types)]
-pub type ulong = u64;
+type ulong = u64;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 #[repr(C)]
