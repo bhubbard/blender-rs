@@ -751,3 +751,5 @@ pub mod DNA_screen_types;
 pub use DNA_screen_types::*;
 pub mod DNA_sdna_pointers;
 pub use DNA_sdna_pointers::*;
+pub mod DNA_tracking_types;
+pub use DNA_tracking_types::*;
