@@ -47,6 +47,10 @@ pub use DNA_ID_enums::*;
 pub use DNA_ID::*;
 pub use DNA_listBase::*;
 pub use DNA_uuid_types::*;
+pub use DNA_attribute_types::*;
+pub use DNA_curve_enums::*;
+pub use DNA_anim_enums::*;
+
 
 /// Mesh header data mirroring DNA `Mesh`.
 #[derive(Debug, Clone)]
@@ -616,7 +620,6 @@ pub mod deg_eval_copy_on_write;
 
 
 pub mod DNA_packedFile_types;
-pub use DNA_packedFile_types::*;
 pub mod DNA_curveprofile_types;
 pub use DNA_curveprofile_types::*;
 pub mod DNA_vec_types;
@@ -660,3 +663,5 @@ pub mod DNA_asset_types;
 pub use DNA_asset_types::*;
 pub mod DNA_modifier_types;
 pub use DNA_modifier_types::*;
+pub mod DNA_anim_types;
+pub use DNA_anim_types::*;
