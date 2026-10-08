@@ -631,3 +631,4 @@ pub mod DNA_object_types;
 pub mod DNA_pointcache_types;
 pub mod DNA_scene_enums;
 pub mod DNA_space_enums;
+pub mod DNA_userdef_enums;
