@@ -615,3 +615,4 @@ pub mod deg_eval_copy_on_write;
 
 pub mod DNA_packedFile_types;
 pub mod DNA_curveprofile_types;
+pub mod DNA_vec_types;
