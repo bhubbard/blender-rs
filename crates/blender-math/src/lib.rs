@@ -457,3 +457,5 @@ pub mod cpp_types;
 pub use cpp_types::*;
 pub mod attribute_math;
 pub use attribute_math::*;
+pub mod node_texture_math;
+pub use node_texture_math::*;
