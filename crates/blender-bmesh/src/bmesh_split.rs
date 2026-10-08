@@ -20,6 +20,7 @@ impl BMesh {
         let co1 = self.vpool.get(v1).map(|v| v.co).unwrap_or(Vec3::ZERO);
         let co2 = self.vpool.get(v2).map(|v| v.co).unwrap_or(Vec3::ZERO);
         let vn = self.vert_create(Some(co1.lerp(co2, fac)), Some(v1));
+        self.vert_data_interp_pair(vn, v1, v2, fac);
 
         // Move the far end of `edge` from v2 to the new vertex.
         self.disk_edge_remove(v2, edge);

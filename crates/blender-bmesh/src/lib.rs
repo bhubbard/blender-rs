@@ -401,6 +401,7 @@ pub mod bmesh_query;
 pub mod bmesh_join;
 pub mod bmesh_dissolve;
 pub mod bmesh_faceops;
+pub mod bmesh_vdata;
 pub mod bmesh_core;
 pub mod bmesh_edgeloop;
 pub mod bmesh_marking;
