@@ -49,6 +49,14 @@ impl Aabb {
         p.cmpge(self.min).all() && p.cmple(self.max).all()
     }
 
+    /// Squared distance from `p` to the box (0 inside); infinite for the empty box.
+    pub fn dist_sq_to_point(&self, p: Vec3) -> f32 {
+        if self.is_empty() {
+            return f32::INFINITY;
+        }
+        (p.clamp(self.min, self.max) - p).length_squared()
+    }
+
     /// Boxes that merely touch count as intersecting (`isect_aabb_aabb_v3`).
     pub fn intersects(&self, o: &Self) -> bool {
         !self.is_empty()
@@ -121,6 +129,15 @@ mod tests {
         let apart = Aabb { min: Vec3::splat(1.5), max: Vec3::splat(2.0) };
         assert!(a.intersects(&touching));
         assert!(!a.intersects(&apart));
+    }
+
+    #[test]
+    fn point_distance() {
+        let b = unit();
+        assert_eq!(b.dist_sq_to_point(Vec3::splat(0.5)), 0.0);
+        assert_eq!(b.dist_sq_to_point(Vec3::new(3.0, 0.5, 0.5)), 4.0);
+        assert_eq!(b.dist_sq_to_point(Vec3::new(2.0, 2.0, 0.5)), 2.0);
+        assert_eq!(Aabb::EMPTY.dist_sq_to_point(Vec3::ZERO), f32::INFINITY);
     }
 
     #[test]
