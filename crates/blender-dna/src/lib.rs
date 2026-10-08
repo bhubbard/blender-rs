@@ -747,3 +747,5 @@ pub mod DNA_node_types;
 pub use DNA_node_types::*;
 pub mod DNA_scene_types;
 pub use DNA_scene_types::*;
+pub mod DNA_screen_types;
+pub use DNA_screen_types::*;
