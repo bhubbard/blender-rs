@@ -23,6 +23,8 @@ DuplicateEdge(VertHandle, VertHandle),
 InvalidSplit,
 #[error("Invalid join: edge must be shared by exactly two distinct faces")]
 InvalidJoin,
+#[error("Invalid dissolve: vertex must have exactly two distinct neighbours")]
+InvalidDissolve,
 #[error("Face must have at least 3 vertices")]
 DegenerateFace,
 }
@@ -397,6 +399,7 @@ pub mod bmesh_kill;
 pub mod bmesh_split;
 pub mod bmesh_query;
 pub mod bmesh_join;
+pub mod bmesh_dissolve;
 pub mod bmesh_core;
 pub mod bmesh_edgeloop;
 pub mod bmesh_marking;
@@ -756,6 +759,10 @@ pub mod cached_image;
 
 
 pub mod pbvh_bmesh;
+
+
+
+
 
 
 

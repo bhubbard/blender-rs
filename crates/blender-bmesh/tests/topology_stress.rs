@@ -48,7 +48,7 @@ fn random_operations_keep_topology_valid() {
         let mut bm = grid(4);
         bm.validate_topology().unwrap();
         for step in 0..60 {
-            let op = rng.next(5);
+            let op = rng.next(7);
             let es = edges(&bm);
             let fs = faces(&bm);
             if es.is_empty() {
@@ -72,6 +72,15 @@ fn random_operations_keep_topology_valid() {
                     let vs = bm.face_verts(f);
                     if vs.len() >= 4 {
                         let _ = bm.face_split(f, vs[0], vs[2]);
+                    }
+                }
+                4 => {
+                    let _ = bm.edge_rotate(e);
+                }
+                5 => {
+                    let vs: Vec<_> = bm.vpool.iter().map(|(h, _)| h).collect();
+                    if !vs.is_empty() {
+                        let _ = bm.vert_dissolve_pair(vs[rng.next(vs.len())]);
                     }
                 }
                 _ => {
