@@ -455,3 +455,5 @@ pub use node_shader_math::*;
 
 pub mod cpp_types;
 pub use cpp_types::*;
+pub mod attribute_math;
+pub use attribute_math::*;
