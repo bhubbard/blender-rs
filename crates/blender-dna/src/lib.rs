@@ -627,3 +627,4 @@ pub mod DNA_grease_pencil_modifier_types;
 pub mod DNA_layer_types;
 pub mod DNA_material_types;
 pub mod DNA_node_tree_interface_types;
+pub mod DNA_object_types;
