@@ -2201,3 +2201,5 @@ pub mod IMB_imbuf;
 pub use IMB_imbuf::*;
 pub mod IMB_colormanagement_intern;
 pub use IMB_colormanagement_intern::*;
+pub mod IMB_filetype;
+pub use IMB_filetype::*;
