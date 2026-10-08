@@ -1,7 +1,7 @@
 //! Fast I/O importers and exporters for Blender meshes mirroring `source/blender/io`.
 
 use blender_bmesh::{BMesh, VertHandle};
-use blender_math::Vec3;
+pub use blender_math::*;
 use std::collections::HashMap;
 use std::fmt::Write as FmtWrite;
 use thiserror::Error;

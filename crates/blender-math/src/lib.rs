@@ -452,3 +452,6 @@ pub mod deriche_gaussian_blur;
 pub mod van_vliet_gaussian_blur;
 pub mod node_shader_math;
 pub use node_shader_math::*;
+
+pub mod cpp_types;
+pub use cpp_types::*;
