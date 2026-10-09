@@ -2374,3 +2374,5 @@ pub mod COM_node_tree_output_node_operation;
 pub use COM_node_tree_output_node_operation::*;
 pub mod COM_operation;
 pub use COM_operation::*;
+pub mod COM_realize_on_domain_operation;
+pub use COM_realize_on_domain_operation::*;
