@@ -2316,3 +2316,5 @@ pub mod cpu_processor_cache;
 pub use cpu_processor_cache::*;
 pub mod DEG_depsgraph_build;
 pub use DEG_depsgraph_build::*;
+pub mod DEG_depsgraph;
+pub use DEG_depsgraph::*;
