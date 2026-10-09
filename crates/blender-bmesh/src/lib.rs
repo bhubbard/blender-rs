@@ -811,3 +811,5 @@ pub mod bmo_extrude;
 pub use bmo_extrude::*;
 pub mod bmo_fill_attribute;
 pub use bmo_fill_attribute::*;
+pub mod bmesh_mesh_impl;
+pub use bmesh_mesh_impl::*;
