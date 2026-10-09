@@ -2226,3 +2226,5 @@ pub mod GEO_add_curves_on_mesh;
 pub use GEO_add_curves_on_mesh::*;
 pub mod IMB_colormanagement;
 pub use IMB_colormanagement::*;
+pub mod IMB_imbuf_enums;
+pub use IMB_imbuf_enums::*;
