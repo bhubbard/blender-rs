@@ -2318,3 +2318,5 @@ pub mod DEG_depsgraph_build;
 pub use DEG_depsgraph_build::*;
 pub mod DEG_depsgraph;
 pub use DEG_depsgraph::*;
+pub mod DEG_depsgraph_debug;
+pub use DEG_depsgraph_debug::*;
