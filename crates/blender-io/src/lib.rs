@@ -2300,3 +2300,5 @@ pub mod OCIO_colorspace;
 pub use OCIO_colorspace::*;
 pub mod OCIO_cpu_processor;
 pub use OCIO_cpu_processor::*;
+pub mod OCIO_display;
+pub use OCIO_display::*;
