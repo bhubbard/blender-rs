@@ -2494,3 +2494,5 @@ pub mod eevee_world;
 pub use eevee_world::*;
 pub mod eevee_bxdf_bsl;
 pub use eevee_bxdf_bsl::*;
+pub mod eevee_deferred_tile_classify_bsl;
+pub use eevee_deferred_tile_classify_bsl::*;
