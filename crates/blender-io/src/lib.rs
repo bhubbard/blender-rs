@@ -2510,3 +2510,5 @@ pub mod wm_subwindow;
 pub use wm_subwindow::*;
 pub mod wm_toolsystem;
 pub use wm_toolsystem::*;
+pub mod wm_xr_location_scouting;
+pub use wm_xr_location_scouting::*;
