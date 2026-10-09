@@ -2354,3 +2354,5 @@ pub mod deg_builder;
 pub use deg_builder::*;
 pub mod deg_builder_cache;
 pub use deg_builder_cache::*;
+pub mod deg_builder_nodes;
+pub use deg_builder_nodes::*;
