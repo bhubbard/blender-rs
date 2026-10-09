@@ -2388,3 +2388,5 @@ pub mod COM_single_value_node_input_operation;
 pub use COM_single_value_node_input_operation::*;
 pub mod COM_static_cache_manager;
 pub use COM_static_cache_manager::*;
+pub mod COM_zone_operation;
+pub use COM_zone_operation::*;
