@@ -817,3 +817,5 @@ pub mod bmesh_polygon_impl;
 pub use bmesh_polygon_impl::*;
 pub mod bmesh_query_impl;
 pub use bmesh_query_impl::*;
+pub mod bmo_fill_edgeloop;
+pub use bmo_fill_edgeloop::*;
