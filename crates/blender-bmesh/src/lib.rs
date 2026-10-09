@@ -803,3 +803,5 @@ pub mod bmo_create;
 pub use bmo_create::*;
 pub mod bmo_dissolve;
 pub use bmo_dissolve::*;
+pub mod bmo_dupe;
+pub use bmo_dupe::*;
