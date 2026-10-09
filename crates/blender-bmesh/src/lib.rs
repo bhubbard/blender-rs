@@ -779,3 +779,5 @@ pub mod bmesh_mods_impl;
 pub use bmesh_mods_impl::*;
 pub mod bmesh_query_uv;
 pub use bmesh_query_uv::*;
+pub mod bmesh_structure;
+pub use bmesh_structure::*;
