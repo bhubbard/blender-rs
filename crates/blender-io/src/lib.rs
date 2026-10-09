@@ -2290,3 +2290,5 @@ pub mod ffmpeg_compat;
 pub use ffmpeg_compat::*;
 pub mod ffmpeg_swscale;
 pub use ffmpeg_swscale::*;
+pub mod movie_proxy_indexer;
+pub use movie_proxy_indexer::*;
