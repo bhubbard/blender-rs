@@ -769,5 +769,5 @@ pub mod bmesh_construct_impl;
 pub use bmesh_construct_impl::*;
 pub mod bmesh_mesh_normals_impl;
 pub use bmesh_mesh_normals_impl::*;
-
-
+pub mod bmesh_mesh_duplicate;
+pub use bmesh_mesh_duplicate::*;
