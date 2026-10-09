@@ -2422,3 +2422,5 @@ pub mod rna_context;
 pub use rna_context::*;
 pub mod rna_curveprofile;
 pub use rna_curveprofile::*;
+pub mod rna_curves;
+pub use rna_curves::*;
