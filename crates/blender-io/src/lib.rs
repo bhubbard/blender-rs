@@ -2224,3 +2224,5 @@ pub mod RNA_path;
 pub use RNA_path::*;
 pub mod GEO_add_curves_on_mesh;
 pub use GEO_add_curves_on_mesh::*;
+pub mod IMB_colormanagement;
+pub use IMB_colormanagement::*;
