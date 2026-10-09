@@ -793,3 +793,5 @@ pub mod bmo_bisect_plane;
 pub use bmo_bisect_plane::*;
 pub mod bmo_bridge;
 pub use bmo_bridge::*;
+pub mod bmo_connect;
+pub use bmo_connect::*;
