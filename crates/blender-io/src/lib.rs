@@ -2272,3 +2272,5 @@ pub mod IMB_filter;
 pub use IMB_filter::*;
 pub mod imbuf;
 pub use imbuf::*;
+pub mod openimageio_support;
+pub use openimageio_support::*;
