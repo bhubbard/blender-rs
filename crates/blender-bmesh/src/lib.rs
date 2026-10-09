@@ -783,3 +783,5 @@ pub mod bmesh_structure;
 pub use bmesh_structure::*;
 pub mod bmesh_uvselect;
 pub use bmesh_uvselect::*;
+pub mod bmesh_walkers_impl;
+pub use bmesh_walkers_impl::*;
