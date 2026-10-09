@@ -813,3 +813,5 @@ pub mod bmo_fill_attribute;
 pub use bmo_fill_attribute::*;
 pub mod bmesh_mesh_impl;
 pub use bmesh_mesh_impl::*;
+pub mod bmesh_polygon_impl;
+pub use bmesh_polygon_impl::*;
