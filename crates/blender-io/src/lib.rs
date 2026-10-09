@@ -2298,3 +2298,5 @@ pub mod OCIO_api;
 pub use OCIO_api::*;
 pub mod OCIO_colorspace;
 pub use OCIO_colorspace::*;
+pub mod OCIO_cpu_processor;
+pub use OCIO_cpu_processor::*;
