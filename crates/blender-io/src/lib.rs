@@ -2232,3 +2232,5 @@ pub mod cineonlib;
 pub use cineonlib::*;
 pub mod logImageCore;
 pub use logImageCore::*;
+pub mod blender_cli_command;
+pub use blender_cli_command::*;
