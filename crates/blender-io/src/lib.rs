@@ -2236,3 +2236,5 @@ pub mod blender_cli_command;
 pub use blender_cli_command::*;
 pub mod curve_poly;
 pub use curve_poly::*;
+pub mod lib_id_delete;
+pub use lib_id_delete::*;
