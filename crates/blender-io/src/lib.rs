@@ -2444,3 +2444,5 @@ pub mod abc_writer_curves;
 pub use abc_writer_curves::*;
 pub mod abc_writer_camera;
 pub use abc_writer_camera::*;
+pub mod abc_writer_hair;
+pub use abc_writer_hair::*;
