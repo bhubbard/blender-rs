@@ -787,3 +787,5 @@ pub mod bmesh_walkers_impl;
 pub use bmesh_walkers_impl::*;
 pub mod bmo_beautify;
 pub use bmo_beautify::*;
+pub mod bmo_bevel;
+pub use bmo_bevel::*;
