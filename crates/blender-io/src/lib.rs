@@ -1884,7 +1884,7 @@ pub mod IMB_cache;
 
 pub mod IMB_openexr;
 
-pub mod IMB_partial_update;
+
 
 pub mod IMB_thumbs;
 
@@ -2228,5 +2228,5 @@ pub mod IMB_colormanagement;
 pub use IMB_colormanagement::*;
 pub mod IMB_imbuf_enums;
 pub use IMB_imbuf_enums::*;
-
-
+pub mod cineonlib;
+pub use cineonlib::*;
