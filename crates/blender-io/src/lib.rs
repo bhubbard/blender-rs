@@ -2234,3 +2234,5 @@ pub mod logImageCore;
 pub use logImageCore::*;
 pub mod blender_cli_command;
 pub use blender_cli_command::*;
+pub mod curve_poly;
+pub use curve_poly::*;
