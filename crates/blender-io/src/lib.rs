@@ -2264,3 +2264,5 @@ pub mod node_graph;
 pub use node_graph::*;
 pub mod node_texture_util;
 pub use node_texture_util::*;
+pub mod node_texture_proc;
+pub use node_texture_proc::*;
