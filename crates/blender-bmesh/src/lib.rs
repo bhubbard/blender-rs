@@ -807,3 +807,5 @@ pub mod bmo_dupe;
 pub use bmo_dupe::*;
 pub mod bmo_edgenet;
 pub use bmo_edgenet::*;
+pub mod bmo_extrude;
+pub use bmo_extrude::*;
