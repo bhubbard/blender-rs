@@ -2450,3 +2450,5 @@ pub mod abc_writer_instance;
 pub use abc_writer_instance::*;
 pub mod abc_writer_mball;
 pub use abc_writer_mball::*;
+pub mod abc_writer_mesh;
+pub use abc_writer_mesh::*;
