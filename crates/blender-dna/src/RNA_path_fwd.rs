@@ -20,9 +20,4 @@ pub struct LookupKey {
     pub _opaque: [u8; 0],
 }
 
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct Span {
-    pub _opaque: [u8; 0],
-}
 

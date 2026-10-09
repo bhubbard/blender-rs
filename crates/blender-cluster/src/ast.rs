@@ -74,6 +74,23 @@ pub fn map_c_type(c_type: &str, in_array: bool) -> String {
         }
     }
 
+    if let Some(rest) = t.strip_prefix("blender::") {
+        t = rest.trim();
+    }
+
+    if t.starts_with("std::optional<") || t.starts_with("optional<") {
+        let inner = t.trim_start_matches("std::optional<").trim_start_matches("optional<").trim_end_matches('>').trim();
+        return format!("Option<{}>", map_c_type(inner, false));
+    }
+    if t.starts_with("std::vector<") || t.starts_with("vector<") || t.starts_with("Vector<") {
+        let inner = t.trim_start_matches("std::vector<").trim_start_matches("vector<").trim_start_matches("Vector<").trim_end_matches('>').trim();
+        return format!("Vec<{}>", map_c_type(inner, false));
+    }
+    if t.starts_with("std::unique_ptr<") || t.starts_with("unique_ptr<") {
+        let inner = t.trim_start_matches("std::unique_ptr<").trim_start_matches("unique_ptr<").trim_end_matches('>').trim();
+        return format!("Box<{}>", map_c_type(inner, false));
+    }
+
     match t {
         "int" | "signed int" | "bContextDataResult" | "int32_t" | "int32" => "i32".to_string(),
         "unsigned int" | "uint" | "uint32_t" | "uint32" => "u32".to_string(),
@@ -95,7 +112,7 @@ pub fn map_c_type(c_type: &str, in_array: bool) -> String {
         "void" => "()".to_string(),
         "void*" | "void *" => "*mut core::ffi::c_void".to_string(),
         "char*" | "char *" | "const char*" | "const char *" => "*mut i8".to_string(),
-        "std::string" | "string" => "String".to_string(),
+        "std::string" | "string" | "UString" => "String".to_string(),
         "StringRef" | "StringRefNull" => "String".to_string(),
         other => {
             if other.ends_with('*') {
@@ -375,7 +392,12 @@ pub fn try_ast_fast_path(header_content: &str) -> Option<String> {
     out.push_str("#[allow(non_camel_case_types)]\ntype uchar = u8;\n");
     out.push_str("#[allow(non_camel_case_types)]\ntype ushort = u16;\n");
     out.push_str("#[allow(non_camel_case_types)]\ntype uint = u32;\n");
-    out.push_str("#[allow(non_camel_case_types)]\ntype ulong = u64;\n\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype ulong = u64;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype int = i32;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype UString = String;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype PropertyFlag = u32;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype PropertyOverrideFlag = u32;\n");
+    out.push_str("#[allow(non_camel_case_types)]\ntype ParameterFlag = u32;\n\n");
 
 
     for e in enums {

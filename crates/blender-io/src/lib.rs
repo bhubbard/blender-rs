@@ -2203,7 +2203,7 @@ pub use IMB_imbuf::*;
 pub mod IMB_colormanagement_intern;
 pub use IMB_colormanagement_intern::*;
 pub mod IMB_filetype;
-pub use IMB_filetype::*;
+pub use IMB_filetype::ImFileType;
 pub mod RNA_access;
 pub use RNA_access::*;
 pub mod BLI_string;
@@ -2267,10 +2267,10 @@ pub use node_texture_util::*;
 pub mod node_texture_proc;
 pub use node_texture_proc::*;
 pub mod IMB_metadata;
-pub use IMB_metadata::*;
 pub mod IMB_filter;
-pub use IMB_filter::*;
 pub mod imbuf;
 pub use imbuf::*;
 pub mod openimageio_support;
-pub use openimageio_support::*;
+pub use openimageio_support::{ReadContext, WriteContext};
+
+

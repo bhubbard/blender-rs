@@ -1,6 +1,7 @@
 //! Auto-transpiled C/C++ header module: openimageio_support
 
 use crate::*;
+type ImBuf = crate::IMB_imbuf::ImBuf;
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]

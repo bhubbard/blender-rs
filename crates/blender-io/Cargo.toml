@@ -8,5 +8,6 @@ authors.workspace = true
 [dependencies]
 blender-math = { path = "../blender-math" }
 blender-bmesh = { path = "../blender-bmesh" }
+blender-dna = { path = "../blender-dna" }
 thiserror = { workspace = true }
 anyhow = { workspace = true }
