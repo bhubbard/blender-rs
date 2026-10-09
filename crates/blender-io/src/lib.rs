@@ -2426,3 +2426,5 @@ pub mod rna_curves;
 pub use rna_curves::*;
 pub mod rna_curve;
 pub use rna_curve::*;
+pub mod rna_dynamicpaint;
+pub use rna_dynamicpaint::*;
