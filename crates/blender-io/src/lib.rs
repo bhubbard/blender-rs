@@ -2448,3 +2448,5 @@ pub mod abc_writer_hair;
 pub use abc_writer_hair::*;
 pub mod abc_writer_instance;
 pub use abc_writer_instance::*;
+pub mod abc_writer_mball;
+pub use abc_writer_mball::*;
