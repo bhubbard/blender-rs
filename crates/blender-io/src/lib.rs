@@ -2502,3 +2502,5 @@ pub mod eevee_light_shape_display_bsl;
 pub use eevee_light_shape_display_bsl::*;
 pub mod eevee_nodetree_bsl;
 pub use eevee_nodetree_bsl::*;
+pub mod wm_panel_type_impl;
+pub use wm_panel_type_impl::*;
