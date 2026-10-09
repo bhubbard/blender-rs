@@ -2432,3 +2432,5 @@ pub mod rna_fluid;
 pub use rna_fluid::*;
 pub mod rna_grease_pencil;
 pub use rna_grease_pencil::*;
+pub mod rna_grease_pencil_api;
+pub use rna_grease_pencil_api::*;
