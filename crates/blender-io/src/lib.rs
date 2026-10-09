@@ -2296,3 +2296,5 @@ pub mod movie_util;
 pub use movie_util::*;
 pub mod OCIO_api;
 pub use OCIO_api::*;
+pub mod OCIO_colorspace;
+pub use OCIO_colorspace::*;
