@@ -2412,3 +2412,5 @@ pub mod rna_blender_project;
 pub use rna_blender_project::*;
 pub mod rna_attribute;
 pub use rna_attribute::*;
+pub mod rna_boid;
+pub use rna_boid::*;
