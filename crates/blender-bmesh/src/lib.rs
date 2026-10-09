@@ -795,3 +795,5 @@ pub mod bmo_bridge;
 pub use bmo_bridge::*;
 pub mod bmo_connect;
 pub use bmo_connect::*;
+pub mod bmo_connect_concave;
+pub use bmo_connect_concave::*;
