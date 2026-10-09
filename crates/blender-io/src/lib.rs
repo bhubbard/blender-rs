@@ -2310,3 +2310,5 @@ pub mod OCIO_role_names;
 pub use OCIO_role_names::*;
 pub mod OCIO_version;
 pub use OCIO_version::*;
+pub mod OCIO_view;
+pub use OCIO_view::*;
