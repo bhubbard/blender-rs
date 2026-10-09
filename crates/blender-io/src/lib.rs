@@ -2430,3 +2430,5 @@ pub mod rna_dynamicpaint;
 pub use rna_dynamicpaint::*;
 pub mod rna_fluid;
 pub use rna_fluid::*;
+pub mod rna_grease_pencil;
+pub use rna_grease_pencil::*;
