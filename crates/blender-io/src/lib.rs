@@ -2416,3 +2416,5 @@ pub mod rna_boid;
 pub use rna_boid::*;
 pub mod rna_camera;
 pub use rna_camera::*;
+pub mod rna_collection;
+pub use rna_collection::*;
