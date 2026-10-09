@@ -2508,3 +2508,5 @@ pub mod wm_operator_props;
 pub use wm_operator_props::*;
 pub mod wm_subwindow;
 pub use wm_subwindow::*;
+pub mod wm_toolsystem;
+pub use wm_toolsystem::*;
