@@ -2408,3 +2408,5 @@ pub mod rna_armature_api;
 pub use rna_armature_api::*;
 pub mod rna_asset;
 pub use rna_asset::*;
+pub mod rna_blender_project;
+pub use rna_blender_project::*;
