@@ -815,3 +815,5 @@ pub mod bmesh_mesh_impl;
 pub use bmesh_mesh_impl::*;
 pub mod bmesh_polygon_impl;
 pub use bmesh_polygon_impl::*;
+pub mod bmesh_query_impl;
+pub use bmesh_query_impl::*;
