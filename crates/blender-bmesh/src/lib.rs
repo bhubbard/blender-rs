@@ -789,3 +789,5 @@ pub mod bmo_beautify;
 pub use bmo_beautify::*;
 pub mod bmo_bevel;
 pub use bmo_bevel::*;
+pub mod bmo_bisect_plane;
+pub use bmo_bisect_plane::*;
