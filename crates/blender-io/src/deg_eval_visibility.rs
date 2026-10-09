@@ -2,4 +2,14 @@
 
 use crate::*;
 
-pub const DEG_NODE_VISITED: i32 = (1 << 0);
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct Depsgraph {
+    pub _opaque: [u8; 0],
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
+pub struct IDNode {
+    pub _opaque: [u8; 0],
+}
