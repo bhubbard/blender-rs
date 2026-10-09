@@ -2322,3 +2322,5 @@ pub mod DEG_depsgraph_debug;
 pub use DEG_depsgraph_debug::*;
 pub mod DEG_depsgraph_physics;
 pub use DEG_depsgraph_physics::*;
+pub mod DEG_depsgraph_writeback_sync;
+pub use DEG_depsgraph_writeback_sync::*;
