@@ -2404,3 +2404,5 @@ pub mod rna_annotations;
 pub use rna_annotations::*;
 pub mod rna_armature;
 pub use rna_armature::*;
+pub mod rna_armature_api;
+pub use rna_armature_api::*;
