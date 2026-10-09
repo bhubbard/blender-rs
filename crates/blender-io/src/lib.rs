@@ -2418,3 +2418,5 @@ pub mod rna_camera;
 pub use rna_camera::*;
 pub mod rna_collection;
 pub use rna_collection::*;
+pub mod rna_context;
+pub use rna_context::*;
