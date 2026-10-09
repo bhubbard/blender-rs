@@ -2240,3 +2240,5 @@ pub mod lib_id_delete;
 pub use lib_id_delete::*;
 pub mod volume_grid_fields;
 pub use volume_grid_fields::*;
+pub mod multires_unsubdivide;
+pub use multires_unsubdivide::*;
