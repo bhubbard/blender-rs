@@ -2400,3 +2400,5 @@ pub mod makesrna;
 pub use makesrna::*;
 pub mod rna_animation_api;
 pub use rna_animation_api::*;
+pub mod rna_annotations;
+pub use rna_annotations::*;
