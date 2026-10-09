@@ -2362,3 +2362,5 @@ pub mod COM_conversion_operation;
 pub use COM_conversion_operation::*;
 pub mod COM_bundle_item;
 pub use COM_bundle_item::*;
+pub mod COM_implicit_input_operation;
+pub use COM_implicit_input_operation::*;
