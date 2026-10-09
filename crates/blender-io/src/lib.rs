@@ -2438,3 +2438,5 @@ pub mod rna_image;
 pub use rna_image::*;
 pub mod abc_writer_abstract;
 pub use abc_writer_abstract::*;
+pub mod abc_writer_attribute;
+pub use abc_writer_attribute::*;
