@@ -773,3 +773,5 @@ pub mod bmesh_mesh_duplicate;
 pub use bmesh_mesh_duplicate::*;
 pub mod bmesh_mesh_partial_update_impl;
 pub use bmesh_mesh_partial_update_impl::*;
+pub mod bmesh_iterators_impl;
+pub use bmesh_iterators_impl::*;
