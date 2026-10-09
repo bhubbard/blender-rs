@@ -2500,3 +2500,5 @@ pub mod eevee_geom_volume_bsl;
 pub use eevee_geom_volume_bsl::*;
 pub mod eevee_light_shape_display_bsl;
 pub use eevee_light_shape_display_bsl::*;
+pub mod eevee_nodetree_bsl;
+pub use eevee_nodetree_bsl::*;
