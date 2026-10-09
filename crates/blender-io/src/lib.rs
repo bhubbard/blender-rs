@@ -2332,3 +2332,5 @@ pub mod deg_builder_relations_drivers;
 pub use deg_builder_relations_drivers::*;
 pub mod deg_builder_stack;
 pub use deg_builder_stack::*;
+pub mod pipeline_all_objects;
+pub use pipeline_all_objects::*;
