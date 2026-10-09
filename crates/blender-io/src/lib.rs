@@ -2326,3 +2326,5 @@ pub mod DEG_depsgraph_writeback_sync;
 pub use DEG_depsgraph_writeback_sync::*;
 pub mod deg_builder_cycle;
 pub use deg_builder_cycle::*;
+pub mod deg_builder_relations;
+pub use deg_builder_relations::*;
