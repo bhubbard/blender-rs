@@ -147,6 +147,13 @@ impl<T> Default for MutableSpan<T> {
         Self::empty()
     }
 }
+impl<T> Clone for MutableSpan<T> {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+
+impl<T> Copy for MutableSpan<T> {}
 
 impl<T> Deref for MutableSpan<T> {
     type Target = [T];

@@ -3,7 +3,7 @@
 //! Mirrors `source/blender/bmesh` with generational memory pools to guarantee
 //! 100% memory safety without self-referential pointer hazards.
 use blender_dna::{CustomDataType, MeshElemFlags};
-use blender_math::{normal_tri_v3, Vec3};
+pub use blender_math::*;
 use blender_mem::{Handle, MemPool};
 use hashbrown::HashMap;
 use thiserror::Error;
@@ -769,3 +769,5 @@ pub mod bmesh_construct_impl;
 pub use bmesh_construct_impl::*;
 pub mod bmesh_mesh_normals_impl;
 pub use bmesh_mesh_normals_impl::*;
+
+
