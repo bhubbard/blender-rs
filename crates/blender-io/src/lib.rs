@@ -2496,3 +2496,5 @@ pub mod eevee_bxdf_bsl;
 pub use eevee_bxdf_bsl::*;
 pub mod eevee_deferred_tile_classify_bsl;
 pub use eevee_deferred_tile_classify_bsl::*;
+pub mod eevee_geom_volume_bsl;
+pub use eevee_geom_volume_bsl::*;
