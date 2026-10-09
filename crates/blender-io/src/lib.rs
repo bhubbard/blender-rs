@@ -2284,3 +2284,5 @@ pub mod MOV_read;
 pub use MOV_read::*;
 pub mod MOV_util;
 pub use MOV_util::*;
+pub mod MOV_write;
+pub use MOV_write::*;
