@@ -791,3 +791,5 @@ pub mod bmo_bevel;
 pub use bmo_bevel::*;
 pub mod bmo_bisect_plane;
 pub use bmo_bisect_plane::*;
+pub mod bmo_bridge;
+pub use bmo_bridge::*;
