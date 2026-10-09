@@ -2268,3 +2268,5 @@ pub mod node_texture_proc;
 pub use node_texture_proc::*;
 pub mod IMB_metadata;
 pub use IMB_metadata::*;
+pub mod IMB_filter;
+pub use IMB_filter::*;
