@@ -2286,3 +2286,5 @@ pub mod MOV_util;
 pub use MOV_util::*;
 pub mod MOV_write;
 pub use MOV_write::*;
+pub mod ffmpeg_compat;
+pub use ffmpeg_compat::*;
