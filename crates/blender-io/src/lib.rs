@@ -2368,3 +2368,5 @@ pub mod COM_multi_function_procedure_operation;
 pub use COM_multi_function_procedure_operation::*;
 pub mod COM_node_group_operation;
 pub use COM_node_group_operation::*;
+pub mod COM_node_operation;
+pub use COM_node_operation::*;
