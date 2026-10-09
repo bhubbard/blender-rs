@@ -2376,3 +2376,5 @@ pub mod COM_operation;
 pub use COM_operation::*;
 pub mod COM_realize_on_domain_operation;
 pub use COM_realize_on_domain_operation::*;
+pub mod COM_repeat_zone_operation;
+pub use COM_repeat_zone_operation::*;
