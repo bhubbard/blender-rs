@@ -2442,3 +2442,5 @@ pub mod abc_writer_attribute;
 pub use abc_writer_attribute::*;
 pub mod abc_writer_curves;
 pub use abc_writer_curves::*;
+pub mod abc_writer_camera;
+pub use abc_writer_camera::*;
