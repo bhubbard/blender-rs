@@ -2468,3 +2468,5 @@ pub mod abc_reader_camera;
 pub use abc_reader_camera::*;
 pub mod abc_reader_curves;
 pub use abc_reader_curves::*;
+pub mod abc_reader_mesh;
+pub use abc_reader_mesh::*;
