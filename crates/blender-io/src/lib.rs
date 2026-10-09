@@ -2478,3 +2478,5 @@ pub mod abc_reader_transform;
 pub use abc_reader_transform::*;
 pub mod abc_util;
 pub use abc_util::*;
+pub mod IO_dupli_persistent_id;
+pub use IO_dupli_persistent_id::*;
