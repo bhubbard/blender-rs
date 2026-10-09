@@ -2382,3 +2382,5 @@ pub mod COM_shader_node;
 pub use COM_shader_node::*;
 pub mod COM_shader_operation;
 pub use COM_shader_operation::*;
+pub mod COM_simple_operation;
+pub use COM_simple_operation::*;
