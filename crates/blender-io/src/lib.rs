@@ -2358,3 +2358,5 @@ pub mod deg_builder_nodes;
 pub use deg_builder_nodes::*;
 pub mod COM_domain;
 pub use COM_domain::*;
+pub mod COM_conversion_operation;
+pub use COM_conversion_operation::*;
