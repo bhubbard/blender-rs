@@ -2474,3 +2474,5 @@ pub mod abc_reader_nurbs;
 pub use abc_reader_nurbs::*;
 pub mod abc_reader_points;
 pub use abc_reader_points::*;
+pub mod abc_reader_transform;
+pub use abc_reader_transform::*;
