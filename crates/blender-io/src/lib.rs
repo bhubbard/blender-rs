@@ -2504,3 +2504,5 @@ pub mod eevee_nodetree_bsl;
 pub use eevee_nodetree_bsl::*;
 pub mod wm_panel_type_impl;
 pub use wm_panel_type_impl::*;
+pub mod wm_operator_props;
+pub use wm_operator_props::*;
