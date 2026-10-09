@@ -2490,3 +2490,5 @@ pub mod IO_subdiv_disabler;
 pub use IO_subdiv_disabler::*;
 pub mod engine;
 pub use engine::*;
+pub mod eevee_world;
+pub use eevee_world::*;
