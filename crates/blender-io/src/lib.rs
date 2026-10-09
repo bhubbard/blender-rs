@@ -2414,3 +2414,5 @@ pub mod rna_attribute;
 pub use rna_attribute::*;
 pub mod rna_boid;
 pub use rna_boid::*;
+pub mod rna_camera;
+pub use rna_camera::*;
