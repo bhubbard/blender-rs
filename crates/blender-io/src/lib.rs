@@ -2436,3 +2436,5 @@ pub mod rna_grease_pencil_api;
 pub use rna_grease_pencil_api::*;
 pub mod rna_image;
 pub use rna_image::*;
+pub mod abc_writer_abstract;
+pub use abc_writer_abstract::*;
