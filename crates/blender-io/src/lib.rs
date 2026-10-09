@@ -2278,3 +2278,5 @@ pub mod BLI_sub_frame;
 pub use BLI_sub_frame::*;
 pub mod openexr_api;
 pub use openexr_api::*;
+pub mod MOV_enums;
+pub use MOV_enums::*;
