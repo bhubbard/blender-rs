@@ -2262,3 +2262,5 @@ pub mod node_shader_bsdf_hair_principled;
 pub use node_shader_bsdf_hair_principled::*;
 pub mod node_graph;
 pub use node_graph::*;
+pub mod node_texture_util;
+pub use node_texture_util::*;
