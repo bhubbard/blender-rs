@@ -2276,3 +2276,5 @@ pub mod BLI_string_ref;
 pub use BLI_string_ref::*;
 pub mod BLI_sub_frame;
 pub use BLI_sub_frame::*;
+pub mod openexr_api;
+pub use openexr_api::*;
