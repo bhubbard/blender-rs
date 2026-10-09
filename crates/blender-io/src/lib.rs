@@ -2492,3 +2492,5 @@ pub mod engine;
 pub use engine::*;
 pub mod eevee_world;
 pub use eevee_world::*;
+pub mod eevee_bxdf_bsl;
+pub use eevee_bxdf_bsl::*;
