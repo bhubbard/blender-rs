@@ -2306,3 +2306,5 @@ pub mod OCIO_look;
 pub use OCIO_look::*;
 pub mod OCIO_packed_image;
 pub use OCIO_packed_image::*;
+pub mod OCIO_role_names;
+pub use OCIO_role_names::*;
