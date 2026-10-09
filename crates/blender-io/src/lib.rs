@@ -2482,3 +2482,5 @@ pub mod IO_dupli_persistent_id;
 pub use IO_dupli_persistent_id::*;
 pub mod IO_gsplat;
 pub use IO_gsplat::*;
+pub mod IO_mesh_utils;
+pub use IO_mesh_utils::*;
