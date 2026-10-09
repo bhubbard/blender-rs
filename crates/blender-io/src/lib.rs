@@ -2280,3 +2280,5 @@ pub mod openexr_api;
 pub use openexr_api::*;
 pub mod MOV_enums;
 pub use MOV_enums::*;
+pub mod MOV_read;
+pub use MOV_read::*;
