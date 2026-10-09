@@ -2203,3 +2203,7 @@ pub mod IMB_colormanagement_intern;
 pub use IMB_colormanagement_intern::*;
 pub mod IMB_filetype;
 pub use IMB_filetype::*;
+pub mod RNA_access;
+pub use RNA_access::*;
+pub mod BLI_string;
+pub use BLI_string::*;
