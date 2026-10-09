@@ -2,6 +2,7 @@
 
 use blender_bmesh::{BMesh, VertHandle};
 pub use blender_math::*;
+pub use blender_dna::*;
 use std::collections::HashMap;
 use std::fmt::Write as FmtWrite;
 use thiserror::Error;
@@ -2219,3 +2220,5 @@ pub mod BLI_subprocess;
 pub use BLI_subprocess::*;
 pub mod rna_internal;
 pub use rna_internal::*;
+pub mod RNA_path;
+pub use RNA_path::*;
