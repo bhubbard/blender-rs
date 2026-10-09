@@ -2336,3 +2336,5 @@ pub mod pipeline_all_objects;
 pub use pipeline_all_objects::*;
 pub mod pipeline_from_collection;
 pub use pipeline_from_collection::*;
+pub mod pipeline_from_ids;
+pub use pipeline_from_ids::*;
