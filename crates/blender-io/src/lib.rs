@@ -2446,3 +2446,5 @@ pub mod abc_writer_camera;
 pub use abc_writer_camera::*;
 pub mod abc_writer_hair;
 pub use abc_writer_hair::*;
+pub mod abc_writer_instance;
+pub use abc_writer_instance::*;
