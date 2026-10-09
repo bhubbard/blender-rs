@@ -2230,3 +2230,5 @@ pub mod IMB_imbuf_enums;
 pub use IMB_imbuf_enums::*;
 pub mod cineonlib;
 pub use cineonlib::*;
+pub mod logImageCore;
+pub use logImageCore::*;
