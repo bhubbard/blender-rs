@@ -2398,3 +2398,5 @@ pub mod RNA_define;
 pub use RNA_define::*;
 pub mod makesrna;
 pub use makesrna::*;
+pub mod rna_animation_api;
+pub use rna_animation_api::*;
