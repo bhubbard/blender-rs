@@ -2402,3 +2402,5 @@ pub mod rna_animation_api;
 pub use rna_animation_api::*;
 pub mod rna_annotations;
 pub use rna_annotations::*;
+pub mod rna_armature;
+pub use rna_armature::*;
