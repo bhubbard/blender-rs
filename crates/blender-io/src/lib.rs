@@ -2250,3 +2250,5 @@ pub mod node_geo_bounding_box;
 pub use node_geo_bounding_box::*;
 pub mod node_geo_input_voxel_index;
 pub use node_geo_input_voxel_index::*;
+pub mod node_geo_mesh_primitive_ico_sphere;
+pub use node_geo_mesh_primitive_ico_sphere::*;
