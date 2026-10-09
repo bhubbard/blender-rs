@@ -2320,3 +2320,5 @@ pub mod DEG_depsgraph;
 pub use DEG_depsgraph::*;
 pub mod DEG_depsgraph_debug;
 pub use DEG_depsgraph_debug::*;
+pub mod DEG_depsgraph_physics;
+pub use DEG_depsgraph_physics::*;
