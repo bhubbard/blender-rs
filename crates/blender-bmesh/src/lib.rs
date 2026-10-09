@@ -785,3 +785,5 @@ pub mod bmesh_uvselect;
 pub use bmesh_uvselect::*;
 pub mod bmesh_walkers_impl;
 pub use bmesh_walkers_impl::*;
+pub mod bmo_beautify;
+pub use bmo_beautify::*;
