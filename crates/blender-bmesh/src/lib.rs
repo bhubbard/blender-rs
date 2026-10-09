@@ -821,3 +821,5 @@ pub mod bmo_fill_edgeloop;
 pub use bmo_fill_edgeloop::*;
 pub mod bmo_fill_grid;
 pub use bmo_fill_grid::*;
+pub mod bmo_hull;
+pub use bmo_hull::*;
