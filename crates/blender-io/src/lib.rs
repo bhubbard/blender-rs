@@ -2440,3 +2440,5 @@ pub mod abc_writer_abstract;
 pub use abc_writer_abstract::*;
 pub mod abc_writer_attribute;
 pub use abc_writer_attribute::*;
+pub mod abc_writer_curves;
+pub use abc_writer_curves::*;
