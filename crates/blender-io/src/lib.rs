@@ -2302,3 +2302,5 @@ pub mod OCIO_cpu_processor;
 pub use OCIO_cpu_processor::*;
 pub mod OCIO_display;
 pub use OCIO_display::*;
+pub mod OCIO_look;
+pub use OCIO_look::*;
