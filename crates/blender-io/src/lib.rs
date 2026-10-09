@@ -2394,3 +2394,5 @@ pub mod COM_zone_tree_operation;
 pub use COM_zone_tree_operation::*;
 pub mod RNA_documentation;
 pub use RNA_documentation::*;
+pub mod RNA_define;
+pub use RNA_define::*;
