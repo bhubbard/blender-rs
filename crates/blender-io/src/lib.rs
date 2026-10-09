@@ -2364,3 +2364,5 @@ pub mod COM_bundle_item;
 pub use COM_bundle_item::*;
 pub mod COM_implicit_input_operation;
 pub use COM_implicit_input_operation::*;
+pub mod COM_multi_function_procedure_operation;
+pub use COM_multi_function_procedure_operation::*;
