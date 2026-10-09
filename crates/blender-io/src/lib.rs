@@ -2312,3 +2312,5 @@ pub mod OCIO_version;
 pub use OCIO_version::*;
 pub mod OCIO_view;
 pub use OCIO_view::*;
+pub mod cpu_processor_cache;
+pub use cpu_processor_cache::*;
