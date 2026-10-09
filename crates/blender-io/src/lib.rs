@@ -2342,3 +2342,5 @@ pub mod pipeline_render;
 pub use pipeline_render::*;
 pub mod pipeline_view_layer;
 pub use pipeline_view_layer::*;
+pub mod depsgraph_relation;
+pub use depsgraph_relation::*;
