@@ -2258,3 +2258,5 @@ pub mod node_geo_transform_geometry;
 pub use node_geo_transform_geometry::*;
 pub mod node_shader_hueSatVal;
 pub use node_shader_hueSatVal::*;
+pub mod node_shader_bsdf_hair_principled;
+pub use node_shader_bsdf_hair_principled::*;
