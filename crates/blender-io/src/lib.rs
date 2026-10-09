@@ -2288,3 +2288,5 @@ pub mod MOV_write;
 pub use MOV_write::*;
 pub mod ffmpeg_compat;
 pub use ffmpeg_compat::*;
+pub mod ffmpeg_swscale;
+pub use ffmpeg_swscale::*;
