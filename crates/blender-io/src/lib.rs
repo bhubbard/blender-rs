@@ -2384,3 +2384,5 @@ pub mod COM_shader_operation;
 pub use COM_shader_operation::*;
 pub mod COM_simple_operation;
 pub use COM_simple_operation::*;
+pub mod COM_single_value_node_input_operation;
+pub use COM_single_value_node_input_operation::*;
