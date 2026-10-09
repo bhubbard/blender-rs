@@ -2246,3 +2246,5 @@ pub mod action_runtime_impl;
 pub use action_runtime_impl::*;
 pub mod action_legacy;
 pub use action_legacy::*;
+pub mod node_geo_bounding_box;
+pub use node_geo_bounding_box::*;
