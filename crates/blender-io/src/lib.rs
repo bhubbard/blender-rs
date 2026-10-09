@@ -2222,3 +2222,5 @@ pub mod rna_internal;
 pub use rna_internal::*;
 pub mod RNA_path;
 pub use RNA_path::*;
+pub mod GEO_add_curves_on_mesh;
+pub use GEO_add_curves_on_mesh::*;
