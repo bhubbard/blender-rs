@@ -781,3 +781,5 @@ pub mod bmesh_query_uv;
 pub use bmesh_query_uv::*;
 pub mod bmesh_structure;
 pub use bmesh_structure::*;
+pub mod bmesh_uvselect;
+pub use bmesh_uvselect::*;
