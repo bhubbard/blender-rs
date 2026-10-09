@@ -2410,3 +2410,5 @@ pub mod rna_asset;
 pub use rna_asset::*;
 pub mod rna_blender_project;
 pub use rna_blender_project::*;
+pub mod rna_attribute;
+pub use rna_attribute::*;
