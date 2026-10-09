@@ -2462,3 +2462,5 @@ pub mod abc_axis_conversion;
 pub use abc_axis_conversion::*;
 pub mod abc_keyframing;
 pub use abc_keyframing::*;
+pub mod abc_reader_archive;
+pub use abc_reader_archive::*;
