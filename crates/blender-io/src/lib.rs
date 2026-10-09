@@ -2324,3 +2324,5 @@ pub mod DEG_depsgraph_physics;
 pub use DEG_depsgraph_physics::*;
 pub mod DEG_depsgraph_writeback_sync;
 pub use DEG_depsgraph_writeback_sync::*;
+pub mod deg_builder_cycle;
+pub use deg_builder_cycle::*;
