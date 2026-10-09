@@ -2340,3 +2340,5 @@ pub mod pipeline_from_ids;
 pub use pipeline_from_ids::*;
 pub mod pipeline_render;
 pub use pipeline_render::*;
+pub mod pipeline_view_layer;
+pub use pipeline_view_layer::*;
