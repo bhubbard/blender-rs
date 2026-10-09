@@ -2484,3 +2484,5 @@ pub mod IO_gsplat;
 pub use IO_gsplat::*;
 pub mod IO_mesh_utils;
 pub use IO_mesh_utils::*;
+pub mod IO_path_util_types;
+pub use IO_path_util_types::*;
