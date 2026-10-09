@@ -2348,3 +2348,5 @@ pub mod deg_eval_copy_on_write;
 pub use deg_eval_copy_on_write::*;
 pub mod deg_eval_runtime_backup_animation;
 pub use deg_eval_runtime_backup_animation::*;
+pub mod deg_eval_stats;
+pub use deg_eval_stats::*;
