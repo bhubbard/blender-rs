@@ -2294,3 +2294,5 @@ pub mod movie_proxy_indexer;
 pub use movie_proxy_indexer::*;
 pub mod movie_util;
 pub use movie_util::*;
+pub mod OCIO_api;
+pub use OCIO_api::*;
