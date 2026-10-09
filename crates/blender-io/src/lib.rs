@@ -2274,3 +2274,5 @@ pub mod openimageio_support;
 pub use openimageio_support::{ReadContext, WriteContext};
 pub mod BLI_string_ref;
 pub use BLI_string_ref::*;
+pub mod BLI_sub_frame;
+pub use BLI_sub_frame::*;
