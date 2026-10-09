@@ -2360,3 +2360,5 @@ pub mod COM_domain;
 pub use COM_domain::*;
 pub mod COM_conversion_operation;
 pub use COM_conversion_operation::*;
+pub mod COM_bundle_item;
+pub use COM_bundle_item::*;
