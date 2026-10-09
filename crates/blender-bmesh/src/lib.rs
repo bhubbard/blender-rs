@@ -805,3 +805,5 @@ pub mod bmo_dissolve;
 pub use bmo_dissolve::*;
 pub mod bmo_dupe;
 pub use bmo_dupe::*;
+pub mod bmo_edgenet;
+pub use bmo_edgenet::*;
