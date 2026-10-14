@@ -2516,3 +2516,5 @@ pub mod BLI_task_size_hints;
 pub use BLI_task_size_hints::*;
 pub mod BKE_camera;
 pub use BKE_camera::*;
+pub mod BKE_undo_system;
+pub use BKE_undo_system::*;
