@@ -2265,10 +2265,10 @@ pub mod node_shader_hueSatVal;
 pub use node_shader_hueSatVal::*;
 pub mod node_shader_bsdf_hair_principled;
 pub use node_shader_bsdf_hair_principled::*;
-pub mod node_graph;
-pub use node_graph::*;
-pub mod node_texture_util;
-pub use node_texture_util::*;
+
+
+
+
 pub mod node_texture_proc;
 pub use node_texture_proc::*;
 pub mod IMB_metadata;
@@ -2525,3 +2525,7 @@ pub mod BKE_undo_system;
 pub use BKE_undo_system::*;
 pub mod BKE_shrinkwrap;
 pub use BKE_shrinkwrap::*;
+pub mod NOD_warning;
+pub use NOD_warning::*;
+pub mod NOD_shader_nodes_inline;
+pub use NOD_shader_nodes_inline::*;
