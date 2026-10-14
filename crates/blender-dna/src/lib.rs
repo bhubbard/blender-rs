@@ -51,7 +51,7 @@ pub use DNA_attribute_types::*;
 pub use DNA_curve_enums::*;
 pub use DNA_anim_enums::*;
 pub use DNA_image_enums::ImColorMode;
-pub use DNA_texture_types::{TexMapping, ColorMapping};
+pub use DNA_texture_types::{TexMapping, ColorMapping, MTex};
 
 #[derive(Debug, Clone, PartialEq, Default)]
 #[repr(C)]
@@ -145,7 +145,9 @@ pub mod NOD_geo_field_to_grid;
 pub mod NOD_geo_field_to_list;
 pub mod DNA_attribute_types;
 pub mod BKE_bvh;
+pub use BKE_bvh::*;
 pub mod BKE_bvhutils;
+pub use BKE_bvhutils::*;
 pub mod DNA_brush_types;
 pub mod NOD_geo_index_switch;
 pub mod NOD_geo_menu_switch;

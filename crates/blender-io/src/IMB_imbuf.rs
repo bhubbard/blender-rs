@@ -12,17 +12,6 @@ pub struct ImBuf {
     pub _opaque: [u8; 0],
 }
 
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct rctf {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct rcti {
-    pub _opaque: [u8; 0],
-}
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]

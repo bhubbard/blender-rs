@@ -28,6 +28,20 @@
       "crate": "blender-io",
       "module": "ANIM_visualkey.rs"
     },
+    "upstream/source/blender/animrig/intern/action_legacy.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "action_legacy.rs",
+      "time_s": 21.61,
+      "worker": 2
+    },
+    "upstream/source/blender/animrig/intern/action_runtime.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "action_runtime_impl.rs",
+      "time_s": 20.47,
+      "worker": 3
+    },
     "upstream/source/blender/animrig/intern/action_runtime.hh": {
       "crate": "blender-io",
       "module": "action_runtime.rs"
@@ -127,6 +141,11 @@
     "upstream/source/blender/blenkernel/BKE_callbacks.hh": {
       "crate": "blender-io",
       "module": "BKE_callbacks.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_camera.h": {
+      "crate": "blender-io",
+      "mode": "ast_fast_path",
+      "module": "BKE_camera.rs"
     },
     "upstream/source/blender/blenkernel/BKE_cloth.hh": {
       "crate": "blender-dna",
@@ -288,6 +307,11 @@
       "crate": "blender-dna",
       "module": "BKE_shader_fx.rs"
     },
+    "upstream/source/blender/blenkernel/BKE_shrinkwrap.hh": {
+      "crate": "blender-io",
+      "mode": "ast_fast_path",
+      "module": "BKE_shrinkwrap.rs"
+    },
     "upstream/source/blender/blenkernel/BKE_subdiv_deform.hh": {
       "crate": "blender-dna",
       "module": "BKE_subdiv_deform.rs"
@@ -295,6 +319,11 @@
     "upstream/source/blender/blenkernel/BKE_subdiv_mesh.hh": {
       "crate": "blender-dna",
       "module": "BKE_subdiv_mesh.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_undo_system.hh": {
+      "crate": "blender-io",
+      "mode": "ast_fast_path",
+      "module": "BKE_undo_system.rs"
     },
     "upstream/source/blender/blenkernel/BKE_volume_grid_fields.hh": {
       "crate": "blender-io",
@@ -323,6 +352,20 @@
       "time_s": 7.5,
       "worker": 1
     },
+    "upstream/source/blender/blenkernel/intern/blender_cli_command.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "blender_cli_command.rs",
+      "time_s": 28.2,
+      "worker": 1
+    },
+    "upstream/source/blender/blenkernel/intern/curve_poly.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "curve_poly.rs",
+      "time_s": 33.96,
+      "worker": 4
+    },
     "upstream/source/blender/blenkernel/intern/icons.cc": {
       "crate": "blender-io",
       "module": "icons.rs"
@@ -335,12 +378,26 @@
       "crate": "blender-io",
       "module": "lib_id.rs"
     },
+    "upstream/source/blender/blenkernel/intern/lib_id_delete.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "lib_id_delete.rs",
+      "time_s": 54.15,
+      "worker": 2
+    },
     "upstream/source/blender/blenkernel/intern/mask_evaluate.cc": {
       "crate": "blender-io",
       "mode": "parallel_worker",
       "module": "mask_evaluate.rs",
       "time_s": 1.0,
       "worker": 4
+    },
+    "upstream/source/blender/blenkernel/intern/multires_unsubdivide.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "multires_unsubdivide.rs",
+      "time_s": 87.38,
+      "worker": 3
     },
     "upstream/source/blender/blenkernel/intern/pbvh_bmesh.cc": {
       "crate": "blender-bmesh",
@@ -356,6 +413,13 @@
       "module": "subdiv_converter.rs",
       "time_s": 2.36,
       "worker": 4
+    },
+    "upstream/source/blender/blenkernel/intern/volume_grid_fields.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "volume_grid_fields.rs",
+      "time_s": 21.25,
+      "worker": 2
     },
     "upstream/source/blender/blenlib/BLI_array_state.hh": {
       "crate": "blender-io",
@@ -600,6 +664,41 @@
       "time_s": 8.0,
       "worker": 4
     },
+    "upstream/source/blender/blenlib/BLI_string.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "BLI_string.rs",
+      "time_s": 4.09,
+      "worker": 1
+    },
+    "upstream/source/blender/blenlib/BLI_string_ref.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "BLI_string_ref.rs",
+      "time_s": 5.47,
+      "worker": 2
+    },
+    "upstream/source/blender/blenlib/BLI_sub_frame.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "BLI_sub_frame.rs",
+      "time_s": 6.72,
+      "worker": 3
+    },
+    "upstream/source/blender/blenlib/BLI_subprocess.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "BLI_subprocess.rs",
+      "time_s": 6.9,
+      "worker": 4
+    },
+    "upstream/source/blender/blenlib/BLI_task_size_hints.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "BLI_task_size_hints.rs",
+      "time_s": 5.47,
+      "worker": 2
+    },
     "upstream/source/blender/bmesh/bmesh.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh.rs"
@@ -680,6 +779,13 @@
     "upstream/source/blender/bmesh/intern/bmesh_marking.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh_marking.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_mesh.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmesh_mesh_impl.rs",
+      "time_s": 5.11,
+      "worker": 4
     },
     "upstream/source/blender/bmesh/intern/bmesh_mesh.hh": {
       "crate": "blender-bmesh",
@@ -765,6 +871,13 @@
       "crate": "blender-bmesh",
       "module": "bmesh_operators_private.rs"
     },
+    "upstream/source/blender/bmesh/intern/bmesh_polygon.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmesh_polygon_impl.rs",
+      "time_s": 5.37,
+      "worker": 3
+    },
     "upstream/source/blender/bmesh/intern/bmesh_polygon.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh_polygon.rs"
@@ -780,6 +893,160 @@
     "upstream/source/blender/bmesh/intern/bmesh_private.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh_private.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_query.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmesh_query_impl.rs",
+      "time_s": 7.14,
+      "worker": 4
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_query_uv.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmesh_query_uv.rs",
+      "time_s": 39.78,
+      "worker": 1
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_structure.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmesh_structure.rs",
+      "time_s": 104.7,
+      "worker": 2
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_uvselect.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmesh_uvselect.rs",
+      "time_s": 0.43,
+      "worker": 3
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_walkers_impl.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmesh_walkers_impl.rs",
+      "time_s": 122.54,
+      "worker": 4
+    },
+    "upstream/source/blender/bmesh/operators/bmo_beautify.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_beautify.rs",
+      "time_s": 0.7,
+      "worker": 1
+    },
+    "upstream/source/blender/bmesh/operators/bmo_bevel.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_bevel.rs",
+      "time_s": 29.88,
+      "worker": 2
+    },
+    "upstream/source/blender/bmesh/operators/bmo_bisect_plane.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_bisect_plane.rs",
+      "time_s": 0.67,
+      "worker": 3
+    },
+    "upstream/source/blender/bmesh/operators/bmo_bridge.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_bridge.rs",
+      "time_s": 0.4,
+      "worker": 4
+    },
+    "upstream/source/blender/bmesh/operators/bmo_connect.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_connect.rs",
+      "time_s": 0.58,
+      "worker": 2
+    },
+    "upstream/source/blender/bmesh/operators/bmo_connect_concave.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_connect_concave.rs",
+      "time_s": 44.57,
+      "worker": 3
+    },
+    "upstream/source/blender/bmesh/operators/bmo_connect_nonplanar.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_connect_nonplanar.rs",
+      "time_s": 44.43,
+      "worker": 4
+    },
+    "upstream/source/blender/bmesh/operators/bmo_create.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_create.rs",
+      "time_s": 0.73,
+      "worker": 2
+    },
+    "upstream/source/blender/bmesh/operators/bmo_dissolve.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_dissolve.rs",
+      "time_s": 0.69,
+      "worker": 3
+    },
+    "upstream/source/blender/bmesh/operators/bmo_dupe.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_dupe.rs",
+      "time_s": 0.3,
+      "worker": 4
+    },
+    "upstream/source/blender/bmesh/operators/bmo_edgenet.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_edgenet.rs",
+      "time_s": 0.47,
+      "worker": 2
+    },
+    "upstream/source/blender/bmesh/operators/bmo_extrude.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_extrude.rs",
+      "time_s": 0.26,
+      "worker": 3
+    },
+    "upstream/source/blender/bmesh/operators/bmo_fill_attribute.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_fill_attribute.rs",
+      "time_s": 1.29,
+      "worker": 4
+    },
+    "upstream/source/blender/bmesh/operators/bmo_fill_edgeloop.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_fill_edgeloop.rs",
+      "time_s": 1.64,
+      "worker": 3
+    },
+    "upstream/source/blender/bmesh/operators/bmo_fill_grid.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_fill_grid.rs",
+      "time_s": 1.71,
+      "worker": 4
+    },
+    "upstream/source/blender/bmesh/operators/bmo_flatten.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_flatten.rs",
+      "time_s": 1.38,
+      "worker": 2
+    },
+    "upstream/source/blender/bmesh/operators/bmo_hull.cc": {
+      "crate": "blender-bmesh",
+      "mode": "parallel_worker",
+      "module": "bmo_hull.rs",
+      "time_s": 0.88,
+      "worker": 3
     },
     "upstream/source/blender/bmesh/tools/bmesh_beautify.hh": {
       "crate": "blender-bmesh",
@@ -801,17 +1068,143 @@
       "crate": "blender-bmesh",
       "module": "bmesh_path_uv.rs"
     },
+    "upstream/source/blender/compositor/COM_bundle_item.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_bundle_item.rs",
+      "time_s": 5.33,
+      "worker": 1
+    },
+    "upstream/source/blender/compositor/COM_conversion_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_conversion_operation.rs",
+      "time_s": 3.61,
+      "worker": 2
+    },
+    "upstream/source/blender/compositor/COM_domain.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_domain.rs",
+      "time_s": 1.75,
+      "worker": 3
+    },
+    "upstream/source/blender/compositor/COM_implicit_input_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_implicit_input_operation.rs",
+      "time_s": 7.42,
+      "worker": 1
+    },
     "upstream/source/blender/compositor/COM_meta_data.hh": {
       "crate": "blender-bmesh",
       "module": "COM_meta_data.rs"
+    },
+    "upstream/source/blender/compositor/COM_multi_function_procedure_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_multi_function_procedure_operation.rs",
+      "time_s": 6.79,
+      "worker": 3
+    },
+    "upstream/source/blender/compositor/COM_node_group_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_node_group_operation.rs",
+      "time_s": 7.24,
+      "worker": 4
+    },
+    "upstream/source/blender/compositor/COM_node_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_node_operation.rs",
+      "time_s": 7.99,
+      "worker": 1
     },
     "upstream/source/blender/compositor/COM_node_tree_input_node_operation.hh": {
       "crate": "blender-dna",
       "module": "COM_node_tree_input_node_operation.rs"
     },
+    "upstream/source/blender/compositor/COM_node_tree_output_node_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_node_tree_output_node_operation.rs",
+      "time_s": 8.96,
+      "worker": 2
+    },
+    "upstream/source/blender/compositor/COM_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_operation.rs",
+      "time_s": 9.02,
+      "worker": 3
+    },
     "upstream/source/blender/compositor/COM_pixel_operation.hh": {
       "crate": "blender-math",
       "module": "COM_pixel_operation.rs"
+    },
+    "upstream/source/blender/compositor/COM_realize_on_domain_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_realize_on_domain_operation.rs",
+      "time_s": 8.69,
+      "worker": 4
+    },
+    "upstream/source/blender/compositor/COM_repeat_zone_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_repeat_zone_operation.rs",
+      "time_s": 6.54,
+      "worker": 2
+    },
+    "upstream/source/blender/compositor/COM_shader_node.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_shader_node.rs",
+      "time_s": 6.74,
+      "worker": 1
+    },
+    "upstream/source/blender/compositor/COM_shader_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_shader_operation.rs",
+      "time_s": 7.03,
+      "worker": 2
+    },
+    "upstream/source/blender/compositor/COM_simple_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_simple_operation.rs",
+      "time_s": 7.26,
+      "worker": 3
+    },
+    "upstream/source/blender/compositor/COM_single_value_node_input_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_single_value_node_input_operation.rs",
+      "time_s": 7.93,
+      "worker": 4
+    },
+    "upstream/source/blender/compositor/COM_static_cache_manager.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_static_cache_manager.rs",
+      "time_s": 7.36,
+      "worker": 1
+    },
+    "upstream/source/blender/compositor/COM_zone_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_zone_operation.rs",
+      "time_s": 7.24,
+      "worker": 3
+    },
+    "upstream/source/blender/compositor/COM_zone_tree_operation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "COM_zone_tree_operation.rs",
+      "time_s": 7.56,
+      "worker": 4
     },
     "upstream/source/blender/compositor/algorithms/COM_algorithm_morphological_blur.hh": {
       "crate": "blender-math",
@@ -853,6 +1246,125 @@
       "crate": "blender-bmesh",
       "module": "cached_image.rs"
     },
+    "upstream/source/blender/depsgraph/DEG_depsgraph.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "DEG_depsgraph.rs",
+      "time_s": 3.41,
+      "worker": 1
+    },
+    "upstream/source/blender/depsgraph/DEG_depsgraph_build.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "DEG_depsgraph_build.rs",
+      "time_s": 1.56,
+      "worker": 2
+    },
+    "upstream/source/blender/depsgraph/DEG_depsgraph_debug.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "DEG_depsgraph_debug.rs",
+      "time_s": 4.98,
+      "worker": 3
+    },
+    "upstream/source/blender/depsgraph/DEG_depsgraph_physics.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "DEG_depsgraph_physics.rs",
+      "time_s": 6.71,
+      "worker": 4
+    },
+    "upstream/source/blender/depsgraph/DEG_depsgraph_writeback_sync.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "DEG_depsgraph_writeback_sync.rs",
+      "time_s": 6.4,
+      "worker": 2
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_builder.rs",
+      "time_s": 5.1,
+      "worker": 4
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cache.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_builder_cache.rs",
+      "time_s": 6.13,
+      "worker": 1
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_builder_cycle.rs",
+      "time_s": 6.38,
+      "worker": 3
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_builder_nodes.rs",
+      "time_s": 6.1,
+      "worker": 4
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_builder_relations.rs",
+      "time_s": 6.29,
+      "worker": 2
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_drivers.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_builder_relations_drivers.rs",
+      "time_s": 6.43,
+      "worker": 3
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_stack.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_builder_stack.rs",
+      "time_s": 7.05,
+      "worker": 1
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_all_objects.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "pipeline_all_objects.rs",
+      "time_s": 6.87,
+      "worker": 2
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_collection.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "pipeline_from_collection.rs",
+      "time_s": 6.72,
+      "worker": 3
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_ids.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "pipeline_from_ids.rs",
+      "time_s": 6.78,
+      "worker": 4
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_render.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "pipeline_render.rs",
+      "time_s": 6.42,
+      "worker": 1
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_view_layer.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "pipeline_view_layer.rs",
+      "time_s": 6.62,
+      "worker": 2
+    },
     "upstream/source/blender/depsgraph/intern/depsgraph_light_linking.cc": {
       "crate": "blender-bmesh",
       "module": "depsgraph_light_linking.rs"
@@ -861,9 +1373,23 @@
       "crate": "blender-io",
       "module": "depsgraph_physics.rs"
     },
+    "upstream/source/blender/depsgraph/intern/depsgraph_relation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "depsgraph_relation.rs",
+      "time_s": 6.52,
+      "worker": 4
+    },
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_copy_on_write.cc": {
       "crate": "blender-dna",
       "module": "deg_eval_copy_on_write.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_copy_on_write.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_eval_copy_on_write.rs",
+      "time_s": 5.93,
+      "worker": 2
     },
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_flush.cc": {
       "crate": "blender-io",
@@ -877,13 +1403,34 @@
       "crate": "blender-dna",
       "module": "deg_eval_runtime_backup.rs"
     },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_animation.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_eval_runtime_backup_animation.rs",
+      "time_s": 6.38,
+      "worker": 3
+    },
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_pose.cc": {
       "crate": "blender-io",
       "module": "deg_eval_runtime_backup_pose.rs"
     },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_stats.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_eval_stats.rs",
+      "time_s": 6.71,
+      "worker": 1
+    },
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_visibility.cc": {
       "crate": "blender-io",
       "module": "deg_eval_visibility.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_visibility.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "deg_eval_visibility.rs",
+      "time_s": 5.95,
+      "worker": 2
     },
     "upstream/source/blender/draw/engines/compositor/compositor_engine.h": {
       "crate": "blender-dna",
@@ -961,13 +1508,55 @@
       "crate": "blender-io",
       "module": "eevee_volume.rs"
     },
+    "upstream/source/blender/draw/engines/eevee/eevee_world.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "eevee_world.rs",
+      "time_s": 8.12,
+      "worker": 2
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_bxdf.bsl.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "eevee_bxdf_bsl.rs",
+      "time_s": 7.89,
+      "worker": 4
+    },
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_deferred_thickness_amend.bsl.hh": {
       "crate": "blender-mem",
       "module": "eevee_deferred_thickness_amend_bsl.rs"
     },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_deferred_tile_classify.bsl.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "eevee_deferred_tile_classify_bsl.rs",
+      "time_s": 7.75,
+      "worker": 2
+    },
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_gather.bsl.hh": {
       "crate": "blender-mem",
       "module": "eevee_depth_of_field_gather_bsl.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_geom_volume.bsl.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "eevee_geom_volume_bsl.rs",
+      "time_s": 12.95,
+      "worker": 1
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_light_shape_display.bsl.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "eevee_light_shape_display_bsl.rs",
+      "time_s": 7.6,
+      "worker": 3
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_nodetree.bsl.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "eevee_nodetree_bsl.rs",
+      "time_s": 10.23,
+      "worker": 4
     },
     "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_trace.bsl.hh": {
       "crate": "blender-math",
@@ -1186,6 +1775,13 @@
       "mode": "ast_fast_path",
       "module": "IMB_imbuf_enums.rs"
     },
+    "upstream/source/blender/imbuf/IMB_metadata.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "IMB_metadata.rs",
+      "time_s": 6.43,
+      "worker": 3
+    },
     "upstream/source/blender/imbuf/IMB_openexr.hh": {
       "crate": "blender-io",
       "mode": "ast_fast_path",
@@ -1212,6 +1808,13 @@
       "time_s": 1.7,
       "worker": 4
     },
+    "upstream/source/blender/imbuf/intern/IMB_filter.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "IMB_filter.rs",
+      "time_s": 7.55,
+      "worker": 1
+    },
     "upstream/source/blender/imbuf/intern/allocimbuf.cc": {
       "crate": "blender-io",
       "module": "allocimbuf.rs"
@@ -1233,6 +1836,153 @@
     "upstream/source/blender/imbuf/intern/format_jpeg.cc": {
       "crate": "blender-io",
       "module": "format_jpeg.rs"
+    },
+    "upstream/source/blender/imbuf/intern/imbuf.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "imbuf.rs",
+      "time_s": 6.76,
+      "worker": 4
+    },
+    "upstream/source/blender/imbuf/intern/oiio/openimageio_support.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "openimageio_support.rs",
+      "time_s": 4.79,
+      "worker": 2
+    },
+    "upstream/source/blender/imbuf/intern/openexr/openexr_api.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "openexr_api.rs",
+      "time_s": 3.8,
+      "worker": 3
+    },
+    "upstream/source/blender/imbuf/movie/MOV_enums.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "MOV_enums.rs",
+      "time_s": 4.88,
+      "worker": 4
+    },
+    "upstream/source/blender/imbuf/movie/MOV_read.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "MOV_read.rs",
+      "time_s": 5.41,
+      "worker": 1
+    },
+    "upstream/source/blender/imbuf/movie/MOV_util.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "MOV_util.rs",
+      "time_s": 5.64,
+      "worker": 2
+    },
+    "upstream/source/blender/imbuf/movie/MOV_write.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "MOV_write.rs",
+      "time_s": 5.98,
+      "worker": 3
+    },
+    "upstream/source/blender/imbuf/movie/intern/ffmpeg_compat.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "ffmpeg_compat.rs",
+      "time_s": 6.25,
+      "worker": 4
+    },
+    "upstream/source/blender/imbuf/movie/intern/ffmpeg_swscale.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "ffmpeg_swscale.rs",
+      "time_s": 6.32,
+      "worker": 1
+    },
+    "upstream/source/blender/imbuf/movie/intern/movie_proxy_indexer.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "movie_proxy_indexer.rs",
+      "time_s": 6.21,
+      "worker": 2
+    },
+    "upstream/source/blender/imbuf/movie/intern/movie_util.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "movie_util.rs",
+      "time_s": 5.44,
+      "worker": 4
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_api.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "OCIO_api.rs",
+      "time_s": 5.49,
+      "worker": 2
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_colorspace.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "OCIO_colorspace.rs",
+      "time_s": 6.8,
+      "worker": 3
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_cpu_processor.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "OCIO_cpu_processor.rs",
+      "time_s": 5.2,
+      "worker": 1
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_display.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "OCIO_display.rs",
+      "time_s": 5.52,
+      "worker": 2
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_look.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "OCIO_look.rs",
+      "time_s": 5.79,
+      "worker": 4
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_packed_image.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "OCIO_packed_image.rs",
+      "time_s": 5.89,
+      "worker": 2
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_role_names.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "OCIO_role_names.rs",
+      "time_s": 5.52,
+      "worker": 3
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_version.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "OCIO_version.rs",
+      "time_s": 5.16,
+      "worker": 1
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_view.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "OCIO_view.rs",
+      "time_s": 5.25,
+      "worker": 2
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/cpu_processor_cache.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "cpu_processor_cache.rs",
+      "time_s": 5.46,
+      "worker": 3
     },
     "upstream/source/blender/io/alembic/ABC_alembic.h": {
       "crate": "blender-io",
@@ -1260,6 +2010,188 @@
       "mode": "parallel_worker",
       "module": "abc_hierarchy_iterator.rs",
       "time_s": 2.35,
+      "worker": 4
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_abstract.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_abstract.rs",
+      "time_s": 1.71,
+      "worker": 1
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_attribute.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_attribute.rs",
+      "time_s": 3.45,
+      "worker": 2
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_camera.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_camera.rs",
+      "time_s": 6.94,
+      "worker": 3
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_curves.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_curves.rs",
+      "time_s": 4.97,
+      "worker": 4
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_hair.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_hair.rs",
+      "time_s": 6.86,
+      "worker": 1
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_instance.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_instance.rs",
+      "time_s": 6.89,
+      "worker": 2
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_mball.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_mball.rs",
+      "time_s": 7.01,
+      "worker": 3
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_mesh.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_mesh.rs",
+      "time_s": 6.8,
+      "worker": 4
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_nurbs.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_nurbs.rs",
+      "time_s": 7.04,
+      "worker": 1
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_points.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_points.rs",
+      "time_s": 6.93,
+      "worker": 2
+    },
+    "upstream/source/blender/io/alembic/exporter/abc_writer_transform.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_writer_transform.rs",
+      "time_s": 6.9,
+      "worker": 3
+    },
+    "upstream/source/blender/io/alembic/intern/abc_axis_conversion.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_axis_conversion.rs",
+      "time_s": 7.14,
+      "worker": 4
+    },
+    "upstream/source/blender/io/alembic/intern/abc_keyframing.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_keyframing.rs",
+      "time_s": 6.82,
+      "worker": 2
+    },
+    "upstream/source/blender/io/alembic/intern/abc_reader_archive.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_reader_archive.rs",
+      "time_s": 6.81,
+      "worker": 3
+    },
+    "upstream/source/blender/io/alembic/intern/abc_reader_camera.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_reader_camera.rs",
+      "time_s": 6.45,
+      "worker": 4
+    },
+    "upstream/source/blender/io/alembic/intern/abc_reader_curves.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_reader_curves.rs",
+      "time_s": 6.55,
+      "worker": 1
+    },
+    "upstream/source/blender/io/alembic/intern/abc_reader_mesh.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_reader_mesh.rs",
+      "time_s": 6.82,
+      "worker": 2
+    },
+    "upstream/source/blender/io/alembic/intern/abc_reader_nurbs.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_reader_nurbs.rs",
+      "time_s": 7.15,
+      "worker": 3
+    },
+    "upstream/source/blender/io/alembic/intern/abc_reader_points.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_reader_points.rs",
+      "time_s": 7.11,
+      "worker": 1
+    },
+    "upstream/source/blender/io/alembic/intern/abc_reader_transform.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_reader_transform.rs",
+      "time_s": 6.94,
+      "worker": 2
+    },
+    "upstream/source/blender/io/alembic/intern/abc_util.h": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "abc_util.rs",
+      "time_s": 6.82,
+      "worker": 3
+    },
+    "upstream/source/blender/io/common/IO_dupli_persistent_id.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "IO_dupli_persistent_id.rs",
+      "time_s": 6.87,
+      "worker": 1
+    },
+    "upstream/source/blender/io/common/IO_gsplat.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "IO_gsplat.rs",
+      "time_s": 6.91,
+      "worker": 2
+    },
+    "upstream/source/blender/io/common/IO_mesh_utils.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "IO_mesh_utils.rs",
+      "time_s": 7.01,
+      "worker": 3
+    },
+    "upstream/source/blender/io/common/IO_path_util_types.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "IO_path_util_types.rs",
+      "time_s": 6.9,
+      "worker": 2
+    },
+    "upstream/source/blender/io/common/IO_subdiv_disabler.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "IO_subdiv_disabler.rs",
+      "time_s": 6.96,
       "worker": 4
     },
     "upstream/source/blender/io/ply/exporter/ply_export.hh": {
@@ -1793,6 +2725,20 @@
       "mode": "ast_fast_path",
       "module": "RNA_access.rs"
     },
+    "upstream/source/blender/makesrna/RNA_define.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "RNA_define.rs",
+      "time_s": 5.0,
+      "worker": 1
+    },
+    "upstream/source/blender/makesrna/RNA_documentation.hh": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "RNA_documentation.rs",
+      "time_s": 2.28,
+      "worker": 2
+    },
     "upstream/source/blender/makesrna/RNA_path.hh": {
       "crate": "blender-io",
       "mode": "ast_fast_path",
@@ -1802,9 +2748,149 @@
       "crate": "blender-dna",
       "module": "RNA_path_fwd.rs"
     },
+    "upstream/source/blender/makesrna/intern/makesrna.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "makesrna.rs",
+      "time_s": 15.16,
+      "worker": 3
+    },
     "upstream/source/blender/makesrna/intern/rna_animation.cc": {
       "crate": "blender-bmesh",
       "module": "rna_animation.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_animation_api.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_animation_api.rs",
+      "time_s": 12.09,
+      "worker": 2
+    },
+    "upstream/source/blender/makesrna/intern/rna_annotations.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_annotations.rs",
+      "time_s": 8.94,
+      "worker": 3
+    },
+    "upstream/source/blender/makesrna/intern/rna_armature.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_armature.rs",
+      "time_s": 8.96,
+      "worker": 4
+    },
+    "upstream/source/blender/makesrna/intern/rna_armature_api.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_armature_api.rs",
+      "time_s": 9.31,
+      "worker": 1
+    },
+    "upstream/source/blender/makesrna/intern/rna_asset.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_asset.rs",
+      "time_s": 9.01,
+      "worker": 2
+    },
+    "upstream/source/blender/makesrna/intern/rna_attribute.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_attribute.rs",
+      "time_s": 11.57,
+      "worker": 3
+    },
+    "upstream/source/blender/makesrna/intern/rna_blender_project.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_blender_project.rs",
+      "time_s": 7.67,
+      "worker": 4
+    },
+    "upstream/source/blender/makesrna/intern/rna_boid.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_boid.rs",
+      "time_s": 6.89,
+      "worker": 2
+    },
+    "upstream/source/blender/makesrna/intern/rna_camera.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_camera.rs",
+      "time_s": 6.67,
+      "worker": 3
+    },
+    "upstream/source/blender/makesrna/intern/rna_collection.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_collection.rs",
+      "time_s": 7.81,
+      "worker": 1
+    },
+    "upstream/source/blender/makesrna/intern/rna_context.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_context.rs",
+      "time_s": 7.81,
+      "worker": 3
+    },
+    "upstream/source/blender/makesrna/intern/rna_curve.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_curve.rs",
+      "time_s": 17.92,
+      "worker": 4
+    },
+    "upstream/source/blender/makesrna/intern/rna_curveprofile.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_curveprofile.rs",
+      "time_s": 7.95,
+      "worker": 1
+    },
+    "upstream/source/blender/makesrna/intern/rna_curves.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_curves.rs",
+      "time_s": 10.25,
+      "worker": 2
+    },
+    "upstream/source/blender/makesrna/intern/rna_dynamicpaint.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_dynamicpaint.rs",
+      "time_s": 13.23,
+      "worker": 4
+    },
+    "upstream/source/blender/makesrna/intern/rna_fluid.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_fluid.rs",
+      "time_s": 12.4,
+      "worker": 1
+    },
+    "upstream/source/blender/makesrna/intern/rna_grease_pencil.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_grease_pencil.rs",
+      "time_s": 9.72,
+      "worker": 2
+    },
+    "upstream/source/blender/makesrna/intern/rna_grease_pencil_api.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_grease_pencil_api.rs",
+      "time_s": 8.75,
+      "worker": 3
+    },
+    "upstream/source/blender/makesrna/intern/rna_image.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "rna_image.rs",
+      "time_s": 8.15,
+      "worker": 4
     },
     "upstream/source/blender/makesrna/intern/rna_internal.hh": {
       "crate": "blender-io",
@@ -1830,6 +2916,11 @@
     "upstream/source/blender/nodes/NOD_partial_eval.hh": {
       "crate": "blender-io",
       "module": "NOD_partial_eval.rs"
+    },
+    "upstream/source/blender/nodes/NOD_shader_nodes_inline.hh": {
+      "crate": "blender-io",
+      "mode": "ast_fast_path",
+      "module": "NOD_shader_nodes_inline.rs"
     },
     "upstream/source/blender/nodes/NOD_socket_items.hh": {
       "crate": "blender-io",
@@ -1911,6 +3002,13 @@
       "crate": "blender-dna",
       "module": "NOD_geo_viewer.rs"
     },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_bounding_box.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_geo_bounding_box.rs",
+      "time_s": 21.47,
+      "worker": 3
+    },
     "upstream/source/blender/nodes/geometry/nodes/node_geo_curve_topology_curve_of_point.cc": {
       "crate": "blender-io",
       "module": "node_geo_curve_topology_curve_of_point.rs"
@@ -1927,9 +3025,30 @@
       "crate": "blender-io",
       "module": "node_geo_input_mesh_vertex_neighbors.rs"
     },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_input_voxel_index.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_geo_input_voxel_index.rs",
+      "time_s": 24.51,
+      "worker": 4
+    },
     "upstream/source/blender/nodes/geometry/nodes/node_geo_material_selection.cc": {
       "crate": "blender-io",
       "module": "node_geo_material_selection.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_primitive_ico_sphere.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_geo_mesh_primitive_ico_sphere.rs",
+      "time_s": 24.46,
+      "worker": 1
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_subdivide.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_geo_mesh_subdivide.rs",
+      "time_s": 23.77,
+      "worker": 2
     },
     "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_corners_of_edge.cc": {
       "crate": "blender-io",
@@ -1951,12 +3070,26 @@
       "crate": "blender-io",
       "module": "node_geo_mesh_topology_offset_corner_in_face.rs"
     },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_transform_geometry.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_geo_transform_geometry.rs",
+      "time_s": 28.38,
+      "worker": 3
+    },
     "upstream/source/blender/nodes/shader/materialx/material.h": {
       "crate": "blender-io",
       "mode": "parallel_worker",
       "module": "material.rs",
       "time_s": 2.71,
       "worker": 1
+    },
+    "upstream/source/blender/nodes/shader/materialx/node_graph.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_graph.rs",
+      "time_s": 44.65,
+      "worker": 4
     },
     "upstream/source/blender/nodes/shader/materialx/node_item.h": {
       "crate": "blender-math",
@@ -1969,6 +3102,20 @@
       "time_s": 2.63,
       "worker": 3
     },
+    "upstream/source/blender/nodes/shader/nodes/node_shader_bsdf_hair_principled.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_shader_bsdf_hair_principled.rs",
+      "time_s": 40.07,
+      "worker": 1
+    },
+    "upstream/source/blender/nodes/shader/nodes/node_shader_hueSatVal.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_shader_hueSatVal.rs",
+      "time_s": 27.31,
+      "worker": 2
+    },
     "upstream/source/blender/nodes/shader/nodes/node_shader_math.cc": {
       "crate": "blender-math",
       "mode": "parallel_worker",
@@ -1976,11 +3123,25 @@
       "time_s": 0.28,
       "worker": 1
     },
+    "upstream/source/blender/nodes/texture/node_texture_util.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_texture_util.rs",
+      "time_s": 24.18,
+      "worker": 3
+    },
     "upstream/source/blender/nodes/texture/nodes/node_texture_math.cc": {
       "crate": "blender-math",
       "mode": "parallel_worker",
       "module": "node_texture_math.rs",
       "time_s": 6.19,
+      "worker": 4
+    },
+    "upstream/source/blender/nodes/texture/nodes/node_texture_proc.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "node_texture_proc.rs",
+      "time_s": 33.5,
       "worker": 4
     },
     "upstream/source/blender/render/RE_bake.h": {
@@ -1990,6 +3151,13 @@
     "upstream/source/blender/render/RE_texture_margin.h": {
       "crate": "blender-dna",
       "module": "RE_texture_margin.rs"
+    },
+    "upstream/source/blender/render/hydra/engine.cc": {
+      "crate": "blender-io",
+      "mode": "parallel_worker",
+      "module": "engine.rs",
+      "time_s": 2.16,
+      "worker": 1
     },
     "upstream/source/blender/render/intern/bake.cc": {
       "crate": "blender-io",
@@ -2019,1188 +3187,48 @@
       "crate": "blender-bmesh",
       "module": "wm_init_exit.rs"
     },
-    "upstream/source/blender/blenkernel/intern/blender_cli_command.cc": {
+    "upstream/source/blender/windowmanager/intern/wm_operator_props.cc": {
       "crate": "blender-io",
-      "module": "blender_cli_command.rs",
       "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 28.2
-    },
-    "upstream/source/blender/blenkernel/intern/curve_poly.cc": {
-      "crate": "blender-io",
-      "module": "curve_poly.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 33.96
-    },
-    "upstream/source/blender/blenkernel/intern/lib_id_delete.cc": {
-      "crate": "blender-io",
-      "module": "lib_id_delete.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 54.15
-    },
-    "upstream/source/blender/blenkernel/intern/volume_grid_fields.cc": {
-      "crate": "blender-io",
-      "module": "volume_grid_fields.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 21.25
-    },
-    "upstream/source/blender/blenkernel/intern/multires_unsubdivide.cc": {
-      "crate": "blender-io",
-      "module": "multires_unsubdivide.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 87.38
-    },
-    "upstream/source/blender/animrig/intern/action_runtime.cc": {
-      "crate": "blender-io",
-      "module": "action_runtime_impl.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 20.47
-    },
-    "upstream/source/blender/animrig/intern/action_legacy.cc": {
-      "crate": "blender-io",
-      "module": "action_legacy.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 21.61
-    },
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_bounding_box.cc": {
-      "crate": "blender-io",
-      "module": "node_geo_bounding_box.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 21.47
-    },
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_input_voxel_index.cc": {
-      "crate": "blender-io",
-      "module": "node_geo_input_voxel_index.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 24.51
-    },
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_primitive_ico_sphere.cc": {
-      "crate": "blender-io",
-      "module": "node_geo_mesh_primitive_ico_sphere.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 24.46
-    },
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_subdivide.cc": {
-      "crate": "blender-io",
-      "module": "node_geo_mesh_subdivide.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 23.77
-    },
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_transform_geometry.cc": {
-      "crate": "blender-io",
-      "module": "node_geo_transform_geometry.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 28.38
-    },
-    "upstream/source/blender/nodes/shader/nodes/node_shader_hueSatVal.cc": {
-      "crate": "blender-io",
-      "module": "node_shader_hueSatVal.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 27.31
-    },
-    "upstream/source/blender/nodes/shader/nodes/node_shader_bsdf_hair_principled.cc": {
-      "crate": "blender-io",
-      "module": "node_shader_bsdf_hair_principled.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 40.07
-    },
-    "upstream/source/blender/nodes/shader/materialx/node_graph.cc": {
-      "crate": "blender-io",
-      "module": "node_graph.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 44.65
-    },
-    "upstream/source/blender/nodes/texture/node_texture_util.cc": {
-      "crate": "blender-io",
-      "module": "node_texture_util.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 24.18
-    },
-    "upstream/source/blender/nodes/texture/nodes/node_texture_proc.cc": {
-      "crate": "blender-io",
-      "module": "node_texture_proc.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 33.5
-    },
-    "upstream/source/blender/imbuf/IMB_metadata.hh": {
-      "crate": "blender-io",
-      "module": "IMB_metadata.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.43
-    },
-    "upstream/source/blender/imbuf/intern/IMB_filter.hh": {
-      "crate": "blender-io",
-      "module": "IMB_filter.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 7.55
-    },
-    "upstream/source/blender/imbuf/intern/imbuf.hh": {
-      "crate": "blender-io",
-      "module": "imbuf.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.76
-    },
-    "upstream/source/blender/imbuf/intern/oiio/openimageio_support.hh": {
-      "crate": "blender-io",
-      "module": "openimageio_support.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 4.79
-    },
-    "upstream/source/blender/bmesh/intern/bmesh_query_uv.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmesh_query_uv.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 39.78
-    },
-    "upstream/source/blender/bmesh/intern/bmesh_structure.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmesh_structure.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 104.7
-    },
-    "upstream/source/blender/bmesh/intern/bmesh_uvselect.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmesh_uvselect.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 0.43
-    },
-    "upstream/source/blender/bmesh/intern/bmesh_walkers_impl.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmesh_walkers_impl.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 122.54
-    },
-    "upstream/source/blender/bmesh/operators/bmo_beautify.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_beautify.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 0.7
-    },
-    "upstream/source/blender/bmesh/operators/bmo_bevel.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_bevel.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 29.88
-    },
-    "upstream/source/blender/bmesh/operators/bmo_bisect_plane.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_bisect_plane.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 0.67
-    },
-    "upstream/source/blender/bmesh/operators/bmo_bridge.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_bridge.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 0.4
-    },
-    "upstream/source/blender/bmesh/operators/bmo_connect.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_connect.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 0.58
-    },
-    "upstream/source/blender/bmesh/operators/bmo_connect_concave.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_connect_concave.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 44.57
-    },
-    "upstream/source/blender/bmesh/operators/bmo_connect_nonplanar.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_connect_nonplanar.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 44.43
-    },
-    "upstream/source/blender/bmesh/operators/bmo_create.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_create.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 0.73
-    },
-    "upstream/source/blender/bmesh/operators/bmo_dissolve.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_dissolve.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 0.69
-    },
-    "upstream/source/blender/bmesh/operators/bmo_dupe.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_dupe.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 0.3
-    },
-    "upstream/source/blender/blenlib/BLI_string.hh": {
-      "crate": "blender-io",
-      "module": "BLI_string.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 4.09
-    },
-    "upstream/source/blender/blenlib/BLI_string_ref.hh": {
-      "crate": "blender-io",
-      "module": "BLI_string_ref.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 5.47
-    },
-    "upstream/source/blender/blenlib/BLI_sub_frame.hh": {
-      "crate": "blender-io",
-      "module": "BLI_sub_frame.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.72
-    },
-    "upstream/source/blender/blenlib/BLI_subprocess.hh": {
-      "crate": "blender-io",
-      "module": "BLI_subprocess.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.9
-    },
-    "upstream/source/blender/bmesh/operators/bmo_edgenet.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_edgenet.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 0.47
-    },
-    "upstream/source/blender/bmesh/operators/bmo_extrude.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_extrude.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 0.26
-    },
-    "upstream/source/blender/bmesh/operators/bmo_fill_attribute.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_fill_attribute.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 1.29
-    },
-    "upstream/source/blender/bmesh/intern/bmesh_mesh.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmesh_mesh_impl.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 5.11
-    },
-    "upstream/source/blender/bmesh/intern/bmesh_polygon.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmesh_polygon_impl.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 5.37
-    },
-    "upstream/source/blender/bmesh/intern/bmesh_query.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmesh_query_impl.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 7.14
-    },
-    "upstream/source/blender/imbuf/intern/openexr/openexr_api.h": {
-      "crate": "blender-io",
-      "module": "openexr_api.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 3.8
-    },
-    "upstream/source/blender/imbuf/movie/MOV_enums.hh": {
-      "crate": "blender-io",
-      "module": "MOV_enums.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 4.88
-    },
-    "upstream/source/blender/imbuf/movie/MOV_read.hh": {
-      "crate": "blender-io",
-      "module": "MOV_read.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 5.41
-    },
-    "upstream/source/blender/imbuf/movie/MOV_util.hh": {
-      "crate": "blender-io",
-      "module": "MOV_util.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 5.64
-    },
-    "upstream/source/blender/imbuf/movie/MOV_write.hh": {
-      "crate": "blender-io",
-      "module": "MOV_write.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 5.98
-    },
-    "upstream/source/blender/imbuf/movie/intern/ffmpeg_compat.h": {
-      "crate": "blender-io",
-      "module": "ffmpeg_compat.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.25
-    },
-    "upstream/source/blender/imbuf/movie/intern/ffmpeg_swscale.hh": {
-      "crate": "blender-io",
-      "module": "ffmpeg_swscale.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 6.32
-    },
-    "upstream/source/blender/imbuf/movie/intern/movie_proxy_indexer.hh": {
-      "crate": "blender-io",
-      "module": "movie_proxy_indexer.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.21
-    },
-    "upstream/source/blender/imbuf/movie/intern/movie_util.hh": {
-      "crate": "blender-io",
-      "module": "movie_util.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 5.44
-    },
-    "upstream/source/blender/imbuf/opencolorio/OCIO_api.hh": {
-      "crate": "blender-io",
-      "module": "OCIO_api.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 5.49
-    },
-    "upstream/source/blender/imbuf/opencolorio/OCIO_colorspace.hh": {
-      "crate": "blender-io",
-      "module": "OCIO_colorspace.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.8
-    },
-    "upstream/source/blender/imbuf/opencolorio/OCIO_cpu_processor.hh": {
-      "crate": "blender-io",
-      "module": "OCIO_cpu_processor.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 5.2
-    },
-    "upstream/source/blender/imbuf/opencolorio/OCIO_display.hh": {
-      "crate": "blender-io",
-      "module": "OCIO_display.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 5.52
-    },
-    "upstream/source/blender/imbuf/opencolorio/OCIO_look.hh": {
-      "crate": "blender-io",
-      "module": "OCIO_look.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 5.79
-    },
-    "upstream/source/blender/imbuf/opencolorio/OCIO_packed_image.hh": {
-      "crate": "blender-io",
-      "module": "OCIO_packed_image.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 5.89
-    },
-    "upstream/source/blender/imbuf/opencolorio/OCIO_role_names.hh": {
-      "crate": "blender-io",
-      "module": "OCIO_role_names.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 5.52
-    },
-    "upstream/source/blender/imbuf/opencolorio/OCIO_version.hh": {
-      "crate": "blender-io",
-      "module": "OCIO_version.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 5.16
-    },
-    "upstream/source/blender/imbuf/opencolorio/OCIO_view.hh": {
-      "crate": "blender-io",
-      "module": "OCIO_view.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 5.25
-    },
-    "upstream/source/blender/imbuf/opencolorio/intern/cpu_processor_cache.hh": {
-      "crate": "blender-io",
-      "module": "cpu_processor_cache.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 5.46
-    },
-    "upstream/source/blender/depsgraph/DEG_depsgraph_build.hh": {
-      "crate": "blender-io",
-      "module": "DEG_depsgraph_build.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 1.56
-    },
-    "upstream/source/blender/depsgraph/DEG_depsgraph.hh": {
-      "crate": "blender-io",
-      "module": "DEG_depsgraph.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 3.41
-    },
-    "upstream/source/blender/depsgraph/DEG_depsgraph_debug.hh": {
-      "crate": "blender-io",
-      "module": "DEG_depsgraph_debug.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 4.98
-    },
-    "upstream/source/blender/depsgraph/DEG_depsgraph_physics.hh": {
-      "crate": "blender-io",
-      "module": "DEG_depsgraph_physics.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.71
-    },
-    "upstream/source/blender/depsgraph/DEG_depsgraph_writeback_sync.hh": {
-      "crate": "blender-io",
-      "module": "DEG_depsgraph_writeback_sync.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.4
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.h": {
-      "crate": "blender-io",
-      "module": "deg_builder_cycle.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.38
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations.h": {
-      "crate": "blender-io",
-      "module": "deg_builder_relations.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.29
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_drivers.h": {
-      "crate": "blender-io",
-      "module": "deg_builder_relations_drivers.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.43
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_stack.h": {
-      "crate": "blender-io",
-      "module": "deg_builder_stack.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 7.05
-    },
-    "upstream/source/blender/depsgraph/intern/builder/pipeline_all_objects.h": {
-      "crate": "blender-io",
-      "module": "pipeline_all_objects.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.87
-    },
-    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_collection.h": {
-      "crate": "blender-io",
-      "module": "pipeline_from_collection.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.72
-    },
-    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_ids.h": {
-      "crate": "blender-io",
-      "module": "pipeline_from_ids.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.78
-    },
-    "upstream/source/blender/depsgraph/intern/builder/pipeline_render.h": {
-      "crate": "blender-io",
-      "module": "pipeline_render.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 6.42
-    },
-    "upstream/source/blender/depsgraph/intern/builder/pipeline_view_layer.h": {
-      "crate": "blender-io",
-      "module": "pipeline_view_layer.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.62
-    },
-    "upstream/source/blender/depsgraph/intern/depsgraph_relation.hh": {
-      "crate": "blender-io",
-      "module": "depsgraph_relation.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.52
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_copy_on_write.h": {
-      "crate": "blender-io",
-      "module": "deg_eval_copy_on_write.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 5.93
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_animation.h": {
-      "crate": "blender-io",
-      "module": "deg_eval_runtime_backup_animation.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.38
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_stats.h": {
-      "crate": "blender-io",
-      "module": "deg_eval_stats.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 6.71
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_visibility.h": {
-      "crate": "blender-io",
-      "module": "deg_eval_visibility.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 5.95
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder.cc": {
-      "crate": "blender-io",
-      "module": "deg_builder.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 5.1
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cache.cc": {
-      "crate": "blender-io",
-      "module": "deg_builder_cache.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 6.13
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes.cc": {
-      "crate": "blender-io",
-      "module": "deg_builder_nodes.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.1
-    },
-    "upstream/source/blender/compositor/COM_domain.hh": {
-      "crate": "blender-io",
-      "module": "COM_domain.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 1.75
-    },
-    "upstream/source/blender/compositor/COM_conversion_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_conversion_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 3.61
-    },
-    "upstream/source/blender/compositor/COM_bundle_item.hh": {
-      "crate": "blender-io",
-      "module": "COM_bundle_item.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 5.33
-    },
-    "upstream/source/blender/compositor/COM_implicit_input_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_implicit_input_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 7.42
-    },
-    "upstream/source/blender/compositor/COM_multi_function_procedure_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_multi_function_procedure_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.79
-    },
-    "upstream/source/blender/compositor/COM_node_group_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_node_group_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 7.24
-    },
-    "upstream/source/blender/compositor/COM_node_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_node_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 7.99
-    },
-    "upstream/source/blender/compositor/COM_node_tree_output_node_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_node_tree_output_node_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 8.96
-    },
-    "upstream/source/blender/compositor/COM_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 9.02
-    },
-    "upstream/source/blender/compositor/COM_realize_on_domain_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_realize_on_domain_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 8.69
-    },
-    "upstream/source/blender/compositor/COM_repeat_zone_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_repeat_zone_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.54
-    },
-    "upstream/source/blender/compositor/COM_shader_node.hh": {
-      "crate": "blender-io",
-      "module": "COM_shader_node.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 6.74
-    },
-    "upstream/source/blender/compositor/COM_shader_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_shader_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 7.03
-    },
-    "upstream/source/blender/compositor/COM_simple_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_simple_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 7.26
-    },
-    "upstream/source/blender/compositor/COM_single_value_node_input_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_single_value_node_input_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 7.93
-    },
-    "upstream/source/blender/compositor/COM_static_cache_manager.hh": {
-      "crate": "blender-io",
-      "module": "COM_static_cache_manager.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 7.36
-    },
-    "upstream/source/blender/compositor/COM_zone_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_zone_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 7.24
-    },
-    "upstream/source/blender/compositor/COM_zone_tree_operation.hh": {
-      "crate": "blender-io",
-      "module": "COM_zone_tree_operation.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 7.56
-    },
-    "upstream/source/blender/makesrna/RNA_documentation.hh": {
-      "crate": "blender-io",
-      "module": "RNA_documentation.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 2.28
-    },
-    "upstream/source/blender/makesrna/RNA_define.hh": {
-      "crate": "blender-io",
-      "module": "RNA_define.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 5.0
-    },
-    "upstream/source/blender/makesrna/intern/makesrna.cc": {
-      "crate": "blender-io",
-      "module": "makesrna.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 15.16
-    },
-    "upstream/source/blender/makesrna/intern/rna_animation_api.cc": {
-      "crate": "blender-io",
-      "module": "rna_animation_api.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 12.09
-    },
-    "upstream/source/blender/makesrna/intern/rna_annotations.cc": {
-      "crate": "blender-io",
-      "module": "rna_annotations.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 8.94
-    },
-    "upstream/source/blender/makesrna/intern/rna_armature.cc": {
-      "crate": "blender-io",
-      "module": "rna_armature.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 8.96
-    },
-    "upstream/source/blender/makesrna/intern/rna_armature_api.cc": {
-      "crate": "blender-io",
-      "module": "rna_armature_api.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 9.31
-    },
-    "upstream/source/blender/makesrna/intern/rna_asset.cc": {
-      "crate": "blender-io",
-      "module": "rna_asset.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 9.01
-    },
-    "upstream/source/blender/makesrna/intern/rna_blender_project.cc": {
-      "crate": "blender-io",
-      "module": "rna_blender_project.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 7.67
-    },
-    "upstream/source/blender/makesrna/intern/rna_attribute.cc": {
-      "crate": "blender-io",
-      "module": "rna_attribute.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 11.57
-    },
-    "upstream/source/blender/makesrna/intern/rna_boid.cc": {
-      "crate": "blender-io",
-      "module": "rna_boid.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.89
-    },
-    "upstream/source/blender/makesrna/intern/rna_camera.cc": {
-      "crate": "blender-io",
-      "module": "rna_camera.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.67
-    },
-    "upstream/source/blender/makesrna/intern/rna_collection.cc": {
-      "crate": "blender-io",
-      "module": "rna_collection.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 7.81
-    },
-    "upstream/source/blender/makesrna/intern/rna_context.cc": {
-      "crate": "blender-io",
-      "module": "rna_context.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 7.81
-    },
-    "upstream/source/blender/makesrna/intern/rna_curveprofile.cc": {
-      "crate": "blender-io",
-      "module": "rna_curveprofile.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 7.95
-    },
-    "upstream/source/blender/makesrna/intern/rna_curves.cc": {
-      "crate": "blender-io",
-      "module": "rna_curves.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 10.25
-    },
-    "upstream/source/blender/makesrna/intern/rna_curve.cc": {
-      "crate": "blender-io",
-      "module": "rna_curve.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 17.92
-    },
-    "upstream/source/blender/makesrna/intern/rna_dynamicpaint.cc": {
-      "crate": "blender-io",
-      "module": "rna_dynamicpaint.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 13.23
-    },
-    "upstream/source/blender/makesrna/intern/rna_fluid.cc": {
-      "crate": "blender-io",
-      "module": "rna_fluid.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 12.4
-    },
-    "upstream/source/blender/makesrna/intern/rna_grease_pencil.cc": {
-      "crate": "blender-io",
-      "module": "rna_grease_pencil.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 9.72
-    },
-    "upstream/source/blender/makesrna/intern/rna_grease_pencil_api.cc": {
-      "crate": "blender-io",
-      "module": "rna_grease_pencil_api.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 8.75
-    },
-    "upstream/source/blender/makesrna/intern/rna_image.cc": {
-      "crate": "blender-io",
-      "module": "rna_image.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 8.15
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_abstract.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_abstract.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 1.71
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_attribute.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_attribute.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 3.45
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_curves.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_curves.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 4.97
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_camera.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_camera.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.94
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_hair.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_hair.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 6.86
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_instance.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_instance.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.89
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_mball.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_mball.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 7.01
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_mesh.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_mesh.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.8
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_nurbs.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_nurbs.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 7.04
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_points.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_points.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.93
-    },
-    "upstream/source/blender/io/alembic/exporter/abc_writer_transform.h": {
-      "crate": "blender-io",
-      "module": "abc_writer_transform.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.9
-    },
-    "upstream/source/blender/io/alembic/intern/abc_axis_conversion.h": {
-      "crate": "blender-io",
-      "module": "abc_axis_conversion.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 7.14
-    },
-    "upstream/source/blender/io/alembic/intern/abc_keyframing.h": {
-      "crate": "blender-io",
-      "module": "abc_keyframing.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.82
-    },
-    "upstream/source/blender/io/alembic/intern/abc_reader_archive.h": {
-      "crate": "blender-io",
-      "module": "abc_reader_archive.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.81
-    },
-    "upstream/source/blender/io/alembic/intern/abc_reader_camera.h": {
-      "crate": "blender-io",
-      "module": "abc_reader_camera.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.45
-    },
-    "upstream/source/blender/io/alembic/intern/abc_reader_curves.h": {
-      "crate": "blender-io",
-      "module": "abc_reader_curves.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 6.55
-    },
-    "upstream/source/blender/io/alembic/intern/abc_reader_mesh.h": {
-      "crate": "blender-io",
-      "module": "abc_reader_mesh.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.82
-    },
-    "upstream/source/blender/io/alembic/intern/abc_reader_nurbs.h": {
-      "crate": "blender-io",
-      "module": "abc_reader_nurbs.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 7.15
-    },
-    "upstream/source/blender/io/alembic/intern/abc_reader_points.h": {
-      "crate": "blender-io",
-      "module": "abc_reader_points.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 7.11
-    },
-    "upstream/source/blender/io/alembic/intern/abc_reader_transform.h": {
-      "crate": "blender-io",
-      "module": "abc_reader_transform.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.94
-    },
-    "upstream/source/blender/io/alembic/intern/abc_util.h": {
-      "crate": "blender-io",
-      "module": "abc_util.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 6.82
-    },
-    "upstream/source/blender/io/common/IO_dupli_persistent_id.hh": {
-      "crate": "blender-io",
-      "module": "IO_dupli_persistent_id.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 6.87
-    },
-    "upstream/source/blender/io/common/IO_gsplat.hh": {
-      "crate": "blender-io",
-      "module": "IO_gsplat.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.91
-    },
-    "upstream/source/blender/io/common/IO_mesh_utils.hh": {
-      "crate": "blender-io",
-      "module": "IO_mesh_utils.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 7.01
-    },
-    "upstream/source/blender/io/common/IO_path_util_types.hh": {
-      "crate": "blender-io",
-      "module": "IO_path_util_types.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 6.9
-    },
-    "upstream/source/blender/io/common/IO_subdiv_disabler.hh": {
-      "crate": "blender-io",
-      "module": "IO_subdiv_disabler.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 6.96
-    },
-    "upstream/source/blender/render/hydra/engine.cc": {
-      "crate": "blender-io",
-      "module": "engine.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 2.16
-    },
-    "upstream/source/blender/draw/engines/eevee/eevee_world.hh": {
-      "crate": "blender-io",
-      "module": "eevee_world.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 8.12
-    },
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_bxdf.bsl.hh": {
-      "crate": "blender-io",
-      "module": "eevee_bxdf_bsl.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 7.89
-    },
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_deferred_tile_classify.bsl.hh": {
-      "crate": "blender-io",
-      "module": "eevee_deferred_tile_classify_bsl.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 7.75
-    },
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_geom_volume.bsl.hh": {
-      "crate": "blender-io",
-      "module": "eevee_geom_volume_bsl.rs",
-      "mode": "parallel_worker",
-      "worker": 1,
-      "time_s": 12.95
-    },
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_light_shape_display.bsl.hh": {
-      "crate": "blender-io",
-      "module": "eevee_light_shape_display_bsl.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 7.6
-    },
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_nodetree.bsl.hh": {
-      "crate": "blender-io",
-      "module": "eevee_nodetree_bsl.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 10.23
+      "module": "wm_operator_props.rs",
+      "time_s": 11.36,
+      "worker": 2
     },
     "upstream/source/blender/windowmanager/intern/wm_panel_type.cc": {
       "crate": "blender-io",
+      "mode": "parallel_worker",
       "module": "wm_panel_type_impl.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 9.0
-    },
-    "upstream/source/blender/windowmanager/intern/wm_operator_props.cc": {
-      "crate": "blender-io",
-      "module": "wm_operator_props.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 11.36
+      "time_s": 9.0,
+      "worker": 4
     },
     "upstream/source/blender/windowmanager/intern/wm_subwindow.cc": {
       "crate": "blender-io",
-      "module": "wm_subwindow.rs",
       "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 8.44
+      "module": "wm_subwindow.rs",
+      "time_s": 8.44,
+      "worker": 2
     },
     "upstream/source/blender/windowmanager/intern/wm_toolsystem.cc": {
       "crate": "blender-io",
-      "module": "wm_toolsystem.rs",
       "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 8.13
+      "module": "wm_toolsystem.rs",
+      "time_s": 8.13,
+      "worker": 3
     },
     "upstream/source/blender/windowmanager/xr/intern/wm_xr_location_scouting.cc": {
       "crate": "blender-io",
+      "mode": "parallel_worker",
       "module": "wm_xr_location_scouting.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 7.61
+      "time_s": 7.61,
+      "worker": 4
     },
-    "upstream/source/blender/blenlib/BLI_task_size_hints.hh": {
+    "upstream/source/blender/nodes/NOD_warning.hh": {
       "crate": "blender-io",
-      "module": "BLI_task_size_hints.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 5.47
+      "module": "NOD_warning.rs"
     },
-    "upstream/source/blender/bmesh/operators/bmo_fill_edgeloop.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_fill_edgeloop.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 1.64
-    },
-    "upstream/source/blender/bmesh/operators/bmo_fill_grid.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_fill_grid.rs",
-      "mode": "parallel_worker",
-      "worker": 4,
-      "time_s": 1.71
-    },
-    "upstream/source/blender/bmesh/operators/bmo_hull.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_hull.rs",
-      "mode": "parallel_worker",
-      "worker": 3,
-      "time_s": 0.88
-    },
-    "upstream/source/blender/bmesh/operators/bmo_flatten.cc": {
-      "crate": "blender-bmesh",
-      "module": "bmo_flatten.rs",
-      "mode": "parallel_worker",
-      "worker": 2,
-      "time_s": 1.38
+    "upstream/source/blender/nodes/texture/node_texture_util.hh": {
+      "crate": "blender-io",
+      "module": "node_texture_util.rs"
     }
   },
   "failed": {
@@ -3209,7 +3237,6 @@
     "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_bake_values.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/BKE_camera.h": "compile_check_failed",
     "upstream/source/blender/blenkernel/BKE_cpp_types.hh": "transpile_error",
     "upstream/source/blender/blenkernel/BKE_deform.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_key.hh": "compiler_burndown_exceeded",
@@ -3223,12 +3250,10 @@
     "upstream/source/blender/blenkernel/BKE_path_templates.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_pointcache.h": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_report.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_shrinkwrap.hh": "compile_check_failed",
     "upstream/source/blender/blenkernel/BKE_subdiv.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_subdiv_eval.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_subdiv_foreach.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_subdiv_modifier.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_undo_system.hh": "compile_check_failed",
     "upstream/source/blender/blenkernel/BKE_vfontdata.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/BKE_volume_to_mesh.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/anonymous_attribute_id.cc": "transpile_error",
@@ -3641,6 +3666,19 @@
     "upstream/source/blender/io/common/IO_orientation.hh": "compile_check_failed",
     "upstream/source/blender/io/common/IO_path_util.hh": "transpile_error",
     "upstream/source/blender/io/common/IO_string_utils.hh": "transpile_error",
+    "upstream/source/blender/io/common/IO_types.hh": "compile_check_failed",
+    "upstream/source/blender/io/common/IO_validate.hh": "transpile_error",
+    "upstream/source/blender/io/common/intern/dupli_parent_finder.hh": "compile_check_failed",
+    "upstream/source/blender/io/csv/IO_csv.hh": "compile_check_failed",
+    "upstream/source/blender/io/fbx/IO_fbx.hh": "compile_check_failed",
+    "upstream/source/blender/io/fbx/importer/fbx_import.hh": "compile_check_failed",
+    "upstream/source/blender/io/fbx/importer/fbx_import_anim.hh": "compile_check_failed",
+    "upstream/source/blender/io/fbx/importer/fbx_import_armature.hh": "compile_check_failed",
+    "upstream/source/blender/io/fbx/importer/fbx_import_material.hh": "compile_check_failed",
+    "upstream/source/blender/io/fbx/importer/fbx_import_mesh.hh": "compile_check_failed",
+    "upstream/source/blender/io/fbx/importer/fbx_import_util.hh": "compile_check_failed",
+    "upstream/source/blender/io/grease_pencil/grease_pencil_io.hh": "compile_check_failed",
+    "upstream/source/blender/io/grease_pencil/intern/grease_pencil_io_intern.hh": "compile_check_failed",
     "upstream/source/blender/io/ply/IO_ply.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/IO_ply.hh": "compile_check_failed",
     "upstream/source/blender/io/ply/exporter/ply_export.cc": "compiler_burndown_exceeded",
@@ -3655,6 +3693,11 @@
     "upstream/source/blender/io/ply/importer/ply_import_gsplat.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/importer/ply_import_mesh.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/intern/ply_data.hh": "compile_check_failed",
+    "upstream/source/blender/io/spz/IO_spz.hh": "compile_check_failed",
+    "upstream/source/blender/io/spz/importer/spz_import.hh": "compile_check_failed",
+    "upstream/source/blender/io/spz/intern/spz_header.hh": "compile_check_failed",
+    "upstream/source/blender/io/spz/intern/spz_read.hh": "compile_check_failed",
+    "upstream/source/blender/io/spz/intern/spz_read_common.hh": "compile_check_failed",
     "upstream/source/blender/io/stl/IO_stl.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/stl/IO_stl.hh": "compile_check_failed",
     "upstream/source/blender/io/stl/exporter/stl_export.cc": "compiler_burndown_exceeded",
@@ -3662,6 +3705,11 @@
     "upstream/source/blender/io/stl/importer/stl_import.cc": "apfel_generation_failed",
     "upstream/source/blender/io/stl/importer/stl_import_binary_reader.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/stl/importer/stl_import_mesh.cc": "compiler_burndown_exceeded",
+    "upstream/source/blender/io/usd/hydra/camera_delegate.hh": "compile_check_failed",
+    "upstream/source/blender/io/usd/hydra/curves.hh": "compile_check_failed",
+    "upstream/source/blender/io/usd/hydra/image.hh": "compile_check_failed",
+    "upstream/source/blender/io/usd/hydra/instancer.hh": "transpile_error",
+    "upstream/source/blender/io/usd/hydra/light.hh": "compile_check_failed",
     "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/exporter/obj_export_file_writer.cc": "compiler_burndown_exceeded",
@@ -3706,11 +3754,24 @@
     "upstream/source/blender/makesrna/intern/rna_mesh_api.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_meta.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_meta_api.cc": "transpile_error",
+    "upstream/source/blender/makesrna/intern/rna_movieclip.cc": "compile_check_failed",
+    "upstream/source/blender/makesrna/intern/rna_nla.cc": "compile_check_failed",
+    "upstream/source/blender/makesrna/intern/rna_node_socket.cc": "compile_check_failed",
+    "upstream/source/blender/makesrna/intern/rna_node_tree_interface.cc": "timeout",
+    "upstream/source/blender/makesrna/intern/rna_nodetree.cc": "compile_check_failed",
+    "upstream/source/blender/makesrna/intern/rna_object.cc": "timeout",
+    "upstream/source/blender/makesrna/intern/rna_object_api.cc": "compile_check_failed",
+    "upstream/source/blender/makesrna/intern/rna_object_force.cc": "timeout",
+    "upstream/source/blender/makesrna/intern/rna_packedfile.cc": "transpile_error",
+    "upstream/source/blender/makesrna/intern/rna_palette.cc": "compile_check_failed",
+    "upstream/source/blender/makesrna/intern/rna_particle.cc": "timeout",
+    "upstream/source/blender/makesrna/intern/rna_path.cc": "compile_check_failed",
+    "upstream/source/blender/makesrna/intern/rna_pointcloud.cc": "compile_check_failed",
+    "upstream/source/blender/makesrna/intern/rna_pose.cc": "compile_check_failed",
     "upstream/source/blender/nodes/NOD_eval_log.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/NOD_geometry_nodes_closure.hh": "compile_check_failed",
     "upstream/source/blender/nodes/NOD_geometry_nodes_closure_signature.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/NOD_node_declaration.hh": "compile_check_failed",
-    "upstream/source/blender/nodes/NOD_shader_nodes_inline.hh": "compile_check_failed",
     "upstream/source/blender/nodes/composite/nodes/node_composite_combine_color.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/composite/nodes/node_composite_separate_color.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/function/node_function_util.hh": "transpile_error",
@@ -3739,44 +3800,7 @@
     "upstream/source/blender/windowmanager/intern/wm_files_link.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_operators.cc": "compile_check_failed",
     "upstream/source/blender/windowmanager/intern/wm_playanim.cc": "compile_check_failed",
-    "upstream/source/blender/windowmanager/wm_event_types.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/makesrna/intern/rna_nla.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_node_socket.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_movieclip.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_nodetree.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_object_api.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_packedfile.cc": "transpile_error",
-    "upstream/source/blender/makesrna/intern/rna_palette.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_node_tree_interface.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_path.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_pointcloud.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_pose.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_object_force.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_object.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_particle.cc": "timeout",
-    "upstream/source/blender/io/common/IO_validate.hh": "transpile_error",
-    "upstream/source/blender/io/common/IO_types.hh": "compile_check_failed",
-    "upstream/source/blender/io/common/intern/dupli_parent_finder.hh": "compile_check_failed",
-    "upstream/source/blender/io/csv/IO_csv.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/IO_fbx.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_anim.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_armature.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_material.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_mesh.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_util.hh": "compile_check_failed",
-    "upstream/source/blender/io/grease_pencil/grease_pencil_io.hh": "compile_check_failed",
-    "upstream/source/blender/io/grease_pencil/intern/grease_pencil_io_intern.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/IO_spz.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/importer/spz_import.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/intern/spz_header.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/intern/spz_read.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/intern/spz_read_common.hh": "compile_check_failed",
-    "upstream/source/blender/io/usd/hydra/instancer.hh": "transpile_error",
-    "upstream/source/blender/io/usd/hydra/camera_delegate.hh": "compile_check_failed",
-    "upstream/source/blender/io/usd/hydra/curves.hh": "compile_check_failed",
-    "upstream/source/blender/io/usd/hydra/image.hh": "compile_check_failed",
-    "upstream/source/blender/io/usd/hydra/light.hh": "compile_check_failed"
+    "upstream/source/blender/windowmanager/wm_event_types.hh": "compiler_burndown_exceeded"
   },
   "skipped": {
     "upstream/source/blender/animrig/ANIM_action_iterators.hh": {
@@ -12673,10 +12697,6 @@
     },
     "upstream/source/blender/nodes/NOD_value_elem_eval.hh": {
       "confidence": 0.32988816392804193,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/nodes/NOD_warning.hh": {
-      "confidence": 0.5133984755678812,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/nodes/composite/include/NOD_compositor_file_output.hh": {

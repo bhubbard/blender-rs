@@ -5,7 +5,7 @@ use crate::*;
 
 pub const MAX_IDPROP_NAME: i32 = 64;
 pub const DEFAULT_ALLOC_FOR_NULL_STRINGS: i32 = 64;
-pub const MAX_ID_NAME: i32 = 258;
+pub const MAX_ID_NAME: usize = 258;
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]

@@ -5,6 +5,8 @@
 #[allow(unused_imports)]
 use crate::*;
 
+pub const FILE_MAX: usize = 1024;
+
 #[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
 pub struct eSpace_Link_Flag(pub i8);

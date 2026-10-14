@@ -21,6 +21,7 @@ pub struct Span<T> {
     pub size: usize,
 }
 
+
 impl<T> Span<T> {
     #[inline]
     pub const fn empty() -> Self {
@@ -359,6 +360,40 @@ impl<T> VArray<T> {
 pub struct Field<T> {
     pub _marker: core::marker::PhantomData<T>,
 }
+
+/// Non-owning contiguous view of a virtual array mirroring `blender::VArraySpan<T>`.
+#[derive(Debug, PartialEq)]
+pub struct VArraySpan<T> {
+    pub span: Span<T>,
+}
+
+impl<T> Clone for VArraySpan<T> {
+    #[inline]
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl<T> Copy for VArraySpan<T> {}
+
+impl<T> Default for VArraySpan<T> {
+    fn default() -> Self {
+        Self { span: Span::empty() }
+    }
+}
+
+/// Offset indices representing partitioned array ranges mirroring `blender::OffsetIndices<T>`.
+#[derive(Debug, PartialEq, Eq, Default)]
+pub struct OffsetIndices<IndexType = i32> {
+    pub offsets: Span<IndexType>,
+}
+
+impl<IndexType> Clone for OffsetIndices<IndexType> {
+    #[inline]
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl<IndexType> Copy for OffsetIndices<IndexType> {}
 
 /// Geometry Node execution context mirroring `blender::nodes::GeoNodeExecParams`.
 #[derive(Debug, Clone, Default)]
