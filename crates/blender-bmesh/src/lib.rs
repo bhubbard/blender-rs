@@ -827,3 +827,5 @@ pub mod bmo_flatten;
 pub use bmo_flatten::*;
 pub mod bmo_inset;
 pub use bmo_inset::*;
+pub mod bmo_join_triangles;
+pub use bmo_join_triangles::*;
