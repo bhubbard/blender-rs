@@ -3,6 +3,11 @@
 use blender_bmesh::{BMesh, VertHandle};
 pub use blender_math::*;
 pub use blender_dna::*;
+
+pub mod bke {
+    pub use blender_dna::*;
+    pub use blender_math::*;
+}
 use std::collections::HashMap;
 use std::fmt::Write as FmtWrite;
 use thiserror::Error;
@@ -2518,3 +2523,5 @@ pub mod BKE_camera;
 pub use BKE_camera::*;
 pub mod BKE_undo_system;
 pub use BKE_undo_system::*;
+pub mod BKE_shrinkwrap;
+pub use BKE_shrinkwrap::*;
