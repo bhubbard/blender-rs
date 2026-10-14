@@ -678,6 +678,7 @@ pub mod bmesh_opdefines;
 
 
 pub mod bmesh_polygon;
+pub use bmesh_polygon::*;
 
 pub mod bmesh_polygon_edgenet;
 
@@ -829,3 +830,5 @@ pub mod bmo_inset;
 pub use bmo_inset::*;
 pub mod bmo_join_triangles;
 pub use bmo_join_triangles::*;
+
+

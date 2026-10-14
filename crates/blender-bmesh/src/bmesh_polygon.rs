@@ -10,6 +10,12 @@ pub struct Heap {
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
+pub struct HeapNode {
+    pub _opaque: [u8; 0],
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
 pub struct LinkNode {
     pub _opaque: [u8; 0],
 }
