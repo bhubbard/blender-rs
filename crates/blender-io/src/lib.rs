@@ -2531,5 +2531,5 @@ pub mod NOD_shader_nodes_inline;
 pub use NOD_shader_nodes_inline::*;
 pub mod node_texture_util;
 pub use node_texture_util::*;
-
-
+pub mod BLI_unique_hash;
+pub use BLI_unique_hash::*;
