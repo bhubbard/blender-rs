@@ -13,7 +13,7 @@ pub struct HullTriangle {
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
 pub struct HullFinalEdges {
-    pub ListBaseT<LinkData> *> *edges: Map<BMVert,
+    pub edges: *mut core::ffi::c_void,
     pub base_pool: *mut BLI_mempool,
     pub link_pool: *mut BLI_mempool,
 }
