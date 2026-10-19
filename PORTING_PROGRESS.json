@@ -3514,6 +3514,46 @@
     "upstream/source/blender/geometry/GEO_mesh_bevel.hh": {
       "crate": "blender-io",
       "module": "GEO_mesh_bevel.rs"
+    },
+    "upstream/source/blender/geometry/GEO_mesh_boolean.hh": {
+      "crate": "blender-io",
+      "module": "GEO_mesh_boolean.rs"
+    },
+    "upstream/source/blender/geometry/intern/mesh_boolean_manifold.hh": {
+      "crate": "blender-io",
+      "module": "mesh_boolean_manifold.rs"
+    },
+    "upstream/source/blender/geometry/GEO_mesh_selection.hh": {
+      "crate": "blender-io",
+      "module": "GEO_mesh_selection.rs"
+    },
+    "upstream/source/blender/geometry/GEO_mesh_to_curve.hh": {
+      "crate": "blender-io",
+      "module": "GEO_mesh_to_curve.rs"
+    },
+    "upstream/source/blender/geometry/GEO_mesh_to_volume.hh": {
+      "crate": "blender-io",
+      "module": "GEO_mesh_to_volume.rs"
+    },
+    "upstream/source/blender/geometry/GEO_mix_geometries.hh": {
+      "crate": "blender-io",
+      "module": "GEO_mix_geometries.rs"
+    },
+    "upstream/source/blender/geometry/GEO_point_merge.hh": {
+      "crate": "blender-io",
+      "module": "GEO_point_merge.rs"
+    },
+    "upstream/source/blender/geometry/GEO_points_to_volume.hh": {
+      "crate": "blender-io",
+      "module": "GEO_points_to_volume.rs"
+    },
+    "upstream/source/blender/geometry/GEO_realize_instances.hh": {
+      "crate": "blender-io",
+      "module": "GEO_realize_instances.rs"
+    },
+    "upstream/source/blender/geometry/GEO_reorder.hh": {
+      "crate": "blender-io",
+      "module": "GEO_reorder.rs"
     }
   },
   "failed": {
@@ -11893,42 +11933,6 @@
       "reason": "pruned_legacy_or_test",
       "subsystem": "functions"
     },
-    "upstream/source/blender/geometry/GEO_mesh_boolean.hh": {
-      "confidence": 0.4985617133783603,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_mesh_selection.hh": {
-      "confidence": 0.47330259810841463,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_mesh_to_curve.hh": {
-      "confidence": 0.5558975292361695,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_mesh_to_volume.hh": {
-      "confidence": 0.5128539747918488,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_mix_geometries.hh": {
-      "confidence": 0.5374862548733662,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_point_merge.hh": {
-      "confidence": 0.3554983307255355,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_points_to_volume.hh": {
-      "confidence": 0.3722345880240181,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_realize_instances.hh": {
-      "confidence": 0.4156209574757754,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_reorder.hh": {
-      "confidence": 0.5375581319929489,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/geometry/GEO_resample_curves.hh": {
       "confidence": 0.4132281000037803,
       "reason": "zev_route_skip"
@@ -12019,10 +12023,6 @@
     },
     "upstream/source/blender/geometry/intern/mesh_boolean_manifold.cc": {
       "confidence": 0.5353490440710902,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/intern/mesh_boolean_manifold.hh": {
-      "confidence": 0.3130692186497628,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/geometry/intern/mesh_copy_selection.cc": {
