@@ -56,6 +56,19 @@ pub struct BMEdge_OFlag {
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
+pub struct BMLoop {
+    pub head: BMHeader,
+    pub v: *mut BMVert,
+    pub e: *mut BMEdge,
+    pub f: *mut BMFace,
+    pub radial_next: *mut BMLoop,
+    pub radial_prev: *mut BMLoop,
+    pub next: *mut BMLoop,
+    pub prev: *mut BMLoop,
+}
+
+#[repr(C)]
+#[derive(Debug, Clone, PartialEq, Default)]
 pub struct BMElemF {
     pub head: BMHeader,
 }

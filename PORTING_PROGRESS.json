@@ -3298,6 +3298,18 @@
       "module": "wm_xr_location_scouting.rs",
       "time_s": 7.61,
       "worker": 4
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_delete.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_delete.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_inline.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_inline.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_iterators_inline.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_iterators_inline.rs"
     }
   },
   "failed": {
@@ -3422,9 +3434,6 @@
     "upstream/source/blender/blenlib/intern/task_iterator.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/task_pool.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/intern/bmesh_callback_generic.cc": "compile_check_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_delete.hh": "transpile_error",
-    "upstream/source/blender/bmesh/intern/bmesh_inline.hh": "transpile_error",
-    "upstream/source/blender/bmesh/intern/bmesh_iterators_inline.hh": "transpile_error",
     "upstream/source/blender/bmesh/intern/bmesh_iterators_parallel.hh": "transpile_error",
     "upstream/source/blender/bmesh/intern/bmesh_mesh_debug.cc": "compile_check_failed",
     "upstream/source/blender/bmesh/intern/bmesh_mesh_debug.hh": "transpile_error",

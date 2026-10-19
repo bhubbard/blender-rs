@@ -832,6 +832,10 @@ pub mod bmo_join_triangles;
 pub use bmo_join_triangles::*;
 pub mod bmesh_delete;
 pub use bmesh_delete::*;
+pub mod bmesh_inline;
+pub use bmesh_inline::*;
+pub mod bmesh_iterators_inline;
+pub use bmesh_iterators_inline::*;
 
 
 

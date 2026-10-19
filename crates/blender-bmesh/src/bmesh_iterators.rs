@@ -1,5 +1,5 @@
-//! Auto-transpiled C/C++ header module: bmesh_iterators
-
+use core::ffi::c_void;
+use crate::bmesh_class::{BMVert, BMEdge, BMFace, BMLoop, BMesh};
 use crate::*;
 
 #[repr(C)]
@@ -104,6 +104,19 @@ pub struct data {
     pub vert_of_face: BMIter__vert_of_face,
     pub edge_of_face: BMIter__edge_of_face,
     pub loop_of_face: BMIter__loop_of_face,
+}
+
+pub type BMIter__begin_cb = Option<unsafe extern "C" fn(*mut c_void)>;
+pub type BMIter__step_cb = Option<unsafe extern "C" fn(*mut c_void) -> *mut c_void>;
+
+#[repr(C)]
+#[derive(Debug, Clone, Default)]
+pub struct BMIter {
+    pub data: data,
+    pub begin: BMIter__begin_cb,
+    pub step: BMIter__step_cb,
+    pub count: i32,
+    pub itype: i8,
 }
 
 #[repr(C)]
