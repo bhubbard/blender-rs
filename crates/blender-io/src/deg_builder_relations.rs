@@ -220,59 +220,8 @@ pub struct bSound {
     pub _opaque: [u8; 0],
 }
 
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct ComponentNode {
-    pub _opaque: [u8; 0],
-}
 
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct Depsgraph {
-    pub _opaque: [u8; 0],
-}
 
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct IDNode {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct Node {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct OperationNode {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct Relation {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct RootPChanMap {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct TimeSourceNode {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct DepsgraphBuilderCache {
-    pub _opaque: [u8; 0],
-}
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]

@@ -1,35 +1,34 @@
 //! Auto-transpiled C/C++ header module: depsgraph_physics
+//! Upstream: source/blender/depsgraph/intern/depsgraph_physics.hh
 
 use crate::*;
+use crate::DEG_depsgraph::Depsgraph;
+use blender_dna::DNA_collection_types::Collection;
+use std::os::raw::c_uint;
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
-pub struct T {
+pub struct CollisionRelation {
     pub _opaque: [u8; 0],
 }
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
-pub struct CollisionComponentFlag {
+pub struct EffectorRelation {
     pub _opaque: [u8; 0],
 }
 
-#[repr(i32)]
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum CollisionComponentFlag_2 {
-    None = 0,
-    Transform = 1 << 0,
-    Geometry = 1 << 1,
-    EvalPose = 1 << 2,
-}
+extern "C" {
+    pub fn DEG_build_effector_relations(
+        graph: *mut Depsgraph,
+        collection: *mut Collection,
+    ) -> *mut ListBaseT<EffectorRelation>;
 
-impl Default for CollisionComponentFlag_2 {
-    fn default() -> Self {
-        unsafe { core::mem::zeroed() }
-    }
-}
+    pub fn DEG_build_collision_relations(
+        graph: *mut Depsgraph,
+        collection: *mut Collection,
+        modifier_type: c_uint,
+    ) -> *mut ListBaseT<CollisionRelation>;
 
-pub const None: i32 = CollisionComponentFlag_2::None as i32;
-pub const Transform: i32 = CollisionComponentFlag_2::Transform as i32;
-pub const Geometry: i32 = CollisionComponentFlag_2::Geometry as i32;
-pub const EvalPose: i32 = CollisionComponentFlag_2::EvalPose as i32;
+    pub fn DEG_clear_physics_relations(graph: *mut Depsgraph);
+}
