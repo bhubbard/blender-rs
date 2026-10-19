@@ -3406,6 +3406,34 @@
     "upstream/source/blender/bmesh/tools/bmesh_wireframe.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh_wireframe.rs"
+    },
+    "upstream/source/blender/geometry/GEO_curves_remove_and_split.hh": {
+      "crate": "blender-io",
+      "module": "GEO_curves_remove_and_split.rs"
+    },
+    "upstream/source/blender/geometry/GEO_interpolate_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_interpolate_curves.rs"
+    },
+    "upstream/source/blender/geometry/GEO_mesh_merge_verts.hh": {
+      "crate": "blender-io",
+      "module": "GEO_mesh_merge_verts.rs"
+    },
+    "upstream/source/blender/geometry/GEO_trim_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_trim_curves.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_coloring.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_coloring.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_coloring_utils.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_coloring_utils.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_set.rs"
     }
   },
   "failed": {
@@ -3756,12 +3784,6 @@
     "upstream/source/blender/draw/intern/shaders/draw_debug_infos.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/intern/shaders/draw_gsplat.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/intern/shaders/draw_gsplat_lib.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/geometry/GEO_curves_remove_and_split.hh": "transpile_error",
-    "upstream/source/blender/geometry/GEO_interpolate_curves.hh": "transpile_error",
-    "upstream/source/blender/geometry/GEO_mesh_merge_verts.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/geometry/GEO_trim_curves.hh": "transpile_error",
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_coloring_utils.hh": "transpile_error",
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/IMB_imbuf_types.hh": "compile_check_failed",
     "upstream/source/blender/imbuf/IMB_interp.hh": "transpile_error",
     "upstream/source/blender/imbuf/IMB_partial_update.hh": "compile_check_failed",
@@ -11835,10 +11857,6 @@
       "confidence": 0.4985617133783603,
       "reason": "zev_route_skip"
     },
-    "upstream/source/blender/geometry/GEO_mesh_merge_verts.hh": {
-      "confidence": 0.4883397777679206,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/geometry/GEO_mesh_selection.hh": {
       "confidence": 0.47330259810841463,
       "reason": "zev_route_skip"
@@ -12099,10 +12117,6 @@
       "confidence": 0.17402454919349997,
       "reason": "zev_route_skip"
     },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_coloring.hh": {
-      "confidence": 0.3374552164767222,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_damping_angular.hh": {
       "confidence": 0.17036248388777012,
       "reason": "zev_route_skip"
@@ -12125,10 +12139,6 @@
     },
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_rod_bend_twist.hh": {
       "confidence": 0.16918212093202728,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set.hh": {
-      "confidence": 0.34183777849642266,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set_params.hh": {
