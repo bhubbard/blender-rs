@@ -2623,3 +2623,7 @@ pub mod GEO_uv_pack;
 pub use GEO_uv_pack::*;
 pub mod GEO_volume_grid_resample;
 pub use GEO_volume_grid_resample::*;
+pub mod DEG_depsgraph_light_linking;
+pub use DEG_depsgraph_light_linking::*;
+pub mod DEG_depsgraph_query;
+pub use DEG_depsgraph_query::*;

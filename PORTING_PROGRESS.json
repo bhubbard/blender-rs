@@ -3586,6 +3586,14 @@
     "upstream/source/blender/geometry/GEO_volume_grid_resample.hh": {
       "crate": "blender-io",
       "module": "GEO_volume_grid_resample.rs"
+    },
+    "upstream/source/blender/depsgraph/DEG_depsgraph_light_linking.hh": {
+      "crate": "blender-io",
+      "module": "DEG_depsgraph_light_linking.rs"
+    },
+    "upstream/source/blender/depsgraph/DEG_depsgraph_query.hh": {
+      "crate": "blender-io",
+      "module": "DEG_depsgraph_query.rs"
     }
   },
   "failed": {
@@ -3796,7 +3804,6 @@
     "upstream/source/blender/compositor/shaders/infos/compositor_parallel_reduction_infos.hh": "transpile_error",
     "upstream/source/blender/compositor/utilities/COM_utilities_diagonals.hh": "transpile_error",
     "upstream/source/blender/compositor/utilities/COM_utilities_oidn.hh": "transpile_error",
-    "upstream/source/blender/depsgraph/DEG_depsgraph_query.hh": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.h": "compile_check_failed",
@@ -8087,10 +8094,6 @@
     },
     "upstream/source/blender/compositor/shaders/infos/compositor_z_combine_infos.hh": {
       "confidence": 0.1890121709181956,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/DEG_depsgraph_light_linking.hh": {
-      "confidence": 0.3229061937889519,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/depsgraph/intern/builder/deg_builder.h": {
