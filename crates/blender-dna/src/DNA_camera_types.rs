@@ -1,6 +1,7 @@
 //! Auto-transpiled C/C++ header module: DNA_camera_types
 
 use crate::*;
+pub use crate::DNA_gpu_types::GPUDOFSettings;
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]
@@ -109,53 +110,6 @@ impl Default for Camera {
     }
 }
 
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct AnimData {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct Object {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct Image {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct ImageUser {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct MovieClip {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct MovieClipUser {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct Text {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct GPUDOFSettings {
-    pub _opaque: [u8; 0],
-}
 
 #[repr(i32)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

@@ -81,17 +81,6 @@ pub struct ViewerPath {
     pub path: ListBaseT<ViewerPathElem>,
 }
 
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct ID {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct bNodeTree {
-    pub _opaque: [u8; 0],
-}
 
 #[repr(i32)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

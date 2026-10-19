@@ -89,11 +89,6 @@ pub struct MovieClipScopes {
     pub slide_scale: [f32; 2],
 }
 
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct AnimData {
-    pub _opaque: [u8; 0],
-}
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]

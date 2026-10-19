@@ -23,6 +23,13 @@ type int8_t = i8;
 type uint8_t = u8;
 #[allow(non_camel_case_types)]
 type uchar = u8;
+
+#[repr(C)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
+pub struct bNodeInstanceKey {
+    pub value: u32,
+}
+
 #[allow(non_camel_case_types)]
 type ushort = u16;
 #[allow(non_camel_case_types)]

@@ -446,6 +446,7 @@ pub use DNA_constraint_types::{bConstraint, bConstraintTarget};
 
 
 pub mod DNA_viewer_path_types;
+pub use DNA_viewer_path_types::*;
 
 
 
@@ -482,6 +483,7 @@ pub mod DNA_shader_fx_types;
 pub mod DNA_speaker_types;
 
 pub mod DNA_text_types;
+pub use DNA_text_types::*;
 
 
 
@@ -504,6 +506,7 @@ pub mod DNA_brush_enums;
 
 
 pub mod DNA_camera_types;
+pub use DNA_camera_types::*;
 
 pub mod DNA_colorband_types;
 
@@ -642,6 +645,7 @@ pub mod eevee_shader;
 
 
 pub mod DNA_mask_types;
+pub use DNA_mask_types::*;
 
 
 
@@ -769,4 +773,7 @@ pub mod DNA_view3d_types;
 pub use DNA_view3d_types::*;
 pub mod DNA_userdef_types;
 pub use DNA_userdef_types::*;
+pub mod DNA_space_types;
+pub use DNA_space_types::*;
+
 

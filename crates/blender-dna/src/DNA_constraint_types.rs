@@ -405,17 +405,6 @@ pub struct bGeometryAttributeConstraint {
     pub _pad0: [i8; 7],
 }
 
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct Text {
-    pub _opaque: [u8; 0],
-}
-
-#[repr(C)]
-#[derive(Debug, Clone, PartialEq, Default)]
-pub struct Object {
-    pub _opaque: [u8; 0],
-}
 
 #[repr(C)]
 #[derive(Debug, Clone, PartialEq, Default)]

@@ -2504,7 +2504,9 @@
     },
     "upstream/source/blender/makesdna/DNA_mask_types.h": {
       "crate": "blender-dna",
-      "module": "DNA_mask_types.rs"
+      "module": "DNA_mask_types.rs",
+      "mode": "ast_fast_path",
+      "time_s": 0.1
     },
     "upstream/source/blender/makesdna/DNA_material_types.h": {
       "crate": "blender-dna",
@@ -3266,6 +3268,12 @@
       "module": "DNA_userdef_types.rs",
       "mode": "ast_fast_path",
       "time_s": 0.1
+    },
+    "upstream/source/blender/makesdna/DNA_space_types.h": {
+      "crate": "blender-dna",
+      "module": "DNA_space_types.rs",
+      "mode": "ast_fast_path",
+      "time_s": 0.1
     }
   },
   "failed": {
@@ -3760,7 +3768,6 @@
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/makesdna/DNA_array_utils.hh": "transpile_error",
     "upstream/source/blender/makesdna/DNA_sdna_types.h": "compile_check_failed",
-    "upstream/source/blender/makesdna/DNA_space_types.h": "compile_check_failed",
     "upstream/source/blender/makesdna/DNA_vec_defaults.h": "transpile_error",
     "upstream/source/blender/makesdna/intern/dna_genfile.cc": "compile_check_failed",
     "upstream/source/blender/makesdna/intern/dna_parse.cc": "compile_check_failed",
