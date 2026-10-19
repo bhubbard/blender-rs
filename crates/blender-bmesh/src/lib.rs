@@ -842,6 +842,14 @@ pub mod bmesh_tools;
 pub use bmesh_tools::*;
 pub mod bmesh_query_inline;
 pub use bmesh_query_inline::*;
+pub mod bmesh_iterators_parallel;
+pub use bmesh_iterators_parallel::*;
+pub mod bmesh_mesh_debug;
+pub use bmesh_mesh_debug::*;
+pub mod bmesh_walkers_private;
+pub use bmesh_walkers_private::*;
+pub mod bmesh_walkers;
+pub use bmesh_walkers::*;
 
 
 

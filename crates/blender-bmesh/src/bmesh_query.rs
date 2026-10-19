@@ -3,6 +3,19 @@
 //! `BM_edge_other_vert`, `BM_edge_is_boundary`, `BM_vert_in_face`, ...).
 
 use crate::*;
+use crate::bmesh_class::{BMVert as BMVertC, BMEdge as BMEdgeC, BMFace as BMFaceC, BMLoop as BMLoopC};
+
+extern "C" {
+    pub fn BM_vert_in_face(v: *mut BMVertC, f: *mut BMFaceC) -> bool;
+    pub fn BM_verts_in_face_count(varr: *mut *mut BMVertC, len: i32, f: *mut BMFaceC) -> i32;
+    pub fn BM_verts_in_face(varr: *mut *mut BMVertC, len: i32, f: *mut BMFaceC) -> bool;
+    pub fn BM_edge_in_face(e: *const BMEdgeC, f: *const BMFaceC) -> bool;
+    pub fn BM_edge_calc_length(e: *const BMEdgeC) -> f32;
+    pub fn BM_edge_calc_length_squared(e: *const BMEdgeC) -> f32;
+    pub fn BM_edge_face_pair(e: *mut BMEdgeC, r_fa: *mut *mut BMFaceC, r_fb: *mut *mut BMFaceC) -> bool;
+    pub fn BM_edge_loop_pair(e: *mut BMEdgeC, r_la: *mut *mut BMLoopC, r_lb: *mut *mut BMLoopC) -> bool;
+    pub fn BM_edge_other_loop(e: *mut BMEdgeC, l: *mut BMLoopC) -> *mut BMLoopC;
+}
 
 impl BMesh {
     /// The vertex of `e` that is not `v` (`BM_edge_other_vert`).
