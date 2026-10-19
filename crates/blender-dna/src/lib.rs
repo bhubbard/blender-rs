@@ -761,5 +761,5 @@ pub mod DNA_xr_types;
 pub use DNA_xr_types::*;
 pub mod dna_parse;
 pub use dna_parse::*;
-
-
+pub mod DNA_windowmanager_types;
+pub use DNA_windowmanager_types::*;
