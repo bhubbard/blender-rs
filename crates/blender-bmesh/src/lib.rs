@@ -782,6 +782,8 @@ pub mod bmesh_query_uv;
 pub use bmesh_query_uv::*;
 pub mod bmesh_structure;
 pub use bmesh_structure::*;
+pub mod bmesh_structure_inline;
+pub use bmesh_structure_inline::*;
 pub mod bmesh_uvselect;
 pub use bmesh_uvselect::*;
 pub mod bmesh_walkers_impl;
@@ -836,6 +838,8 @@ pub mod bmesh_inline;
 pub use bmesh_inline::*;
 pub mod bmesh_iterators_inline;
 pub use bmesh_iterators_inline::*;
+pub mod bmesh_tools;
+pub use bmesh_tools::*;
 
 
 

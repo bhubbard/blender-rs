@@ -3310,6 +3310,18 @@
     "upstream/source/blender/bmesh/intern/bmesh_iterators_inline.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh_iterators_inline.rs"
+    },
+    "upstream/source/blender/bmesh/bmesh_tools.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_tools.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_structure.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_structure.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_structure_inline.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_structure_inline.rs"
     }
   },
   "failed": {
@@ -3442,8 +3454,6 @@
     "upstream/source/blender/bmesh/intern/bmesh_query.hh": "transpile_error",
     "upstream/source/blender/bmesh/intern/bmesh_query_inline.hh": "transpile_error",
     "upstream/source/blender/bmesh/intern/bmesh_query_uv.hh": "transpile_error",
-    "upstream/source/blender/bmesh/intern/bmesh_structure.hh": "transpile_error",
-    "upstream/source/blender/bmesh/intern/bmesh_structure_inline.hh": "transpile_error",
     "upstream/source/blender/bmesh/intern/bmesh_walkers_private.hh": "compile_check_failed",
     "upstream/source/blender/bmesh/operators/bmo_circularize.cc": "compile_check_failed",
     "upstream/source/blender/bmesh/operators/bmo_fill_holes.cc": "compile_check_failed",
@@ -7477,10 +7487,6 @@
     "upstream/source/blender/blenloader/tests/blendfile_loading_base_test.h": {
       "reason": "pruned_legacy_or_test",
       "subsystem": "blenloader"
-    },
-    "upstream/source/blender/bmesh/bmesh_tools.hh": {
-      "confidence": 0.5643249624550417,
-      "reason": "zev_route_skip"
     },
     "upstream/source/blender/bmesh/intern/bmesh_log.cc": {
       "confidence": 0.5781975968150452,
