@@ -3358,6 +3358,54 @@
     "upstream/source/blender/bmesh/intern/bmesh_walkers.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh_walkers.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_bevel.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_bevel.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_bisect_plane.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_bisect_plane.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_boolean.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_boolean.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_decimate.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_decimate.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_edgenet.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_edgenet.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_edgesplit.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_edgesplit.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_intersect_edges.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_intersect_edges.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_path_region_uv.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_path_region_uv.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_region_match.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_region_match.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_separate.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_separate.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_triangulate.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_triangulate.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_wireframe.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_wireframe.rs"
     }
   },
   "failed": {
@@ -3507,31 +3555,21 @@
     "upstream/source/blender/bmesh/operators/bmo_wireframe.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_beautify.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_bisect_plane.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_bisect_plane.hh": "transpile_error",
     "upstream/source/blender/bmesh/tools/bmesh_boolean.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_boolean.hh": "transpile_error",
-    "upstream/source/blender/bmesh/tools/bmesh_decimate.hh": "transpile_error",
     "upstream/source/blender/bmesh/tools/bmesh_decimate_collapse.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_decimate_dissolve.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_decimate_unsubdivide.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_edgenet.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_edgesplit.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_edgesplit.hh": "transpile_error",
     "upstream/source/blender/bmesh/tools/bmesh_intersect.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_intersect_edges.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_intersect_edges.hh": "transpile_error",
     "upstream/source/blender/bmesh/tools/bmesh_path.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_path_region.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_path_region_uv.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_path_region_uv.hh": "transpile_error",
     "upstream/source/blender/bmesh/tools/bmesh_path_uv.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_region_match.hh": "transpile_error",
     "upstream/source/blender/bmesh/tools/bmesh_separate.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_separate.hh": "transpile_error",
     "upstream/source/blender/bmesh/tools/bmesh_triangulate.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_triangulate.hh": "transpile_error",
     "upstream/source/blender/bmesh/tools/bmesh_wireframe.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_wireframe.hh": "transpile_error",
     "upstream/source/blender/compositor/COM_group_node_operation.hh": "transpile_error",
     "upstream/source/blender/compositor/COM_input_descriptor.hh": "compile_check_failed",
     "upstream/source/blender/compositor/COM_render_context.hh": "compile_check_failed",
@@ -7543,14 +7581,6 @@
     },
     "upstream/source/blender/bmesh/tools/bmesh_bevel.cc": {
       "confidence": 0.5369075594288967,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/bmesh/tools/bmesh_bevel.hh": {
-      "confidence": 0.4345804246723874,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/bmesh/tools/bmesh_edgenet.hh": {
-      "confidence": 0.4220336683227614,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/bmesh/tools/bmesh_region_match.cc": {

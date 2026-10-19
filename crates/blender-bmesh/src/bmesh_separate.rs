@@ -2,6 +2,13 @@
 //! an edge into one vertex per fan.
 
 use crate::*;
+use crate::bmesh_class::BMesh as BMeshC;
+
+pub type BMFaceFilterFunc = Option<unsafe extern "C" fn(f: *mut crate::bmesh_class::BMFace, user_data: *mut core::ffi::c_void) -> bool>;
+
+extern "C" {
+    pub fn BM_mesh_separate_faces(bm: *mut BMeshC, filter_fn: BMFaceFilterFunc, user_data: *mut core::ffi::c_void);
+}
 
 impl BMesh {
     /// Separates `v` so every group of faces connected around it through shared edges gets

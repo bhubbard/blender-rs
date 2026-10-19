@@ -850,6 +850,28 @@ pub mod bmesh_walkers_private;
 pub use bmesh_walkers_private::*;
 pub mod bmesh_walkers;
 pub use bmesh_walkers::*;
+pub mod bmesh_bevel;
+pub use bmesh_bevel::*;
+pub mod bmesh_bisect_plane;
+pub use bmesh_bisect_plane::*;
+pub mod bmesh_boolean;
+pub use bmesh_boolean::*;
+pub mod bmesh_decimate;
+pub use bmesh_decimate::*;
+pub mod bmesh_edgenet;
+pub use bmesh_edgenet::*;
+pub mod bmesh_edgesplit;
+pub use bmesh_edgesplit::*;
+pub mod bmesh_intersect_edges;
+pub use bmesh_intersect_edges::*;
+pub mod bmesh_path_region_uv;
+pub use bmesh_path_region_uv::*;
+pub mod bmesh_region_match;
+pub use bmesh_region_match::*;
+pub mod bmesh_triangulate;
+pub use bmesh_triangulate::*;
+pub mod bmesh_wireframe;
+pub use bmesh_wireframe::*;
 
 
 
