@@ -781,6 +781,9 @@ pub mod DNA_vec_defaults;
 pub use DNA_vec_defaults::*;
 pub mod DNA_array_utils;
 pub use DNA_array_utils::*;
+pub mod dna_rename_defs;
+pub use dna_rename_defs::*;
+
 
 
 

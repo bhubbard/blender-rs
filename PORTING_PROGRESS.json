@@ -3292,6 +3292,12 @@
       "module": "DNA_array_utils.rs",
       "mode": "safe_rust_transpile",
       "time_s": 0.1
+    },
+    "upstream/source/blender/makesdna/intern/dna_rename_defs.h": {
+      "crate": "blender-dna",
+      "module": "dna_rename_defs.rs",
+      "mode": "safe_rust_transpile",
+      "time_s": 0.05
     }
   },
   "failed": {
@@ -3786,7 +3792,6 @@
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/makesdna/intern/dna_genfile.cc": "compile_check_failed",
     "upstream/source/blender/makesdna/intern/dna_parse.cc": "compile_check_failed",
-    "upstream/source/blender/makesdna/intern/dna_rename_defs.h": "transpile_error",
     "upstream/source/blender/makesdna/intern/dna_utils.cc": "compile_check_failed",
     "upstream/source/blender/makesdna/intern/makesdna.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/RNA_types.hh": "compile_check_failed",
