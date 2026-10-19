@@ -3554,6 +3554,38 @@
     "upstream/source/blender/geometry/GEO_reorder.hh": {
       "crate": "blender-io",
       "module": "GEO_reorder.rs"
+    },
+    "upstream/source/blender/geometry/GEO_resample_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_resample_curves.rs"
+    },
+    "upstream/source/blender/geometry/GEO_reverse_uv_sampler.hh": {
+      "crate": "blender-io",
+      "module": "GEO_reverse_uv_sampler.rs"
+    },
+    "upstream/source/blender/geometry/GEO_separate_geometry.hh": {
+      "crate": "blender-io",
+      "module": "GEO_separate_geometry.rs"
+    },
+    "upstream/source/blender/geometry/GEO_simplify_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_simplify_curves.rs"
+    },
+    "upstream/source/blender/geometry/GEO_smooth_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_smooth_curves.rs"
+    },
+    "upstream/source/blender/geometry/GEO_subdivide_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_subdivide_curves.rs"
+    },
+    "upstream/source/blender/geometry/GEO_uv_pack.hh": {
+      "crate": "blender-io",
+      "module": "GEO_uv_pack.rs"
+    },
+    "upstream/source/blender/geometry/GEO_volume_grid_resample.hh": {
+      "crate": "blender-io",
+      "module": "GEO_volume_grid_resample.rs"
     }
   },
   "failed": {
@@ -11932,38 +11964,6 @@
     "upstream/source/blender/functions/tests/FN_multi_function_test_common.hh": {
       "reason": "pruned_legacy_or_test",
       "subsystem": "functions"
-    },
-    "upstream/source/blender/geometry/GEO_resample_curves.hh": {
-      "confidence": 0.4132281000037803,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_reverse_uv_sampler.hh": {
-      "confidence": 0.3393549360298431,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_separate_geometry.hh": {
-      "confidence": 0.5388967501642499,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_simplify_curves.hh": {
-      "confidence": 0.5392877806037261,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_smooth_curves.hh": {
-      "confidence": 0.5378607942557462,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_subdivide_curves.hh": {
-      "confidence": 0.5388453314218039,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_uv_pack.hh": {
-      "confidence": 0.36469510493175816,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_volume_grid_resample.hh": {
-      "confidence": 0.5394071888516788,
-      "reason": "zev_route_skip"
     },
     "upstream/source/blender/geometry/intern/add_curves_on_mesh.cc": {
       "confidence": 0.5344765157919033,
