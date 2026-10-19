@@ -2334,6 +2334,12 @@
       "mode": "ast_fast_path",
       "module": "DNA_armature_types.rs"
     },
+    "upstream/source/blender/makesdna/DNA_array_utils.hh": {
+      "crate": "blender-dna",
+      "mode": "safe_rust_transpile",
+      "module": "DNA_array_utils.rs",
+      "time_s": 0.1
+    },
     "upstream/source/blender/makesdna/DNA_asset_types.h": {
       "crate": "blender-dna",
       "mode": "ast_fast_path",
@@ -2504,8 +2510,8 @@
     },
     "upstream/source/blender/makesdna/DNA_mask_types.h": {
       "crate": "blender-dna",
-      "module": "DNA_mask_types.rs",
       "mode": "ast_fast_path",
+      "module": "DNA_mask_types.rs",
       "time_s": 0.1
     },
     "upstream/source/blender/makesdna/DNA_material_types.h": {
@@ -2628,6 +2634,12 @@
       "crate": "blender-dna",
       "module": "DNA_sdna_type_ids.rs"
     },
+    "upstream/source/blender/makesdna/DNA_sdna_types.h": {
+      "crate": "blender-dna",
+      "mode": "safe_rust_transpile",
+      "module": "DNA_sdna_types.rs",
+      "time_s": 0.1
+    },
     "upstream/source/blender/makesdna/DNA_sequence_types.h": {
       "crate": "blender-dna",
       "mode": "ast_fast_path",
@@ -2652,6 +2664,12 @@
       "crate": "blender-dna",
       "mode": "ast_fast_path",
       "module": "DNA_space_enums.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_space_types.h": {
+      "crate": "blender-dna",
+      "mode": "ast_fast_path",
+      "module": "DNA_space_types.rs",
+      "time_s": 0.1
     },
     "upstream/source/blender/makesdna/DNA_speaker_types.h": {
       "crate": "blender-dna",
@@ -2679,9 +2697,21 @@
       "mode": "ast_fast_path",
       "module": "DNA_userdef_enums.rs"
     },
+    "upstream/source/blender/makesdna/DNA_userdef_types.h": {
+      "crate": "blender-dna",
+      "mode": "ast_fast_path",
+      "module": "DNA_userdef_types.rs",
+      "time_s": 0.1
+    },
     "upstream/source/blender/makesdna/DNA_uuid_types.h": {
       "crate": "blender-dna",
       "module": "DNA_uuid_types.rs"
+    },
+    "upstream/source/blender/makesdna/DNA_vec_defaults.h": {
+      "crate": "blender-dna",
+      "mode": "safe_rust_transpile",
+      "module": "DNA_vec_defaults.rs",
+      "time_s": 0.05
     },
     "upstream/source/blender/makesdna/DNA_vec_types.h": {
       "crate": "blender-dna",
@@ -2748,6 +2778,12 @@
       "module": "dna_parse.rs",
       "time_s": 14.23,
       "worker": 2
+    },
+    "upstream/source/blender/makesdna/intern/dna_rename_defs.h": {
+      "crate": "blender-dna",
+      "mode": "safe_rust_transpile",
+      "module": "dna_rename_defs.rs",
+      "time_s": 0.05
     },
     "upstream/source/blender/makesdna/intern/dna_utils.h": {
       "crate": "blender-dna",
@@ -3262,42 +3298,6 @@
       "module": "wm_xr_location_scouting.rs",
       "time_s": 7.61,
       "worker": 4
-    },
-    "upstream/source/blender/makesdna/DNA_userdef_types.h": {
-      "crate": "blender-dna",
-      "module": "DNA_userdef_types.rs",
-      "mode": "ast_fast_path",
-      "time_s": 0.1
-    },
-    "upstream/source/blender/makesdna/DNA_space_types.h": {
-      "crate": "blender-dna",
-      "module": "DNA_space_types.rs",
-      "mode": "ast_fast_path",
-      "time_s": 0.1
-    },
-    "upstream/source/blender/makesdna/DNA_sdna_types.h": {
-      "crate": "blender-dna",
-      "module": "DNA_sdna_types.rs",
-      "mode": "safe_rust_transpile",
-      "time_s": 0.1
-    },
-    "upstream/source/blender/makesdna/DNA_vec_defaults.h": {
-      "crate": "blender-dna",
-      "module": "DNA_vec_defaults.rs",
-      "mode": "safe_rust_transpile",
-      "time_s": 0.05
-    },
-    "upstream/source/blender/makesdna/DNA_array_utils.hh": {
-      "crate": "blender-dna",
-      "module": "DNA_array_utils.rs",
-      "mode": "safe_rust_transpile",
-      "time_s": 0.1
-    },
-    "upstream/source/blender/makesdna/intern/dna_rename_defs.h": {
-      "crate": "blender-dna",
-      "module": "dna_rename_defs.rs",
-      "mode": "safe_rust_transpile",
-      "time_s": 0.05
     }
   },
   "failed": {
