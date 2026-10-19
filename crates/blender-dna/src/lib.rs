@@ -403,6 +403,7 @@ pub mod DNA_uuid_types;
 
 
 pub mod DNA_theme_types;
+pub use DNA_theme_types::*;
 
 
 
@@ -766,3 +767,6 @@ pub mod DNA_windowmanager_types;
 pub use DNA_windowmanager_types::*;
 pub mod DNA_view3d_types;
 pub use DNA_view3d_types::*;
+pub mod DNA_userdef_types;
+pub use DNA_userdef_types::*;
+

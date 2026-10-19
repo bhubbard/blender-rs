@@ -30,9 +30,6 @@ type uint = u32;
 #[allow(non_camel_case_types)]
 type ulong = u64;
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
-#[repr(C)]
-pub struct bUUID { pub data: [u8; 16] }
 
 #[repr(transparent)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default)]
