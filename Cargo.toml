@@ -10,6 +10,7 @@ members = [
     "crates/blender-stl",
     "crates/blender-bridge",
     "crates/blender-cluster",
+    "crates/blender-app",
 ]
 resolver = "2"
 
