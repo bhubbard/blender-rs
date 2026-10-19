@@ -3322,6 +3322,18 @@
     "upstream/source/blender/bmesh/intern/bmesh_structure_inline.hh": {
       "crate": "blender-bmesh",
       "module": "bmesh_structure_inline.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_query_inline.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_query_inline.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_query_uv.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_query_uv.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_uvselect.hh": {
+      "crate": "blender-bmesh",
+      "module": "bmesh_uvselect.rs"
     }
   },
   "failed": {
@@ -3452,8 +3464,6 @@
     "upstream/source/blender/bmesh/intern/bmesh_mesh_duplicate.hh": "transpile_error",
     "upstream/source/blender/bmesh/intern/bmesh_operators.cc": "compile_check_failed",
     "upstream/source/blender/bmesh/intern/bmesh_query.hh": "transpile_error",
-    "upstream/source/blender/bmesh/intern/bmesh_query_inline.hh": "transpile_error",
-    "upstream/source/blender/bmesh/intern/bmesh_query_uv.hh": "transpile_error",
     "upstream/source/blender/bmesh/intern/bmesh_walkers_private.hh": "compile_check_failed",
     "upstream/source/blender/bmesh/operators/bmo_circularize.cc": "compile_check_failed",
     "upstream/source/blender/bmesh/operators/bmo_fill_holes.cc": "compile_check_failed",
@@ -7494,10 +7504,6 @@
     },
     "upstream/source/blender/bmesh/intern/bmesh_mesh_convert.cc": {
       "confidence": 0.5686242609221168,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/bmesh/intern/bmesh_uvselect.hh": {
-      "confidence": 0.5289699318854054,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/bmesh/intern/bmesh_walkers.cc": {

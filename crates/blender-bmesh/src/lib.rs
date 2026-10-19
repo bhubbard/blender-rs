@@ -840,6 +840,8 @@ pub mod bmesh_iterators_inline;
 pub use bmesh_iterators_inline::*;
 pub mod bmesh_tools;
 pub use bmesh_tools::*;
+pub mod bmesh_query_inline;
+pub use bmesh_query_inline::*;
 
 
 
