@@ -3742,6 +3742,46 @@
     "upstream/source/blender/depsgraph/intern/node/deg_node_time.hh": {
       "crate": "blender-io",
       "module": "deg_node_time.rs"
+    },
+    "upstream/source/blender/blenloader/BLO_blend_validate.hh": {
+      "crate": "blender-io",
+      "module": "BLO_blend_validate.rs"
+    },
+    "upstream/source/blender/blenloader/BLO_read_write.hh": {
+      "crate": "blender-io",
+      "module": "BLO_read_write.rs"
+    },
+    "upstream/source/blender/blenloader/BLO_readfile.hh": {
+      "crate": "blender-io",
+      "module": "BLO_readfile.rs"
+    },
+    "upstream/source/blender/blenloader/BLO_undofile.hh": {
+      "crate": "blender-io",
+      "module": "BLO_undofile.rs"
+    },
+    "upstream/source/blender/blenloader/BLO_userdef_default.h": {
+      "crate": "blender-io",
+      "module": "BLO_userdef_default.rs"
+    },
+    "upstream/source/blender/blenloader/BLO_writefile.hh": {
+      "crate": "blender-io",
+      "module": "BLO_writefile.rs"
+    },
+    "upstream/source/blender/blenloader/intern/readfile.hh": {
+      "crate": "blender-io",
+      "module": "BLO_intern_readfile.rs"
+    },
+    "upstream/source/blender/blenloader/intern/writefile.hh": {
+      "crate": "blender-io",
+      "module": "BLO_intern_writefile.rs"
+    },
+    "upstream/source/blender/blenloader/tests/blendfile_loading_base_test.h": {
+      "crate": "blender-io",
+      "module": "BLO_blendfile_loading_base_test.rs"
+    },
+    "upstream/source/blender/blenloader/versioning_common.hh": {
+      "crate": "blender-io",
+      "module": "BLO_versioning_common.rs"
     }
   },
   "failed": {

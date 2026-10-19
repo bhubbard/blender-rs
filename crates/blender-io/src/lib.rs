@@ -2691,4 +2691,25 @@ pub mod pipeline;
 pub use pipeline::*;
 pub mod pipeline_compositor;
 pub use pipeline_compositor::*;
+pub mod BLO_readfile;
+pub use BLO_readfile::*;
+pub mod BLO_writefile;
+pub use BLO_writefile::*;
+pub mod BLO_read_write;
+pub use BLO_read_write::*;
+pub mod BLO_blend_validate;
+pub use BLO_blend_validate::*;
+pub mod BLO_undofile;
+pub use BLO_undofile::*;
+pub mod BLO_userdef_default;
+pub use BLO_userdef_default::*;
+pub mod BLO_intern_readfile;
+pub use BLO_intern_readfile::*;
+pub mod BLO_intern_writefile;
+pub use BLO_intern_writefile::*;
+pub mod BLO_versioning_common;
+pub use BLO_versioning_common::*;
+pub mod BLO_blendfile_loading_base_test;
+pub use BLO_blendfile_loading_base_test::*;
+
 
