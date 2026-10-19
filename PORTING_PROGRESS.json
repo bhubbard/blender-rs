@@ -3474,6 +3474,46 @@
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_rod_bend_twist.hh": {
       "crate": "blender-io",
       "module": "GEO_xpbd_constraint_rod_bend_twist.rs"
+    },
+    "upstream/source/blender/geometry/GEO_curve_constraints.hh": {
+      "crate": "blender-io",
+      "module": "GEO_curve_constraints.rs"
+    },
+    "upstream/source/blender/geometry/GEO_extend_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_extend_curves.rs"
+    },
+    "upstream/source/blender/geometry/GEO_fillet_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_fillet_curves.rs"
+    },
+    "upstream/source/blender/geometry/GEO_fit_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_fit_curves.rs"
+    },
+    "upstream/source/blender/geometry/GEO_foreach_geometry.hh": {
+      "crate": "blender-io",
+      "module": "GEO_foreach_geometry.rs"
+    },
+    "upstream/source/blender/geometry/GEO_grid_samplers.hh": {
+      "crate": "blender-io",
+      "module": "GEO_grid_samplers.rs"
+    },
+    "upstream/source/blender/geometry/GEO_join_geometries.hh": {
+      "crate": "blender-io",
+      "module": "GEO_join_geometries.rs"
+    },
+    "upstream/source/blender/geometry/GEO_merge_curves.hh": {
+      "crate": "blender-io",
+      "module": "GEO_merge_curves.rs"
+    },
+    "upstream/source/blender/geometry/GEO_merge_layers.hh": {
+      "crate": "blender-io",
+      "module": "GEO_merge_layers.rs"
+    },
+    "upstream/source/blender/geometry/GEO_mesh_bevel.hh": {
+      "crate": "blender-io",
+      "module": "GEO_mesh_bevel.rs"
     }
   },
   "failed": {
@@ -11852,46 +11892,6 @@
     "upstream/source/blender/functions/tests/FN_multi_function_test_common.hh": {
       "reason": "pruned_legacy_or_test",
       "subsystem": "functions"
-    },
-    "upstream/source/blender/geometry/GEO_curve_constraints.hh": {
-      "confidence": 0.5377585972098022,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_extend_curves.hh": {
-      "confidence": 0.5377741293550015,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_fillet_curves.hh": {
-      "confidence": 0.5370420016322632,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_fit_curves.hh": {
-      "confidence": 0.5356588459835412,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_foreach_geometry.hh": {
-      "confidence": 0.5399854161375843,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_grid_samplers.hh": {
-      "confidence": 0.538015878484234,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_join_geometries.hh": {
-      "confidence": 0.5373841833429851,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_merge_curves.hh": {
-      "confidence": 0.536338244611321,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_merge_layers.hh": {
-      "confidence": 0.4137593966913743,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/GEO_mesh_bevel.hh": {
-      "confidence": 0.45980063277472233,
-      "reason": "zev_route_skip"
     },
     "upstream/source/blender/geometry/GEO_mesh_boolean.hh": {
       "confidence": 0.4985617133783603,
