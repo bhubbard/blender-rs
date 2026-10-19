@@ -3286,6 +3286,12 @@
       "module": "DNA_vec_defaults.rs",
       "mode": "safe_rust_transpile",
       "time_s": 0.05
+    },
+    "upstream/source/blender/makesdna/DNA_array_utils.hh": {
+      "crate": "blender-dna",
+      "module": "DNA_array_utils.rs",
+      "mode": "safe_rust_transpile",
+      "time_s": 0.1
     }
   },
   "failed": {
@@ -3778,7 +3784,6 @@
     "upstream/source/blender/io/wavefront_obj/importer/obj_import_nurbs.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.cc": "apfel_generation_failed",
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/makesdna/DNA_array_utils.hh": "transpile_error",
     "upstream/source/blender/makesdna/intern/dna_genfile.cc": "compile_check_failed",
     "upstream/source/blender/makesdna/intern/dna_parse.cc": "compile_check_failed",
     "upstream/source/blender/makesdna/intern/dna_rename_defs.h": "transpile_error",

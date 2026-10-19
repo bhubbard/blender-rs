@@ -779,6 +779,9 @@ pub mod DNA_sdna_types;
 pub use DNA_sdna_types::*;
 pub mod DNA_vec_defaults;
 pub use DNA_vec_defaults::*;
+pub mod DNA_array_utils;
+pub use DNA_array_utils::*;
+
 
 
 
