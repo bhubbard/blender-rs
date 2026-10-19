@@ -3434,6 +3434,46 @@
     "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set.hh": {
       "crate": "blender-io",
       "module": "GEO_xpbd_constraint_set.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_geometry_ref.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_geometry_ref.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set_params.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_set_params.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_updater_velocity.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_updater_velocity.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set_templated.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_set_templated.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_damping_angular.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_damping_angular.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_damping_linear.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_damping_linear.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_friction_edge.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_friction_edge.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_friction_face.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_friction_face.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_pin_position.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_pin_position.rs"
+    },
+    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_rod_bend_twist.hh": {
+      "crate": "blender-io",
+      "module": "GEO_xpbd_constraint_rod_bend_twist.rs"
     }
   },
   "failed": {
@@ -12115,46 +12155,6 @@
     },
     "upstream/source/blender/geometry/tests/GEO_realize_instances_test.cc": {
       "confidence": 0.17402454919349997,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_damping_angular.hh": {
-      "confidence": 0.17036248388777012,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_damping_linear.hh": {
-      "confidence": 0.1704037012677408,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_friction_edge.hh": {
-      "confidence": 0.17068594032560183,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_friction_face.hh": {
-      "confidence": 0.17045244455758504,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_pin_position.hh": {
-      "confidence": 0.17137599041594517,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_rod_bend_twist.hh": {
-      "confidence": 0.16918212093202728,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set_params.hh": {
-      "confidence": 0.5396478880270412,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_constraint_set_templated.hh": {
-      "confidence": 0.19153229980480663,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_geometry_ref.hh": {
-      "confidence": 0.37531344324377786,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/geometry/xpbd/GEO_xpbd_updater_velocity.hh": {
-      "confidence": 0.17040688439891047,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/geometry/xpbd/intern/xpbd_constraint_coloring.cc": {
