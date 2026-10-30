@@ -19,3 +19,4 @@ blender-stl = { path = "../blender-stl" }
 clap = { version = "4", features = ["derive"] }
 colored = "2"
 anyhow = "1.0"
+eframe = "0.37.0"

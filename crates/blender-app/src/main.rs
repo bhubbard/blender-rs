@@ -8,9 +8,11 @@ use std::time::Instant;
 
 mod scene;
 mod viewport;
+mod gui;
 
 use scene::SceneContext;
 use viewport::ViewportRasterizer;
+use gui::BlenderAppGui;
 
 #[derive(Parser, Debug)]
 #[command(
@@ -22,6 +24,10 @@ struct Cli {
     /// Run in background without window / interactive UI
     #[arg(short = 'b', long = "background", default_value_t = false)]
     background: bool,
+
+    /// Launch full graphical desktop window UI
+    #[arg(long = "gui", default_value_t = false)]
+    gui: bool,
 
     /// Mesh primitive to instantiate (cube, sphere)
     #[arg(long = "primitive", default_value = "cube")]
@@ -121,6 +127,24 @@ fn main() -> Result<()> {
             total_time,
             rate
         );
+    }
+
+    // Launch GUI desktop app window if requested
+    if args.gui {
+        println!("{} Launching Blender Native Desktop GUI Window...", "🚀".bold());
+        let native_options = eframe::NativeOptions {
+            viewport: eframe::egui::ViewportBuilder::default()
+                .with_inner_size([1200.0, 800.0])
+                .with_min_inner_size([640.0, 480.0])
+                .with_title("Blender 4.2.0 (Rust Edition)"),
+            ..Default::default()
+        };
+        eframe::run_native(
+            "Blender 4.2.0",
+            native_options,
+            Box::new(|cc| Ok(Box::new(BlenderAppGui::new(cc)))),
+        ).map_err(|e| anyhow::anyhow!("GUI execution error: {e}"))?;
+        return Ok(());
     }
 
     // Viewport preview
