@@ -19,7 +19,8 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Brandon Hubbard <bhubbard@users.noreply.github.com>"]
 license = "GPL-2.0-or-later"
-repository = "https://github.com/blender/blender"
+repository = "https://github.com/bhubbard/blender-rs"
+homepage = "https://code.brandonhubbard.com/blender-rs/"
 
 [workspace.dependencies]
 glam = "0.29"

@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blender-rs — Memory-Safe Rust Re-Architecture of Blender 3D | Brandon Hubbard</title>
+  <meta name="description" content="Interactive 3D BMesh half-edge playground, 11-crate workspace architecture explorer, and empirical benchmarks for blender-rs (69,902 LOC across 808 Rust files)." />
+  <link rel="canonical" href="https://code.brandonhubbard.com/blender-rs/" />
+  <meta property="og:title" content="blender-rs — Memory-Safe Rust Re-Architecture of Blender 3D" />
+  <meta property="og:description" content="11 Rust workspace crates, 69,902 LOC, generational MemPool half-edge BMesh kernel, pointerless BVH/KD-tree, and interactive 3D viewport playground." />
+  <meta property="og:url" content="https://code.brandonhubbard.com/blender-rs/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFEM8TN9ZM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NFEM8TN9ZM');
+  </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "blender-rs",
+    "description": "Memory-safe, SIMD-accelerated Rust re-architecture of the Blender 3D creation suite (blenlib, makesdna, bmesh, blenkernel, and io).",
+    "codeRepository": "https://github.com/bhubbard/blender-rs",
+    "url": "https://code.brandonhubbard.com/blender-rs/",
+    "programmingLanguage": "Rust",
+    "runtimePlatform": "Rust 2021 Edition",
+    "license": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+    "author": {
+      "@type": "Person",
+      "name": "Brandon Hubbard",
+      "url": "https://brandonhubbard.com"
+    }
+  }
+  </script>
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root, [data-theme="dark"] {
+      --bg-canvas: #0a0a0a;
+      --bg-surface: #121212;
+      --bg-elevated: #171717;
+      --bg-glass: rgba(10, 10, 10, 0.92);
+      --text-primary: #f5f5f5;
+      --text-secondary: #a3a3a3;
+      --text-muted: #737373;
+      --border-grid: #262626;
+      --border-strong: #404040;
+      --accent-primary: #3b82f6;
+      --accent-hover: #60a5fa;
+      --accent-soft: rgba(59, 130, 246, 0.12);
+      --status-pass: #16a34a;
+      --status-pass-bg: rgba(22, 163, 74, 0.14);
+      --status-warn: #ea580c;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    [data-theme="light"] {
+      --bg-canvas: #fafafa;
+      --bg-surface: #ffffff;
+      --bg-elevated: #f4f4f5;
+      --bg-glass: rgba(250, 250, 250, 0.92);
+      --text-primary: #0a0a0a;
+      --text-secondary: #52525b;
+      --text-muted: #71717a;
+      --border-grid: #d4d4d8;
+      --border-strong: #a1a1aa;
+      --accent-primary: #0055ff;
+      --accent-hover: #0044cc;
+      --accent-soft: rgba(0, 85, 255, 0.08);
+      --status-pass: #15803d;
+      --status-pass-bg: rgba(21, 128, 61, 0.1);
+      --status-warn: #c2410c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg-canvas);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Unified Site Header */
+    .site-header {
+      border-bottom: 1px solid var(--border-grid);
+      background: var(--bg-surface);
+    }
+
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: var(--accent-primary);
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .site-nav a {
+      color: var(--text-secondary);
+      transition: color 0.15s ease;
+    }
+
+    .site-nav a:hover, .site-nav a.active {
+      color: var(--accent-primary);
+    }
+
+    .theme-btn {
+      background: transparent;
+      border: 1px solid var(--border-grid);
+      color: var(--text-primary);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 6px 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .theme-btn:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+
+    /* Sticky Subnav */
+    .subnav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-grid);
+    }
+
+    .subnav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 44px;
+      overflow-x: auto;
+    }
+
+    .subnav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .subnav-links a {
+      color: var(--text-secondary);
+    }
+
+    .subnav-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      border-bottom: 1px solid var(--border-grid);
+      padding: 56px 0 48px;
+      background:
+        linear-gradient(to right, var(--border-grid) 1px, transparent 1px) 0 0 / 48px 48px,
+        linear-gradient(to bottom, var(--border-grid) 1px, transparent 1px) 0 0 / 48px 48px;
+      background-color: var(--bg-canvas);
+    }
+
+    .hero-Inner {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-grid);
+      padding: 40px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-primary);
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-primary);
+      padding: 4px 10px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 68ch;
+      margin-bottom: 28px;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 12px 20px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+
+    .btn-primary {
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: #ffffff;
+    }
+
+    /* Telemetry Strip */
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      border-top: 1px solid var(--border-grid);
+      border-left: 1px solid var(--border-grid);
+    }
+
+    .telemetry-cell {
+      padding: 18px 20px;
+      background: var(--bg-surface);
+      border-right: 1px solid var(--border-grid);
+      border-bottom: 1px solid var(--border-grid);
+    }
+
+    .telemetry-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .telemetry-value {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .telemetry-sub {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--status-pass);
+      margin-top: 4px;
+    }
+
+    /* Sections */
+    .section {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border-grid);
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .section-index {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-primary);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    /* Interactive 3D Playground */
+    .playground-shell {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      border: 1px solid var(--border-grid);
+      background: var(--bg-surface);
+    }
+
+    @media (max-width: 980px) {
+      .playground-shell {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .playground-controls {
+      border-right: 1px solid var(--border-grid);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .control-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .select-input, .btn-group button {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 9px 12px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-grid);
+      color: var(--text-primary);
+      cursor: pointer;
+    }
+
+    .btn-group {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .btn-group button.active {
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .bmesh-readout {
+      border: 1px solid var(--border-grid);
+      background: var(--bg-canvas);
+      padding: 14px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .readout-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-grid);
+      padding-bottom: 4px;
+    }
+
+    .readout-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .euler-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      background: var(--status-pass-bg);
+      color: var(--status-pass);
+      font-weight: 700;
+    }
+
+    .playground-viewport-area {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background: var(--bg-canvas);
+    }
+
+    .viewport-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border-grid);
+      background: var(--bg-surface);
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      gap: 10px;
+    }
+
+    .viewport-stage {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      min-height: 460px;
+    }
+
+    .viewport-stage.split-ascii {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 768px) {
+      .viewport-stage.split-ascii {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #bmesh-canvas {
+      width: 100%;
+      height: 460px;
+      display: block;
+      cursor: grab;
+      background:
+        radial-gradient(circle at center, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+    }
+
+    #bmesh-canvas:active {
+      cursor: grabbing;
+    }
+
+    #ascii-viewport {
+      display: none;
+      border-left: 1px solid var(--border-grid);
+      background: #050505;
+      color: #3b82f6;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      line-height: 1.05;
+      padding: 16px;
+      overflow: auto;
+      white-space: pre;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .viewport-stage.split-ascii #ascii-viewport {
+      display: flex;
+    }
+
+    .viewport-footer {
+      padding: 10px 16px;
+      border-top: 1px solid var(--border-grid);
+      background: var(--bg-surface);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* Crate Explorer Grid */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-grid);
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      background: var(--accent-soft);
+    }
+
+    .crate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      border-top: 1px solid var(--border-grid);
+      border-left: 1px solid var(--border-grid);
+    }
+
+    @media (max-width: 500px) {
+      .crate-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .crate-card {
+      background: var(--bg-surface);
+      border-right: 1px solid var(--border-grid);
+      border-bottom: 1px solid var(--border-grid);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .crate-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .crate-name {
+      font-family: var(--font-mono);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+    }
+
+    .crate-stats {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      border: 1px solid var(--border-grid);
+      padding: 3px 8px;
+      background: var(--bg-canvas);
+    }
+
+    .crate-origin {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    .crate-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .crate-code {
+      font-family: var(--font-mono);
+      font-size: 0.73rem;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-grid);
+      padding: 10px 12px;
+      color: var(--text-primary);
+      overflow-x: auto;
+    }
+
+    /* Benchmarks Table */
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border-grid);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.875rem;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-grid);
+      border-right: 1px solid var(--border-grid);
+    }
+
+    th {
+      background: var(--bg-elevated);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-secondary);
+    }
+
+    td {
+      background: var(--bg-surface);
+    }
+
+    td.mono {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+    }
+
+    .speedup-pill {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      background: var(--status-pass-bg);
+      color: var(--status-pass);
+      border: 1px solid var(--status-pass);
+    }
+
+    /* Code Blocks */
+    .code-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+      gap: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .code-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .code-panel {
+      border: 1px solid var(--border-grid);
+      background: var(--bg-surface);
+    }
+
+    .code-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border-grid);
+      background: var(--bg-elevated);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+
+    .copy-btn {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 4px 10px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-grid);
+      color: var(--text-primary);
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+
+    pre.code-body {
+      padding: 18px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      background: var(--bg-canvas);
+      color: var(--text-primary);
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 40px 0;
+      background: var(--bg-surface);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Unified Brandon Hubbard Site Header -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="https://brandonhubbard.com" class="brand-link">
+        <span class="brand-mark"></span>
+        <span>Brandon Hubbard // Systems Engineering</span>
+      </a>
+      <nav class="site-nav" aria-label="Global Navigation">
+        <a href="https://brandonhubbard.com">Home</a>
+        <a href="https://brandonhubbard.com/resume/">Resume</a>
+        <a href="https://code.brandonhubbard.com/" class="active">Code Portal</a>
+        <a href="https://github.com/bhubbard/blender-rs" target="_blank" rel="noopener">GitHub</a>
+        <button class="theme-btn" id="theme-toggle" type="button" aria-label="Toggle color theme">LIGHT // DARK</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sticky Subnav -->
+  <div class="subnav">
+    <div class="subnav-inner">
+      <div class="subnav-links">
+        <a href="#playground">01. 3D BMesh Playground</a>
+        <a href="#crates">02. 11-Crate Architecture</a>
+        <a href="#benchmarks">03. Empirical Benchmarks</a>
+        <a href="#quickstart">04. CLI &amp; SDK Quickstart</a>
+      </div>
+      <div class="subnav-links">
+        <a href="https://github.com/bhubbard/blender-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener">BENCHMARKS.md ↗</a>
+        <a href="https://github.com/bhubbard/blender-rs/blob/main/PORTING.md" target="_blank" rel="noopener">PORTING.md ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-Inner">
+        <div class="eyebrow">RUST 2021 // GENERATIONAL BMESH KERNEL // SIMD GLAM GEOMETRY</div>
+        <h1>blender-rs</h1>
+        <p class="hero-subtitle">
+          A memory-safe, SIMD-accelerated Rust re-architecture of the Blender 3D creation suite
+          (<code>blenlib</code>, <code>makesdna</code>, <code>bmesh</code>, <code>blenkernel</code>, and <code>io</code>).
+          Replaces raw cyclic C pointers with generational arena handles (<code>MemPool&lt;T&gt;</code>) and pointerless spatial trees (<code>Bvh</code>, <code>KdTree</code>).
+        </p>
+        <div class="btn-row">
+          <a href="#playground" class="btn btn-primary">Launch 3D BMesh Playground ↓</a>
+          <a href="https://github.com/bhubbard/blender-rs" class="btn" target="_blank" rel="noopener">View Source on GitHub ↗</a>
+          <a href="https://github.com/bhubbard/blender-rs/blob/main/BENCHMARKS.md" class="btn" target="_blank" rel="noopener">Read Benchmark Report ↗</a>
+        </div>
+
+        <div class="telemetry-grid">
+          <div class="telemetry-cell">
+            <div class="telemetry-label">Workspace Crates</div>
+            <div class="telemetry-value">11</div>
+            <div class="telemetry-sub">Modular Cargo Workspace</div>
+          </div>
+          <div class="telemetry-cell">
+            <div class="telemetry-label">Rust Source Scale</div>
+            <div class="telemetry-value">69,902 LOC</div>
+            <div class="telemetry-sub">Across 808 .rs Source Files</div>
+          </div>
+          <div class="telemetry-cell">
+            <div class="telemetry-label">Ported C/C++ Modules</div>
+            <div class="telemetry-value">773</div>
+            <div class="telemetry-sub">Verified Subsystem Translations</div>
+          </div>
+          <div class="telemetry-cell">
+            <div class="telemetry-label">Kernel Speedup vs C++</div>
+            <div class="telemetry-value">1.11x–1.31x</div>
+            <div class="telemetry-sub">MemPool, BVH, KD-Tree &amp; STL Weld</div>
+          </div>
+          <div class="telemetry-cell">
+            <div class="telemetry-label">Raw Pointer Cycles</div>
+            <div class="telemetry-value">0</div>
+            <div class="telemetry-sub">64-bit Generational Handle&lt;T&gt;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01. Interactive 3D BMesh & Terminal Wireframe Playground -->
+  <section class="section" id="playground">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-index">01 // Interactive Half-Edge Kernel &amp; Rasterizer</div>
+          <h2 class="section-title">3D BMesh Topology &amp; Terminal Viewport Playground</h2>
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-secondary);">
+          Simulating <code>blender_bmesh::BMesh</code> + <code>blender_app::ViewportRasterizer</code>
+        </div>
+      </div>
+
+      <div class="playground-shell">
+        <div class="playground-controls">
+          <div class="control-group">
+            <label class="control-label" for="primitive-select">
+              <span>1. Procedural Primitive</span>
+              <span>--primitive</span>
+            </label>
+            <select id="primitive-select" class="select-input">
+              <option value="cube">Default Cube (2x2x2 Manifold)</option>
+              <option value="sphere">UV Sphere (24x12 Lat/Lon)</option>
+              <option value="icosahedron">Icosahedron (20 Equilateral Faces)</option>
+              <option value="torus">Torus Ring (Genus-1, χ = 0)</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <div class="control-label">
+              <span>2. Subdivision Passes (edge_split)</span>
+              <span id="subdiv-label">0 Passes</span>
+            </div>
+            <div class="btn-group" id="subdiv-buttons">
+              <button type="button" data-subdiv="0" class="active">0x</button>
+              <button type="button" data-subdiv="1">1x</button>
+              <button type="button" data-subdiv="2">2x</button>
+              <button type="button" data-subdiv="3">3x</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="render-mode">
+              <span>3. Viewport Shading &amp; Inspection</span>
+              <span>Mode</span>
+            </label>
+            <select id="render-mode" class="select-input">
+              <option value="solid-wire">Shaded Faces + Half-Edge Wireframe</option>
+              <option value="normals">Face Normals (Newell's Method) + Vertices</option>
+              <option value="bvh">BVH AABB Spatial Bounds Overlay</option>
+              <option value="terminal">Split View: 3D Canvas + CLI Bresenham ASCII</option>
+            </select>
+          </div>
+
+          <div class="bmesh-readout" aria-live="polite">
+            <div class="readout-row">
+              <span>vpool (BMVert):</span>
+              <strong id="stat-verts">8</strong>
+            </div>
+            <div class="readout-row">
+              <span>epool (BMEdge):</span>
+              <strong id="stat-edges">12</strong>
+            </div>
+            <div class="readout-row">
+              <span>lpool (BMLoop):</span>
+              <strong id="stat-loops">24</strong>
+            </div>
+            <div class="readout-row">
+              <span>fpool (BMFace):</span>
+              <strong id="stat-faces">6</strong>
+            </div>
+            <div class="readout-row">
+              <span>Euler (χ = V - E + F):</span>
+              <span class="euler-badge" id="stat-euler">χ = 2 (Manifold)</span>
+            </div>
+            <div class="readout-row">
+              <span>CLI Command:</span>
+              <code id="stat-cli" style="color: var(--accent-primary);">blender --primitive cube</code>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+            <button type="button" class="btn" id="export-obj-btn" style="justify-content: center; padding: 10px;">
+              Export .OBJ ↓
+            </button>
+            <button type="button" class="btn" id="toggle-spin-btn" style="justify-content: center; padding: 10px;">
+              Pause Orbit
+            </button>
+          </div>
+        </div>
+
+        <div class="playground-viewport-area">
+          <div class="viewport-toolbar">
+            <span>DRAG TO ORBIT // SCROLL TO ZOOM // DOUBLE-CLICK TO RESET CAMERA</span>
+            <span id="fps-counter" style="color: var(--status-pass);">60 FPS // TOPOLOGY VALIDATED</span>
+          </div>
+
+          <div class="viewport-stage" id="viewport-stage">
+            <canvas id="bmesh-canvas" width="900" height="460"></canvas>
+            <div id="ascii-viewport" aria-label="Bresenham Terminal Wireframe Rasterizer"></div>
+          </div>
+
+          <div class="viewport-footer">
+            <span>Generational Arena: <code>Handle&lt;T&gt; { index: u32, generation: u32 }</code></span>
+            <span id="bbox-readout">AABB Bounds: [-1.00, -1.00, -1.00] → [1.00, 1.00, 1.00]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02. 11-Crate Workspace Architecture Explorer -->
+  <section class="section" id="crates">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-index">02 // Modular Rust Workspace</div>
+          <h2 class="section-title">11-Crate Architecture &amp; Subsystem Mapping</h2>
+        </div>
+      </div>
+
+      <div class="filter-bar" id="crate-filters">
+        <button type="button" class="filter-btn active" data-filter="all">All 11 Crates (69,902 LOC)</button>
+        <button type="button" class="filter-btn" data-filter="kernel">Core Kernel &amp; Memory</button>
+        <button type="button" class="filter-btn" data-filter="geometry">Math &amp; Spatial Geometry</button>
+        <button type="button" class="filter-btn" data-filter="io">Mesh I/O &amp; Bridges</button>
+        <button type="button" class="filter-btn" data-filter="app">CLI &amp; Verification</button>
+      </div>
+
+      <div class="crate-grid" id="crate-grid">
+        <article class="crate-card" data-category="kernel">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-bmesh</span>
+              <span class="crate-stats">115 files // 6,086 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/blender/bmesh</code></div>
+          </div>
+          <p class="crate-desc">
+            Non-manifold-capable half-edge polygon mesh kernel (<code>BMVert</code>, <code>BMEdge</code>, <code>BMLoop</code>, <code>BMFace</code>) with circular disk, radial, and face-loop cycles, Newell normals, Euler operators, and bevel/bisect/bridge/extrude/subdivide operators.
+          </p>
+          <div class="crate-code">bm.face_create(&amp;[v0, v1, v2, v3], None)?; bm.edge_split(edge_h, 0.5)?;</div>
+        </article>
+
+        <article class="crate-card" data-category="kernel">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-mem</span>
+              <span class="crate-stats">21 files // 662 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/blender/blenlib/BLI_mempool.h</code></div>
+          </div>
+          <p class="crate-desc">
+            Generational slot allocator (<code>MemPool&lt;T&gt;</code>) and 64-bit <code>Handle&lt;T&gt;</code> indexing that replaces raw C pointers across cyclic BMesh topologies, guaranteeing zero use-after-free bugs with O(1) free-list reuse.
+          </p>
+          <div class="crate-code">let h: Handle&lt;BMVert&gt; = pool.alloc(vert); assert!(pool.get(h).is_some());</div>
+        </article>
+
+        <article class="crate-card" data-category="kernel">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-dna</span>
+              <span class="crate-stats">172 files // 42,090 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/blender/makesdna/DNA_*</code></div>
+          </div>
+          <p class="crate-desc">
+            Complete Rust type definitions for Blender's serialized DNA data schemas (<code>DNA_mesh_types</code>, <code>DNA_object_types</code>, <code>DNA_scene_types</code>, <code>MeshElemFlags</code>, and <code>CustomDataType</code>).
+          </p>
+          <div class="crate-code">pub struct MeshElemFlags: u8 { const SELECT = 1 &lt;&lt; 0; const SMOOTH = 1 &lt;&lt; 4; }</div>
+        </article>
+
+        <article class="crate-card" data-category="geometry">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-geom</span>
+              <span class="crate-stats">13 files // 1,917 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/blender/blenlib/intern/math_geom.cc</code></div>
+          </div>
+          <p class="crate-desc">
+            Hand-ported computational geometry kernels: flat-array median-split <code>Bvh</code> (raycasting &amp; closest-point), pointerless 3D <code>KdTree</code>, ear-clipping <code>triangulate_polygon_v2</code>, monotone-chain <code>convex_hull_v2</code>, and barycentric/ray intersections.
+          </p>
+          <div class="crate-code">let bvh = Bvh::new(&amp;tris); let hit = bvh.ray_cast(orig, dir);</div>
+        </article>
+
+        <article class="crate-card" data-category="geometry">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-math</span>
+              <span class="crate-stats">57 files // 1,570 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/blender/blenlib/BLI_math_*</code></div>
+          </div>
+          <p class="crate-desc">
+            SIMD-accelerated vectors, matrices, and quaternions powered by <code>glam</code>, alongside <code>Bounds2D</code>, <code>BoundingBox</code>, Garland-Heckbert <code>Quadric</code> decimation metrics, XPBD physics constraints, and Deriche/Van Vliet blur kernels.
+          </p>
+          <div class="crate-code">pub use glam::{Mat3, Mat4, Quat, Vec2, Vec3, Vec4};</div>
+        </article>
+
+        <article class="crate-card" data-category="io">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-io</span>
+              <span class="crate-stats">419 files // 15,511 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/blender/io/*</code></div>
+          </div>
+          <p class="crate-desc">
+            High-throughput mesh importers, exporters, and scene filter pipelines for Wavefront OBJ, Stanford PLY, STL, and Universal Scene Description (USD).
+          </p>
+          <div class="crate-code">let obj_text = blender_io::export_obj(&amp;scene.bmesh);</div>
+        </article>
+
+        <article class="crate-card" data-category="io">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-obj</span>
+              <span class="crate-stats">1 file // 327 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/blender/io/wavefront_obj</code></div>
+          </div>
+          <p class="crate-desc">
+            Standalone zero-dependency Wavefront <code>.obj</code> parser and serializer supporting arbitrary n-gons, negative relative indices, vertex normals/UVs, and ear-clipping fan triangulation.
+          </p>
+          <div class="crate-code">let mesh = blender_obj::parse_obj(src)?; let tris = mesh.triangulate();</div>
+        </article>
+
+        <article class="crate-card" data-category="io">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-stl</span>
+              <span class="crate-stats">1 file // 304 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/blender/io/stl</code></div>
+          </div>
+          <p class="crate-desc">
+            Auto-detecting binary and ASCII <code>.stl</code> reader and writer with bit-identical <code>[u32; 3]</code> vertex welding (<code>to_indexed</code> / <code>from_indexed</code>) that normalizes signed zero (<code>-0.0 == 0.0</code>).
+          </p>
+          <div class="crate-code">let stl = blender_stl::read_stl(&amp;bytes)?; let (verts, tris) = stl.to_indexed();</div>
+        </article>
+
+        <article class="crate-card" data-category="io">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-bridge</span>
+              <span class="crate-stats">1 file // 142 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/blender/blenkernel/intern/mesh_convert.cc</code></div>
+          </div>
+          <p class="crate-desc">
+            Lossless bidirectional topology conversion (<code>obj_to_bmesh</code> and <code>bmesh_to_obj</code>) preserving arbitrary n-gon face loops and verifying Euler characteristic invariants.
+          </p>
+          <div class="crate-code">let bm = obj_to_bmesh(&amp;obj)?; let roundtrip = bmesh_to_obj(&amp;bm);</div>
+        </article>
+
+        <article class="crate-card" data-category="app">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-app</span>
+              <span class="crate-stats">3 files // 388 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: <code>source/creator</code></div>
+          </div>
+          <p class="crate-desc">
+            The <code>blender</code> CLI binary providing procedural primitive generation, multi-pass edge subdivision, Wavefront OBJ export, a 3D terminal Bresenham wireframe viewport, and automated benchmarking.
+          </p>
+          <div class="crate-code">blender --primitive cube --subdivide 2 --viewport --export-obj out.obj</div>
+        </article>
+
+        <article class="crate-card" data-category="app">
+          <div>
+            <div class="crate-top">
+              <span class="crate-name">blender-cluster</span>
+              <span class="crate-stats">5 files // 905 LOC</span>
+            </div>
+            <div class="crate-origin">Upstream: Transpilation &amp; Verification Tooling</div>
+          </div>
+          <p class="crate-desc">
+            AST call-graph clusterer and automated C/C++ to Rust subsystem verification harness tracking the 773 ported modules in <code>PORTING_PROGRESS.json</code>.
+          </p>
+          <div class="crate-code">pub mod ast; pub mod cluster; pub mod verifier;</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03. Empirical Benchmarks -->
+  <section class="section" id="benchmarks">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-index">03 // Performance Telemetry</div>
+          <h2 class="section-title">Empirical Benchmarks: blender-rs vs Upstream Blender 4.2 C/C++</h2>
+        </div>
+        <a href="https://github.com/bhubbard/blender-rs/blob/main/BENCHMARKS.md" class="btn" target="_blank" rel="noopener">Full BENCHMARKS.md Report ↗</a>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Subsystem</th>
+              <th>Crate</th>
+              <th>Workload / Kernel</th>
+              <th>blender-rs (Rust)</th>
+              <th>Blender 4.2 (C/C++)</th>
+              <th>Speedup &amp; Safety Advantage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Memory Arena</strong></td>
+              <td class="mono">blender-mem</td>
+              <td><code>MemPool&lt;BMVert&gt;</code> 1M alloc + 50% free-list churn</td>
+              <td class="mono"><strong>14.2 ms</strong></td>
+              <td class="mono">16.8 ms (<code>BLI_mempool</code>)</td>
+              <td><span class="speedup-pill">1.18x faster</span> + Generational UAF safety</td>
+            </tr>
+            <tr>
+              <td><strong>BMesh Subdivision</strong></td>
+              <td class="mono">blender-bmesh</td>
+              <td>Default Cube + 3x <code>edge_split</code> + <code>validate_topology</code></td>
+              <td class="mono"><strong>41.8 µs</strong></td>
+              <td class="mono">46.5 µs (<code>BM_mesh_create</code>)</td>
+              <td><span class="speedup-pill">1.11x faster</span> + Zero raw C pointers</td>
+            </tr>
+            <tr>
+              <td><strong>BMesh UV Sphere</strong></td>
+              <td class="mono">blender-bmesh</td>
+              <td>64x32 UV Sphere (V=1,986, E=4,032, F=2,048)</td>
+              <td class="mono"><strong>312.4 µs</strong></td>
+              <td class="mono">348.0 µs (<code>BMO_op_uvsphere</code>)</td>
+              <td><span class="speedup-pill">1.11x faster</span> + Verified χ = 2 manifold</td>
+            </tr>
+            <tr>
+              <td><strong>BVH Raycast</strong></td>
+              <td class="mono">blender-geom</td>
+              <td><code>Bvh::new</code> (200K tris) + 10K Möller–Trumbore rays</td>
+              <td class="mono"><strong>28.4 ms / 1.9 ms</strong></td>
+              <td class="mono">34.1 ms / 2.2 ms (<code>BLI_bvhtree</code>)</td>
+              <td><span class="speedup-pill">1.20x faster</span> + Flat 36B <code>Vec&lt;Node&gt;</code></td>
+            </tr>
+            <tr>
+              <td><strong>3D KD-Tree</strong></td>
+              <td class="mono">blender-geom</td>
+              <td><code>KdTree::new</code> (100K pts) + 10K <code>find_nearest_n(16)</code></td>
+              <td class="mono"><strong>11.6 ms / 3.4 ms</strong></td>
+              <td class="mono">15.2 ms / 4.1 ms (<code>BLI_kdtree_3d</code>)</td>
+              <td><span class="speedup-pill">1.31x faster</span> + Pointerless 20B nodes</td>
+            </tr>
+            <tr>
+              <td><strong>Polygon Ear-Clip</strong></td>
+              <td class="mono">blender-geom</td>
+              <td><code>triangulate_polygon_v2</code> (1,000 concave 64-gons)</td>
+              <td class="mono"><strong>1.84 ms</strong></td>
+              <td class="mono">2.05 ms (<code>BLI_polyfill_2d</code>)</td>
+              <td><span class="speedup-pill">1.11x faster</span> + Collinear fallback</td>
+            </tr>
+            <tr>
+              <td><strong>Binary STL Weld</strong></td>
+              <td class="mono">blender-stl</td>
+              <td>Binary STL parse (100K tris) + <code>to_indexed</code> weld</td>
+              <td class="mono"><strong>8.7 ms</strong></td>
+              <td class="mono">11.4 ms (<code>io_mesh_stl</code>)</td>
+              <td><span class="speedup-pill">1.31x faster</span> + Bit-exact <code>[u32; 3]</code> hash</td>
+            </tr>
+            <tr>
+              <td><strong>OBJ ↔ BMesh Bridge</strong></td>
+              <td class="mono">blender-bridge</td>
+              <td><code>obj_to_bmesh</code> + <code>bmesh_to_obj</code> (10K n-gon faces)</td>
+              <td class="mono"><strong>6.2 ms</strong></td>
+              <td class="mono">7.9 ms (<code>io_wavefront_obj</code>)</td>
+              <td><span class="speedup-pill">1.27x faster</span> + Lossless n-gon cycles</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04. CLI & Rust SDK Quickstart -->
+  <section class="section" id="quickstart">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-index">04 // Reproducible Workflows</div>
+          <h2 class="section-title">CLI &amp; Rust SDK Quickstart</h2>
+        </div>
+      </div>
+
+      <div class="code-grid">
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span>TERMINAL // CLI VIEWPORT &amp; BENCHMARK</span>
+            <button type="button" class="copy-btn" data-copy="cli-code">Copy</button>
+          </div>
+          <pre class="code-body" id="cli-code"># Clone and run the full 11-crate test suite
+git clone https://github.com/bhubbard/blender-rs.git
+cd blender-rs
+cargo test --workspace --release
+
+# Render a subdivided cube in the 3D Bresenham terminal viewport
+cargo run --release -p blender-app --bin blender -- \
+  --primitive cube --subdivide 1 --viewport
+
+# Generate a UV sphere and export to Wavefront OBJ
+cargo run --release -p blender-app --bin blender -- \
+  --primitive sphere --export-obj sphere.obj
+
+# Run the end-to-end BMesh + subdivision + OBJ export benchmark
+cargo run --release -p blender-app --bin blender -- --benchmark</pre>
+        </div>
+
+        <div class="code-panel">
+          <div class="code-panel-header">
+            <span>RUST SDK // HALF-EDGE BMESH &amp; BVH RAYCAST</span>
+            <button type="button" class="copy-btn" data-copy="sdk-code">Copy</button>
+          </div>
+          <pre class="code-body" id="sdk-code">use blender_bmesh::BMesh;
+use blender_geom::bvh::Bvh;
+use blender_math::Vec3;
+
+fn main() -&gt; anyhow::Result&lt;()&gt; {
+    // 1. Construct a quad in the generational BMesh kernel
+    let mut bm = BMesh::new();
+    let v0 = bm.vert_create(Some(Vec3::new(0.0, 0.0, 0.0)), None);
+    let v1 = bm.vert_create(Some(Vec3::new(2.0, 0.0, 0.0)), None);
+    let v2 = bm.vert_create(Some(Vec3::new(2.0, 2.0, 0.0)), None);
+    let v3 = bm.vert_create(Some(Vec3::new(0.0, 2.0, 0.0)), None);
+    let face = bm.face_create(&amp;[v0, v1, v2, v3], None)?;
+
+    // 2. Split an edge via Euler operator (promotes quad to 5-gon)
+    let first_edge = bm.epool.iter().next().unwrap().0;
+    bm.edge_split(first_edge, 0.5)?;
+    bm.recalc_face_normals();
+    assert_eq!(bm.fpool.get(face).unwrap().len, 5);
+
+    // 3. Raycast triangles with blender_geom::bvh::Bvh
+    let tri = [Vec3::ZERO, Vec3::X * 2.0, Vec3::Y * 2.0];
+    let bvh = Bvh::new(&amp;[tri]);
+    let hit = bvh.ray_cast(Vec3::new(0.5, 0.5, 5.0), -Vec3::Z).unwrap();
+    assert!((hit.t - 5.0).abs() &lt; 1e-6);
+    Ok(())
+}</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>blender-rs</strong> // Memory-Safe Rust Re-Architecture of Blender 3D // GPL-2.0-or-later
+      </div>
+      <div style="display: flex; gap: 20px;">
+        <a href="https://code.brandonhubbard.com/">← Back to Code Portal</a>
+        <a href="https://github.com/bhubbard/blender-rs" target="_blank" rel="noopener">GitHub Repository ↗</a>
+        <a href="https://github.com/bhubbard/blender-rs/blob/main/BENCHMARKS.md" target="_blank" rel="noopener">Benchmarks ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive 3D BMesh Kernel & Viewport Script -->
+  <script>
+    (function() {
+      // Theme Toggle
+      const htmlEl = document.documentElement;
+      const themeBtn = document.getElementById('theme-toggle');
+      const savedTheme = localStorage.getItem('bh-theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        htmlEl.setAttribute('data-theme', savedTheme);
+      }
+      themeBtn.addEventListener('click', () => {
+        const next = htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        htmlEl.setAttribute('data-theme', next);
+        localStorage.setItem('bh-theme', next);
+      });
+
+      // Crate Filter Buttons
+      const filterBtns = document.querySelectorAll('#crate-filters .filter-btn');
+      const crateCards = document.querySelectorAll('#crate-grid .crate-card');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const cat = btn.getAttribute('data-filter');
+          crateCards.forEach(card => {
+            if (cat === 'all' || card.getAttribute('data-category') === cat) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Copy Buttons
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-copy');
+          const el = document.getElementById(targetId);
+          if (el && navigator.clipboard) {
+            navigator.clipboard.writeText(el.innerText).then(() => {
+              const orig = btn.innerText;
+              btn.innerText = 'COPIED';
+              setTimeout(() => { btn.innerText = orig; }, 1400);
+            });
+          }
+        });
+      });
+
+      // --- 3D Half-Edge BMesh Simulation & Viewport ---
+      const canvas = document.getElementById('bmesh-canvas');
+      const ctx = canvas.getContext('2d');
+      const asciiEl = document.getElementById('ascii-viewport');
+      const stageEl = document.getElementById('viewport-stage');
+
+      let currentPrimitive = 'cube';
+      let currentSubdiv = 0;
+      let renderMode = 'solid-wire';
+      let isSpinning = true;
+      let yaw = 0.65;
+      let pitch = 0.42;
+      let cameraDist = 4.2;
+      let mesh = { verts: [], faces: [], edges: [], normals: [], bvhBoxes: [], eulerExpected: 2 };
+
+      function buildPrimitive(type) {
+        let verts = [];
+        let faces = [];
+        let eulerExpected = 2;
+
+        if (type === 'cube') {
+          const s = 1.0;
+          verts = [
+            [-s, -s, -s], [ s, -s, -s], [ s,  s, -s], [-s,  s, -s],
+            [-s, -s,  s], [ s, -s,  s], [ s,  s,  s], [-s,  s,  s]
+          ];
+          faces = [
+            [0, 3, 2, 1],
+            [4, 5, 6, 7],
+            [0, 1, 5, 4],
+            [2, 3, 7, 6],
+            [0, 4, 7, 3],
+            [1, 2, 6, 5]
+          ];
+        } else if (type === 'sphere') {
+          const segs = 18, rings = 10, rad = 1.25;
+          verts.push([0, 0, rad]); // top pole 0
+          const grid = [];
+          for (let r = 1; r < rings; r++) {
+            const theta = Math.PI * r / rings;
+            const z = rad * Math.cos(theta);
+            const rSin = rad * Math.sin(theta);
+            const ring = [];
+            for (let s = 0; s < segs; s++) {
+              const phi = 2 * Math.PI * s / segs;
+              ring.push(verts.length);
+              verts.push([rSin * Math.cos(phi), rSin * Math.sin(phi), z]);
+            }
+            grid.push(ring);
+          }
+          const botIdx = verts.length;
+          verts.push([0, 0, -rad]);
+
+          for (let s = 0; s < segs; s++) {
+            faces.push([0, grid[0][s], grid[0][(s + 1) % segs]]);
+          }
+          for (let r = 0; r < grid.length - 1; r++) {
+            for (let s = 0; s < segs; s++) {
+              const ns = (s + 1) % segs;
+              faces.push([grid[r][s], grid[r + 1][s], grid[r + 1][ns], grid[r][ns]]);
+            }
+          }
+          const last = grid[grid.length - 1];
+          for (let s = 0; s < segs; s++) {
+            faces.push([last[(s + 1) % segs], last[s], botIdx]);
+          }
+        } else if (type === 'icosahedron') {
+          const t = (1 + Math.sqrt(5)) / 2;
+          const raw = [
+            [-1,  t, 0], [ 1,  t, 0], [-1, -t, 0], [ 1, -t, 0],
+            [ 0, -1, t], [ 0,  1, t], [ 0, -1,-t], [ 0,  1,-t],
+            [ t,  0,-1], [ t,  0, 1], [-t,  0,-1], [-t,  0, 1]
+          ];
+          verts = raw.map(v => {
+            const len = Math.hypot(v[0], v[1], v[2]);
+            return [v[0] / len * 1.3, v[1] / len * 1.3, v[2] / len * 1.3];
+          });
+          faces = [
+            [0,11,5],[0,5,1],[0,1,7],[0,7,10],[0,10,11],
+            [1,5,9],[5,11,4],[11,10,2],[10,7,6],[7,1,8],
+            [3,9,4],[3,4,2],[3,2,6],[3,6,8],[3,8,9],
+            [4,9,5],[2,4,11],[6,2,10],[8,6,7],[9,8,1]
+          ];
+        } else if (type === 'torus') {
+          eulerExpected = 0;
+          const R = 1.0, r = 0.42, majSegs = 18, minSegs = 10;
+          const grid = [];
+          for (let i = 0; i < majSegs; i++) {
+            const u = 2 * Math.PI * i / majSegs;
+            const ring = [];
+            for (let j = 0; j < minSegs; j++) {
+              const v = 2 * Math.PI * j / minSegs;
+              const x = (R + r * Math.cos(v)) * Math.cos(u);
+              const y = (R + r * Math.cos(v)) * Math.sin(u);
+              const z = r * Math.sin(v);
+              ring.push(verts.length);
+              verts.push([x, y, z]);
+            }
+            grid.push(ring);
+          }
+          for (let i = 0; i < majSegs; i++) {
+            const ni = (i + 1) % majSegs;
+            for (let j = 0; j < minSegs; j++) {
+              const nj = (j + 1) % minSegs;
+              faces.push([grid[i][j], grid[ni][j], grid[ni][nj], grid[i][nj]]);
+            }
+          }
+        }
+
+        return { verts, faces, eulerExpected };
+      }
+
+      // Quad/Tri Catmull-style topological face subdivision + edge_split simulation
+      function subdivideTopology(base, passes) {
+        let verts = base.verts.map(v => v.slice());
+        let faces = base.faces.map(f => f.slice());
+
+        for (let p = 0; p < passes; p++) {
+          const edgeMidMap = new Map();
+          const getMidVert = (a, b) => {
+            const k = a < b ? `${a}_${b}` : `${b}_${a}`;
+            if (edgeMidMap.has(k)) return edgeMidMap.get(k);
+            const va = verts[a], vb = verts[b];
+            const idx = verts.length;
+            verts.push([(va[0] + vb[0]) * 0.5, (va[1] + vb[1]) * 0.5, (va[2] + vb[2]) * 0.5]);
+            edgeMidMap.set(k, idx);
+            return idx;
+          };
+
+          const nextFaces = [];
+          for (const f of faces) {
+            // Face centroid
+            let cx = 0, cy = 0, cz = 0;
+            for (const vi of f) {
+              cx += verts[vi][0];
+              cy += verts[vi][1];
+              cz += verts[vi][2];
+            }
+            cx /= f.length; cy /= f.length; cz /= f.length;
+            const cIdx = verts.length;
+            verts.push([cx, cy, cz]);
+
+            const mids = f.map((vi, idx) => getMidVert(vi, f[(idx + 1) % f.length]));
+            for (let i = 0; i < f.length; i++) {
+              const prevMid = mids[(i + f.length - 1) % f.length];
+              nextFaces.push([f[i], mids[i], cIdx, prevMid]);
+            }
+          }
+          faces = nextFaces;
+        }
+
+        // Extract unique edges (epool) and loop count (lpool)
+        const edgeSet = new Set();
+        const edges = [];
+        let loopCount = 0;
+        for (const f of faces) {
+          loopCount += f.length;
+          for (let i = 0; i < f.length; i++) {
+            const a = f[i], b = f[(i + 1) % f.length];
+            const k = a < b ? `${a}_${b}` : `${b}_${a}`;
+            if (!edgeSet.has(k)) {
+              edgeSet.add(k);
+              edges.push([a, b]);
+            }
+          }
+        }
+
+        // Compute Newell face normals and centroids
+        const normals = faces.map(f => {
+          let nx = 0, ny = 0, nz = 0, cx = 0, cy = 0, cz = 0;
+          for (let i = 0; i < f.length; i++) {
+            const curr = verts[f[i]];
+            const next = verts[f[(i + 1) % f.length]];
+            nx += (curr[1] - next[1]) * (curr[2] + next[2]);
+            ny += (curr[2] - next[2]) * (curr[0] + next[0]);
+            nz += (curr[0] - next[0]) * (curr[1] + next[1]);
+            cx += curr[0]; cy += curr[1]; cz += curr[2];
+          }
+          const len = Math.hypot(nx, ny, nz) || 1;
+          const n = f.length;
+          return {
+            normal: [nx / len, ny / len, nz / len],
+            center: [cx / n, cy / n, cz / n]
+          };
+        });
+
+        // Compute BVH cluster boxes (group faces into octants for visualization)
+        const bvhBoxes = [];
+        const step = Math.max(1, Math.floor(faces.length / 8));
+        for (let i = 0; i < faces.length; i += step) {
+          let minX = Infinity, minY = Infinity, minZ = Infinity;
+          let maxX = -Infinity, maxY = -Infinity, maxZ = -Infinity;
+          for (let j = i; j < Math.min(faces.length, i + step); j++) {
+            for (const vi of faces[j]) {
+              const v = verts[vi];
+              if (v[0] < minX) minX = v[0];
+              if (v[1] < minY) minY = v[1];
+              if (v[2] < minZ) minZ = v[2];
+              if (v[0] > maxX) maxX = v[0];
+              if (v[1] > maxY) maxY = v[1];
+              if (v[2] > maxZ) maxZ = v[2];
+            }
+          }
+          bvhBoxes.push({ min: [minX, minY, minZ], max: [maxX, maxY, maxZ] });
+        }
+
+        return {
+          verts,
+          faces,
+          edges,
+          loopCount,
+          normals,
+          bvhBoxes,
+          eulerExpected: base.eulerExpected
+        };
+      }
+
+      function rebuildMesh() {
+        const base = buildPrimitive(currentPrimitive);
+        mesh = subdivideTopology(base, currentSubdiv);
+
+        // Update UI Telemetry
+        const V = mesh.verts.length;
+        const E = mesh.edges.length;
+        const L = mesh.loopCount;
+        const F = mesh.faces.length;
+        const chi = V - E + F;
+
+        document.getElementById('stat-verts').textContent = V.toLocaleString();
+        document.getElementById('stat-edges').textContent = E.toLocaleString();
+        document.getElementById('stat-loops').textContent = L.toLocaleString();
+        document.getElementById('stat-faces').textContent = F.toLocaleString();
+
+        const eulerEl = document.getElementById('stat-euler');
+        eulerEl.textContent = `χ = ${chi} (${chi === 2 ? 'Genus-0 Manifold' : 'Genus-1 Torus'})`;
+
+        const cliPrim = currentPrimitive === 'sphere' ? 'sphere' : 'cube';
+        const subFlag = currentSubdiv > 0 ? ` --subdivide ${currentSubdiv}` : '';
+        const vpFlag = renderMode === 'terminal' ? ' --viewport' : '';
+        document.getElementById('stat-cli').textContent = `blender --primitive ${cliPrim}${subFlag}${vpFlag}`;
+      }
+
+      function projectPoint(v, width, height) {
+        // Rotate Y (yaw) then Rotate X (pitch)
+        const cy = Math.cos(yaw), sy = Math.sin(yaw);
+        const cp = Math.cos(pitch), sp = Math.sin(pitch);
+
+        const x1 = v[0] * cy + v[2] * sy;
+        const z1 = -v[0] * sy + v[2] * cy;
+        const y2 = v[1] * cp - z1 * sp;
+        const z2 = v[1] * sp + z1 * cp;
+
+        const zCam = cameraDist - z2;
+        if (zCam <= 0.1) return null;
+        const fov = Math.min(width, height) * 0.85;
+        const sx = width * 0.5 + (x1 / zCam) * fov;
+        const syScreen = height * 0.5 - (y2 / zCam) * fov;
+        return { x: sx, y: syScreen, z: z2 };
+      }
+
+      // Bresenham ASCII Rasterizer (mirrors crates/blender-app/src/viewport.rs)
+      function renderAsciiViewport() {
+        const w = 54, h = 24;
+        const buf = new Array(w * h).fill(' ');
+
+        const drawLine = (x0, y0, x1, y1, ch) => {
+          let x = x0 | 0, y = y0 | 0;
+          const dx = Math.abs(x1 - x0), dy = -Math.abs(y1 - y0);
+          const sx = x0 < x1 ? 1 : -1, sy = y0 < y1 ? 1 : -1;
+          let err = dx + dy;
+          while (true) {
+            if (x >= 0 && x < w && y >= 0 && y < h) {
+              buf[y * w + x] = ch;
+            }
+            if (x === x1 && y === y1) break;
+            const e2 = 2 * err;
+            if (e2 >= dy) { err += dy; x += sx; }
+            if (e2 <= dx) { err += dx; y += sy; }
+          }
+        };
+
+        for (const [ia, ib] of mesh.edges) {
+          const p0 = projectPoint(mesh.verts[ia], w, h * 2);
+          const p1 = projectPoint(mesh.verts[ib], w, h * 2);
+          if (p0 && p1) {
+            drawLine(Math.round(p0.x), Math.round(p0.y * 0.5), Math.round(p1.x), Math.round(p1.y * 0.5), '█');
+          }
+        }
+
+        let out = '┌' + '─'.repeat(w) + '┐\n';
+        for (let r = 0; r < h; r++) {
+          out += '│' + buf.slice(r * w, (r + 1) * w).join('') + '│\n';
+        }
+        out += '└' + '─'.repeat(w) + '┘';
+        asciiEl.textContent = out;
+      }
+
+      function renderFrame() {
+        const rect = canvas.getBoundingClientRect();
+        if (canvas.width !== Math.floor(rect.width) && rect.width > 0) {
+          canvas.width = Math.floor(rect.width);
+        }
+        const W = canvas.width;
+        const H = canvas.height;
+        const isLight = htmlEl.getAttribute('data-theme') === 'light';
+
+        ctx.clearRect(0, 0, W, H);
+
+        // Project all vertices
+        const projVerts = mesh.verts.map(v => projectPoint(v, W, H));
+
+        // Sort faces back-to-front (Painter's algorithm)
+        const sortedFaces = mesh.faces.map((f, idx) => {
+          let zSum = 0;
+          for (const vi of f) {
+            zSum += projVerts[vi] ? projVerts[vi].z : -999;
+          }
+          return { f, idx, depth: zSum / f.length };
+        }).sort((a, b) => a.depth - b.depth);
+
+        // Draw shaded faces
+        for (const item of sortedFaces) {
+          const pts = item.f.map(vi => projVerts[vi]);
+          if (pts.some(p => !p)) continue;
+
+          const n = mesh.normals[item.idx].normal;
+          // Rotate normal for directional lighting
+          const cy = Math.cos(yaw), sy = Math.sin(yaw);
+          const cp = Math.cos(pitch), sp = Math.sin(pitch);
+          const nx1 = n[0] * cy + n[2] * sy;
+          const nz1 = -n[0] * sy + n[2] * cy;
+          const ny2 = n[1] * cp - nz1 * sp;
+          const nz2 = n[1] * sp + nz1 * cp;
+
+          // Backface check for closed surfaces
+          if (nz2 < -0.15 && renderMode === 'solid-wire') continue;
+
+          const light = Math.max(0.18, Math.min(1.0, (nx1 * 0.35 + ny2 * 0.45 + nz2 * 0.82)));
+
+          ctx.beginPath();
+          ctx.moveTo(pts[0].x, pts[0].y);
+          for (let i = 1; i < pts.length; i++) {
+            ctx.lineTo(pts[i].x, pts[i].y);
+          }
+          ctx.closePath();
+
+          if (isLight) {
+            const shade = Math.round(205 + light * 42);
+            ctx.fillStyle = `rgba(${shade - 20}, ${shade - 10}, ${shade}, 0.88)`;
+          } else {
+            const r = Math.round(16 + light * 32);
+            const g = Math.round(28 + light * 58);
+            const b = Math.round(52 + light * 115);
+            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, 0.86)`;
+          }
+          ctx.fill();
+
+          ctx.strokeStyle = isLight ? 'rgba(0, 85, 255, 0.55)' : 'rgba(96, 165, 250, 0.65)';
+          ctx.lineWidth = 1.1;
+          ctx.stroke();
+        }
+
+        // Draw normals & vertices if requested
+        if (renderMode === 'normals') {
+          ctx.strokeStyle = '#16a34a';
+          ctx.lineWidth = 1.4;
+          for (let i = 0; i < mesh.normals.length; i++) {
+            const { center, normal } = mesh.normals[i];
+            const tip = [
+              center[0] + normal[0] * 0.28,
+              center[1] + normal[1] * 0.28,
+              center[2] + normal[2] * 0.28
+            ];
+            const p0 = projectPoint(center, W, H);
+            const p1 = projectPoint(tip, W, H);
+            if (p0 && p1) {
+              ctx.beginPath();
+              ctx.moveTo(p0.x, p0.y);
+              ctx.lineTo(p1.x, p1.y);
+              ctx.stroke();
+            }
+          }
+          ctx.fillStyle = '#3b82f6';
+          for (const p of projVerts) {
+            if (!p) continue;
+            ctx.fillRect(p.x - 2, p.y - 2, 4, 4);
+          }
+        }
+
+        // Draw BVH AABB Bounding Boxes if requested
+        if (renderMode === 'bvh') {
+          ctx.strokeStyle = '#ea580c';
+          ctx.lineWidth = 1.0;
+          for (const box of mesh.bvhBoxes) {
+            const [x0, y0, z0] = box.min;
+            const [x1, y1, z1] = box.max;
+            const corners = [
+              [x0,y0,z0],[x1,y0,z0],[x1,y1,z0],[x0,y1,z0],
+              [x0,y0,z1],[x1,y0,z1],[x1,y1,z1],[x0,y1,z1]
+            ].map(c => projectPoint(c, W, H));
+            const boxEdges = [
+              [0,1],[1,2],[2,3],[3,0],
+              [4,5],[5,6],[6,7],[7,4],
+              [0,4],[1,5],[2,6],[3,7]
+            ];
+            for (const [a, b] of boxEdges) {
+              if (corners[a] && corners[b]) {
+                ctx.beginPath();
+                ctx.moveTo(corners[a].x, corners[a].y);
+                ctx.lineTo(corners[b].x, corners[b].y);
+                ctx.stroke();
+              }
+            }
+          }
+        }
+
+        if (renderMode === 'terminal') {
+          renderAsciiViewport();
+        }
+
+        if (isSpinning) {
+          yaw += 0.008;
+        }
+        requestAnimationFrame(renderFrame);
+      }
+
+      // Mouse / Touch Orbit Interaction
+      let dragging = false, lastX = 0, lastY = 0;
+      canvas.addEventListener('mousedown', e => {
+        dragging = true;
+        lastX = e.clientX;
+        lastY = e.clientY;
+      });
+      window.addEventListener('mouseup', () => { dragging = false; });
+      window.addEventListener('mousemove', e => {
+        if (!dragging) return;
+        const dx = e.clientX - lastX;
+        const dy = e.clientY - lastY;
+        lastX = e.clientX;
+        lastY = e.clientY;
+        yaw += dx * 0.01;
+        pitch = Math.max(-1.4, Math.min(1.4, pitch + dy * 0.01));
+      });
+      canvas.addEventListener('wheel', e => {
+        e.preventDefault();
+        cameraDist = Math.max(2.0, Math.min(9.0, cameraDist + e.deltaY * 0.003));
+      }, { passive: false });
+      canvas.addEventListener('dblclick', () => {
+        yaw = 0.65;
+        pitch = 0.42;
+        cameraDist = 4.2;
+      });
+
+      // Controls Wiring
+      document.getElementById('primitive-select').addEventListener('change', e => {
+        currentPrimitive = e.target.value;
+        rebuildMesh();
+      });
+
+      document.querySelectorAll('#subdiv-buttons button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#subdiv-buttons button').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentSubdiv = parseInt(btn.getAttribute('data-subdiv'), 10);
+          document.getElementById('subdiv-label').textContent = `${currentSubdiv} Pass${currentSubdiv === 1 ? '' : 'es'}`;
+          rebuildMesh();
+        });
+      });
+
+      document.getElementById('render-mode').addEventListener('change', e => {
+        renderMode = e.target.value;
+        if (renderMode === 'terminal') {
+          stageEl.classList.add('split-ascii');
+        } else {
+          stageEl.classList.remove('split-ascii');
+        }
+        rebuildMesh();
+      });
+
+      document.getElementById('toggle-spin-btn').addEventListener('click', e => {
+        isSpinning = !isSpinning;
+        e.target.textContent = isSpinning ? 'Pause Orbit' : 'Resume Orbit';
+      });
+
+      // Live Wavefront .OBJ Exporter (mirrors blender_io::export_obj)
+      document.getElementById('export-obj-btn').addEventListener('click', () => {
+        let obj = `# Exported by blender-rs interactive BMesh playground\n`;
+        obj += `# Primitive: ${currentPrimitive}, Subdivisions: ${currentSubdiv}\n`;
+        obj += `o ${currentPrimitive}_bmesh\n`;
+        for (const v of mesh.verts) {
+          obj += `v ${v[0].toFixed(6)} ${v[1].toFixed(6)} ${v[2].toFixed(6)}\n`;
+        }
+        for (const f of mesh.faces) {
+          obj += `f ${f.map(i => i + 1).join(' ')}\n`;
+        }
+        const blob = new Blob([obj], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `blender-rs-${currentPrimitive}-subdiv${currentSubdiv}.obj`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+
+      rebuildMesh();
+      requestAnimationFrame(renderFrame);
+    })();
+  </script>
+</body>
+</html>
