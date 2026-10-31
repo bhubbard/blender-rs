@@ -5,6 +5,7 @@
 
 pub mod bounds;
 pub mod bvh;
+pub mod generative_3d;
 pub mod isect;
 pub mod kdtree;
 pub mod line;
