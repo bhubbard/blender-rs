@@ -2790,4 +2790,16 @@ pub use blf_internal::*;
 pub mod thumbnail_provider;
 pub use thumbnail_provider::*;
 
+// freestyle core additions (5 headers)
+pub mod FRS_freestyle;
+pub use FRS_freestyle::*;
+pub mod AppConfig;
+pub use AppConfig::*;
+pub mod AppView;
+pub use AppView::*;
+pub mod AppCanvas;
+pub use AppCanvas::*;
+pub mod FRS_controller;
+pub use FRS_controller::*;
+
 

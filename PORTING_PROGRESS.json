@@ -3906,6 +3906,26 @@
     "upstream/source/blender/blendthumb/src/thumbnail_provider.h": {
       "crate": "blender-io",
       "module": "thumbnail_provider.rs"
+    },
+    "upstream/source/blender/freestyle/FRS_freestyle.h": {
+      "crate": "blender-io",
+      "module": "FRS_freestyle.rs"
+    },
+    "upstream/source/blender/freestyle/intern/application/AppConfig.h": {
+      "crate": "blender-io",
+      "module": "AppConfig.rs"
+    },
+    "upstream/source/blender/freestyle/intern/application/Controller.h": {
+      "crate": "blender-io",
+      "module": "FRS_controller.rs"
+    },
+    "upstream/source/blender/freestyle/intern/application/AppCanvas.h": {
+      "crate": "blender-io",
+      "module": "AppCanvas.rs"
+    },
+    "upstream/source/blender/freestyle/intern/application/AppView.h": {
+      "crate": "blender-io",
+      "module": "AppView.rs"
     }
   },
   "failed": {
