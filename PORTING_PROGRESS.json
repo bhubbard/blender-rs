@@ -4594,6 +4594,74 @@
     "upstream/source/blender/makesrna/intern/rna_internal_types.hh": {
       "crate": "blender-io",
       "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/cineon/logmemfile.h": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/oiio/openimageio_api.h": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/gpu_shader_binder_internal.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/error_handling.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_colorspace.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_config.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_cpu_processor.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_display.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_display_processor.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_gpu_shader_binder.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_look.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_processor.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_view.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/ocio_shader_shared.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/opencolorio.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/source_processor.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/view_specific_look.hh": {
+      "crate": "blender-io",
+      "module": "IMB_ocio_extended.rs"
     }
   },
   "failed": {
@@ -4883,7 +4951,6 @@
     "upstream/source/blender/imbuf/intern/cineon/cineonlib.cc": "timeout",
     "upstream/source/blender/imbuf/intern/cineon/logImageCore.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/cineon/logmemfile.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/cineon/logmemfile.h": "transpile_error",
     "upstream/source/blender/imbuf/intern/colormanagement.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/conversion.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/filetype.cc": "compiler_burndown_exceeded",
@@ -4900,22 +4967,6 @@
     "upstream/source/blender/imbuf/intern/format_targa.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/format_tiff.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/format_webp.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/oiio/openimageio_api.h": "transpile_error",
-    "upstream/source/blender/imbuf/opencolorio/intern/gpu_shader_binder_internal.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/error_handling.hh": "transpile_error",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_colorspace.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_config.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_cpu_processor.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_display.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_display_processor.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_gpu_shader_binder.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_look.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_processor.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_view.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/ocio_shader_shared.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/opencolorio.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/source_processor.hh": "transpile_error",
-    "upstream/source/blender/imbuf/opencolorio/intern/view_specific_look.hh": "transpile_error",
     "upstream/source/blender/io/alembic/intern/abc_customdata.h": "compile_check_failed",
     "upstream/source/blender/io/alembic/intern/abc_reader_object.h": "compile_check_failed",
     "upstream/source/blender/io/common/IO_abstract_hierarchy_iterator.h": "compile_check_failed",

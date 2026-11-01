@@ -2949,3 +2949,6 @@ pub use BKE_kernel_extended::*;
 
 pub mod RNA_types_extended;
 pub use RNA_types_extended::*;
+
+pub mod IMB_ocio_extended;
+pub use IMB_ocio_extended::*;
