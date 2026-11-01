@@ -3902,6 +3902,10 @@
     "upstream/source/blender/blenfont/intern/blf_internal_types.hh": {
       "crate": "blender-io",
       "module": "blf_internal_types.rs"
+    },
+    "upstream/source/blender/blendthumb/src/thumbnail_provider.h": {
+      "crate": "blender-io",
+      "module": "thumbnail_provider.rs"
     }
   },
   "failed": {

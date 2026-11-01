@@ -2786,4 +2786,8 @@ pub use blf_internal_types::*;
 pub mod blf_internal;
 pub use blf_internal::*;
 
+// blendthumb completion (2/2 headers - 100%)
+pub mod thumbnail_provider;
+pub use thumbnail_provider::*;
+
 
