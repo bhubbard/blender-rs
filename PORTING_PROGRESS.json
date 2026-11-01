@@ -3782,6 +3782,118 @@
     "upstream/source/blender/blenloader/versioning_common.hh": {
       "crate": "blender-io",
       "module": "BLO_versioning_common.rs"
+    },
+    "upstream/source/blender/blenloader_core/BLO_core_bhead.hh": {
+      "crate": "blender-io",
+      "module": "BLO_core_bhead.rs"
+    },
+    "upstream/source/blender/blenloader_core/BLO_core_blend_header.hh": {
+      "crate": "blender-io",
+      "module": "BLO_core_blend_header.rs"
+    },
+    "upstream/source/blender/blenloader_core/BLO_core_file_reader.hh": {
+      "crate": "blender-io",
+      "module": "BLO_core_file_reader.rs"
+    },
+    "upstream/source/blender/modifiers/MOD_modifiertypes.hh": {
+      "crate": "blender-io",
+      "module": "MOD_modifiertypes.rs"
+    },
+    "upstream/source/blender/modifiers/MOD_nodes.hh": {
+      "crate": "blender-io",
+      "module": "MOD_nodes.rs"
+    },
+    "upstream/source/blender/modifiers/intern/MOD_util.hh": {
+      "crate": "blender-io",
+      "module": "MOD_util.rs"
+    },
+    "upstream/source/blender/modifiers/intern/MOD_ui_common.hh": {
+      "crate": "blender-io",
+      "module": "MOD_ui_common.rs"
+    },
+    "upstream/source/blender/modifiers/intern/MOD_solidify_util.hh": {
+      "crate": "blender-io",
+      "module": "MOD_solidify_util.rs"
+    },
+    "upstream/source/blender/modifiers/intern/MOD_weightvg_util.hh": {
+      "crate": "blender-io",
+      "module": "MOD_weightvg_util.rs"
+    },
+    "upstream/source/blender/modifiers/intern/MOD_meshcache_util.hh": {
+      "crate": "blender-io",
+      "module": "MOD_meshcache_util.rs"
+    },
+    "upstream/source/blender/modifiers/intern/MOD_grease_pencil_util.hh": {
+      "crate": "blender-io",
+      "module": "MOD_grease_pencil_util.rs"
+    },
+    "upstream/source/blender/modifiers/intern/lineart/MOD_lineart.hh": {
+      "crate": "blender-io",
+      "module": "MOD_lineart.rs"
+    },
+    "upstream/source/blender/modifiers/intern/lineart/lineart_intern.hh": {
+      "crate": "blender-io",
+      "module": "lineart_intern.rs"
+    },
+    "upstream/source/blender/shader_fx/FX_shader_types.hh": {
+      "crate": "blender-io",
+      "module": "FX_shader_types.rs"
+    },
+    "upstream/source/blender/shader_fx/intern/FX_shader_util.hh": {
+      "crate": "blender-io",
+      "module": "FX_shader_util.rs"
+    },
+    "upstream/source/blender/shader_fx/intern/FX_ui_common.hh": {
+      "crate": "blender-io",
+      "module": "FX_ui_common.rs"
+    },
+    "upstream/source/blender/simulation/SIM_mass_spring.h": {
+      "crate": "blender-io",
+      "module": "SIM_mass_spring.rs"
+    },
+    "upstream/source/blender/simulation/intern/implicit.h": {
+      "crate": "blender-io",
+      "module": "implicit.rs"
+    },
+    "upstream/source/blender/simulation/intern/eigen_utils.h": {
+      "crate": "blender-io",
+      "module": "eigen_utils.rs"
+    },
+    "upstream/source/blender/simulation/intern/ConstrainedConjugateGradient.h": {
+      "crate": "blender-io",
+      "module": "ConstrainedConjugateGradient.rs"
+    },
+    "upstream/source/blender/ikplugin/BIK_api.h": {
+      "crate": "blender-io",
+      "module": "BIK_api.rs"
+    },
+    "upstream/source/blender/ikplugin/intern/ikplugin_api.h": {
+      "crate": "blender-io",
+      "module": "ikplugin_api.rs"
+    },
+    "upstream/source/blender/ikplugin/intern/iksolver_plugin.h": {
+      "crate": "blender-io",
+      "module": "iksolver_plugin.rs"
+    },
+    "upstream/source/blender/ikplugin/intern/itasc_plugin.h": {
+      "crate": "blender-io",
+      "module": "itasc_plugin.rs"
+    },
+    "upstream/source/blender/blentranslation/BLT_date_string.hh": {
+      "crate": "blender-io",
+      "module": "BLT_date_string.rs"
+    },
+    "upstream/source/blender/blentranslation/BLT_lang.hh": {
+      "crate": "blender-io",
+      "module": "BLT_lang.rs"
+    },
+    "upstream/source/blender/blentranslation/BLT_translation.hh": {
+      "crate": "blender-io",
+      "module": "BLT_translation.rs"
+    },
+    "upstream/source/blender/blentranslation/intern/messages.hh": {
+      "crate": "blender-io",
+      "module": "messages.rs"
     }
   },
   "failed": {
@@ -3994,14 +4106,11 @@
     "upstream/source/blender/compositor/utilities/COM_utilities_oidn.hh": "transpile_error",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.h": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes.h": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_rig.cc": "timeout",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_scene.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_view_layer.cc": "timeout",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_drivers.cc": "timeout",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_impl.h": "transpile_error",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_rig.cc": "timeout",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_scene.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_view_layer.cc": "compile_check_failed",
@@ -4012,7 +4121,6 @@
     "upstream/source/blender/depsgraph/intern/builder/pipeline_from_collection.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/pipeline_view_layer.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/debug/deg_debug_relations_graphviz.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/depsgraph.hh": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/depsgraph_build.cc": "timeout",
     "upstream/source/blender/depsgraph/intern/depsgraph_debug.cc": "timeout",
     "upstream/source/blender/depsgraph/intern/depsgraph_query_foreach.cc": "compile_check_failed",
@@ -4020,7 +4128,6 @@
     "upstream/source/blender/depsgraph/intern/depsgraph_relation.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/depsgraph_tag.cc": "timeout",
     "upstream/source/blender/depsgraph/intern/depsgraph_type.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/depsgraph_type.hh": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/depsgraph_update.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/depsgraph_writeback_sync.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/eval/deg_eval.cc": "compiler_burndown_exceeded",
@@ -4028,7 +4135,6 @@
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_modifier.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_movieclip.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_object.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_pose.h": "transpile_error",
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_scene.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sound.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_volume.cc": "compiler_burndown_exceeded",
@@ -4036,7 +4142,6 @@
     "upstream/source/blender/depsgraph/intern/node/deg_node_factory.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_id.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_operation.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/node/deg_node_operation.hh": "compile_check_failed",
     "upstream/source/blender/draw/DRW_select_buffer.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_camera_shared.hh": "compile_check_failed",
     "upstream/source/blender/draw/engines/eevee/eevee_debug_shared.hh": "compile_check_failed",
@@ -4301,7 +4406,6 @@
     "upstream/source/blender/nodes/geometry/nodes/node_geo_string_to_curves.cc": "compile_check_failed",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_tool_set_face_set.cc": "compile_check_failed",
     "upstream/source/blender/nodes/shader/materialx/node_graph.h": "compile_check_failed",
-    "upstream/source/blender/nodes/texture/node_texture_util.hh": "compile_check_failed",
     "upstream/source/blender/render/hydra/light_tasks_delegate.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/WM_api.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/gizmo/WM_gizmo_types.hh": "compiler_burndown_exceeded",
@@ -7920,10 +8024,6 @@
       "reason": "pruned_legacy_or_test",
       "subsystem": "blenloader"
     },
-    "upstream/source/blender/blenloader/tests/blendfile_loading_base_test.h": {
-      "reason": "pruned_legacy_or_test",
-      "subsystem": "blenloader"
-    },
     "upstream/source/blender/bmesh/intern/bmesh_log.cc": {
       "confidence": 0.5781975968150452,
       "reason": "zev_route_skip"
@@ -8284,40 +8384,16 @@
       "confidence": 0.1890121709181956,
       "reason": "zev_route_skip"
     },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder.h": {
-      "confidence": 0.34702462496112385,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cache.h": {
-      "confidence": 0.4811546007823757,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_key.cc": {
       "confidence": 0.47472327661636216,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_key.h": {
-      "confidence": 0.41310351885596647,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_pchanmap.cc": {
       "confidence": 0.4031794030302719,
       "reason": "zev_route_skip"
     },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_pchanmap.h": {
-      "confidence": 0.3746928731991457,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_remove_noop.cc": {
       "confidence": 0.3297967610192578,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_remove_noop.h": {
-      "confidence": 0.39522596593348697,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_rna.h": {
-      "confidence": 0.4190549395660103,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_rna_test.cc": {
@@ -8328,20 +8404,8 @@
       "confidence": 0.4955282440673503,
       "reason": "zev_route_skip"
     },
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_transitive.h": {
-      "confidence": 0.39368083397257647,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/builder/pipeline.h": {
-      "confidence": 0.34422021268265396,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/depsgraph/intern/builder/pipeline_compositor.cc": {
       "confidence": 0.498863897460226,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/builder/pipeline_compositor.h": {
-      "confidence": 0.3579098157277614,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/depsgraph/intern/builder/pipeline_from_ids.cc": {
@@ -8356,10 +8420,6 @@
       "confidence": 0.4990852558890403,
       "reason": "zev_route_skip"
     },
-    "upstream/source/blender/depsgraph/intern/debug/deg_debug.h": {
-      "confidence": 0.4994479508219779,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/depsgraph/intern/debug/deg_debug_stats_gnuplot.cc": {
       "confidence": 0.3080839302816871,
       "reason": "zev_route_skip"
@@ -8370,14 +8430,6 @@
     },
     "upstream/source/blender/depsgraph/intern/depsgraph_eval.cc": {
       "confidence": 0.4936761300226757,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/depsgraph_light_linking.hh": {
-      "confidence": 0.4673068162392385,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/depsgraph_physics.hh": {
-      "confidence": 0.3954531590937763,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/depsgraph/intern/depsgraph_query.cc": {
@@ -8392,96 +8444,24 @@
       "confidence": 0.41208869682109345,
       "reason": "zev_route_skip"
     },
-    "upstream/source/blender/depsgraph/intern/depsgraph_registry.hh": {
-      "confidence": 0.4141839783004614,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/depsgraph_tag.hh": {
-      "confidence": 0.3588773053973526,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/depsgraph_update.hh": {
-      "confidence": 0.3940114096839622,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval.h": {
-      "confidence": 0.3983417536911781,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup.cc": {
       "confidence": 0.3998533551923259,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_modifier.h": {
-      "confidence": 0.3989848099975384,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_movieclip.h": {
-      "confidence": 0.390778149324363,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_object.h": {
-      "confidence": 0.3755432897154818,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_scene.h": {
-      "confidence": 0.30333433526676157,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sequence.cc": {
       "confidence": 0.4944029921455957,
       "reason": "zev_route_skip"
     },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sequence.h": {
-      "confidence": 0.3788764049576104,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sequencer.cc": {
       "confidence": 0.4976380318117796,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sequencer.h": {
-      "confidence": 0.30969797235469965,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sound.h": {
-      "confidence": 0.254336232847658,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_volume.h": {
-      "confidence": 0.3061325018736714,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/depsgraph/intern/node/deg_node.cc": {
       "confidence": 0.31261420200806117,
       "reason": "zev_route_skip"
     },
-    "upstream/source/blender/depsgraph/intern/node/deg_node.hh": {
-      "confidence": 0.33216355909326434,
-      "reason": "zev_route_skip"
-    },
     "upstream/source/blender/depsgraph/intern/node/deg_node_component.cc": {
       "confidence": 0.4806655469080016,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/node/deg_node_component.hh": {
-      "confidence": 0.3381872863328139,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/node/deg_node_factory.hh": {
-      "confidence": 0.4456315194466944,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/node/deg_node_factory_impl.hh": {
-      "confidence": 0.3478203306709551,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/node/deg_node_id.hh": {
-      "confidence": 0.3408740229451972,
-      "reason": "zev_route_skip"
-    },
-    "upstream/source/blender/depsgraph/intern/node/deg_node_time.hh": {
-      "confidence": 0.4016285833731096,
       "reason": "zev_route_skip"
     },
     "upstream/source/blender/draw/DRW_engine.hh": {

@@ -2712,4 +2712,72 @@ pub use BLO_versioning_common::*;
 pub mod BLO_blendfile_loading_base_test;
 pub use BLO_blendfile_loading_base_test::*;
 
+// blenloader_core (3 headers)
+pub mod BLO_core_bhead;
+pub use BLO_core_bhead::*;
+pub mod BLO_core_blend_header;
+pub use BLO_core_blend_header::*;
+pub mod BLO_core_file_reader;
+pub use BLO_core_file_reader::*;
+
+// modifiers (10 headers)
+pub mod MOD_modifiertypes;
+pub use MOD_modifiertypes::*;
+pub mod MOD_nodes;
+pub use MOD_nodes::*;
+pub mod MOD_util;
+pub use MOD_util::*;
+pub mod MOD_ui_common;
+pub use MOD_ui_common::*;
+pub mod MOD_solidify_util;
+pub use MOD_solidify_util::*;
+pub mod MOD_weightvg_util;
+pub use MOD_weightvg_util::*;
+pub mod MOD_meshcache_util;
+pub use MOD_meshcache_util::*;
+pub mod MOD_grease_pencil_util;
+pub use MOD_grease_pencil_util::*;
+pub mod MOD_lineart;
+pub use MOD_lineart::*;
+pub mod lineart_intern;
+pub use lineart_intern::*;
+
+// shader_fx (3 headers)
+pub mod FX_shader_types;
+pub use FX_shader_types::*;
+pub mod FX_shader_util;
+pub use FX_shader_util::*;
+pub mod FX_ui_common;
+pub use FX_ui_common::*;
+
+// simulation (4 headers)
+pub mod SIM_mass_spring;
+pub use SIM_mass_spring::*;
+pub mod implicit;
+pub use implicit::*;
+pub mod eigen_utils;
+pub use eigen_utils::*;
+pub mod ConstrainedConjugateGradient;
+pub use ConstrainedConjugateGradient::*;
+
+// ikplugin (4 headers)
+pub mod BIK_api;
+pub use BIK_api::*;
+pub mod ikplugin_api;
+pub use ikplugin_api::*;
+pub mod iksolver_plugin;
+pub use iksolver_plugin::*;
+pub mod itasc_plugin;
+pub use itasc_plugin::*;
+
+// blentranslation (4 headers)
+pub mod BLT_date_string;
+pub use BLT_date_string::*;
+pub mod BLT_lang;
+pub use BLT_lang::*;
+pub mod BLT_translation;
+pub use BLT_translation::*;
+pub mod messages;
+pub use messages::*;
+
 

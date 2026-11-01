@@ -1,0 +1,5 @@
+/* SPDX-FileCopyrightText: Blender Authors
+ *
+ * SPDX-License-Identifier: GPL-2.0-or-later */
+
+// Shader FX utility definitions
