@@ -3926,6 +3926,26 @@
     "upstream/source/blender/freestyle/intern/application/AppView.h": {
       "crate": "blender-io",
       "module": "AppView.rs"
+    },
+    "upstream/source/blender/render/RE_pipeline.h": {
+      "crate": "blender-io",
+      "module": "RE_pipeline.rs"
+    },
+    "upstream/source/blender/render/RE_engine.h": {
+      "crate": "blender-io",
+      "module": "RE_engine.rs"
+    },
+    "upstream/source/blender/render/RE_multires_bake.h": {
+      "crate": "blender-io",
+      "module": "RE_multires_bake.rs"
+    },
+    "upstream/source/blender/render/RE_texture.h": {
+      "crate": "blender-io",
+      "module": "RE_texture.rs"
+    },
+    "upstream/source/blender/render/RE_compositor.hh": {
+      "crate": "blender-io",
+      "module": "RE_compositor.rs"
     }
   },
   "failed": {

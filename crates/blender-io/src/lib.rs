@@ -2802,4 +2802,16 @@ pub use AppCanvas::*;
 pub mod FRS_controller;
 pub use FRS_controller::*;
 
+// render core pipeline additions (5 headers)
+pub mod RE_pipeline;
+pub use RE_pipeline::*;
+pub mod RE_engine;
+pub use RE_engine::*;
+pub mod RE_multires_bake;
+pub use RE_multires_bake::*;
+pub mod RE_texture;
+pub use RE_texture::*;
+pub mod RE_compositor;
+pub use RE_compositor::*;
+
 
