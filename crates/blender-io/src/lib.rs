@@ -2814,4 +2814,26 @@ pub use RE_texture::*;
 pub mod RE_compositor;
 pub use RE_compositor::*;
 
+// asset_system architecture additions (10 headers)
+pub mod AS_asset_catalog_path;
+pub use AS_asset_catalog_path::*;
+pub mod AS_asset_catalog_tree;
+pub use AS_asset_catalog_tree::*;
+pub mod AS_asset_representation;
+pub use AS_asset_representation::*;
+pub mod AS_asset_library;
+pub use AS_asset_library::*;
+pub mod AS_disk_file_hash_service;
+pub use AS_disk_file_hash_service::*;
+pub mod AS_essentials_library;
+pub use AS_essentials_library::*;
+pub mod AS_remote_library;
+pub use AS_remote_library::*;
+pub mod asset_catalog_collection;
+pub use asset_catalog_collection::*;
+pub mod asset_catalog_definition_file;
+pub use asset_catalog_definition_file::*;
+pub mod asset_library_service;
+pub use asset_library_service::*;
+
 

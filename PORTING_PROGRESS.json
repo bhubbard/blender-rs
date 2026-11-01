@@ -3946,6 +3946,46 @@
     "upstream/source/blender/render/RE_compositor.hh": {
       "crate": "blender-io",
       "module": "RE_compositor.rs"
+    },
+    "upstream/source/blender/asset_system/AS_asset_catalog_path.hh": {
+      "crate": "blender-io",
+      "module": "AS_asset_catalog_path.rs"
+    },
+    "upstream/source/blender/asset_system/AS_asset_catalog_tree.hh": {
+      "crate": "blender-io",
+      "module": "AS_asset_catalog_tree.rs"
+    },
+    "upstream/source/blender/asset_system/AS_asset_representation.hh": {
+      "crate": "blender-io",
+      "module": "AS_asset_representation.rs"
+    },
+    "upstream/source/blender/asset_system/AS_asset_library.hh": {
+      "crate": "blender-io",
+      "module": "AS_asset_library.rs"
+    },
+    "upstream/source/blender/asset_system/AS_disk_file_hash_service.hh": {
+      "crate": "blender-io",
+      "module": "AS_disk_file_hash_service.rs"
+    },
+    "upstream/source/blender/asset_system/AS_essentials_library.hh": {
+      "crate": "blender-io",
+      "module": "AS_essentials_library.rs"
+    },
+    "upstream/source/blender/asset_system/AS_remote_library.hh": {
+      "crate": "blender-io",
+      "module": "AS_remote_library.rs"
+    },
+    "upstream/source/blender/asset_system/intern/asset_catalog_collection.hh": {
+      "crate": "blender-io",
+      "module": "asset_catalog_collection.rs"
+    },
+    "upstream/source/blender/asset_system/intern/asset_catalog_definition_file.hh": {
+      "crate": "blender-io",
+      "module": "asset_catalog_definition_file.rs"
+    },
+    "upstream/source/blender/asset_system/intern/asset_library_service.hh": {
+      "crate": "blender-io",
+      "module": "asset_library_service.rs"
     }
   },
   "failed": {
