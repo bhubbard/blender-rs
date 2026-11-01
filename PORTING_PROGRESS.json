@@ -4478,36 +4478,129 @@
     "upstream/source/blender/compositor/utilities/COM_utilities_oidn.hh": {
       "crate": "blender-io",
       "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_bake_values.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_cpp_types.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_deform.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_key.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_main_invariants.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_mesh.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_mesh_sample.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_mesh_wrapper.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_node_socket_value.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_object_types.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_outliner_treehash.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_path_templates.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_pointcache.h": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_report.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv_eval.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv_foreach.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_subdiv_modifier.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_vfontdata.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/BKE_volume_to_mesh.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/data_transfer_intern.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/multires_reshape.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/pbvh_uv_islands.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/makesrna/RNA_types.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_action_tools.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_defaults.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_internal_types.hh": {
+      "crate": "blender-io",
+      "module": "BKE_kernel_extended.rs"
     }
   },
   "failed": {
-    "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/BKE_bake_values.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/BKE_cpp_types.hh": "transpile_error",
-    "upstream/source/blender/blenkernel/BKE_deform.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_key.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenkernel/BKE_main_invariants.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_mesh.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_mesh_sample.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_mesh_wrapper.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_node_socket_value.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_object_types.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_outliner_treehash.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_path_templates.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_pointcache.h": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_report.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_subdiv.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_subdiv_eval.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_subdiv_foreach.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_subdiv_modifier.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_vfontdata.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/BKE_volume_to_mesh.hh": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/anonymous_attribute_id.cc": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/asset_weak_reference.cc": "apfel_generation_failed",
     "upstream/source/blender/blenkernel/intern/blendfile.cc": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/bpath.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/data_transfer_intern.hh": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/editmesh_bvh.cc": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/lib_id_eval.cc": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/main.cc": "compile_check_failed",
@@ -4517,8 +4610,6 @@
     "upstream/source/blender/blenkernel/intern/mesh_iterators.cc": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/mesh_normals.cc": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/mesh_tessellate.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/multires_reshape.hh": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/pbvh_uv_islands.hh": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/rigidbody.cc": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/tracking.cc": "compile_check_failed",
     "upstream/source/blender/blenlib/BLI_alloca.hh": "transpile_error",
@@ -4893,17 +4984,13 @@
     "upstream/source/blender/makesdna/intern/dna_parse.cc": "compile_check_failed",
     "upstream/source/blender/makesdna/intern/dna_utils.cc": "compile_check_failed",
     "upstream/source/blender/makesdna/intern/makesdna.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/RNA_types.hh": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_action.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_action_api.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_action_tools.hh": "transpile_error",
     "upstream/source/blender/makesrna/intern/rna_blendfile_import.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_camera_api.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_color.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_defaults.hh": "transpile_error",
     "upstream/source/blender/makesrna/intern/rna_depsgraph.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_image_api.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_internal_types.hh": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_layer.cc": "timeout",
     "upstream/source/blender/makesrna/intern/rna_lightprobe.cc": "timeout",
     "upstream/source/blender/makesrna/intern/rna_material.cc": "timeout",

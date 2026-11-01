@@ -2934,3 +2934,18 @@ pub mod AS_utils;
 pub use AS_utils::*;
 
 
+
+pub mod BKE_bake_extended;
+pub use BKE_bake_extended::*;
+
+pub mod BKE_subdiv_extended;
+pub use BKE_subdiv_extended::*;
+
+pub mod BKE_mesh_extended;
+pub use BKE_mesh_extended::*;
+
+pub mod BKE_kernel_extended;
+pub use BKE_kernel_extended::*;
+
+pub mod RNA_types_extended;
+pub use RNA_types_extended::*;
