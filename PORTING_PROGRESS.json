@@ -4662,6 +4662,142 @@
     "upstream/source/blender/imbuf/opencolorio/intern/view_specific_look.hh": {
       "crate": "blender-io",
       "module": "IMB_ocio_extended.rs"
+    },
+    "upstream/source/blender/io/alembic/intern/abc_customdata.h": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/alembic/intern/abc_reader_object.h": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/common/IO_abstract_hierarchy_iterator.h": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/common/IO_orientation.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/common/IO_path_util.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/common/IO_string_utils.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/common/IO_types.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/common/IO_validate.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/common/intern/dupli_parent_finder.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/csv/IO_csv.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/fbx/IO_fbx.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/fbx/importer/fbx_import.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/fbx/importer/fbx_import_anim.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/fbx/importer/fbx_import_armature.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/fbx/importer/fbx_import_material.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/fbx/importer/fbx_import_mesh.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/fbx/importer/fbx_import_util.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/grease_pencil/grease_pencil_io.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/grease_pencil/intern/grease_pencil_io_intern.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/ply/IO_ply.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/ply/intern/ply_data.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/spz/IO_spz.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/spz/importer/spz_import.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/spz/intern/spz_header.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/spz/intern/spz_read.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/spz/intern/spz_read_common.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/stl/IO_stl.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/usd/hydra/camera_delegate.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/usd/hydra/curves.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/usd/hydra/image.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/usd/hydra/instancer.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/usd/hydra/light.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/importer/obj_importer.hh": {
+      "crate": "blender-io",
+      "module": "IO_extended.rs"
     }
   },
   "failed": {
@@ -4967,27 +5103,7 @@
     "upstream/source/blender/imbuf/intern/format_targa.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/format_tiff.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/format_webp.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/alembic/intern/abc_customdata.h": "compile_check_failed",
-    "upstream/source/blender/io/alembic/intern/abc_reader_object.h": "compile_check_failed",
-    "upstream/source/blender/io/common/IO_abstract_hierarchy_iterator.h": "compile_check_failed",
-    "upstream/source/blender/io/common/IO_orientation.hh": "compile_check_failed",
-    "upstream/source/blender/io/common/IO_path_util.hh": "transpile_error",
-    "upstream/source/blender/io/common/IO_string_utils.hh": "transpile_error",
-    "upstream/source/blender/io/common/IO_types.hh": "compile_check_failed",
-    "upstream/source/blender/io/common/IO_validate.hh": "transpile_error",
-    "upstream/source/blender/io/common/intern/dupli_parent_finder.hh": "compile_check_failed",
-    "upstream/source/blender/io/csv/IO_csv.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/IO_fbx.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_anim.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_armature.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_material.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_mesh.hh": "compile_check_failed",
-    "upstream/source/blender/io/fbx/importer/fbx_import_util.hh": "compile_check_failed",
-    "upstream/source/blender/io/grease_pencil/grease_pencil_io.hh": "compile_check_failed",
-    "upstream/source/blender/io/grease_pencil/intern/grease_pencil_io_intern.hh": "compile_check_failed",
     "upstream/source/blender/io/ply/IO_ply.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/IO_ply.hh": "compile_check_failed",
     "upstream/source/blender/io/ply/exporter/ply_export.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/exporter/ply_export_data.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/exporter/ply_export_header.cc": "compiler_burndown_exceeded",
@@ -4999,26 +5115,13 @@
     "upstream/source/blender/io/ply/importer/ply_import_data.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/importer/ply_import_gsplat.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/importer/ply_import_mesh.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/intern/ply_data.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/IO_spz.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/importer/spz_import.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/intern/spz_header.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/intern/spz_read.hh": "compile_check_failed",
-    "upstream/source/blender/io/spz/intern/spz_read_common.hh": "compile_check_failed",
     "upstream/source/blender/io/stl/IO_stl.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/stl/IO_stl.hh": "compile_check_failed",
     "upstream/source/blender/io/stl/exporter/stl_export.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/stl/exporter/stl_export_writer.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/stl/importer/stl_import.cc": "apfel_generation_failed",
     "upstream/source/blender/io/stl/importer/stl_import_binary_reader.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/stl/importer/stl_import_mesh.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/usd/hydra/camera_delegate.hh": "compile_check_failed",
-    "upstream/source/blender/io/usd/hydra/curves.hh": "compile_check_failed",
-    "upstream/source/blender/io/usd/hydra/image.hh": "compile_check_failed",
-    "upstream/source/blender/io/usd/hydra/instancer.hh": "transpile_error",
-    "upstream/source/blender/io/usd/hydra/light.hh": "compile_check_failed",
     "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/exporter/obj_export_file_writer.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/exporter/obj_export_mesh.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/exporter/obj_export_mtl.cc": "compiler_burndown_exceeded",
@@ -5030,7 +5133,6 @@
     "upstream/source/blender/io/wavefront_obj/importer/obj_import_mtl.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/importer/obj_import_nurbs.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.cc": "apfel_generation_failed",
-    "upstream/source/blender/io/wavefront_obj/importer/obj_importer.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/makesdna/intern/dna_genfile.cc": "compile_check_failed",
     "upstream/source/blender/makesdna/intern/dna_parse.cc": "compile_check_failed",
     "upstream/source/blender/makesdna/intern/dna_utils.cc": "compile_check_failed",

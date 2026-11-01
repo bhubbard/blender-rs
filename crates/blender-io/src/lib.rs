@@ -2952,3 +2952,6 @@ pub use RNA_types_extended::*;
 
 pub mod IMB_ocio_extended;
 pub use IMB_ocio_extended::*;
+
+pub mod IO_extended;
+pub use IO_extended::*;
