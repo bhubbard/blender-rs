@@ -4386,6 +4386,98 @@
     "upstream/source/blender/compositor/shaders/infos/compositor_convert_infos.hh": {
       "crate": "blender-io",
       "module": "COM_shader_infos.rs"
+    },
+    "upstream/source/blender/compositor/COM_group_node_operation.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/COM_scene_compositor_effects_operation.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/COM_undefined_node_operation.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_compute_preview.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_convolve.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_extract_alpha.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_morphological_distance.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_parallel_reduction.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_smaa.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_symmetric_separable_blur_variable_size.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_ocio_color_space_conversion_shader.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_cryptomatte_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_directional_blur_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_lens_distortion_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_morphological_blur_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_morphological_distance_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_morphological_step_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_motion_blur_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_movie_distortion_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_ocio_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_parallel_reduction_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/utilities/COM_utilities_diagonals.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
+    },
+    "upstream/source/blender/compositor/utilities/COM_utilities_oidn.hh": {
+      "crate": "blender-io",
+      "module": "COM_operations_extended.rs"
     }
   },
   "failed": {
@@ -4548,16 +4640,6 @@
     "upstream/source/blender/bmesh/tools/bmesh_separate.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_triangulate.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_wireframe.cc": "apfel_generation_failed",
-    "upstream/source/blender/compositor/COM_group_node_operation.hh": "transpile_error",
-    "upstream/source/blender/compositor/COM_scene_compositor_effects_operation.hh": "compile_check_failed",
-    "upstream/source/blender/compositor/COM_undefined_node_operation.hh": "transpile_error",
-    "upstream/source/blender/compositor/algorithms/COM_algorithm_compute_preview.hh": "transpile_error",
-    "upstream/source/blender/compositor/algorithms/COM_algorithm_convolve.hh": "transpile_error",
-    "upstream/source/blender/compositor/algorithms/COM_algorithm_extract_alpha.hh": "transpile_error",
-    "upstream/source/blender/compositor/algorithms/COM_algorithm_morphological_distance.hh": "transpile_error",
-    "upstream/source/blender/compositor/algorithms/COM_algorithm_parallel_reduction.hh": "transpile_error",
-    "upstream/source/blender/compositor/algorithms/COM_algorithm_smaa.hh": "transpile_error",
-    "upstream/source/blender/compositor/algorithms/COM_algorithm_symmetric_separable_blur_variable_size.hh": "transpile_error",
     "upstream/source/blender/compositor/algorithms/intern/jump_flooding.cc": "compile_check_failed",
     "upstream/source/blender/compositor/algorithms/intern/morphological_blur.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/algorithms/intern/morphological_distance.cc": "compiler_burndown_exceeded",
@@ -4567,25 +4649,12 @@
     "upstream/source/blender/compositor/algorithms/intern/summed_area_table.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/algorithms/intern/symmetric_separable_blur.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/algorithms/intern/symmetric_separable_blur_variable_size.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/cached_resources/COM_ocio_color_space_conversion_shader.hh": "compile_check_failed",
     "upstream/source/blender/compositor/cached_resources/intern/bokeh_kernel.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/cached_resources/intern/deriche_gaussian_coefficients.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/cached_resources/intern/distortion_grid.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/cached_resources/intern/fog_glow_kernel.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/cached_resources/intern/image_coordinates.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/cached_resources/intern/keying_screen.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/shaders/infos/compositor_cryptomatte_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/shaders/infos/compositor_directional_blur_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/shaders/infos/compositor_lens_distortion_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/shaders/infos/compositor_morphological_blur_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/shaders/infos/compositor_morphological_distance_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/shaders/infos/compositor_morphological_step_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/shaders/infos/compositor_motion_blur_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/shaders/infos/compositor_movie_distortion_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/shaders/infos/compositor_ocio_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/shaders/infos/compositor_parallel_reduction_infos.hh": "transpile_error",
-    "upstream/source/blender/compositor/utilities/COM_utilities_diagonals.hh": "transpile_error",
-    "upstream/source/blender/compositor/utilities/COM_utilities_oidn.hh": "transpile_error",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_rig.cc": "timeout",
