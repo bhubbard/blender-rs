@@ -4306,6 +4306,86 @@
     "upstream/source/blender/nodes/shader/materialx/node_graph.h": {
       "crate": "blender-io",
       "module": "node_materialx_graph.rs"
+    },
+    "upstream/source/blender/imbuf/IMB_imbuf_types.hh": {
+      "crate": "blender-io",
+      "module": "IMB_imbuf_types.rs"
+    },
+    "upstream/source/blender/imbuf/IMB_interp.hh": {
+      "crate": "blender-io",
+      "module": "IMB_interp.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_config.hh": {
+      "crate": "blender-io",
+      "module": "OCIO_config.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_matrix.hh": {
+      "crate": "blender-io",
+      "module": "OCIO_matrix.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_scope.hh": {
+      "crate": "blender-io",
+      "module": "OCIO_scope.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/OCIO_gpu_shader_binder.hh": {
+      "crate": "blender-io",
+      "module": "OCIO_gpu_shader_binder.rs"
+    },
+    "upstream/source/blender/imbuf/IMB_partial_update.hh": {
+      "crate": "blender-io",
+      "module": "IMB_partial_update.rs"
+    },
+    "upstream/source/blender/imbuf/intern/colormanagement_inline.h": {
+      "crate": "blender-io",
+      "module": "IMB_colormanagement_inline.rs"
+    },
+    "upstream/source/blender/imbuf/movie/intern/movie_read.hh": {
+      "crate": "blender-io",
+      "module": "IMB_movie.rs"
+    },
+    "upstream/source/blender/imbuf/movie/intern/movie_write.hh": {
+      "crate": "blender-io",
+      "module": "IMB_movie.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/white_point.hh": {
+      "crate": "blender-io",
+      "module": "OCIO_intern.rs"
+    },
+    "upstream/source/blender/imbuf/opencolorio/intern/description.hh": {
+      "crate": "blender-io",
+      "module": "OCIO_intern.rs"
+    },
+    "upstream/source/blender/compositor/COM_input_descriptor.hh": {
+      "crate": "blender-io",
+      "module": "COM_input_descriptor.rs"
+    },
+    "upstream/source/blender/compositor/COM_render_context.hh": {
+      "crate": "blender-io",
+      "module": "COM_render_context.rs"
+    },
+    "upstream/source/blender/compositor/COM_result.hh": {
+      "crate": "blender-io",
+      "module": "COM_result.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_symmetric_separable_blur.hh": {
+      "crate": "blender-io",
+      "module": "COM_algorithms.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/COM_algorithm_jump_flooding.hh": {
+      "crate": "blender-io",
+      "module": "COM_algorithms.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_distortion_grid.hh": {
+      "crate": "blender-io",
+      "module": "COM_cached_resources.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/COM_cached_resource.hh": {
+      "crate": "blender-io",
+      "module": "COM_cached_resources.rs"
+    },
+    "upstream/source/blender/compositor/shaders/infos/compositor_convert_infos.hh": {
+      "crate": "blender-io",
+      "module": "COM_shader_infos.rs"
     }
   },
   "failed": {
@@ -4469,19 +4549,14 @@
     "upstream/source/blender/bmesh/tools/bmesh_triangulate.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_wireframe.cc": "apfel_generation_failed",
     "upstream/source/blender/compositor/COM_group_node_operation.hh": "transpile_error",
-    "upstream/source/blender/compositor/COM_input_descriptor.hh": "compile_check_failed",
-    "upstream/source/blender/compositor/COM_render_context.hh": "compile_check_failed",
-    "upstream/source/blender/compositor/COM_result.hh": "compile_check_failed",
     "upstream/source/blender/compositor/COM_scene_compositor_effects_operation.hh": "compile_check_failed",
     "upstream/source/blender/compositor/COM_undefined_node_operation.hh": "transpile_error",
     "upstream/source/blender/compositor/algorithms/COM_algorithm_compute_preview.hh": "transpile_error",
     "upstream/source/blender/compositor/algorithms/COM_algorithm_convolve.hh": "transpile_error",
     "upstream/source/blender/compositor/algorithms/COM_algorithm_extract_alpha.hh": "transpile_error",
-    "upstream/source/blender/compositor/algorithms/COM_algorithm_jump_flooding.hh": "transpile_error",
     "upstream/source/blender/compositor/algorithms/COM_algorithm_morphological_distance.hh": "transpile_error",
     "upstream/source/blender/compositor/algorithms/COM_algorithm_parallel_reduction.hh": "transpile_error",
     "upstream/source/blender/compositor/algorithms/COM_algorithm_smaa.hh": "transpile_error",
-    "upstream/source/blender/compositor/algorithms/COM_algorithm_symmetric_separable_blur.hh": "transpile_error",
     "upstream/source/blender/compositor/algorithms/COM_algorithm_symmetric_separable_blur_variable_size.hh": "transpile_error",
     "upstream/source/blender/compositor/algorithms/intern/jump_flooding.cc": "compile_check_failed",
     "upstream/source/blender/compositor/algorithms/intern/morphological_blur.cc": "compiler_burndown_exceeded",
@@ -4492,8 +4567,6 @@
     "upstream/source/blender/compositor/algorithms/intern/summed_area_table.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/algorithms/intern/symmetric_separable_blur.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/algorithms/intern/symmetric_separable_blur_variable_size.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/cached_resources/COM_cached_resource.hh": "compile_check_failed",
-    "upstream/source/blender/compositor/cached_resources/COM_distortion_grid.hh": "compile_check_failed",
     "upstream/source/blender/compositor/cached_resources/COM_ocio_color_space_conversion_shader.hh": "compile_check_failed",
     "upstream/source/blender/compositor/cached_resources/intern/bokeh_kernel.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/cached_resources/intern/deriche_gaussian_coefficients.cc": "compiler_burndown_exceeded",
@@ -4501,7 +4574,6 @@
     "upstream/source/blender/compositor/cached_resources/intern/fog_glow_kernel.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/cached_resources/intern/image_coordinates.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/compositor/cached_resources/intern/keying_screen.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/shaders/infos/compositor_convert_infos.hh": "transpile_error",
     "upstream/source/blender/compositor/shaders/infos/compositor_cryptomatte_infos.hh": "transpile_error",
     "upstream/source/blender/compositor/shaders/infos/compositor_directional_blur_infos.hh": "transpile_error",
     "upstream/source/blender/compositor/shaders/infos/compositor_lens_distortion_infos.hh": "transpile_error",
@@ -4646,9 +4718,6 @@
     "upstream/source/blender/draw/intern/shaders/draw_debug_infos.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/intern/shaders/draw_gsplat.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/intern/shaders/draw_gsplat_lib.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/imbuf/IMB_imbuf_types.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/IMB_interp.hh": "transpile_error",
-    "upstream/source/blender/imbuf/IMB_partial_update.hh": "compile_check_failed",
     "upstream/source/blender/imbuf/intern/cache.cc": "compile_check_failed",
     "upstream/source/blender/imbuf/intern/cineon/cineon_dpx.cc": "compile_check_failed",
     "upstream/source/blender/imbuf/intern/cineon/cineonlib.cc": "timeout",
@@ -4656,7 +4725,6 @@
     "upstream/source/blender/imbuf/intern/cineon/logmemfile.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/cineon/logmemfile.h": "transpile_error",
     "upstream/source/blender/imbuf/intern/colormanagement.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/colormanagement_inline.h": "transpile_error",
     "upstream/source/blender/imbuf/intern/conversion.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/filetype.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/filter.cc": "compiler_burndown_exceeded",
@@ -4673,13 +4741,6 @@
     "upstream/source/blender/imbuf/intern/format_tiff.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/format_webp.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/imbuf/intern/oiio/openimageio_api.h": "transpile_error",
-    "upstream/source/blender/imbuf/movie/intern/movie_read.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/movie/intern/movie_write.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/OCIO_config.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/OCIO_gpu_shader_binder.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/OCIO_matrix.hh": "transpile_error",
-    "upstream/source/blender/imbuf/opencolorio/OCIO_scope.hh": "compile_check_failed",
-    "upstream/source/blender/imbuf/opencolorio/intern/description.hh": "transpile_error",
     "upstream/source/blender/imbuf/opencolorio/intern/gpu_shader_binder_internal.hh": "compile_check_failed",
     "upstream/source/blender/imbuf/opencolorio/intern/libocio/error_handling.hh": "transpile_error",
     "upstream/source/blender/imbuf/opencolorio/intern/libocio/libocio_colorspace.hh": "compile_check_failed",
@@ -4695,7 +4756,6 @@
     "upstream/source/blender/imbuf/opencolorio/intern/opencolorio.hh": "compile_check_failed",
     "upstream/source/blender/imbuf/opencolorio/intern/source_processor.hh": "transpile_error",
     "upstream/source/blender/imbuf/opencolorio/intern/view_specific_look.hh": "transpile_error",
-    "upstream/source/blender/imbuf/opencolorio/intern/white_point.hh": "compile_check_failed",
     "upstream/source/blender/io/alembic/intern/abc_customdata.h": "compile_check_failed",
     "upstream/source/blender/io/alembic/intern/abc_reader_object.h": "compile_check_failed",
     "upstream/source/blender/io/common/IO_abstract_hierarchy_iterator.h": "compile_check_failed",
