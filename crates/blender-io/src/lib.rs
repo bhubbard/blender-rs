@@ -2780,4 +2780,10 @@ pub use BLT_translation::*;
 pub mod messages;
 pub use messages::*;
 
+// blenfont completion (4/4 headers - 100%)
+pub mod blf_internal_types;
+pub use blf_internal_types::*;
+pub mod blf_internal;
+pub use blf_internal::*;
+
 
