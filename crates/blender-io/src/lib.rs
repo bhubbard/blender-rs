@@ -2801,6 +2801,16 @@ pub mod AppCanvas;
 pub use AppCanvas::*;
 pub mod FRS_controller;
 pub use FRS_controller::*;
+pub mod FRS_blender_interface;
+pub use FRS_blender_interface::*;
+pub mod FRS_geometry;
+pub use FRS_geometry::*;
+pub mod FRS_winged_edge;
+pub use FRS_winged_edge::*;
+pub mod FRS_view_map;
+pub use FRS_view_map::*;
+pub mod FRS_stroke;
+pub use FRS_stroke::*;
 
 // render core pipeline additions (5 headers)
 pub mod RE_pipeline;
@@ -2813,6 +2823,10 @@ pub mod RE_texture;
 pub use RE_texture::*;
 pub mod RE_compositor;
 pub use RE_compositor::*;
+pub mod RE_intern_types;
+pub use RE_intern_types::*;
+pub mod RE_hydra;
+pub use RE_hydra::*;
 
 // asset_system architecture additions (10 headers)
 pub mod AS_asset_catalog_path;
@@ -2835,5 +2849,9 @@ pub mod asset_catalog_definition_file;
 pub use asset_catalog_definition_file::*;
 pub mod asset_library_service;
 pub use asset_library_service::*;
+pub mod AS_library_types;
+pub use AS_library_types::*;
+pub mod AS_utils;
+pub use AS_utils::*;
 
 

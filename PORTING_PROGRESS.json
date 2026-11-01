@@ -3986,6 +3986,238 @@
     "upstream/source/blender/asset_system/intern/asset_library_service.hh": {
       "crate": "blender-io",
       "module": "asset_library_service.rs"
+    },
+    "upstream/source/blender/asset_system/intern/library_types/common.hh": {
+      "crate": "blender-io",
+      "module": "AS_library_types.rs"
+    },
+    "upstream/source/blender/asset_system/intern/library_types/all_library.hh": {
+      "crate": "blender-io",
+      "module": "AS_library_types.rs"
+    },
+    "upstream/source/blender/asset_system/intern/library_types/essentials_library.hh": {
+      "crate": "blender-io",
+      "module": "AS_library_types.rs"
+    },
+    "upstream/source/blender/asset_system/intern/library_types/on_disk_library.hh": {
+      "crate": "blender-io",
+      "module": "AS_library_types.rs"
+    },
+    "upstream/source/blender/asset_system/intern/library_types/preferences_on_disk_library.hh": {
+      "crate": "blender-io",
+      "module": "AS_library_types.rs"
+    },
+    "upstream/source/blender/asset_system/intern/library_types/remote_library.hh": {
+      "crate": "blender-io",
+      "module": "AS_library_types.rs"
+    },
+    "upstream/source/blender/asset_system/intern/library_types/runtime_library.hh": {
+      "crate": "blender-io",
+      "module": "AS_library_types.rs"
+    },
+    "upstream/source/blender/asset_system/intern/utils.hh": {
+      "crate": "blender-io",
+      "module": "AS_utils.rs"
+    },
+    "upstream/source/blender/render/intern/render_types.h": {
+      "crate": "blender-io",
+      "module": "RE_intern_types.rs"
+    },
+    "upstream/source/blender/render/intern/render_result.h": {
+      "crate": "blender-io",
+      "module": "RE_intern_types.rs"
+    },
+    "upstream/source/blender/render/intern/pipeline.hh": {
+      "crate": "blender-io",
+      "module": "RE_intern_types.rs"
+    },
+    "upstream/source/blender/render/intern/texture_common.h": {
+      "crate": "blender-io",
+      "module": "RE_intern_types.rs"
+    },
+    "upstream/source/blender/render/intern/tile_highlight.h": {
+      "crate": "blender-io",
+      "module": "RE_intern_types.rs"
+    },
+    "upstream/source/blender/render/intern/zbuf.h": {
+      "crate": "blender-io",
+      "module": "RE_intern_types.rs"
+    },
+    "upstream/source/blender/render/hydra/camera.hh": {
+      "crate": "blender-io",
+      "module": "RE_hydra.rs"
+    },
+    "upstream/source/blender/render/hydra/engine.hh": {
+      "crate": "blender-io",
+      "module": "RE_hydra.rs"
+    },
+    "upstream/source/blender/render/hydra/final_engine.hh": {
+      "crate": "blender-io",
+      "module": "RE_hydra.rs"
+    },
+    "upstream/source/blender/render/hydra/light_tasks_delegate.hh": {
+      "crate": "blender-io",
+      "module": "RE_hydra.rs"
+    },
+    "upstream/source/blender/render/hydra/preview_engine.hh": {
+      "crate": "blender-io",
+      "module": "RE_hydra.rs"
+    },
+    "upstream/source/blender/render/hydra/render_task_delegate.hh": {
+      "crate": "blender-io",
+      "module": "RE_hydra.rs"
+    },
+    "upstream/source/blender/render/hydra/settings.hh": {
+      "crate": "blender-io",
+      "module": "RE_hydra.rs"
+    },
+    "upstream/source/blender/render/hydra/viewport_engine.hh": {
+      "crate": "blender-io",
+      "module": "RE_hydra.rs"
+    },
+    "upstream/source/blender/freestyle/intern/blender_interface/BlenderFileLoader.h": {
+      "crate": "blender-io",
+      "module": "FRS_blender_interface.rs"
+    },
+    "upstream/source/blender/freestyle/intern/blender_interface/BlenderStrokeRenderer.h": {
+      "crate": "blender-io",
+      "module": "FRS_blender_interface.rs"
+    },
+    "upstream/source/blender/freestyle/intern/blender_interface/BlenderStyleModule.h": {
+      "crate": "blender-io",
+      "module": "FRS_blender_interface.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/BBox.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Bezier.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/FastGrid.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/FitCurve.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Geom.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/GeomCleaner.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Grid.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/GridHelpers.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/HashGrid.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/matrix_util.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Noise.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/normal_cycle.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/Polygon.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/geometry/SweepLine.h": {
+      "crate": "blender-io",
+      "module": "FRS_geometry.rs"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/Curvature.h": {
+      "crate": "blender-io",
+      "module": "FRS_winged_edge.rs"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/Nature.h": {
+      "crate": "blender-io",
+      "module": "FRS_winged_edge.rs"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WEdge.h": {
+      "crate": "blender-io",
+      "module": "FRS_winged_edge.rs"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WFillGrid.h": {
+      "crate": "blender-io",
+      "module": "FRS_winged_edge.rs"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WingedEdgeBuilder.h": {
+      "crate": "blender-io",
+      "module": "FRS_winged_edge.rs"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WSFillGrid.h": {
+      "crate": "blender-io",
+      "module": "FRS_winged_edge.rs"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WXEdge.h": {
+      "crate": "blender-io",
+      "module": "FRS_winged_edge.rs"
+    },
+    "upstream/source/blender/freestyle/intern/winged_edge/WXEdgeBuilder.h": {
+      "crate": "blender-io",
+      "module": "FRS_winged_edge.rs"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Interface0D.h": {
+      "crate": "blender-io",
+      "module": "FRS_view_map.rs"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Interface1D.h": {
+      "crate": "blender-io",
+      "module": "FRS_view_map.rs"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewMap.h": {
+      "crate": "blender-io",
+      "module": "FRS_view_map.rs"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/ViewEdgeXBuilder.h": {
+      "crate": "blender-io",
+      "module": "FRS_view_map.rs"
+    },
+    "upstream/source/blender/freestyle/intern/view_map/Silhouette.h": {
+      "crate": "blender-io",
+      "module": "FRS_view_map.rs"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Stroke.h": {
+      "crate": "blender-io",
+      "module": "FRS_stroke.rs"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeRenderer.h": {
+      "crate": "blender-io",
+      "module": "FRS_stroke.rs"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeLayer.h": {
+      "crate": "blender-io",
+      "module": "FRS_stroke.rs"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StrokeShader.h": {
+      "crate": "blender-io",
+      "module": "FRS_stroke.rs"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/Chain.h": {
+      "crate": "blender-io",
+      "module": "FRS_stroke.rs"
+    },
+    "upstream/source/blender/freestyle/intern/stroke/StyleModule.h": {
+      "crate": "blender-io",
+      "module": "FRS_stroke.rs"
     }
   },
   "failed": {
