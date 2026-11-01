@@ -4218,11 +4218,97 @@
     "upstream/source/blender/freestyle/intern/stroke/StyleModule.h": {
       "crate": "blender-io",
       "module": "FRS_stroke.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_action_legacy.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_action_legacy.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_pose.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_pose.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_action_iterators.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_action_iterators.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_animdata.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_animdata.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_armature.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_armature.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_armature_iter.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_armature.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_fcurve.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_fcurve.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_keyingsets.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_keyingsets.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_nla.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_nla.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_rna.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_rna.rs"
+    },
+    "upstream/source/blender/animrig/ANIM_evaluation.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_evaluation.rs"
+    },
+    "upstream/source/blender/animrig/intern/evaluation_internal.hh": {
+      "crate": "blender-io",
+      "module": "ANIM_evaluation.rs"
+    },
+    "upstream/source/blender/windowmanager/WM_api.hh": {
+      "crate": "blender-io",
+      "module": "WM_api.rs"
+    },
+    "upstream/source/blender/windowmanager/gizmo/WM_gizmo_types.hh": {
+      "crate": "blender-io",
+      "module": "WM_gizmo_types.rs"
+    },
+    "upstream/source/blender/windowmanager/gizmo/wm_gizmo_fn.hh": {
+      "crate": "blender-io",
+      "module": "wm_gizmo_fn.rs"
+    },
+    "upstream/source/blender/windowmanager/wm_event_types.hh": {
+      "crate": "blender-io",
+      "module": "wm_event_types.rs"
+    },
+    "upstream/source/blender/nodes/NOD_eval_log.hh": {
+      "crate": "blender-io",
+      "module": "NOD_eval_log.rs"
+    },
+    "upstream/source/blender/nodes/NOD_geometry_nodes_closure.hh": {
+      "crate": "blender-io",
+      "module": "NOD_geometry_nodes_closure.rs"
+    },
+    "upstream/source/blender/nodes/NOD_geometry_nodes_closure_signature.hh": {
+      "crate": "blender-io",
+      "module": "NOD_geometry_nodes_closure_signature.rs"
+    },
+    "upstream/source/blender/nodes/NOD_node_declaration.hh": {
+      "crate": "blender-io",
+      "module": "NOD_node_declaration.rs"
+    },
+    "upstream/source/blender/nodes/function/node_function_util.hh": {
+      "crate": "blender-io",
+      "module": "node_function_util.rs"
+    },
+    "upstream/source/blender/nodes/shader/materialx/node_graph.h": {
+      "crate": "blender-io",
+      "module": "node_materialx_graph.rs"
     }
   },
   "failed": {
-    "upstream/source/blender/animrig/ANIM_action_legacy.hh": "transpile_error",
-    "upstream/source/blender/animrig/ANIM_pose.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_bake_geometry_nodes_modifier.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_bake_items_serialize.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/blenkernel/BKE_bake_values.hh": "compiler_burndown_exceeded",
@@ -4710,13 +4796,8 @@
     "upstream/source/blender/makesrna/intern/rna_path.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_pointcloud.cc": "timeout",
     "upstream/source/blender/makesrna/intern/rna_pose.cc": "compile_check_failed",
-    "upstream/source/blender/nodes/NOD_eval_log.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/NOD_geometry_nodes_closure.hh": "compile_check_failed",
-    "upstream/source/blender/nodes/NOD_geometry_nodes_closure_signature.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/NOD_node_declaration.hh": "compile_check_failed",
     "upstream/source/blender/nodes/composite/nodes/node_composite_combine_color.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/composite/nodes/node_composite_separate_color.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/function/node_function_util.hh": "transpile_error",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_curve_topology_points_of_curve.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_edge_paths_to_curves.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_edge_split.cc": "compiler_burndown_exceeded",
@@ -4729,19 +4810,13 @@
     "upstream/source/blender/nodes/geometry/nodes/node_geo_separate_components.cc": "apfel_generation_failed",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_string_to_curves.cc": "compile_check_failed",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_tool_set_face_set.cc": "compile_check_failed",
-    "upstream/source/blender/nodes/shader/materialx/node_graph.h": "compile_check_failed",
-    "upstream/source/blender/render/hydra/light_tasks_delegate.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/WM_api.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/gizmo/WM_gizmo_types.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/gizmo/wm_gizmo_fn.hh": "compile_check_failed",
     "upstream/source/blender/windowmanager/intern/wm.cc": "apfel_generation_failed",
     "upstream/source/blender/windowmanager/intern/wm_cursors.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_event_system.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_files.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_files_link.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/windowmanager/intern/wm_operators.cc": "compile_check_failed",
-    "upstream/source/blender/windowmanager/intern/wm_playanim.cc": "compile_check_failed",
-    "upstream/source/blender/windowmanager/wm_event_types.hh": "compiler_burndown_exceeded"
+    "upstream/source/blender/windowmanager/intern/wm_playanim.cc": "compile_check_failed"
   },
   "skipped": {
     "upstream/source/blender/animrig/ANIM_action_iterators.hh": {

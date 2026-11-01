@@ -957,6 +957,27 @@ pub mod BLI_atomic_disjoint_set;
 
 
 pub mod ANIM_action;
+pub use ANIM_action::*;
+pub mod ANIM_action_legacy;
+pub use ANIM_action_legacy::*;
+pub mod ANIM_pose;
+pub use ANIM_pose::*;
+pub mod ANIM_action_iterators;
+pub use ANIM_action_iterators::*;
+pub mod ANIM_animdata;
+pub use ANIM_animdata::*;
+pub mod ANIM_armature;
+pub use ANIM_armature::*;
+pub mod ANIM_fcurve;
+pub use ANIM_fcurve::*;
+pub mod ANIM_keyingsets;
+pub use ANIM_keyingsets::*;
+pub mod ANIM_nla;
+pub use ANIM_nla::*;
+pub mod ANIM_rna;
+pub use ANIM_rna::*;
+pub mod ANIM_evaluation;
+pub use ANIM_evaluation::*;
 
 pub mod AS_asset_file_status;
 
@@ -1672,6 +1693,14 @@ pub mod eevee_shader;
 
 
 pub mod WM_message;
+pub mod WM_api;
+pub use WM_api::*;
+pub mod wm_event_types;
+pub use wm_event_types::*;
+pub mod WM_gizmo_types;
+pub use WM_gizmo_types::*;
+pub mod wm_gizmo_fn;
+pub use wm_gizmo_fn::*;
 
 pub mod wm_gizmo_wmapi;
 
@@ -2527,6 +2556,18 @@ pub mod BKE_shrinkwrap;
 pub use BKE_shrinkwrap::*;
 pub mod NOD_warning;
 pub use NOD_warning::*;
+pub mod NOD_eval_log;
+pub use NOD_eval_log::*;
+pub mod NOD_geometry_nodes_closure_signature;
+pub use NOD_geometry_nodes_closure_signature::*;
+pub mod NOD_geometry_nodes_closure;
+pub use NOD_geometry_nodes_closure::*;
+pub mod NOD_node_declaration;
+pub use NOD_node_declaration::*;
+pub mod node_function_util;
+pub use node_function_util::*;
+pub mod node_materialx_graph;
+pub use node_materialx_graph::*;
 pub mod NOD_shader_nodes_inline;
 pub use NOD_shader_nodes_inline::*;
 pub mod node_texture_util;
