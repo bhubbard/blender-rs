@@ -2970,3 +2970,6 @@ pub use WM_extended::*;
 
 pub mod NOD_extended;
 pub use NOD_extended::*;
+
+pub mod COM_kernels_extended;
+pub use COM_kernels_extended::*;

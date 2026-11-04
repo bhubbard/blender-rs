@@ -5402,6 +5402,66 @@
     "upstream/source/blender/nodes/geometry/nodes/node_geo_tool_set_face_set.cc": {
       "crate": "blender-io",
       "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/intern/jump_flooding.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/intern/morphological_blur.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/intern/morphological_distance.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/intern/morphological_distance_feather.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/intern/parallel_reduction.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/intern/recursive_gaussian_blur.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/intern/summed_area_table.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/intern/symmetric_separable_blur.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/algorithms/intern/symmetric_separable_blur_variable_size.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/intern/bokeh_kernel.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/intern/deriche_gaussian_coefficients.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/intern/distortion_grid.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/intern/fog_glow_kernel.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/intern/image_coordinates.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/compositor/cached_resources/intern/keying_screen.cc": {
+      "crate": "blender-io",
+      "module": "COM_kernels_extended.rs"
     }
   },
   "failed": {
@@ -5492,21 +5552,6 @@
     "upstream/source/blender/bmesh/tools/bmesh_separate.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_triangulate.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_wireframe.cc": "apfel_generation_failed",
-    "upstream/source/blender/compositor/algorithms/intern/jump_flooding.cc": "compile_check_failed",
-    "upstream/source/blender/compositor/algorithms/intern/morphological_blur.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/algorithms/intern/morphological_distance.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/algorithms/intern/morphological_distance_feather.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/algorithms/intern/parallel_reduction.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/algorithms/intern/recursive_gaussian_blur.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/algorithms/intern/summed_area_table.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/algorithms/intern/symmetric_separable_blur.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/algorithms/intern/symmetric_separable_blur_variable_size.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/cached_resources/intern/bokeh_kernel.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/cached_resources/intern/deriche_gaussian_coefficients.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/cached_resources/intern/distortion_grid.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/cached_resources/intern/fog_glow_kernel.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/cached_resources/intern/image_coordinates.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/compositor/cached_resources/intern/keying_screen.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.cc": "compile_check_failed",
     "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_rig.cc": "timeout",
