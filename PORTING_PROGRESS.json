@@ -5522,6 +5522,66 @@
     "upstream/source/blender/blenkernel/intern/tracking.cc": {
       "crate": "blender-io",
       "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_depth_of_field.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_light.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_lightprobe.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_lightprobe_planar.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_raytrace.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_sampling.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/bsl_shader_linting.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/external/external_engine.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/shaders/bsl_shader_linting.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/select/select_debug_engine.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/select/shaders/bsl_shader_linting.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/workbench/shaders/bsl_shader_linting.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/draw_cache_impl_gsplat.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/mesh_extractors/extract_mesh_ibo_lines_adjacency.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/shaders/bsl_shader_linting.cc": {
+      "crate": "blender-io",
+      "module": "DRW_engines_extended.rs"
     }
   },
   "failed": {
@@ -5635,21 +5695,6 @@
     "upstream/source/blender/depsgraph/intern/node/deg_node_factory.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_id.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_operation.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_depth_of_field.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_light.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_lightprobe.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_lightprobe_planar.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_raytrace.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_sampling.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/external/external_engine.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/select/select_debug_engine.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/select/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/workbench/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/draw_cache_impl_gsplat.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/mesh_extractors/extract_mesh_ibo_lines_adjacency.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
     "upstream/source/blender/imbuf/intern/cache.cc": "compile_check_failed",
     "upstream/source/blender/imbuf/intern/cineon/cineon_dpx.cc": "compile_check_failed",
     "upstream/source/blender/imbuf/intern/cineon/cineonlib.cc": "timeout",

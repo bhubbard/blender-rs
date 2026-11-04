@@ -2976,3 +2976,6 @@ pub use COM_kernels_extended::*;
 
 pub mod BKE_intern_extended;
 pub use BKE_intern_extended::*;
+
+pub mod DRW_engines_extended;
+pub use DRW_engines_extended::*;
