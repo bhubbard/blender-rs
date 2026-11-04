@@ -2994,3 +2994,6 @@ pub use IO_drivers_extended::*;
 
 pub mod DEG_intern_extended;
 pub use DEG_intern_extended::*;
+
+pub mod BMO_operators_extended;
+pub use BMO_operators_extended::*;

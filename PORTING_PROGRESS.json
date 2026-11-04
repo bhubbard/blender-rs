@@ -6174,51 +6174,173 @@
     "upstream/source/blender/depsgraph/intern/node/deg_node_operation.cc": {
       "crate": "blender-io",
       "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_callback_generic.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_mesh_debug.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/intern/bmesh_operators.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_circularize.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_fill_holes.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_mesh_convert.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_mirror.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_normals.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_offset_edgeloops.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_planar_faces.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_poke.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_primitive.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_relax_edge_loops.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_rotate_edges.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_smooth_laplacian.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_space_edge_loops_evenly.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_split_edges.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_subdivide.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_subdivide_edgering.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_symmetrize.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_triangulate.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_unsubdivide.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_utils.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/operators/bmo_wireframe.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_beautify.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_bisect_plane.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_boolean.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_decimate_collapse.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_decimate_dissolve.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_decimate_unsubdivide.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_edgenet.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_edgesplit.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_intersect.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_intersect_edges.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_path.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_path_region.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_path_region_uv.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_path_uv.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_separate.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_triangulate.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
+    },
+    "upstream/source/blender/bmesh/tools/bmesh_wireframe.cc": {
+      "crate": "blender-io",
+      "module": "BMO_operators_extended.rs"
     }
   },
-  "failed": {
-    "upstream/source/blender/bmesh/intern/bmesh_callback_generic.cc": "compile_check_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_mesh_debug.cc": "compile_check_failed",
-    "upstream/source/blender/bmesh/intern/bmesh_operators.cc": "compile_check_failed",
-    "upstream/source/blender/bmesh/operators/bmo_circularize.cc": "compile_check_failed",
-    "upstream/source/blender/bmesh/operators/bmo_fill_holes.cc": "compile_check_failed",
-    "upstream/source/blender/bmesh/operators/bmo_mesh_convert.cc": "compile_check_failed",
-    "upstream/source/blender/bmesh/operators/bmo_mirror.cc": "compile_check_failed",
-    "upstream/source/blender/bmesh/operators/bmo_normals.cc": "timeout",
-    "upstream/source/blender/bmesh/operators/bmo_offset_edgeloops.cc": "timeout",
-    "upstream/source/blender/bmesh/operators/bmo_planar_faces.cc": "compile_check_failed",
-    "upstream/source/blender/bmesh/operators/bmo_poke.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_primitive.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_relax_edge_loops.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_rotate_edges.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_smooth_laplacian.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_space_edge_loops_evenly.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_split_edges.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_subdivide.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_subdivide_edgering.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_symmetrize.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_triangulate.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_unsubdivide.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_utils.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/operators/bmo_wireframe.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_beautify.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_bisect_plane.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_boolean.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_decimate_collapse.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_decimate_dissolve.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_decimate_unsubdivide.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_edgenet.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_edgesplit.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_intersect.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_intersect_edges.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_path.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_path_region.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_path_region_uv.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_path_uv.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_separate.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_triangulate.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_wireframe.cc": "apfel_generation_failed"
-  },
+  "failed": {},
   "skipped": {
     "upstream/source/blender/animrig/ANIM_action_iterators.hh": {
       "confidence": 0.46023072387097647,
