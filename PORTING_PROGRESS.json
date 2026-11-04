@@ -5778,40 +5778,133 @@
     "upstream/source/blender/makesrna/intern/rna_pose.cc": {
       "crate": "blender-io",
       "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/BLI_ghash.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/BLI_ghash_utils.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/BLI_heap_simple.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/BLI_linklist.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/BLI_memblock.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/BLI_mempool.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/array_utils_c.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/expr_pylike_eval.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/fnmatch.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/hash_mm2a.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/hash_mm3.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/kdtree.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/lazy_threading.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/math_base_inline.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/math_basis_types.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/math_color_blend_inline.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/math_filter.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/math_interp.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/math_rotation.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/math_vec.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/noise.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/polyfill_2d.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/scanfill.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/session_uid.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/smaa_textures.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/string_ref.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/system.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/system_win32.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/task_graph.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/task_iterator.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/task_pool.cc": {
+      "crate": "blender-io",
+      "module": "BLI_intern_extended.rs"
     }
   },
   "failed": {
-    "upstream/source/blender/blenlib/intern/BLI_ghash.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/BLI_ghash_utils.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/BLI_heap_simple.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/BLI_linklist.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/BLI_memblock.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/BLI_mempool.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/array_utils_c.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/expr_pylike_eval.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/fnmatch.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/hash_mm2a.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/hash_mm3.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/kdtree.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/lazy_threading.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/math_base_inline.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/math_basis_types.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/math_color_blend_inline.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/math_filter.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/math_interp.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/math_rotation.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/math_vec.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/noise.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/polyfill_2d.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/scanfill.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/session_uid.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/smaa_textures.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/string_ref.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/system.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/system_win32.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/task_graph.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/task_iterator.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/task_pool.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/intern/bmesh_callback_generic.cc": "compile_check_failed",
     "upstream/source/blender/bmesh/intern/bmesh_mesh_debug.cc": "compile_check_failed",
     "upstream/source/blender/bmesh/intern/bmesh_operators.cc": "compile_check_failed",

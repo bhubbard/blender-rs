@@ -2985,3 +2985,6 @@ pub use IMB_codecs_extended::*;
 
 pub mod RNA_api_extended;
 pub use RNA_api_extended::*;
+
+pub mod BLI_intern_extended;
+pub use BLI_intern_extended::*;
