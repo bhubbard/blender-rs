@@ -5346,6 +5346,62 @@
     "upstream/source/blender/windowmanager/intern/wm_playanim.cc": {
       "crate": "blender-io",
       "module": "WM_extended.rs"
+    },
+    "upstream/source/blender/nodes/composite/nodes/node_composite_combine_color.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/composite/nodes/node_composite_separate_color.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_curve_topology_points_of_curve.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_edge_paths_to_curves.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_edge_split.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_flip_faces.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_input_instance_bounds.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_input_mesh_edge_neighbors.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_to_density_grid.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_to_sdf_grid.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_vertex_of_corner.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_separate_components.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_string_to_curves.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
+    },
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_tool_set_face_set.cc": {
+      "crate": "blender-io",
+      "module": "NOD_extended.rs"
     }
   },
   "failed": {
@@ -5582,21 +5638,7 @@
     "upstream/source/blender/makesrna/intern/rna_particle.cc": "timeout",
     "upstream/source/blender/makesrna/intern/rna_path.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_pointcloud.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_pose.cc": "compile_check_failed",
-    "upstream/source/blender/nodes/composite/nodes/node_composite_combine_color.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/composite/nodes/node_composite_separate_color.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_curve_topology_points_of_curve.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_edge_paths_to_curves.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_edge_split.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_flip_faces.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_input_instance_bounds.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_input_mesh_edge_neighbors.cc": "apfel_generation_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_to_density_grid.cc": "compile_check_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_to_sdf_grid.cc": "compile_check_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_vertex_of_corner.cc": "apfel_generation_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_separate_components.cc": "apfel_generation_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_string_to_curves.cc": "compile_check_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_tool_set_face_set.cc": "compile_check_failed"
+    "upstream/source/blender/makesrna/intern/rna_pose.cc": "compile_check_failed"
   },
   "skipped": {
     "upstream/source/blender/animrig/ANIM_action_iterators.hh": {
