@@ -5582,6 +5582,90 @@
     "upstream/source/blender/draw/intern/shaders/bsl_shader_linting.cc": {
       "crate": "blender-io",
       "module": "DRW_engines_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/cache.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/cineon/cineon_dpx.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/cineon/cineonlib.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/cineon/logImageCore.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/cineon/logmemfile.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/colormanagement.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/conversion.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/filetype.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/filter.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_avif.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_bmp.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_dds.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_dpx.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_hdr.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_iris.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_png.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_psd.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_svg.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_targa.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_tiff.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/imbuf/intern/format_webp.cc": {
+      "crate": "blender-io",
+      "module": "IMB_codecs_extended.rs"
     }
   },
   "failed": {
@@ -5695,27 +5779,6 @@
     "upstream/source/blender/depsgraph/intern/node/deg_node_factory.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_id.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_operation.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/cache.cc": "compile_check_failed",
-    "upstream/source/blender/imbuf/intern/cineon/cineon_dpx.cc": "compile_check_failed",
-    "upstream/source/blender/imbuf/intern/cineon/cineonlib.cc": "timeout",
-    "upstream/source/blender/imbuf/intern/cineon/logImageCore.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/cineon/logmemfile.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/colormanagement.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/conversion.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/filetype.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/filter.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_avif.cc": "apfel_generation_failed",
-    "upstream/source/blender/imbuf/intern/format_bmp.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_dds.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_dpx.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_hdr.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_iris.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_png.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_psd.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_svg.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_targa.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_tiff.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/imbuf/intern/format_webp.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/IO_ply.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/exporter/ply_export.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/ply/exporter/ply_export_data.cc": "compiler_burndown_exceeded",

@@ -2979,3 +2979,6 @@ pub use BKE_intern_extended::*;
 
 pub mod DRW_engines_extended;
 pub use DRW_engines_extended::*;
+
+pub mod IMB_codecs_extended;
+pub use IMB_codecs_extended::*;
