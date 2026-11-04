@@ -5,6 +5,9 @@ edition = "2021"
 description = "Pure Rust executable runtime engine for Blender"
 license = "GPL-2.0-or-later"
 
+[lib]
+path = "src/lib.rs"
+
 [[bin]]
 name = "blender"
 path = "src/main.rs"

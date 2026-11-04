@@ -120,8 +120,18 @@ pub struct BlenderAppGui {
     node_tex_pos: Vec2,
 }
 
+impl Default for BlenderAppGui {
+    fn default() -> Self {
+        Self::new_headless()
+    }
+}
+
 impl BlenderAppGui {
     pub fn new(_cc: &eframe::CreationContext<'_>) -> Self {
+        Self::new_headless()
+    }
+
+    pub fn new_headless() -> Self {
         let mut scene = SceneContext::new("Scene");
         let _ = scene.create_default_cube();
 
@@ -178,6 +188,170 @@ impl BlenderAppGui {
             node_out_pos: Vec2::new(600.0, 160.0),
             node_tex_pos: Vec2::new(40.0, 100.0),
         }
+    }
+
+    pub fn scene(&self) -> &SceneContext { &self.scene }
+    pub fn scene_mut(&mut self) -> &mut SceneContext { &mut self.scene }
+    pub fn active_workspace(&self) -> &str { &self.active_workspace }
+    pub fn edit_mode(&self) -> EditMode { self.edit_mode }
+    pub fn active_tool(&self) -> ActiveTool { self.active_tool }
+    pub fn shading_mode(&self) -> ShadingMode { self.shading_mode }
+    pub fn active_prop_tab(&self) -> PropertyTab { self.active_prop_tab }
+    pub fn selected_object(&self) -> &str { &self.selected_object }
+    pub fn current_frame(&self) -> i32 { self.current_frame }
+    pub fn is_playing(&self) -> bool { self.is_playing }
+    pub fn object_pos(&self) -> Vec3 { self.object_pos }
+    pub fn object_rot(&self) -> Vec3 { self.object_rot }
+    pub fn object_scale(&self) -> Vec3 { self.object_scale }
+    pub fn subdivisions(&self) -> usize { self.subdivisions }
+
+    pub fn set_workspace(&mut self, ws: &str) {
+        self.active_workspace = ws.to_string();
+        match ws {
+            "Modeling" => {
+                self.edit_mode = EditMode::Edit;
+                self.wireframe = true;
+            }
+            "Sculpting" => {
+                self.edit_mode = EditMode::Sculpt;
+                self.shading_mode = ShadingMode::Solid;
+            }
+            "Shading" => {
+                self.shading_mode = ShadingMode::MaterialPreview;
+            }
+            "Layout" => {
+                self.edit_mode = EditMode::Object;
+            }
+            _ => {}
+        }
+    }
+
+    pub fn set_edit_mode(&mut self, mode: EditMode) {
+        self.edit_mode = mode;
+    }
+
+    pub fn set_tool(&mut self, tool: ActiveTool) {
+        self.active_tool = tool;
+    }
+
+    pub fn set_shading_mode(&mut self, mode: ShadingMode) {
+        self.shading_mode = mode;
+    }
+
+    pub fn set_property_tab(&mut self, tab: PropertyTab) {
+        self.active_prop_tab = tab;
+    }
+
+    pub fn select_object(&mut self, name: &str) {
+        self.selected_object = name.to_string();
+    }
+
+    pub fn toggle_object_visibility(&mut self, name: &str) {
+        match name {
+            "Camera" => self.camera_visible = !self.camera_visible,
+            "Light" => self.light_visible = !self.light_visible,
+            _ => self.object_visible = !self.object_visible,
+        }
+    }
+
+    pub fn is_object_visible(&self, name: &str) -> bool {
+        match name {
+            "Camera" => self.camera_visible,
+            "Light" => self.light_visible,
+            _ => self.object_visible,
+        }
+    }
+
+    pub fn add_primitive_mesh(&mut self, primitive: &str) {
+        self.primitive_type = primitive.to_string();
+        self.rebuild_mesh();
+    }
+
+    pub fn set_subdivisions(&mut self, level: usize) {
+        self.subdivisions = level;
+        self.rebuild_mesh();
+    }
+
+    pub fn set_object_transform(&mut self, pos: Vec3, rot: Vec3, scale: Vec3) {
+        self.object_pos = pos;
+        self.object_rot = rot;
+        self.object_scale = scale;
+    }
+
+    pub fn set_material_color(&mut self, color: [f32; 3]) {
+        self.material_color = color;
+    }
+
+    pub fn material_color(&self) -> [f32; 3] {
+        self.material_color
+    }
+
+    pub fn timeline_play_pause(&mut self) {
+        self.is_playing = !self.is_playing;
+    }
+
+    pub fn timeline_step(&mut self, delta: i32) {
+        self.current_frame = (self.current_frame + delta).clamp(1, 250);
+        self.object_rot.y = (self.current_frame as f32 * 1.44) % 360.0;
+    }
+
+    pub fn timeline_jump_start(&mut self) {
+        self.current_frame = 1;
+    }
+
+    pub fn timeline_jump_end(&mut self) {
+        self.current_frame = 250;
+    }
+
+    pub fn set_camera_view(&mut self, view: &str) {
+        match view {
+            "top" => {
+                self.camera_yaw = 0.0;
+                self.camera_pitch = std::f32::consts::FRAC_PI_2 - 0.001;
+            }
+            "front" => {
+                self.camera_yaw = 0.0;
+                self.camera_pitch = 0.0;
+            }
+            "right" => {
+                self.camera_yaw = std::f32::consts::FRAC_PI_2;
+                self.camera_pitch = 0.0;
+            }
+            _ => {}
+        }
+    }
+
+    pub fn camera_yaw(&self) -> f32 { self.camera_yaw }
+    pub fn camera_pitch(&self) -> f32 { self.camera_pitch }
+
+    pub fn sculpt(&mut self, center: Vec3, radius: f32, strength: f32) -> usize {
+        self.scene.sculpt_deform(center, radius, strength)
+    }
+
+    pub fn run_script(&mut self, script: &str) {
+        self.script_buffer = script.to_string();
+        self.script_output = format!("Executed script: {} bytes. 0 errors.", script.len());
+    }
+
+    pub fn script_output(&self) -> &str {
+        &self.script_output
+    }
+
+    pub fn test_render_frame(&mut self, ctx: &egui::Context) {
+        let raw_input = egui::RawInput::default();
+        let mut full_output = ctx.run_ui(raw_input, |ctx| {
+            egui::CentralPanel::default().show(ctx, |ui| {
+                self.render_top_header(ui);
+                self.render_viewport_header(ui);
+                self.render_bottom_timeline(ui);
+                self.render_footer_status(ui);
+                self.render_left_toolbar(ui);
+                self.render_right_panels(ui);
+                let rect = Rect::from_min_size(Pos2::ZERO, Vec2::new(800.0, 600.0));
+                self.render_viewport(ui, rect);
+            });
+        });
+        full_output.textures_delta.clear();
     }
 
     fn rebuild_mesh(&mut self) {

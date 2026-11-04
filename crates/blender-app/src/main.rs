@@ -6,13 +6,7 @@ use colored::*;
 use std::path::PathBuf;
 use std::time::Instant;
 
-mod scene;
-mod viewport;
-mod gui;
-
-use scene::SceneContext;
-use viewport::ViewportRasterizer;
-use gui::BlenderAppGui;
+use blender_app::{BlenderAppGui, SceneContext, ViewportRasterizer};
 
 #[derive(Parser, Debug)]
 #[command(
