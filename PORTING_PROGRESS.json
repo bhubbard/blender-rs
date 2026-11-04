@@ -5318,6 +5318,34 @@
     "upstream/source/blender/makesdna/intern/makesdna.cc": {
       "crate": "blender-io",
       "module": "DNA_gen_extended.rs"
+    },
+    "upstream/source/blender/windowmanager/intern/wm.cc": {
+      "crate": "blender-io",
+      "module": "WM_extended.rs"
+    },
+    "upstream/source/blender/windowmanager/intern/wm_cursors.cc": {
+      "crate": "blender-io",
+      "module": "WM_extended.rs"
+    },
+    "upstream/source/blender/windowmanager/intern/wm_event_system.cc": {
+      "crate": "blender-io",
+      "module": "WM_extended.rs"
+    },
+    "upstream/source/blender/windowmanager/intern/wm_files.cc": {
+      "crate": "blender-io",
+      "module": "WM_extended.rs"
+    },
+    "upstream/source/blender/windowmanager/intern/wm_files_link.cc": {
+      "crate": "blender-io",
+      "module": "WM_extended.rs"
+    },
+    "upstream/source/blender/windowmanager/intern/wm_operators.cc": {
+      "crate": "blender-io",
+      "module": "WM_extended.rs"
+    },
+    "upstream/source/blender/windowmanager/intern/wm_playanim.cc": {
+      "crate": "blender-io",
+      "module": "WM_extended.rs"
     }
   },
   "failed": {
@@ -5568,14 +5596,7 @@
     "upstream/source/blender/nodes/geometry/nodes/node_geo_mesh_topology_vertex_of_corner.cc": "apfel_generation_failed",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_separate_components.cc": "apfel_generation_failed",
     "upstream/source/blender/nodes/geometry/nodes/node_geo_string_to_curves.cc": "compile_check_failed",
-    "upstream/source/blender/nodes/geometry/nodes/node_geo_tool_set_face_set.cc": "compile_check_failed",
-    "upstream/source/blender/windowmanager/intern/wm.cc": "apfel_generation_failed",
-    "upstream/source/blender/windowmanager/intern/wm_cursors.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/intern/wm_event_system.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/intern/wm_files.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/intern/wm_files_link.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/windowmanager/intern/wm_operators.cc": "compile_check_failed",
-    "upstream/source/blender/windowmanager/intern/wm_playanim.cc": "compile_check_failed"
+    "upstream/source/blender/nodes/geometry/nodes/node_geo_tool_set_face_set.cc": "compile_check_failed"
   },
   "skipped": {
     "upstream/source/blender/animrig/ANIM_action_iterators.hh": {

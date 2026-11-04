@@ -2964,3 +2964,6 @@ pub use DRW_extended::*;
 
 pub mod DNA_gen_extended;
 pub use DNA_gen_extended::*;
+
+pub mod WM_extended;
+pub use WM_extended::*;
