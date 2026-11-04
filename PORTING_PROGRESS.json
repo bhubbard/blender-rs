@@ -6022,6 +6022,158 @@
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.cc": {
       "crate": "blender-io",
       "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_rig.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_scene.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_view_layer.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_drivers.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_rig.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_scene.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_view_layer.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_rna.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/deg_builder_transitive.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_all_objects.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_collection.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/builder/pipeline_view_layer.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/debug/deg_debug_relations_graphviz.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_build.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_debug.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_query_foreach.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_query_iter.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_relation.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_tag.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_type.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_update.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/depsgraph_writeback_sync.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_animation.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_modifier.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_movieclip.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_object.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_scene.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sound.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_volume.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/eval/deg_eval_stats.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/node/deg_node_factory.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/node/deg_node_id.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
+    },
+    "upstream/source/blender/depsgraph/intern/node/deg_node_operation.cc": {
+      "crate": "blender-io",
+      "module": "DEG_intern_extended.rs"
     }
   },
   "failed": {
@@ -6065,45 +6217,7 @@
     "upstream/source/blender/bmesh/tools/bmesh_path_uv.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_separate.cc": "apfel_generation_failed",
     "upstream/source/blender/bmesh/tools/bmesh_triangulate.cc": "apfel_generation_failed",
-    "upstream/source/blender/bmesh/tools/bmesh_wireframe.cc": "apfel_generation_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_cycle.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_map.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_rig.cc": "timeout",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_scene.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_nodes_view_layer.cc": "timeout",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_drivers.cc": "timeout",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_rig.cc": "timeout",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_scene.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_relations_view_layer.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_rna.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/deg_builder_transitive.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/pipeline.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/pipeline_all_objects.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/pipeline_from_collection.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/builder/pipeline_view_layer.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/debug/deg_debug_relations_graphviz.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/depsgraph_build.cc": "timeout",
-    "upstream/source/blender/depsgraph/intern/depsgraph_debug.cc": "timeout",
-    "upstream/source/blender/depsgraph/intern/depsgraph_query_foreach.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/depsgraph_query_iter.cc": "timeout",
-    "upstream/source/blender/depsgraph/intern/depsgraph_relation.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/depsgraph_tag.cc": "timeout",
-    "upstream/source/blender/depsgraph/intern/depsgraph_type.cc": "compile_check_failed",
-    "upstream/source/blender/depsgraph/intern/depsgraph_update.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/depsgraph_writeback_sync.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_animation.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_modifier.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_movieclip.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_object.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_scene.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_sound.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_runtime_backup_volume.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/eval/deg_eval_stats.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/node/deg_node_factory.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/node/deg_node_id.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/node/deg_node_operation.cc": "compiler_burndown_exceeded"
+    "upstream/source/blender/bmesh/tools/bmesh_wireframe.cc": "apfel_generation_failed"
   },
   "skipped": {
     "upstream/source/blender/animrig/ANIM_action_iterators.hh": {

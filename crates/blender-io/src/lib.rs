@@ -2991,3 +2991,6 @@ pub use BLI_intern_extended::*;
 
 pub mod IO_drivers_extended;
 pub use IO_drivers_extended::*;
+
+pub mod DEG_intern_extended;
+pub use DEG_intern_extended::*;
