@@ -12,7 +12,7 @@ use blender_app::{BlenderAppGui, SceneContext, ViewportRasterizer};
 #[command(
     name = "blender",
     about = "Blender-rs: Native Safe Rust 3D Engine & Modeling Kernel",
-    version = "4.2.0-rust.alpha"
+    version = "5.2.3-rust.lts"
 )]
 struct Cli {
     /// Run in background without window / interactive UI
@@ -48,7 +48,7 @@ fn main() -> Result<()> {
     let args = Cli::parse();
 
     println!("{}", "\n======================================================================".cyan().bold());
-    println!("{}", "               🎨  BLENDER 4.2.0 (SAFE RUST NATIVE ENGINE)             ".bold());
+    println!("{}", "             🎨  BLENDER 5.2.3 LTS (SAFE RUST NATIVE ENGINE)          ".bold());
     println!("{}", "   BMesh Half-Edge Kernel • Geometry Nodes XPBD • Zero Pointer Hazards   ".dimmed());
     println!("{}", "======================================================================\n".cyan().bold());
 
@@ -130,11 +130,11 @@ fn main() -> Result<()> {
             viewport: eframe::egui::ViewportBuilder::default()
                 .with_inner_size([1200.0, 800.0])
                 .with_min_inner_size([640.0, 480.0])
-                .with_title("Blender 4.2.0 (Rust Edition)"),
+                .with_title("Blender 5.2.3 LTS (Rust Edition)"),
             ..Default::default()
         };
         eframe::run_native(
-            "Blender 4.2.0",
+            "Blender 5.2.3 LTS",
             native_options,
             Box::new(|cc| Ok(Box::new(BlenderAppGui::new(cc)))),
         ).map_err(|e| anyhow::anyhow!("GUI execution error: {e}"))?;

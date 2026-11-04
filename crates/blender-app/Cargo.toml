@@ -1,8 +1,8 @@
 [package]
 name = "blender-app"
-version = "0.1.0"
+version = "5.2.3"
 edition = "2021"
-description = "Pure Rust executable runtime engine for Blender"
+description = "Pure Rust executable runtime engine for Blender 5.2.3 LTS"
 license = "GPL-2.0-or-later"
 
 [lib]

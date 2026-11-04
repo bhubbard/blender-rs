@@ -1,4 +1,4 @@
-//! Blender Desktop GUI Window matching the canonical upstream Blender 4.x interface.
+//! Blender Desktop GUI Window matching the canonical upstream Blender 5.2.3 LTS interface.
 //! Implements fully interactive:
 //! - Top Menu Bar: Logo, File, Edit, Render, Window, Help, Workspace tabs (Layout, Modeling, Sculpting, UV Editing, Texture Paint, Shading, Animation, Rendering, Compositing, Geometry Nodes, Scripting).
 //! - Viewport Header: Interaction mode (Object / Edit / Sculpt), View / Select / Add (Cube, Sphere, Cylinder, Plane, Torus) / Object menus, Transform Orientations, Shading toggles (Wireframe, Solid, Material Preview, Rendered).
@@ -455,7 +455,7 @@ impl BlenderAppGui {
 
             ui.menu_button("Help", |ui| {
                 if ui.button("Blender-rs Manual").clicked() {
-                    self.status_message = "Pure Rust Blender 4.2 Engine - 100% Rust Conversion".to_string();
+                    self.status_message = "Pure Rust Blender 5.2.3 LTS Engine - 100% Rust Conversion".to_string();
                     ui.close();
                 }
             });
@@ -1291,7 +1291,7 @@ impl BlenderAppGui {
             ui.label(egui::RichText::new(&self.status_message).size(11.0).color(Color32::from_rgb(240, 200, 80)));
 
             ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                ui.label(egui::RichText::new("4.2.0-rust").size(11.0).color(Color32::from_rgb(130, 135, 140)));
+                ui.label(egui::RichText::new("5.2.3-rust.lts").size(11.0).color(Color32::from_rgb(130, 135, 140)));
                 ui.separator();
                 ui.label(egui::RichText::new(format!("Mem: {:.1}M", 28.4)).size(11.0).color(Color32::from_rgb(110, 190, 120)));
                 ui.separator();
@@ -1470,7 +1470,7 @@ impl eframe::App for BlenderAppGui {
             ui.ctx().request_repaint();
         }
 
-        // Canonical Blender 4.2 Dark Visual Styling
+        // Canonical Blender 5.2.3 LTS Dark Visual Styling
         let mut visuals = egui::Visuals::dark();
         visuals.panel_fill = Color32::from_rgb(38, 40, 44);
         visuals.window_fill = Color32::from_rgb(44, 46, 50);
