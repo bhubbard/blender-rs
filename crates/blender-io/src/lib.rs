@@ -2973,3 +2973,6 @@ pub use NOD_extended::*;
 
 pub mod COM_kernels_extended;
 pub use COM_kernels_extended::*;
+
+pub mod BKE_intern_extended;
+pub use BKE_intern_extended::*;

@@ -5462,24 +5462,69 @@
     "upstream/source/blender/compositor/cached_resources/intern/keying_screen.cc": {
       "crate": "blender-io",
       "module": "COM_kernels_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/anonymous_attribute_id.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/asset_weak_reference.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/blendfile.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/bpath.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/editmesh_bvh.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/lib_id_eval.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/main.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/main_idmap.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/mask_rasterize.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/mesh_debug.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/mesh_iterators.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/mesh_normals.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/mesh_tessellate.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/rigidbody.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
+    },
+    "upstream/source/blender/blenkernel/intern/tracking.cc": {
+      "crate": "blender-io",
+      "module": "BKE_intern_extended.rs"
     }
   },
   "failed": {
-    "upstream/source/blender/blenkernel/intern/anonymous_attribute_id.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/asset_weak_reference.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenkernel/intern/blendfile.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/bpath.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/editmesh_bvh.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/lib_id_eval.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/main.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/main_idmap.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/mask_rasterize.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/mesh_debug.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/mesh_iterators.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/mesh_normals.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/mesh_tessellate.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/rigidbody.cc": "compile_check_failed",
-    "upstream/source/blender/blenkernel/intern/tracking.cc": "compile_check_failed",
     "upstream/source/blender/blenlib/intern/BLI_ghash.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/BLI_ghash_utils.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/BLI_heap_simple.cc": "apfel_generation_failed",
