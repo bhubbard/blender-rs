@@ -2961,3 +2961,6 @@ pub use BLI_extended::*;
 
 pub mod DRW_extended;
 pub use DRW_extended::*;
+
+pub mod DNA_gen_extended;
+pub use DNA_gen_extended::*;

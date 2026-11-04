@@ -5302,6 +5302,22 @@
     "upstream/source/blender/draw/intern/shaders/draw_gsplat_lib.bsl.hh": {
       "crate": "blender-io",
       "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/makesdna/intern/dna_genfile.cc": {
+      "crate": "blender-io",
+      "module": "DNA_gen_extended.rs"
+    },
+    "upstream/source/blender/makesdna/intern/dna_parse.cc": {
+      "crate": "blender-io",
+      "module": "DNA_gen_extended.rs"
+    },
+    "upstream/source/blender/makesdna/intern/dna_utils.cc": {
+      "crate": "blender-io",
+      "module": "DNA_gen_extended.rs"
+    },
+    "upstream/source/blender/makesdna/intern/makesdna.cc": {
+      "crate": "blender-io",
+      "module": "DNA_gen_extended.rs"
     }
   },
   "failed": {
@@ -5511,10 +5527,6 @@
     "upstream/source/blender/io/wavefront_obj/importer/obj_import_mtl.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/importer/obj_import_nurbs.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.cc": "apfel_generation_failed",
-    "upstream/source/blender/makesdna/intern/dna_genfile.cc": "compile_check_failed",
-    "upstream/source/blender/makesdna/intern/dna_parse.cc": "compile_check_failed",
-    "upstream/source/blender/makesdna/intern/dna_utils.cc": "compile_check_failed",
-    "upstream/source/blender/makesdna/intern/makesdna.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_action.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_action_api.cc": "compile_check_failed",
     "upstream/source/blender/makesrna/intern/rna_blendfile_import.cc": "compile_check_failed",
