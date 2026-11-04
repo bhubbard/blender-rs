@@ -2955,3 +2955,9 @@ pub use IMB_ocio_extended::*;
 
 pub mod IO_extended;
 pub use IO_extended::*;
+
+pub mod BLI_extended;
+pub use BLI_extended::*;
+
+pub mod DRW_extended;
+pub use DRW_extended::*;

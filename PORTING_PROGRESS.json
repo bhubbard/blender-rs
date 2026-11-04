@@ -4798,6 +4798,510 @@
     "upstream/source/blender/io/wavefront_obj/importer/obj_importer.hh": {
       "crate": "blender-io",
       "module": "IO_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_alloca.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_any.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_asan.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_bit_bool_conversion.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_bit_span_ops.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_build_config.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_colorspace.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_compiler_typecheck.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_fftw.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_fileops.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_fixed_width_int_str.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_generic_array.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_generic_virtual_array.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_implicit_sharing.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_link_utils.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_linklist_stack.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_axis_angle.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_base.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_base_c.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_base_safe.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_boolean.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_color.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_euler.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_geom.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_half.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_matrix.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_quaternion.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_rotation.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_rotation_legacy.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_solvers.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_vector_mpq_types.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_math_vector_unroll.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_memory_cache_file_load.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_mutex.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_session_uid.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_system.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_tempfile.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_timecode.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_unroll.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_utildefines.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_utildefines_iter.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_utility_mixins.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_uuid.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_vector.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_vector_set_slots.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/BLI_virtual_array.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/blenlib/intern/radial_tiling_shared.hh": {
+      "crate": "blender-io",
+      "module": "BLI_extended.rs"
+    },
+    "upstream/source/blender/draw/DRW_select_buffer.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_camera_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_debug_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_depth_of_field_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_film_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_light.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_light_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_lightprobe_volume.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_lookdev.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_lut.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_precompute_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_raytrace_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_renderbuffers_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_sampling_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_subsurface_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_uniform_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_velocity_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/eevee_volume_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_attributes_mesh_lib.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_deferred_combine.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_bokeh_lut.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_filter.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_scatter.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_tiles.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_fast_gi.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_geom_types_lib.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_light_lib.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_lightprobe.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_lightprobe_display.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_lightprobe_volume_load.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_lookdev_display.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_occupancy_convert.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_octahedron_lib.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_tile.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_tag_usage_transparent.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_tilemap_init.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_visibility.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surf_common.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surf_deferred.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surf_shadow.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surf_world.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surfel_light.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surfel_list.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surfel_ray.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_velocity.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/eevee/shaders/eevee_volume.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/image/image_usage.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_antialiasing.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_armature.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_base.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_bounds.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_curve.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_facing.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_lattice.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_motion_path.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_paint.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_sculpt.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_text.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/overlay_xray_fade.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/shaders/infos/overlay_paint_infos.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/overlay/shaders/overlay_gsplat.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/select/shaders/infos/select_id_infos.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/workbench/shaders/workbench_cavity.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/workbench/shaders/workbench_common.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/workbench/shaders/workbench_shadow_visibility.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/engines/workbench/workbench_defines.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/DRW_gpu_wrapper.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/draw_debug.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/draw_handle.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/draw_manager.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/draw_state.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/draw_subdiv_shader_shared.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/draw_view.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/draw_view_data.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/mesh_extractors/extract_mesh.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/shaders/draw_debug_infos.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/shaders/draw_gsplat.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
+    },
+    "upstream/source/blender/draw/intern/shaders/draw_gsplat_lib.bsl.hh": {
+      "crate": "blender-io",
+      "module": "DRW_extended.rs"
     }
   },
   "failed": {
@@ -4816,52 +5320,6 @@
     "upstream/source/blender/blenkernel/intern/mesh_tessellate.cc": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/rigidbody.cc": "compile_check_failed",
     "upstream/source/blender/blenkernel/intern/tracking.cc": "compile_check_failed",
-    "upstream/source/blender/blenlib/BLI_alloca.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_any.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_asan.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_bit_bool_conversion.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_bit_span_ops.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_build_config.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_colorspace.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_compiler_typecheck.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_fftw.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_fileops.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/blenlib/BLI_fixed_width_int_str.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_generic_array.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_generic_virtual_array.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_implicit_sharing.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_link_utils.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_linklist_stack.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_axis_angle.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_base.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_base_c.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_base_safe.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_boolean.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_color.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_euler.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_geom.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_half.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_matrix.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_quaternion.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_rotation.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_rotation_legacy.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_solvers.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_vector_mpq_types.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_math_vector_unroll.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_memory_cache_file_load.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_mutex.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_session_uid.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_system.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_tempfile.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_timecode.hh": "transpile_error",
-    "upstream/source/blender/blenlib/BLI_unroll.hh": "compile_check_failed",
-    "upstream/source/blender/blenlib/BLI_utildefines.hh": "fast_path_type_resolution",
-    "upstream/source/blender/blenlib/BLI_utildefines_iter.hh": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/BLI_utility_mixins.hh": "fast_path_type_resolution",
-    "upstream/source/blender/blenlib/BLI_uuid.hh": "fast_path_type_resolution",
-    "upstream/source/blender/blenlib/BLI_vector.hh": "fast_path_type_resolution",
-    "upstream/source/blender/blenlib/BLI_vector_set_slots.hh": "fast_path_type_resolution",
-    "upstream/source/blender/blenlib/BLI_virtual_array.hh": "fast_path_type_resolution",
     "upstream/source/blender/blenlib/intern/BLI_ghash.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/BLI_ghash_utils.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/BLI_heap_simple.cc": "apfel_generation_failed",
@@ -4884,7 +5342,6 @@
     "upstream/source/blender/blenlib/intern/math_vec.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/noise.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/polyfill_2d.cc": "apfel_generation_failed",
-    "upstream/source/blender/blenlib/intern/radial_tiling_shared.hh": "fast_path_type_resolution",
     "upstream/source/blender/blenlib/intern/scanfill.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/session_uid.cc": "apfel_generation_failed",
     "upstream/source/blender/blenlib/intern/smaa_textures.cc": "apfel_generation_failed",
@@ -4988,100 +5445,21 @@
     "upstream/source/blender/depsgraph/intern/node/deg_node_factory.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_id.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_operation.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/DRW_select_buffer.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_camera_shared.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/eevee_debug_shared.hh": "compile_check_failed",
     "upstream/source/blender/draw/engines/eevee/eevee_depth_of_field.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_depth_of_field_shared.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/eevee_film_shared.hh": "compile_check_failed",
     "upstream/source/blender/draw/engines/eevee/eevee_light.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_light.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_light_shared.hh": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_lightprobe.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/draw/engines/eevee/eevee_lightprobe_planar.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_lightprobe_volume.hh": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_lookdev.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/eevee_lut.hh": "transpile_error",
-    "upstream/source/blender/draw/engines/eevee/eevee_precompute_shared.hh": "compile_check_failed",
     "upstream/source/blender/draw/engines/eevee/eevee_raytrace.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_raytrace_shared.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/eevee_renderbuffers_shared.hh": "compile_check_failed",
     "upstream/source/blender/draw/engines/eevee/eevee_sampling.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/draw/engines/eevee/eevee_sampling_shared.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/eevee_subsurface_shared.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/eevee_uniform_shared.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/eevee_velocity_shared.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/eevee_volume_shared.hh": "compile_check_failed",
     "upstream/source/blender/draw/engines/eevee/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_attributes_mesh_lib.bsl.hh": "transpile_error",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_deferred_combine.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_bokeh_lut.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_filter.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_scatter.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_depth_of_field_tiles.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_fast_gi.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_geom_types_lib.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_light_lib.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_lightprobe.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_lightprobe_display.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_lightprobe_volume_load.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_lookdev_display.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_occupancy_convert.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_octahedron_lib.bsl.hh": "transpile_error",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_ray_tile.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_tag_usage_transparent.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_tilemap_init.bsl.hh": "compile_check_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_shadow_visibility.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surf_common.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surf_deferred.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surf_shadow.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surf_world.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surfel_light.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surfel_list.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_surfel_ray.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_velocity.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/eevee/shaders/eevee_volume.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/external/external_engine.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/image/image_usage.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_antialiasing.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_armature.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_base.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_bounds.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_curve.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_facing.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_lattice.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_motion_path.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_paint.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_sculpt.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_text.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/overlay_xray_fade.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/overlay/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/shaders/infos/overlay_paint_infos.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/overlay/shaders/overlay_gsplat.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/select/select_debug_engine.cc": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/select/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/select/shaders/infos/select_id_infos.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/engines/workbench/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/workbench/shaders/workbench_cavity.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/workbench/shaders/workbench_common.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/workbench/shaders/workbench_shadow_visibility.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/engines/workbench/workbench_defines.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/DRW_gpu_wrapper.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/intern/draw_cache_impl_gsplat.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/draw_debug.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/draw_handle.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/draw_manager.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/draw_state.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/draw_subdiv_shader_shared.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/draw_view.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/draw_view_data.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/mesh_extractors/extract_mesh.hh": "apfel_generation_failed",
     "upstream/source/blender/draw/intern/mesh_extractors/extract_mesh_ibo_lines_adjacency.cc": "apfel_generation_failed",
     "upstream/source/blender/draw/intern/shaders/bsl_shader_linting.cc": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/shaders/draw_debug_infos.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/shaders/draw_gsplat.bsl.hh": "apfel_generation_failed",
-    "upstream/source/blender/draw/intern/shaders/draw_gsplat_lib.bsl.hh": "apfel_generation_failed",
     "upstream/source/blender/imbuf/intern/cache.cc": "compile_check_failed",
     "upstream/source/blender/imbuf/intern/cineon/cineon_dpx.cc": "compile_check_failed",
     "upstream/source/blender/imbuf/intern/cineon/cineonlib.cc": "timeout",
