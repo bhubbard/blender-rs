@@ -126,6 +126,138 @@ impl SceneContext {
         Ok(count)
     }
 
+    /// Creates a cylinder with given radius, height, and segments.
+    pub fn create_cylinder(&mut self, radius: f32, height: f32, segments: usize) -> anyhow::Result<()> {
+        self.bmesh = BMesh::new();
+        let half_h = height * 0.5;
+        let mut top_verts = Vec::with_capacity(segments);
+        let mut bot_verts = Vec::with_capacity(segments);
+
+        let top_center = self.bmesh.vert_create(Some(Vec3::new(0.0, 0.0, half_h)), None);
+        let bot_center = self.bmesh.vert_create(Some(Vec3::new(0.0, 0.0, -half_h)), None);
+
+        for s in 0..segments {
+            let phi = 2.0 * std::f32::consts::PI * (s as f32) / (segments as f32);
+            let x = radius * phi.cos();
+            let y = radius * phi.sin();
+            top_verts.push(self.bmesh.vert_create(Some(Vec3::new(x, y, half_h)), None));
+            bot_verts.push(self.bmesh.vert_create(Some(Vec3::new(x, y, -half_h)), None));
+        }
+
+        // Side quads and top/bot caps
+        for s in 0..segments {
+            let next_s = (s + 1) % segments;
+            // Side quad
+            self.bmesh.face_create(&[bot_verts[s], bot_verts[next_s], top_verts[next_s], top_verts[s]], None)?;
+            // Top cap
+            self.bmesh.face_create(&[top_center, top_verts[s], top_verts[next_s]], None)?;
+            // Bot cap
+            self.bmesh.face_create(&[bot_center, bot_verts[next_s], bot_verts[s]], None)?;
+        }
+
+        self.bmesh.validate_topology().map_err(|e| anyhow::anyhow!("{e}"))?;
+        Ok(())
+    }
+
+    /// Creates a 2x2 flat plane centered at origin on the XY plane.
+    pub fn create_plane(&mut self, size: f32) -> anyhow::Result<()> {
+        self.bmesh = BMesh::new();
+        let hs = size * 0.5;
+        let v0 = self.bmesh.vert_create(Some(Vec3::new(-hs, -hs, 0.0)), None);
+        let v1 = self.bmesh.vert_create(Some(Vec3::new( hs, -hs, 0.0)), None);
+        let v2 = self.bmesh.vert_create(Some(Vec3::new( hs,  hs, 0.0)), None);
+        let v3 = self.bmesh.vert_create(Some(Vec3::new(-hs,  hs, 0.0)), None);
+
+        self.bmesh.face_create(&[v0, v1, v2, v3], None)?;
+        self.bmesh.validate_topology().map_err(|e| anyhow::anyhow!("{e}"))?;
+        Ok(())
+    }
+
+    /// Creates a Torus primitive.
+    pub fn create_torus(&mut self, major_r: f32, minor_r: f32, major_segs: usize, minor_segs: usize) -> anyhow::Result<()> {
+        self.bmesh = BMesh::new();
+        let mut grid = Vec::new();
+
+        for i in 0..major_segs {
+            let u = 2.0 * std::f32::consts::PI * (i as f32) / (major_segs as f32);
+            let cos_u = u.cos();
+            let sin_u = u.sin();
+            let mut ring = Vec::new();
+
+            for j in 0..minor_segs {
+                let v = 2.0 * std::f32::consts::PI * (j as f32) / (minor_segs as f32);
+                let x = (major_r + minor_r * v.cos()) * cos_u;
+                let y = (major_r + minor_r * v.cos()) * sin_u;
+                let z = minor_r * v.sin();
+                ring.push(self.bmesh.vert_create(Some(Vec3::new(x, y, z)), None));
+            }
+            grid.push(ring);
+        }
+
+        for i in 0..major_segs {
+            let next_i = (i + 1) % major_segs;
+            for j in 0..minor_segs {
+                let next_j = (j + 1) % minor_segs;
+                self.bmesh.face_create(&[
+                    grid[i][j],
+                    grid[next_i][j],
+                    grid[next_i][next_j],
+                    grid[i][next_j],
+                ], None)?;
+            }
+        }
+
+        self.bmesh.validate_topology().map_err(|e| anyhow::anyhow!("{e}"))?;
+        Ok(())
+    }
+
+    /// Sculpt deformation: pushes/pulls vertices within brush radius towards/away or along normal.
+    pub fn sculpt_deform(&mut self, center: Vec3, radius: f32, strength: f32) -> usize {
+        let r_sq = radius * radius;
+        let mut modified = 0;
+        let keys: Vec<_> = self.bmesh.vpool.iter().map(|(h, _)| h).collect();
+        for h in keys {
+            if let Some(v) = self.bmesh.vpool.get_mut(h) {
+                let dist_sq = (v.co - center).length_squared();
+                if dist_sq < r_sq {
+                    let factor = (1.0 - (dist_sq / r_sq)).powi(2) * strength;
+                    let dir = (v.co - center).normalize_or_zero();
+                    v.co += dir * factor;
+                    modified += 1;
+                }
+            }
+        }
+        modified
+    }
+
+    /// Extracts all face polygons for shaded rendering.
+    pub fn extract_faces(&self) -> Vec<Vec<Vec3>> {
+        let mut faces = Vec::new();
+        for (_, face) in self.bmesh.fpool.iter() {
+            let mut face_verts = Vec::new();
+            if let Some(first_l) = self.bmesh.lpool.get(face.l_first) {
+                if let Some(v) = self.bmesh.vpool.get(first_l.v) {
+                    face_verts.push(v.co);
+                }
+                let mut cur = first_l.next;
+                while cur != face.l_first {
+                    if let Some(l) = self.bmesh.lpool.get(cur) {
+                        if let Some(v) = self.bmesh.vpool.get(l.v) {
+                            face_verts.push(v.co);
+                        }
+                        cur = l.next;
+                    } else {
+                        break;
+                    }
+                }
+            }
+            if face_verts.len() >= 3 {
+                faces.push(face_verts);
+            }
+        }
+        faces
+    }
+
     /// Extracts all edge vertex coordinate pairs for rendering.
     pub fn extract_edges_lines(&self) -> Vec<(Vec3, Vec3)> {
         let mut lines = Vec::new();
