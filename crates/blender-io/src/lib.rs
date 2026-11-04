@@ -2988,3 +2988,6 @@ pub use RNA_api_extended::*;
 
 pub mod BLI_intern_extended;
 pub use BLI_intern_extended::*;
+
+pub mod IO_drivers_extended;
+pub use IO_drivers_extended::*;

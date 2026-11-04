@@ -5902,6 +5902,126 @@
     "upstream/source/blender/blenlib/intern/task_pool.cc": {
       "crate": "blender-io",
       "module": "BLI_intern_extended.rs"
+    },
+    "upstream/source/blender/io/ply/IO_ply.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/exporter/ply_export.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/exporter/ply_export_data.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/exporter/ply_export_header.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/exporter/ply_file_buffer.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/exporter/ply_file_buffer_ascii.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/exporter/ply_file_buffer_binary.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/importer/ply_import.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/importer/ply_import_buffer.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/importer/ply_import_data.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/importer/ply_import_gsplat.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/ply/importer/ply_import_mesh.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/stl/IO_stl.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/stl/exporter/stl_export.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/stl/exporter/stl_export_writer.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/stl/importer/stl_import.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/stl/importer/stl_import_binary_reader.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/stl/importer/stl_import_mesh.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/exporter/obj_export_file_writer.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/exporter/obj_export_mesh.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/exporter/obj_export_mtl.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/exporter/obj_export_nurbs.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/exporter/obj_exporter.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/importer/importer_mesh_utils.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/importer/obj_import_file_reader.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/importer/obj_import_mesh.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/importer/obj_import_mtl.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/importer/obj_import_nurbs.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
+    },
+    "upstream/source/blender/io/wavefront_obj/importer/obj_importer.cc": {
+      "crate": "blender-io",
+      "module": "IO_drivers_extended.rs"
     }
   },
   "failed": {
@@ -5983,37 +6103,7 @@
     "upstream/source/blender/depsgraph/intern/eval/deg_eval_stats.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_factory.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/depsgraph/intern/node/deg_node_id.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/depsgraph/intern/node/deg_node_operation.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/IO_ply.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/exporter/ply_export.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/exporter/ply_export_data.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/exporter/ply_export_header.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/exporter/ply_file_buffer.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/exporter/ply_file_buffer_ascii.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/exporter/ply_file_buffer_binary.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/importer/ply_import.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/importer/ply_import_buffer.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/importer/ply_import_data.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/importer/ply_import_gsplat.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/ply/importer/ply_import_mesh.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/stl/IO_stl.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/stl/exporter/stl_export.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/stl/exporter/stl_export_writer.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/stl/importer/stl_import.cc": "apfel_generation_failed",
-    "upstream/source/blender/io/stl/importer/stl_import_binary_reader.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/stl/importer/stl_import_mesh.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/IO_wavefront_obj.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/exporter/obj_export_file_writer.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/exporter/obj_export_mesh.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/exporter/obj_export_mtl.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/exporter/obj_export_nurbs.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/exporter/obj_exporter.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/importer/importer_mesh_utils.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/importer/obj_import_file_reader.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/importer/obj_import_mesh.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/importer/obj_import_mtl.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/importer/obj_import_nurbs.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/importer/obj_importer.cc": "apfel_generation_failed"
+    "upstream/source/blender/depsgraph/intern/node/deg_node_operation.cc": "compiler_burndown_exceeded"
   },
   "skipped": {
     "upstream/source/blender/animrig/ANIM_action_iterators.hh": {
