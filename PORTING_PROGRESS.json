@@ -5666,6 +5666,118 @@
     "upstream/source/blender/imbuf/intern/format_webp.cc": {
       "crate": "blender-io",
       "module": "IMB_codecs_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_action.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_action_api.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_blendfile_import.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_camera_api.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_color.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_depsgraph.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_image_api.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_layer.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_lightprobe.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_material.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_material_api.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_mesh_api.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_meta.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_meta_api.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_movieclip.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_nla.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_node_socket.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_node_tree_interface.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_nodetree.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_object.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_object_api.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_object_force.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_packedfile.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_palette.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_particle.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_path.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_pointcloud.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
+    },
+    "upstream/source/blender/makesrna/intern/rna_pose.cc": {
+      "crate": "blender-io",
+      "module": "RNA_api_extended.rs"
     }
   },
   "failed": {
@@ -5808,35 +5920,7 @@
     "upstream/source/blender/io/wavefront_obj/importer/obj_import_mesh.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/importer/obj_import_mtl.cc": "compiler_burndown_exceeded",
     "upstream/source/blender/io/wavefront_obj/importer/obj_import_nurbs.cc": "compiler_burndown_exceeded",
-    "upstream/source/blender/io/wavefront_obj/importer/obj_importer.cc": "apfel_generation_failed",
-    "upstream/source/blender/makesrna/intern/rna_action.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_action_api.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_blendfile_import.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_camera_api.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_color.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_depsgraph.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_image_api.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_layer.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_lightprobe.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_material.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_material_api.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_mesh_api.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_meta.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_meta_api.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_movieclip.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_nla.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_node_socket.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_node_tree_interface.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_nodetree.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_object.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_object_api.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_object_force.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_packedfile.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_palette.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_particle.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_path.cc": "compile_check_failed",
-    "upstream/source/blender/makesrna/intern/rna_pointcloud.cc": "timeout",
-    "upstream/source/blender/makesrna/intern/rna_pose.cc": "compile_check_failed"
+    "upstream/source/blender/io/wavefront_obj/importer/obj_importer.cc": "apfel_generation_failed"
   },
   "skipped": {
     "upstream/source/blender/animrig/ANIM_action_iterators.hh": {

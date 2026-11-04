@@ -2982,3 +2982,6 @@ pub use DRW_engines_extended::*;
 
 pub mod IMB_codecs_extended;
 pub use IMB_codecs_extended::*;
+
+pub mod RNA_api_extended;
+pub use RNA_api_extended::*;
