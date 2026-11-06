@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   coverage:
-    runs-on: macos-15
+    runs-on: macos-14
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,12 +25,20 @@ jobs:
       - name: Install cargo-llvm-cov
         uses: taiki-e/install-action@cargo-llvm-cov
 
-      - name: Generate Coverage Report
+      - name: Generate LCOV and HTML Coverage
         run: |
-          cargo llvm-cov --html --output-dir ./coverage_report
+          cargo llvm-cov --workspace --lcov --output-path lcov.info
+          cargo llvm-cov --workspace --no-run --html
+          cargo llvm-cov --workspace --no-run --summary-only
 
-      - name: Upload Coverage Artifact
+      - name: Upload Coverage HTML Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-report
-          path: ./coverage_report/html
+          name: coverage-report-html
+          path: target/llvm-cov/html
+
+      - name: Upload LCOV Info Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-lcov
+          path: lcov.info

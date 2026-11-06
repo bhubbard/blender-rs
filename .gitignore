@@ -5,5 +5,8 @@
 .DS_Store
 coverage_report
 target/coverage
+target/llvm-cov
+lcov.info
+*.profraw
 __pycache__/
 *.pyc

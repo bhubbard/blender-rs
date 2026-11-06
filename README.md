@@ -58,6 +58,28 @@ cargo run --release -p blender-app --bin blender -- --primitive sphere --export-
 cargo run --release -p blender-app --bin blender -- --benchmark
 ```
 
+### 4. Code Coverage Analysis
+
+Generate pure Rust LLVM source-based code coverage reports across the entire workspace:
+
+```bash
+# Terminal summary table
+cargo coverage-summary
+# Or: make coverage-summary
+
+# Interactive HTML report (saved to target/llvm-cov/html/index.html)
+cargo coverage
+# Or: make coverage
+
+# Open the interactive HTML report directly in your default browser
+cargo coverage-open
+# Or: make coverage-open
+
+# Standard LCOV file for IDEs & CI (saved to lcov.info)
+cargo coverage-lcov
+# Or: make coverage-lcov
+```
+
 ---
 
 ## Rust SDK Examples

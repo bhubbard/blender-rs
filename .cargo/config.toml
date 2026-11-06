@@ -1,0 +1,5 @@
+[alias]
+coverage = "llvm-cov --workspace --html"
+coverage-summary = "llvm-cov --workspace --summary-only"
+coverage-lcov = "llvm-cov --workspace --lcov --output-path lcov.info"
+coverage-open = "llvm-cov --workspace --html --open"
