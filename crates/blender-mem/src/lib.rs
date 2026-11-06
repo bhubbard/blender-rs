@@ -148,6 +148,13 @@ impl<T> MemPool<T> {
         }
     }
 
+    /// Clears the pool, freeing all elements and resetting counts.
+    pub fn clear(&mut self) {
+        self.slots.clear();
+        self.free_head = None;
+        self.active_count = 0;
+    }
+
     /// Iterate over active (handle, &value) pairs.
     pub fn iter(&self) -> impl Iterator<Item = (Handle<T>, &T)> {
         self.slots.iter().enumerate().filter_map(|(idx, slot)| match slot {
